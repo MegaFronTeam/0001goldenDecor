@@ -2,7 +2,154 @@
 	background: #05141F; 
 	color: #fff;
 	margin-top: auto;
+	padding-top: rem(40);
+	padding-bottom: rem(56);
+	&__head{
+		
+		padding-bottom: rem(35);
 
+		border-bottom: 1px solid rgba(#F2F2F2, .4);
+	}
+	&__body{
+		padding-top: rem(35);
+	}
+	.menu{
+		display: block;
+		margin: 0;
+		@include media-breakpoint-down(sm) {
+			a{
+
+				border-bottom: 1px solid  rgba(#F2F2F2, .2);
+				padding-top: 14px;
+				padding-bottom: 14px;
+			}
+		}
+		@include media-breakpoint-up(sm) {
+			
+			li{
+				margin-bottom: rem(8);
+			}
+		}
+		a{
+			font-size: 16px;
+			color: #FFFFFF;
+			text-align: left;
+			padding: 0;
+			
+			
+			@include media-breakpoint-up(sm) {
+			opacity: 0.5;
+			&:hover{
+				opacity: 1;
+
+			}
+			}
+		}
+	}
+	&__col{
+		.menu{
+			@include media-breakpoint-up(xl) {
+				columns: 3;
+			}
+			
+			@include media-breakpoint-up(sm) {
+				columns: 2;
+			}
+
+
+		}
+	}
+	&__title{
+		font-size: rem(18);
+		margin-bottom: rem(30);
+	}
+
+	&__tel{
+		font-size: rem(18);
+		color: #fff;
+	}
+	&__time{
+		font-size: rem(15);
+		margin-bottom: rem(40);
+		color: #F2F2F2;
+		opacity: 0.4;
+	}	
+	p.small{
+		color: #F2F2F2;
+		opacity: 0.4;
+	}
+	.soc{
+		a{
+			color: #fff !important;
+		}
+	} 
+	&__col-menu{
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+
+		&__col-menu{
+			width: 245px;
+		}
+		&__col-contact{
+			width: calc(var(--bs-gutter-x) + #{rem(264)} + 40px);
+		}
+	}
+	&__btn{
+		@extend .btn, .btn-outline-white;
+		@include media-breakpoint-up(sm){
+
+			width: rem(264);
+		}
+		width: 100%;
+		height: rem(60);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(40);
+		}
+	}
+
+	&__row{
+		--bs-gutter-y: 23px;
+	}
+
+	&__copy{
+		opacity: 0.6;
+	}
+	&__footer{
+		padding-top: rem(40);
+		font-size: 14px;
+		a{
+			color: #fff;
+			@include media-breakpoint-up(xxl) {
+				margin-right: rem(40);
+			}
+			span{
+				opacity: 0.6;
+				margin-right: 9px;
+			}
+		}
+	}
+	.logo-wrap{
+		[fill="#05141F"]{
+			fill: #fff !important;
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: 30px;
+		}
+	}
+
+	&__link-more{
+		display: inline-block;
+		cursor: pointer;
+		.icon{
+			font-size: rem(24);
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

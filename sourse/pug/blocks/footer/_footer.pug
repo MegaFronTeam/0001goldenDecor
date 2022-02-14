@@ -1,9 +1,47 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.head
+				p Основанная в 1993 г., компания Golden Decor является одним из лидеров на московском рынке по реализации отделочных материалов. Наш интернет магазин обоев предлагает широкий и уникальный ассортимент высококачественных декоративных материалов для оформления интерьера: эксклюзивные, дизайнерские настенные покрытия, интерьерные краски, лепной декор и свет от ведущих производителей мира.
+				.hidden-block
+					p Основанная в 1993 г., компания Golden Decor является одним из лидеров на московском рынке по реализации отделочных материалов. Наш интернет магазин обоев предлагает широкий и уникальный ассортимент высококачественных декоративных материалов для оформления интерьера: эксклюзивные, дизайнерские настенные покрытия, интерьерные краски, лепной декор и свет от ведущих производителей мира.
+				+e.link-more
+					| Подробнее
+					+icon("chevron-down")
+			+e.body
+
+				+e.row.row
+					+e.col.col-sm
+						+e.title.d-none.d-sm-block Каталог товаров
+						+mnu4
+					+e.col-menu.col-sm-auto
+						+e.title.d-none.d-sm-block О компании
+						+mnu2
+					+e.col-contact.col-lg-auto.order-md-0.order-last
+						.mb-2: +e.tel(href="tel:+7(495)120-06-43") +7 (495) 120-06-43
+						+e.time (Пн-Пт: 10:00-19:00, Сб-Вс: 10:00-18:00)
+
+						p.small Мы в социальных сетях
+						+soc()
+							each soc in socialFoot
+								+item-sos()
+									img(src=`img/svg/${soc}.svg`, alt="")
+					.col-12
+					.col-lg-auto.align-self-center.order-lg-0.order-first
+						+logo
+					.col-md.align-self-center
+						.row.g-3
+							a.col-auto(href="#")  
+								img(src="img/svg/googleplay.svg", alt="")
+							a.col-auto(href="#")  
+								img(src="img/svg/appstore.svg", alt="")
+					.col-md-auto.align-self-center.order-last
+						+e.btn(href="#") Обратная связь
+			+e.footer
+				+e.row.row
+					+e.copy.col @ 2021 Golden Decor. Все права защищены, Любое использование материалов сайта без разрешения запрещено.
+					.col-sm-auto
+						a(href="#")
+							span Сделано в
+							img(src="img/svg/REDPOMIDOR.svg", alt="") 
+

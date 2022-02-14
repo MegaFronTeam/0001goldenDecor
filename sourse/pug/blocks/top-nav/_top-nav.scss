@@ -44,8 +44,8 @@
 	 }
  }
  .logo-wrap{
-	 padding-top: 10px;
-	 padding-bottom: 10px;
+	//  padding-top: 10px;
+	//  padding-bottom: 10px;
 	 svg{
 		 max-width: rem(160);
 	 }
@@ -90,7 +90,11 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		&__row{
+			--bs-gutter-x: 16px;
+		}
+	}
 
 	@include media-breakpoint-down(xs) {}
 }

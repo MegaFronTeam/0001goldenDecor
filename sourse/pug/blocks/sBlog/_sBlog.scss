@@ -10,7 +10,11 @@
 		.section-title{
 			a{
 				display: inline-block;
-				margin-top: em(12);
+				@include media-breakpoint-up(sm) {
+
+					margin-top: em(14);
+				}
+				margin-top: em(10);
 			}
 		}
 	&__slide{

@@ -353,6 +353,11 @@ function eventHandler() {
 		spaceBetween: 24
 	});
 
+	$(".footer__link-more").click(function () {
+		$(".hidden-block").slideDown();
+		$(".footer__link-more").hide();
+	})
+
 
 
 	// $('.header').hcSticky({
