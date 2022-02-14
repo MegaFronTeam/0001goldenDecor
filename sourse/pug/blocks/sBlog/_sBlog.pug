@@ -1,0 +1,28 @@
+mixin  blog-item(i,t,p)
+	+b.blog-item
+		+e.img-wrap(href="#").bg-wrap
+			+pic(`blog-${i}.jpg`,'bg').picture-bg
+		+e.caption
+			+e.title: a(href="#")= t
+			p= p
+
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container 
+				+b.section-title 
+					.row
+						.col 
+							h2= sBlog.title
+						.col-auto.order-md-last
+							+b.link-more(href="#")
+								.d-none.d-sm-inline Смотреть все
+								+icon("chevron-right")
+				+e.slider--js.swiper
+					.swiper-wrapper
+						each item in sBlog.items
+							+e.slide.swiper-slide
+								+blog-item(item.i,item.t,item.p)
+					.d-none.d-md-block
+						+arrow
+	// end sBlog

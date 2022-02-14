@@ -1,6 +1,39 @@
 
 	// start .topLine
 	.topLine {
+		@include media-breakpoint-up(lg) {
+			--sPT: 0;
+			--sPB: 0;
+
+		}
+		--sPT: #{rem(8)};
+		--sPB: #{rem(8)};
+		.row{
+			align-items: center;
+		}
+		.menu{
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: 24px;
+			}
+			@include roww(18px);
+			li{
+				padding-left: 0;
+				padding-right: 0;
+			}
+			a{
+				// color: $secondary;
+				@extend .link-secondary;
+				font-size: 13px;
+			}
+		}
+		.soc{
+			&__item{
+				@extend .link-secondary;
+			}
+			.icon{
+				font-size: rem(24);
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -1,0 +1,42 @@
+mixin  catalog-item(i,t,p,pr)
+	+b.catalog-item
+		+e.btn--like(type="button")
+			+icon("like")
+		+e.img-wrap(href="#").bg-wrap
+			+pic(`prod-${i}.jpg`,'bg').picture-bg
+		+e.title: a(href="#")= t
+		p= p
+		+e.footer
+			.row
+				.col
+					+e.price= pr
+				.col-auto
+					+e.btn--add(type="button")
+mixin sCatalog(t, a)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			if a
+				+b.section-title
+					
+					.row
+						.h2.col-auto
+							a.text-secondary.active(href="#")= t 
+						.h2.col
+							a.text-secondary(href="#")= a 
+						.col-auto.order-md-last
+							+b.link-more(href="#")
+								.d-none.d-sm-inline Смотреть все
+								+icon("chevron-right")
+						.col-12
+						.col
+							+e.menu-wrap
+								+mnu3
+				+e.slider--js.swiper
+					.swiper-wrapper
+						each item in catalog.items.new
+							+e.slide.swiper-slide
+								+catalog-item(item.i,item.t,item.p,item.pr)
+					.d-none.d-md-block
+						+arrow
+	// end sCatalog

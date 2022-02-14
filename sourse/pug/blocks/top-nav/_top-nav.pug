@@ -22,12 +22,19 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col.order-lg-0.order-last
+				.col-auto.d-lg-none
+					+menu-toggle()
+				.col-lg-auto.col
+					+logo()
+				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+				.col-auto.d-none.d-sm-block
+					+top-btns()
+				.col-auto.d-sm-none 
+					+e.tel(href="tel:+7(495)120-06-43")
+						+icon("tel") 
+
 	// end top-nav

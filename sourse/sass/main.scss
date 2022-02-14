@@ -114,5 +114,10 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';
 
+@import '../pug/blocks/sCategeries/_sCategeries';
+@import '../pug/blocks/sCatalog/_sCatalog';
+@import '../pug/blocks/sAbout/_sAbout';
+@import '../pug/blocks/sBlog/_sBlog';
+
 @import "media"; // Всегда в конце
 

@@ -1,7 +1,7 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(8px, m);
 	display: flex;
 	&__item{
 		text-decoration: none !important; 

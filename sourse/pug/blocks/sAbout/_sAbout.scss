@@ -1,0 +1,18 @@
+// start .sAbout
+.sAbout {
+	border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+		// --sPT: ;
+		@include media-breakpoint-up(lg) {
+			
+			--sPB: 87px;
+			--sTPB:  52px;
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAbout

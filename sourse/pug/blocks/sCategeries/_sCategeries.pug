@@ -1,0 +1,14 @@
+mixin sCategeries(data)
+	// start sCategeries
+	+b.sCategeries.section#sCategeries&attributes(attributes)
+		.container
+			.row
+				each item, index in categories
+					+e.col.col-xl-4.col-md-6
+						+e.item(href="#")
+							+e.title= item.name
+							+e.count 2 500 товаров
+							+e.btn
+								+icon("chevron-right")
+							+pic(`categories-${index + 1}.png`)
+	// end sCategeries

@@ -1,5 +1,5 @@
 
-mixin mnu()
+mixin mnu2()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link in nav
 			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
@@ -9,5 +9,31 @@ mixin mnu()
 					ul.sub-menu
 						each sublink in link.subnav
 							li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name
+
+//- menu
+
+mixin mnu()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in categories
+			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url" class=(link.active  ? "active": null))= link.name
+			if link.subnav
+				li.menu-item.menu-item-has-children
+					a(href="#" itemprop="url") О нас
+					ul.sub-menu
+						each sublink in link.subnav
+							li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name
+
+//- menu
+mixin mnu3()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories
+				li.menu-item.swiper-slide(itemprop="item" ): a(href= link.url itemprop="url" class=(link.active  ? "active": null))= link.name
+				if link.subnav
+					li.menu-item.menu-item-has-children
+						a(href="#" itemprop="url") О нас
+						ul.sub-menu
+							each sublink in link.subnav
+								li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name
 
 //- menu

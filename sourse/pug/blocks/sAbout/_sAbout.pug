@@ -1,0 +1,20 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					+b.section-title
+						h2!= about.title
+					.d-none.d-lg-block
+						a.link-more(href="#")
+							= about.link
+							+icon("chevron-right")
+				.col-lg-6
+					each p in about.p
+						p!= p
+					.d-lg-none
+						a.link-more(href="#")
+							= about.link
+							+icon("chevron-right")
+	// end sAbout

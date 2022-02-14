@@ -6,7 +6,7 @@
 	z-index: 1000;
 	overflow: hidden;
 	width: 100%;
-	height: 100%;
+	// height: 10000px;
 	background-position: center 0;
 	opacity: 0;
 	// opacity: 0.7;
@@ -126,6 +126,11 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	.h2,
+	h2{
+		font-weight: 600;
+		line-height: calc(48 /40);
+	}
 }
 
 
@@ -302,27 +307,33 @@ ul {
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	// border: 2px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	outline: none !important;
 	// margin-bottom: 0;
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
 
 	&:hover {
 		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		// border-color: var(--swiperBorderColorDefHover);
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
+		stroke: currentColor;
+		fill: none;
+		stroke-width: 2px;
 	}
 
 	&::after {
@@ -336,6 +347,9 @@ ul {
 		left: var(--swiperArrowPosition);
 	}
 }
+.swiper-button-disabled{
+	opacity: 0 !important;
+}
 
 .swiper-pagination {
 	width: 100%;
@@ -343,19 +357,23 @@ ul {
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 		border-radius: 50%;
-		background-color: #E6E6E6;
+		background: #E5E5E7;
+		opacity: 0.9;
+		border: 1px solid rgba(151, 151, 151, 0.7);
 		outline: none !important;
 		@include mt;
-		margin-left: rem(8);
+		margin-left: rem(4);
 		// padding-right: rem(8);
-		margin-right: rem(5);
+		margin-right: rem(4);
 		display: inline-block;
 
 		&-active,
 		&:hover {
+			opacity: 1;
+			border-color: var(--bs-primary) ;
 			background-color: var(--bs-primary) ;
 		}
 	}
@@ -486,4 +504,27 @@ iframe {
 .swiper-wrapper{
 	
 	// @include row-sw(10px, sm, 100px);
+}
+
+.btn{
+	box-shadow: none !important;
+}
+
+.btn-white{
+	background-color: #fff;
+	border-color: #fff;
+}
+.btn-white,
+.btn-light,
+.btn-secondary,
+.btn-outline-light,
+.btn-outline-secondary,
+.btn-primary{
+	&:focus,
+	&:hover{
+		background-color: $warning;
+		border-color: $warning;
+		color: #fff;	
+
+	}
 }

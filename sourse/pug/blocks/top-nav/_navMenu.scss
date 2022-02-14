@@ -3,7 +3,7 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		
 		flex-wrap: wrap;
 	}
 
@@ -19,55 +19,64 @@
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(16) calc(var(--bs-gutter-x) / 2);
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: 2px;
 	--color: #{$primary};
 	--position: calc(var(--h) * 2);
+	// --position: 0;
 	&.on span {
-		--color: transparent;
+		span{
+			background-color: transparent;
+		}
+		// --color: transparent;
 	}
-
+	
 	&.on  { 
-		--position: 0; 
+		// --position: calc(var(--h) * 5);
+		--position:0;
+		// --position: 1; 
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
-	position: relative; 
-	font-size: 32px;
-	width: 1em;
-	cursor: pointer;
+	height: 24px;
+	position: relative;  
+	width: 24px;
+	cursor: pointer; 
 	span:after,
 	span:before {
 		content: "";
 		position: absolute;
 		left: 0;
+		border-radius: 10px;
 	} 
 	span {
-		@include a-cent(y);
+		@include a-cent();
 		display: block;
+		height: var(--h);
+		width: 14px;
+	 
 	}
 
 	span:before { 
-		top: var(--position);
+		bottom: var(--position);
 		transform: rotate3d(0,0,1, var(--rotate, 0));
 	}
-
+	
 	span:after {
-		bottom: var(--position);
+		top: var(--position);
 		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
 	}
-	span,
+ 
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: 14px;
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
@@ -110,7 +119,7 @@
 			z-index: 9999; 
 			span:after,
 			span:before {
-				--color: #ffffff;
+				--color: #000;
 			}
 		}
 		&__inner {
