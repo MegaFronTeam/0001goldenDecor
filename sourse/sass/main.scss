@@ -118,6 +118,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sCatalog/_sCatalog';
 @import '../pug/blocks/sAbout/_sAbout';
 @import '../pug/blocks/sBlog/_sBlog';
+@import '../pug/blocks/sSubcategories/_sSubcategories';
 
 @import "media"; // Всегда в конце
 
