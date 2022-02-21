@@ -3,24 +3,24 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/headerBlock/_headerBlock.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sContent/_sContent.pug
  
 //- include ../blocks/sContact/_sContact.pug
  
 include ../blocks/footer/_footer.pug
-include ../blocks/sCategeries/_sCategeries.pug
+//- include ../blocks/sCategeries/_sCategeries.pug
 include ../blocks/sCatalog/_sCatalog.pug
-include ../blocks/sAbout/_sAbout.pug
-include ../blocks/sBlog/_sBlog.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sBlog/_sBlog.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= index.head.title
+	- let  title= inner.head.title
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -29,13 +29,16 @@ block pagecontent
 	.header
 		+topLine
 		+top-nav()
-	+headerBlock
-
-	+sCategeries
-	+sCatalog("Новинки",'Акции', "showMore")
+	//- +headerBlock
+	+page-head({
+		title
+	})
+		+breadcrumb('Главная', 'Обои', 'Виниловые обои')
+	//- +sCategeries
+	+sCatalog("Новинки",'Акции')
 	
-	+sAbout
-	+sBlog
+	//- +sAbout
+	//- +sBlog
 	
 	+footer()
       

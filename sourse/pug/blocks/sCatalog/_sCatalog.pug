@@ -12,7 +12,7 @@ mixin  catalog-item(i,t,p,pr)
 					+e.price= pr
 				.col-auto
 					+e.btn--add(type="button")
-mixin sCatalog(t, a)
+mixin sCatalog(t, a, showMore)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
@@ -24,14 +24,15 @@ mixin sCatalog(t, a)
 							a.text-secondary.active(href="#")= t 
 						.h2.col
 							a.text-secondary(href="#")= a 
-						.col-auto.order-md-last
-							+b.link-more(href="#")
-								.d-none.d-sm-inline Смотреть все
-								+icon("chevron-right")
-						.col-12
-						.col
-							+e.menu-wrap
-								+mnu3
+						if showMore
+							.col-auto.order-md-last
+								+b.link-more(href="#")
+									.d-none.d-sm-inline Смотреть все
+									+icon("chevron-right")
+							.col-12
+							.col
+								+e.menu-wrap
+									+mnu3
 				+e.slider--js.swiper
 					.swiper-wrapper
 						each item in catalog.items.new
