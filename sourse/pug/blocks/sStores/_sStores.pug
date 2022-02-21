@@ -1,0 +1,23 @@
+mixin sStores(data)
+	// start sStores
+	+b.SECTION.sStores.section#sStores&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Магазины Golden Decor
+				p Вы, наверное, задаетесь вопросом, где купить в&nbsp;Москве &laquo;те&nbsp;самые&raquo; дизайнерские обои, которые помогут Вам создать авторский, индивидуальный, а&nbsp;потому уникальный интерьер? Ответ очень прост&nbsp;&mdash; купить обои в&nbsp;интернет магазине Golden Decor
+			.row
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin store-item(i, text)
+							+e.slide.swiper-slide
+								+e.item
+									+pic(`store-bg-${i}.jpg`)
+									p!= text
+						+store-item(1, 'Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор')
+						+store-item(2, 'Магазин Golden Decor в&nbsp;ТЦ&nbsp;Экспострой')
+						+store-item(3, 'Магазин Golden Decor в&nbsp;ТЦ&nbsp;Тройка')
+						+store-item(1, 'Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор')
+						+store-item(2, 'Магазин Golden Decor в&nbsp;ТЦ&nbsp;Экспострой')
+						+store-item(3, 'Магазин Golden Decor в&nbsp;ТЦ&nbsp;Тройка')
+
+	// end sStores

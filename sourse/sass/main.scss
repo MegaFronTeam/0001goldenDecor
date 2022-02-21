@@ -119,6 +119,12 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sAbout/_sAbout';
 @import '../pug/blocks/sBlog/_sBlog';
 @import '../pug/blocks/sSubcategories/_sSubcategories';
+@import '../pug/blocks/sFilter/_sFilter';
+@import '../pug/blocks/sBuy/_sBuy';
+@import '../pug/blocks/sAboutBlock/_sAboutBlock';
+@import '../pug/blocks/sStores/_sStores';
+@import '../pug/blocks/sOurEmployees/_sOurEmployees';
+@import '../pug/blocks/sPartners/_sPartners';
 
 @import "media"; // Всегда в конце
 

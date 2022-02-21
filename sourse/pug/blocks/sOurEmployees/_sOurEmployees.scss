@@ -1,0 +1,35 @@
+// start .sOurEmployees
+.sOurEmployees {
+	--sPT: #{rem(48)};
+	--sPB: #{rem(58)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(96)};
+		--sPB: #{rem(177)};
+	}
+	// --sTPB: ;
+	h2 {
+		@include rfs(48px);
+		font-weight: 600;
+	}
+	.col-lg {
+		& > p {
+			margin-bottom: rem(30);
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__content {
+		margin-bottom: rem(28);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOurEmployees

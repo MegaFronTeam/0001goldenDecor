@@ -88,7 +88,9 @@
 
 		"inner":{
 			"head": {
-				"title": "Обои"
+				"title": "Обои",
+				"titleCatalog": "Виниловые обои",
+				"titleAboutCompany": "О компании"
 			}
 		}
 	}

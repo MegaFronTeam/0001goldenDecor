@@ -90,6 +90,39 @@
 		font-weight: 600;
 		margin-bottom: 0;
 	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__btn {
+		display: flex;
+		align-items: center;
+		.top-btns {
+			margin-left: rem(12);
+		}
+		&:hover {
+			.top-btns__btn {
+				background-color: #e8a200;
+				border-color: #e8a200;
+				color: #fff;
+			}
+		}
+	}
+	&__back {
+		position: relative;
+		display: inline-block;
+		font-size: rem(16);
+		font-weight: 500;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+		}
+		.icon {
+			position: absolute;
+			font-size: rem(24);
+			left: rem(-24);
+		}
+	}
 }
 
 .breadcrumb {
