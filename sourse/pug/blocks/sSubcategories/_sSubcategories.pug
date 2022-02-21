@@ -1,6 +1,6 @@
 mixin card-item(i ,title, ...items)
 	a(href="#")
-		+e.item.bg-wrap
+		+e.item.bg-wrap&attributes(attributes)
 			+pic(`sSubcategories-bg-${i}.jpg`, 'bg', 0).picture-bg
 			h6!= title
 			each item in items 
@@ -22,7 +22,7 @@ mixin sSubcategories(data)
 				.col-lg-6.col-xl-3
 					+card-item(5, 'Обои для детской', '2 500 товаров', 'от 1 960 ₽')
 				.col-lg-6.col-xl-6
-					+card-item(6, 'Панно / Фотообои', '2 500 товаров', 'от 1 960 ₽')
+					+card-item(6, 'Панно / Фотообои', '2 500 товаров', 'от 1 960 ₽').full-width
 				.col-lg-6.col-xl-6
 					+card-item(7, 'Флезилиновые обои', '2 500 товаров', 'от 1 960 ₽')
 				.col-lg-6.col-xl-3
