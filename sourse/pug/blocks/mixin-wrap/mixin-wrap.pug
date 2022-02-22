@@ -69,19 +69,21 @@ mixin top-btns()
 			+e.counter 4
 
 mixin page-head(data)
-	+b.page-head
+	+b.page-head&attributes(attributes)
 		.container
 			block
 			if data.back
 				+e.back(href="#")
 					+icon('chevron-left')
 					| В каталог
-			if data.title
-				+e.wrap
+			+e.wrap
+				if data.date
+					p!= data.date
+				if data.title
 					h1!= data.title
-					if data.favorite
-						+e.btn.btn(type="button") 
-							| В избранное
-							+b.top-btns
-								+e.btn
-									+icon("like")
+				if data.favorite
+					+e.btn.btn(type="button") 
+						| В избранное
+						+b.top-btns
+							+e.btn
+								+icon("like")

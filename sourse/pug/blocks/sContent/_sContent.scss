@@ -1,7 +1,49 @@
 
 	// start .sContent
 	.sContent {
-		 
+	--sPT: 0;
+	--sPB: #{rem(48)};
+	&__wrap {
+		max-width: rem(945);
+		margin-right: auto;
+		margin-left: auto;
+		& > p {
+			max-width: rem(620);
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 0;
+			&:first-of-type {
+				font-size: rem(20);
+				margin-bottom: rem(37);
+				line-height: 1.32em;
+			}
+			&:not(:first-of-type) {
+				margin-bottom: rem(24);
+			}
+			&:last-of-type {
+				margin-bottom: rem(56);
+			}
+		}
+	}
+	picture {
+		margin-bottom: rem(40);
+	}
+	&__blog-wrap {
+		padding-top: rem(50);
+		padding-bottom: rem(30);
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(106);
+			padding-bottom: rem(40);
+		}
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	h2 {
+		font-weight: 600;
+		margin-bottom: rem(32);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
