@@ -8,7 +8,7 @@ mixin blog-item(i,t,p,text)
 			if text
 				p= text
 
-mixin  blog-item-2(i,t,p, text)
+mixin blog-item-2(i,t,p, text)
 	+b.blog-item
 		+e.img-wrap.bg-wrap
 			+pic(`blog-${i}.jpg`,'bg').picture-bg
@@ -37,17 +37,3 @@ mixin sBlog(data)
 					.d-none.d-md-block
 						+arrow
 	// end sBlog
-
-mixin sBlog2(data)
-	// start sBlog
-	+b.sBlog#sBlog&attributes(attributes)
-		.container 
-				+b.section-title 
-					.row
-						.col 
-							h2= sBlog.title
-				.row
-					each item in sBlog.items
-						.col-lg-4
-							+e.slide.swiper-slide
-								+blog-item(item.i,item.t,item.p)
