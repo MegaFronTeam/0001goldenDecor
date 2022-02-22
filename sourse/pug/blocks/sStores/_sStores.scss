@@ -5,7 +5,7 @@
 	// --sTPB: ;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(56)};
-		--sPB: #{rem(96)};
+		--sPB: #{rem(80)};
 	};
 	background-color: #F8F8F8;
 	.section-title {
@@ -14,7 +14,7 @@
 			margin-bottom: rem(29);
 		}
 		p {
-			margin-bottom: rem(56);
+			margin-bottom: rem(61);
 			max-width: rem(620);
 			margin-left: auto;
 			margin-right: auto;

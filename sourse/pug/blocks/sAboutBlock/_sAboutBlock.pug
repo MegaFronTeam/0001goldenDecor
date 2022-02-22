@@ -1,16 +1,18 @@
 mixin sAboutBlock(data)
 	// start sAboutBlock
 	+b.sAboutBlock.section#sAboutBlock&attributes(attributes)
-		.container
-			+e.content
+		+e.wrap
+			.container
+				+e.content
+					.row
+						.col-lg-5
+							+logo2()
+						.col-lg
+							//- each item in catalog.items.new
+							p!= sAboutBlock.main
 				.row
-					.col-lg
-						+logo2()
-					.col-lg
-						//- each item in catalog.items.new
-						p!= sAboutBlock.text
-			.row
-				+b.video-wrap
-					<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			p!= sAboutBlock.text
+					+b.video-wrap
+						<iframe src="https://www.youtube.com/embed/L_LUpnjgPso" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				p!= sAboutBlock.text
+				p!= sAboutBlock.text2
 	// end sAboutBlock
