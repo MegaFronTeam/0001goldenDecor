@@ -346,19 +346,31 @@ function eventHandler() {
 			}
 		}
 	});
-	
+
 	const menuSlider = new Swiper('.menu-slider--js', {  
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 24
 	});
 
+	const sStoresSlider = new Swiper('.sStores__slider--js', {  
+		slidesPerView: 2,
+		watchOverflow: true,
+		spaceBetween: 35,
+		breakpoints: {
+			640: {
+				slidesPerView: 2
+			},
+			1024: {
+				slidesPerView: 3
+			},
+		},
+	});
+
 	$(".footer__link-more").click(function () {
 		$(".hidden-block").slideDown();
 		$(".footer__link-more").hide();
-	})
-
-
+	});
 
 	// $('.header').hcSticky({
   //   // stickTo: $('#content')
