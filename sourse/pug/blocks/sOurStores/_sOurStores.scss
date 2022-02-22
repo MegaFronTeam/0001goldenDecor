@@ -6,21 +6,21 @@
 	.section-title {
 		h2 {
 			margin-bottom: 0;
+			min-width: 288px;
 		}
 		.row {
 			--bs-gutter-x: #{rem(24)};
 			--bs-gutter-y: calc(var(--bs-gutter-x) * 0.7);
-			align-items: center;
+			align-items: flex-end;
 		}
 	}
-	.menu {
-		display: flex;
-		flex-wrap: nowrap;
-		@include roww(24px, m);
-		&-item {
-			width: auto;
+	.tab {
+		&__caption {
+			display: flex;
+			flex-wrap: nowrap;
+			@include roww(24px, m);
 		}
-		a {
+		&__btn {
 			padding-top: rem(6);
 			padding-bottom: rem(6);
 			padding-left: 0;
