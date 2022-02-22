@@ -1,9 +1,49 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+e.row.row
+				+e.col.col-sm-6.col-lg-4
+					h5 ИП&nbsp;Абилов Гашим Балахан Оглы
+					+e.item
+						div
+							span.text-secondary ОГРН 
+							| 311774607600626
+						div
+							span.text-secondary ИНН 
+							| 772600136339
+				+e.col.col-sm-6.col-lg-4
+					h5 Наш адрес
+					+e.item
+						.text-secondary г. Москва, Каширское шоссе, д.19. кор.&nbsp;1. 2&nbsp;этаж, пав. 2-C94
+				+e.col.col-sm-6.col-lg-4
+					h5 Режим работы
+					+e.item
+						div
+							span.text-secondary Пн-Пт 
+							| с&nbsp;10:00 до&nbsp;19:00
+						div
+							span.text-secondary Сб-Вс 
+							| с&nbsp;10:00 до&nbsp;18:00
+				+e.col.col-sm-6.col-lg-4
+					h5 Телефоны
+					+e.row-sm.row
+						.col-auto
+							+e.item
+								+e.tel(href="tel:+74959876543") +7 (495) 987-65-43
+								.small.text-secondary Многоканальный
+						.col-auto
+							+e.item
+								+e.tel(href="tel:+79257715577") +7 (925) 771-55-77
+								.small.text-secondary Мобильный телефон
+				+e.col.col-sm-6.col-lg-4
+					h5 Гарантийный отдел
+					+e.item
+						+e.tel(href="tel:+74951200643") +7 (495) 120-06-43
+						+e.mail(href="maito:sale@golden-decor.ru") sale@golden-decor.ru
+				+e.col.col-sm-6.col-lg-4
+					h5 Оптовый отдел
+					+e.item
+						+e.tel(href="tel:+79295790787") +7 (929) 579-07-87
+						+e.mail(href="maito:vbaklanov@okdecor.ru") vbaklanov@okdecor.ru
 	// end sContact

@@ -31,3 +31,9 @@ mixin mnu4()
 		each link in categories2
 			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" )= link
 //- menu
+
+mixin mnu5()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in sOurStores
+			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu

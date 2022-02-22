@@ -125,6 +125,8 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sStores/_sStores';
 @import '../pug/blocks/sOurEmployees/_sOurEmployees';
 @import '../pug/blocks/sPartners/_sPartners';
+@import '../pug/blocks/sContact/_sContact';
+@import '../pug/blocks/sOurStores/_sOurStores';
 
 @import "media"; // Всегда в конце
 
