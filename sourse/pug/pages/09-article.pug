@@ -1,0 +1,44 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+ 
+include ../blocks/footer/_footer.pug
+//- include ../blocks/sCategeries/_sCategeries.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sBlog/_sBlog.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '09-article.jpg'
+
+block title
+	- let  title= inner.head.titleArticle
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	.header
+		+topLine
+		+top-nav()
+	//- +headerBlock
+	+page-head({
+		title,
+		date: '15 января 2022 г.',
+		back: true
+	}).--article
+		+breadcrumb('Главная', 'Журнал')
+	+sContent()
+	
+	+footer()
+      
+
+
+
