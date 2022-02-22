@@ -1,0 +1,42 @@
+// start .sStocks
+.sStocks {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(48)};
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(32)};
+		--sPB: #{rem(96)};
+	}
+	.row {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.blog-item {
+		&__title {
+			padding-bottom: rem(8);
+		}
+		p {
+			color: $primary;
+			opacity: 1;
+			&:first-of-type {
+				color: #9BA1A5;
+				margin-bottom: rem(10);
+			}
+			&:not(:first-of-type) {
+
+			}
+		}
+		&__img-wrap {
+			--ratio: 199/290;
+		}
+		&__caption {
+			padding: rem(30) rem(31) rem(40) rem(30);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sStocks

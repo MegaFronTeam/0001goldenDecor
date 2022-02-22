@@ -1,10 +1,21 @@
-mixin  blog-item(i,t,p)
+mixin blog-item(i,t,p,text)
 	+b.blog-item
 		+e.img-wrap(href="#").bg-wrap
 			+pic(`blog-${i}.jpg`,'bg').picture-bg
 		+e.caption
 			+e.title: a(href="#")= t
 			p= p
+			if text
+				p= text
+
+mixin  blog-item-2(i,t,p, text)
+	+b.blog-item
+		+e.img-wrap.bg-wrap
+			+pic(`blog-${i}.jpg`,'bg').picture-bg
+		+e.caption
+			+e.title: a(href="#")= t
+			p= p
+			p= text
 
 mixin sBlog(data)
 	// start sBlog

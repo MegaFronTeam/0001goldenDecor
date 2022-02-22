@@ -1,0 +1,11 @@
+mixin sJournal(data)
+	// start sJournal
+	+b.sJournal.section#sJournal&attributes(attributes)
+		.container
+			+mnu5
+			.row
+				each item in sJournal.items
+					.col-sm-6.col-lg-4.col-xl-3
+						+blog-item-2(item.i,item.t,item.p)
+			+e.BUTTON.btn.btn Показать еще
+	// end sJournal
