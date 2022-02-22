@@ -21,5 +21,12 @@ mixin mnu3()
 //- menu
 
 mixin mnu4()
-	+mnuBody(categories2)
-//- menu
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in categories2
+			li.menu-item(itemprop="item" ): a(href="#" itemprop="url"  )= link
+mixin mnumobile()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in menumobile
+			li.menu-item.menu-item-has-children(itemprop="item" ): a(href="#" itemprop="url"  )= link.name
+		each link in nav
+			li.menu-item(itemprop="item" ): a(href="#" itemprop="url"  )= link.name

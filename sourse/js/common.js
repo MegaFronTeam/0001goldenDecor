@@ -81,12 +81,12 @@ const JSCCommon = {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
-		}, { passive: true });
+		// document.addEventListener('mouseup', (event) => {
+		// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+		// 	let link = event.target.closest(".menu-mobile .menu a"); // (1)
+		// 	let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+		// 	if (!container && !toggle) this.closeMenu();
+		// }, { passive: true });
 
 		window.addEventListener('resize', () => {
 			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
@@ -346,23 +346,50 @@ function eventHandler() {
 			}
 		}
 	});
-	
+
 	const menuSlider = new Swiper('.menu-slider--js', {  
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 24
 	});
 
+	const sStoresSlider = new Swiper('.sStores__slider--js', {  
+		slidesPerView: 2,
+		watchOverflow: true,
+		spaceBetween: 35,
+		breakpoints: {
+			640: {
+				slidesPerView: 2
+			},
+			1024: {
+				slidesPerView: 3
+			},
+		},
+	});
+
 	$(".footer__link-more").click(function () {
 		$(".hidden-block").slideDown();
 		$(".footer__link-more").hide();
-	})
-
-
+	});
 
 	// $('.header').hcSticky({
   //   // stickTo: $('#content')
   // });
+
+	$(".search-toggle--js, .search-block__close").click(function () {
+		$(this).toggleClass("active")
+		$('.searchBlock-wrap--js').toggleClass("active")
+	})
+
+	document.addEventListener('mouseup', (event) => {
+		let container2 = event.target.closest("   .searchBlock-wrap--js.active"); 
+		let container3 = event.target.closest(" .search-toggle--js.active"); 
+		if (!container2 && !container3) { 
+			$(' .searchBlock-wrap--js.active').removeClass('active')
+			$(".search-toggle--js.active").removeClass('active'); 
+			};
+	}, { passive: true });
+
 
 };
 if (document.readyState !== 'loading') {

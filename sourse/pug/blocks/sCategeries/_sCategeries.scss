@@ -27,6 +27,7 @@
 			&:hover{
 				color: #fff;
 				--color : #fff;
+				--sc: 1.02;
 				background: #05141F;
 			}
 		}
@@ -56,6 +57,9 @@
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			@include mt;
+			transform-origin:  bottom ;
+			transform: scale(var(--sc, 1));
 			@include media-breakpoint-down(lg) {
 
 				max-width: rem(241);

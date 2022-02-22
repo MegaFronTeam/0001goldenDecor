@@ -1,0 +1,32 @@
+mixin card-item(i ,title, ...items)
+	a(href="#")
+		+e.item.bg-wrap&attributes(attributes)
+			+pic(`sSubcategories-bg-${i}.jpg`, 'bg', 0).picture-bg
+			h6!= title
+			each item in items 
+				p!= item
+
+mixin sSubcategories(data)
+	// start sSubcategories
+	+b.SECTION.sSubcategories.section#sSubcategories&attributes(attributes)
+		.container
+			.row
+				.col-lg-6.col-xl-6
+					+card-item(1, 'Текстильные обои', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-3
+					+card-item(2, 'Обои для спальни', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-3
+					+card-item(3, 'Виниловые обои', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-3
+					+card-item(4, 'Обои для кухни', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-3
+					+card-item(5, 'Обои для детской', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-6
+					+card-item(6, 'Панно / Фотообои', '2 500 товаров', 'от 1 960 ₽').full-width
+				.col-lg-6.col-xl-6
+					+card-item(7, 'Флезилиновые обои', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-3
+					+card-item(8, 'Обои под покраску', '2 500 товаров', 'от 1 960 ₽')
+				.col-lg-6.col-xl-3
+					+card-item(9, 'Бумажные обои', '2 500 товаров', 'от 1 960 ₽')
+	// end sSubcategories

@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="header">
 				<!-- start topLine-->
-				<div class="topLine d-none d-md-block section" id="topLine">
+				<div class="topLine d-none d-lg-block section" id="topLine">
 					<div class="container">
 						<div class="row">
 							<div class="col d-none d-lg-block">
@@ -64,7 +64,65 @@
 				<!-- end topLine-->
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<div class="container">
+					<div class="menu-mobile menu-mobile--js d-lg-none">
+						<div class="menu-mobile__inner">
+							<div class="container"> 
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дизайнерам</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="top-nav__container container">
+						<div class="searchBlock-wrap searchBlock-wrap--js">
+							<div class="search-block">
+								<form>
+									<input type="text" placeholder="Поиск"/>
+									<button>
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>
+									</button>
+									<div class="search-block__close">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</form>
+								<div class="search-block__result d-block">
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои дизайнерские
+									</a>
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои виноловые
+									</a>
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои виноловые
+									</a>
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои виноловые
+									</a>
+								</div>
+							</div>
+						</div>
 						<div class="top-nav__row row">
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -83,49 +141,78 @@
 </svg></a>
 								</div>
 							</div>
-							<div class="col-lg order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+							<div class="col-lg order-lg-0 order-last d-none d-lg-block">
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-auto order-lg-0 order-last">
+								<div class="top-btns-wrap">
+									<div class="container">
+										<div class="top-btns">
+											<a class="top-btns__btn d-lg-none" href="#">
+												<svg class="icon icon-home ">
+													<use xlink:href="img/svg/sprite.svg#home"></use>
+												</svg>
+												<div class="top-btns__title">Главная
+												</div>
+											</a>
+											<a class="top-btns__btn d-lg-none" href="#">
+												<svg class="icon icon-menu-small ">
+													<use xlink:href="img/svg/sprite.svg#menu-small"></use>
+												</svg>
+												<div class="top-btns__title">Каталог
+												</div>
+											</a>
+											<button class="top-btns__btn search-toggle search-toggle--js d-none d-lg-flex" type="button">
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+												<div class="top-btns__title">Поиск
+												</div>
+											</button>
+											<button class="top-btns__btn" type="button"> 
+												<svg class="icon icon-user ">
+													<use xlink:href="img/svg/sprite.svg#user"></use>
+												</svg>
+												<div class="top-btns__title">Профиль
+												</div>
+											</button>
+											<a class="top-btns__btn current" href="#"> 
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg>
+												<div class="top-btns__title">Избр
+												</div>
+											</a>
+											<button class="top-btns__btn" type="button"> 
+												<div class="top-btns__inner">
+													<svg class="icon icon-basket ">
+														<use xlink:href="img/svg/sprite.svg#basket"></use>
+													</svg>
+													<div class="top-btns__counter">4
+													</div>
+												</div>
+												<div class="top-btns__title">Корзина
+												</div>
+											</button>
 										</div>
-										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Обои</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
-										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-none d-sm-block">
-								<div class="top-btns">
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-search ">
-											<use xlink:href="img/svg/sprite.svg#search"></use>
-										</svg>
-									</button>
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-user ">
-											<use xlink:href="img/svg/sprite.svg#user"></use>
-										</svg>
-									</button>
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-like ">
-											<use xlink:href="img/svg/sprite.svg#like"></use>
-										</svg>
-									</button>
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-basket ">
-											<use xlink:href="img/svg/sprite.svg#basket"></use>
-										</svg>
-										<div class="top-btns__counter">4
-										</div>
-									</button>
+							<div class="col-auto d-lg-none"> 
+								<div class="search-toggle search-toggle--mobile search-toggle--js">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
 								</div>
 							</div>
-							<div class="col-auto d-sm-none"> 
+							<div class="col-auto d-lg-none"> 
 								<a class="top-nav__tel" href="tel:+7(495)120-06-43">
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
@@ -790,28 +877,43 @@
 					</div>
 					<div class="footer__body">
 						<div class="footer__row row">
-							<div class="footer__col col-sm">
-								<div class="footer__title d-none d-sm-block">Каталог товаров
-								</div>
+							<div class="footer__mobile-mnu-wrap col-12">
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url"></a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дизайнерам</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 								</ul>
 							</div>
-							<div class="footer__col-menu col-sm-auto">
-								<div class="footer__title d-none d-sm-block">О компании
+							<div class="footer__col col-sm d-none d-sm-block">
+								<div class="footer__title">Каталог товаров
+								</div>
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Флизелиновые обои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Текстильные обои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обои для детской</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обои для кухни</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обои для спальни</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обои под покраску</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Виниловые обои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Бумажные обои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Панно / фотообои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+								</ul>
+							</div>
+							<div class="footer__col-menu col-sm-auto d-none d-sm-block">
+								<div class="footer__title">О компании
 								</div>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
