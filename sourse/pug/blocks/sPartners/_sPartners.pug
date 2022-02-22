@@ -7,8 +7,8 @@ mixin sPartners(data)
 	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Партнеры Golden Decor
-				p В&nbsp;Golden Decor Вы&nbsp;откроете для себя самые последние и&nbsp;вечные тенденции украшений для стен&nbsp;&mdash; например, новые коллекции от&nbsp;Roberto Cavalli, Luigi Colani, Valentin Yudashkin или Carl Robinson. Лидеры мирового рынка, как Marburg, Emiliana Parati, KT&nbsp;Exclusive, York, Grandeco, Rasch Textil, Eijffinger, Khroma, Portofino, Sangiorgio, Loymina и&nbsp;др., являются синонимами нашей высококачественной продукции.
+				h2!= sPartners.title
+				p!= sPartners.text
 			.row
 				.col-sm-6.col-md-4.col-lg
 					+sPartners-item(1)

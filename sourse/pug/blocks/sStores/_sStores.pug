@@ -3,8 +3,8 @@ mixin sStores(data)
 	+b.SECTION.sStores.section#sStores&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Магазины Golden Decor
-				p Вы, наверное, задаетесь вопросом, где купить в&nbsp;Москве &laquo;те&nbsp;самые&raquo; дизайнерские обои, которые помогут Вам создать авторский, индивидуальный, а&nbsp;потому уникальный интерьер? Ответ очень прост&nbsp;&mdash; купить обои в&nbsp;интернет магазине Golden Decor
+				h2!= sStores.title
+				p!= sStores.text
 			.row
 				+e.slider--js.swiper
 					.swiper-wrapper
