@@ -31,3 +31,10 @@ mixin mnu4()
 		each link in categories2
 			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" )= link
 //- menu
+
+mixin mnu5()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories3
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
