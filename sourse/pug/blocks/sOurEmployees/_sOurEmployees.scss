@@ -4,9 +4,19 @@
 	--sPB: #{rem(58)};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(96)};
-		--sPB: #{rem(177)};
+		--sPB: #{rem(179)};
 	}
 	// --sTPB: ;
+	&__wrap {
+		@include media-breakpoint-up(xl) {
+			max-width: rem(1101);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.row {
+			--bs-gutter-x: 0;
+		}
+	}
 	h2 {
 		@include rfs(48px);
 		font-weight: 600;
@@ -14,6 +24,8 @@
 	.col-lg {
 		& > p {
 			margin-bottom: rem(30);
+			line-height: 1.44em;
+    	font-size: rem(18);
 			&:last-of-type {
 				margin-bottom: 0;
 			}
@@ -22,7 +34,7 @@
 	&__content {
 		margin-bottom: rem(28);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(56);
+			margin-bottom: rem(48);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

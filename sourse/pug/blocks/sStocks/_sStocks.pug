@@ -1,0 +1,9 @@
+mixin sStocks(data)
+	// start sStocks
+	+b.sStocks.section#sStocks&attributes(attributes)
+		.container
+			.row
+				each item in sStocks.items
+					.col-sm-6.col-lg-4
+						+blog-item-2(item.i,item.t,item.p, item.text)
+	// end sStocks

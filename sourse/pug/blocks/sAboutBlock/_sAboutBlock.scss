@@ -11,6 +11,19 @@
 		& > p {
 			max-width: rem(620);
 			margin-left: auto;
+			&:not(:last-child) {
+				margin-bottom: rem(27);
+			}
+		}
+	}
+	&__wrap {
+		@include media-breakpoint-up(xl) {
+			max-width: rem(1101);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.row {
+			--bs-gutter-x: 0;
 		}
 	}
 	&__content {
@@ -23,11 +36,13 @@
 	}
 	p {
 		margin-bottom: 0;
+		font-size: rem(18);
+		line-height: 1.44em;
 	}
 	.video-wrap {
-		@include block(1060, 680);
-		margin-top: rem(32);
-		margin-bottom: rem(54);
+		@include block(1060, 544);
+		margin-top: rem(40);
+		margin-bottom: rem(57);
 		iframe {
 			position: absolute;
 			top: 0;

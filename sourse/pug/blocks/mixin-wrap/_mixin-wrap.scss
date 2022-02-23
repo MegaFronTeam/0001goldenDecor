@@ -91,8 +91,8 @@
 		margin-bottom: 0;
 	}
 	&__wrap {
-		display: flex;
-		justify-content: space-between;
+		// display: flex;
+		// justify-content: space-between;
 	}
 	&__btn {
 		display: flex;
@@ -115,12 +115,27 @@
 		font-weight: 500;
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(32);
+			margin-bottom: rem(25);
 		}
 		.icon {
 			position: absolute;
 			font-size: rem(24);
 			left: rem(-24);
+		}
+	}
+	&--article {
+		box-shadow: none;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(37);
+		}
+		.page-head {
+			&__wrap {
+				text-align: center;
+				p {
+					color: rgba($color: #05141F, $alpha: 0.5);
+					margin-bottom: rem(24);
+				}
+			}
 		}
 	}
 }
