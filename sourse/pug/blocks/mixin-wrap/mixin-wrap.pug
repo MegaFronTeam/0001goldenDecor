@@ -57,16 +57,29 @@ mixin logo2()
 			</svg>
 
 mixin top-btns()
-	+b.top-btns
-		+e.btn(type="button") 
-			+icon("search") 
-		+e.btn(type="button") 
-			+icon("user") 
-		+e.btn(type="button") 
-			+icon("like") 
-		+e.btn(type="button") 
-			+icon("basket") 
-			+e.counter 4
+	+b.top-btns-wrap
+		.container
+			+b.top-btns
+				+e.btn(href="#").d-lg-none
+					+icon("home") 
+					+e.title Главная
+				+e.btn(href="#").d-lg-none
+					+icon("menu-small") 
+					+e.title Каталог
+				+e.btn(type="button" class="search-toggle--js").d-none.d-lg-flex
+					+icon("search") 
+					+e.title Поиск
+				+e.btn(href="#modal-cabinet").link-modal-custom-js 
+					+icon("user") 
+					+e.title Профиль
+				+e.btn(href="#").current 
+					+icon("like") 
+					+e.title Избр
+				+e.btn(type="button") 
+					+e.inner
+						+icon("basket") 
+						+e.counter 4
+					+e.title Корзина
 
 mixin page-head(data)
 	+b.page-head&attributes(attributes)
@@ -99,3 +112,17 @@ mixin page-head(data)
 						+page-head-item("02", "Личные данные")
 						+page-head-item("03", "Способ доставки")
 						+page-head-item("04", "Способ оплаты")
+
+mixin searchBlock()
+	+b.search-block
+		form
+			input(type="text" placeholder="Поиск")
+			button
+				+icon("search")
+			+e.close
+				+icon("close")
+		+e.result.d-block
+			each item in search
+				+e.result-item(href="#")
+					+icon("search")
+					= item

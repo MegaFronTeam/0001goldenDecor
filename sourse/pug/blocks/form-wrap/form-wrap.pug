@@ -3,7 +3,7 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(placeholder,  t='text', label= placeholder, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
@@ -24,22 +24,14 @@ mixin input(placeholder,  t='text', label, name= t)
 	+e.input-wrap.form-group
 		if label
 			label
-				+e.SPAN.input-title= label
 				+t(t,placeholder, name)&attributes(attributes)
-				block
+				+e.SPAN.input-title= label 
 		else
 			+t(t,placeholder, name)&attributes(attributes)
 		block
+		+b.input-clear--js
+			+icon("close")
 	// +e.input-wrap
-mixin select(label,pl,...items)
-	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= label
-			+e.SELECT.input.form-control&attributes(attributes)
-
-					option()= pl
-					each item in items
-						option()= item
 
 //- wrapper for form
 mixin form-wrap(inp)
@@ -74,6 +66,7 @@ mixin add-file(n)
 
 
 mixin policy()
+	+e.policy Авторизуясь на&nbsp;сайте, Вы&nbsp;принимаете условия #[a(href="#") Пользовательского соглашения],  #[a(href="#") Политики конфиденциальности ] и&nbsp;подтверждаете согласие на&nbsp;передачу и&nbsp;обработку своих данных
+mixin policy2()
 	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+		+in-c('checkbox','Я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 «О персональных данных», на условиях и для целей, определенных в Политике конфиденциальности')(checked)

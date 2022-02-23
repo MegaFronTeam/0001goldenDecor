@@ -81,12 +81,12 @@ const JSCCommon = {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
-		}, { passive: true });
+		// document.addEventListener('mouseup', (event) => {
+		// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+		// 	let link = event.target.closest(".menu-mobile .menu a"); // (1)
+		// 	let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+		// 	if (!container && !toggle) this.closeMenu();
+		// }, { passive: true });
 
 		window.addEventListener('resize', () => {
 			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
@@ -95,47 +95,6 @@ const JSCCommon = {
 
 	// tabs  .
 	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
-		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-		// tabs.forEach(element => {
-		// 	let tabs = element;
-		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
-		// 	const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-		// 	const tabsWrap = tabs.querySelector(".tabs__wrap");
-		// 	const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-		// 	const random = Math.trunc(Math.random() * 1000);
-		// 	tabsBtn.forEach((el, index) => {
-		// 		const data = `tab-content-${random}-${index}`;
-		// 		el.dataset.tabBtn = data;
-		// 		const content = tabsContent[index];
-		// 		content.dataset.tabContent = data;
-		// 		if (!content.dataset.tabContent == data) return;
-
-		// 		const active = content.classList.contains('active') ? 'active' : '';
-		// 		// console.log(el.innerHTML);
-		// 		content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
-		// 	})
-
-
-		// 	tabs.addEventListener('click', function (element) {
-		// 		const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
-		// 		if (!btn) return;
-		// 		const data = btn.dataset.tabBtn;
-		// 		const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
-		// 		const content = this.querySelectorAll(`[data-tab-content]`);
-		// 		tabsAllBtn.forEach(element => {
-		// 			element.dataset.tabBtn == data
-		// 				? element.classList.add('active')
-		// 				: element.classList.remove('active')
-		// 		});
-		// 		content.forEach(element => {
-		// 			element.dataset.tabContent == data
-		// 				? (element.classList.add('active'), element.previousSibling.classList.add('active'))
-		// 				: element.classList.remove('active')
-		// 		});
-		// 	})
-		// })
-
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
@@ -151,14 +110,10 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
-	// /inputMask
-	ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
+		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		let InputNumber = [].slice.call(document.querySelectorAll('.number-js'));
+		InputNumber.forEach(element => element.setAttribute("pattern", "[+][0-9]{4}"));
+		Inputmask({"mask":"9999", showMaskOnHover: false}).mask(InputNumber);
 	}, 
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -190,27 +145,7 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
-	},
-	toggleShow(toggle, drop) {
-
-		let catalogDrop = drop;
-		let catalogToggle = toggle;
-
-		$(document).on('click', catalogToggle, function () {
-			$(this).toggleClass('active').next().fadeToggle('fast', function () {
-				$(this).toggleClass("active")
-			});
-		})
-
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(catalogDrop + ".active"); // (1)
-			let link = event.target.closest(catalogToggle); // (1)
-			if (!container || !catalogToggle) {
-				$(catalogDrop).removeClass('active').fadeOut();
-				$(catalogToggle).removeClass('active');
-			};
-		}, { passive: true });
-	},
+	}, 
 	makeDDGroup() {
 		let parents = document.querySelectorAll('.dd-group-js');
 		for (let parent of parents) {
@@ -246,9 +181,9 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
@@ -418,6 +353,73 @@ function eventHandler() {
 
 	convertImages('.img-svg');
 
+	$(".search-toggle--js, .search-block__close").click(function () {
+		$(this).toggleClass("active")
+		$('.searchBlock-wrap--js').toggleClass("active")
+	})
+
+	document.addEventListener('mouseup', (event) => {
+		let container2 = event.target.closest("   .searchBlock-wrap--js.active"); 
+		let container3 = event.target.closest(" .search-toggle--js.active"); 
+		if (!container2 && !container3) { 
+			$(' .searchBlock-wrap--js.active').removeClass('active')
+			$(".search-toggle--js.active").removeClass('active'); 
+			};
+	}, { passive: true });
+
+
+
+	$(document).on("click", '.input-btn--password-toggle ', function () {
+		var x = this.parentElement.querySelector(".form-control");
+		if (x.type === "password") {
+			this.classList.add("show")
+			x.type = "text";
+		} else {
+			this.classList.remove("show")
+			x.type = "password";
+		}
+	})
+
+	// custom modal
+	$(document).on("click", '.link-modal-custom-js  ', function (e) {
+		e.preventDefault();
+		var x = this.hash;
+		document.body.classList.add("fixed2");
+		$(x).addClass("active")
+	})
+	$(document).on("click", '.toggle-menu-mobile--2js ', function (e) {
+		e.preventDefault(); 
+		document.body.classList.remove("fixed2");
+		$('.modal-custom').removeClass("active")
+	})
+	
+	
+	document.addEventListener('mouseup', (event) => {
+		let modal = event.target.closest("   .modal-custom.active");  
+		if (!modal) { 
+			document.body.classList.remove("fixed2");
+			$('.modal-custom').removeClass("active")
+		};
+	}, { passive: true });
+	// /custom modal
+
+
+
+	$(document).on("change, input" , ".form-control", function () {
+		if (this.value != '' || this.value != this.defaultValue) {
+				$(this).parents('.form-group').find(`.input-clear--js`).addClass("active")
+			}
+			else {
+			$(this).parents('.form-group').find(`.input-clear--js`).removeClass("active")
+			
+		}
+	})
+	$(document).on("click" , ".input-clear--js ", function () {
+		$(this).removeClass("active")
+			$(this).parents('.form-group').find(`.form-control`).val('')
+		
+	})
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -9,6 +9,11 @@
 		padding-bottom: rem(35);
 
 		border-bottom: 1px solid rgba(#F2F2F2, .4);
+		p {
+			color: #F2F2F2;
+
+opacity: 0.4;
+		}
 	}
 	&__body{
 		padding-top: rem(35);
@@ -147,7 +152,7 @@
 		display: inline-block;
 		cursor: pointer;
 		.icon{
-			font-size: rem(24);
+			font-size: rem(16);
 		}
 	}
 // 

@@ -31,7 +31,6 @@ function getChildren(originalSlots, slidesRef, oldSlidesRef) {
   };
 
   Object.keys(originalSlots).forEach(slotName => {
-    if (typeof originalSlots[slotName] !== 'function') return;
     const els = originalSlots[slotName]();
     getSlidesFromElements(els, slotName);
   });

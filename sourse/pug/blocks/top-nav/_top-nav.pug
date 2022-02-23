@@ -20,20 +20,26 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
+		.menu-mobile.menu-mobile--js.d-lg-none
+			.menu-mobile__inner
+				.container 
+					+mnumobile
+		+e.container.container
+			+b.searchBlock-wrap--js
+				+searchBlock()
 			+e.row.row
 				.col-auto.d-lg-none
 					+menu-toggle()
 				.col-lg-auto.col
 					+logo()
-				.col-lg.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-				.col-auto.d-none.d-sm-block
+				.col-lg.order-lg-0.order-last.d-none.d-lg-block
+					+mnu()
+				.col-lg-auto.order-lg-0.order-last
 					+top-btns()
-				.col-auto.d-sm-none 
+				.col-auto.d-lg-none 
+					+b.search-toggle--mobile.--js
+						+icon("search")
+				.col-auto.d-lg-none 
 					+e.tel(href="tel:+7(495)120-06-43")
 						+icon("tel") 
 

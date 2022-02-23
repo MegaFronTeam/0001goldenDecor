@@ -1,36 +1,122 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
+			position: relative;
 			
 		}
+		textarea{
+			min-height: 144px;
+			padding:  22px 24px;
+			margin-top: calc(-1  * var(--input-sp-top));
+			& ~ .input-clear {
+				top: calc( 4px);
+			}
+		}
 		&__input{
+			padding-right: rem(24);
 			// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
+		// display: none;
+		 
+		 &:not(textarea)::placeholder {
+			color: rgba(#05141F, .5);
+			opacity: 0 !important	;
+	}
+		 
  	}
  	&__btn{
+		 @extend .btn;
  		cursor: pointer;
+		 font-size: 18px;
+		 font-weight: 600;
+		 padding: 16px;
+		 margin-bottom: 16px;
+		 margin-top: 40px;
  	}
  	label{
  		width: 100%;
  		display: block;
  	}
+
+	 &__input-title{
+		 position: absolute;
+		 left: 0;
+		 top: calc( var(--input-sp-top) + 8px);
+		 font-size: 16px;
+		 color: #05141F; 
+		 opacity: 0.5;
+		 transform-origin: left ;
+		 pointer-events: none;
+		 @include mt;
+		 max-width: 100%;
+		}
+		textarea  + &__input-title{
+			display: none;
+		}
+		&__input{
+			
+			&:-webkit-autofill ,
+			&:focus, 
+			&:not(:placeholder-shown){
+				&:not(textarea) {
+					box-shadow:  0px 3px 0px  $primary;
+				}
+			}
+			&:-webkit-autofill ,
+			&:focus, 
+			&:not(:placeholder-shown), 
+			&.form-select  {
+				& ~ .form-wrap__input-title{
+					transform: scale(.86) translateY(calc( -1 * (var(--input-sp-top) + 12px))) translateX(0) ;
+					max-width: calc(100% );
+				}
+			}
+		}
+		&__policy{
+			color: #697279;
+			font-size: 13px;
+			a{
+				@extend .tdu;
+
+			}
+			label{
+				color: rgba(#05141F, .5);
+			}
+		}
 }
 
 
-.parsley-error{
-	border-image: none;
-	border: 2px solid  red !important;
-	color: red;
-	outline: 0 !important;
-	 
-}
-.parsley-success{
-	border: 2px solid  #00d600 !important;
+.form-control{
+	&:not(textarea){
 
+		border-left: none;
+		border-right: none;
+		border-top: none;
+	}
 }
-.parsley-errors-list{
-	color: red;
+.form-group{
+	position: relative;
+	input{
+		
+	}
+	padding-top:  var(--input-sp-top);
+	margin-bottom: 24px;
+}
+
+
+.input-btn-wrap{
+	position: relative;	
+}
+.input-btn{
+	position: absolute;
+	right: 0;
+	top: 27px;
+	cursor: pointer;
+	&.show{
+		.path-line{
+			stroke:none !important;
+		}
+	}
 }
 
 // 
@@ -70,6 +156,26 @@
 @include media-breakpoint-down(xs) {}
 
 
+.input-clear{
+	position: absolute;
+	right: 0;
+	// width: 24px;
+	// height: 24px;
+	cursor: pointer;
+	// background: #000;
+	padding-right: 2px;
+	display: none;
+	&.active{
+		display: block;
+	}
+	.icon{
+		font-size: 24px;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2px;
+	}
+	top: calc(var(--input-sp-top) + 4px);
+}
 .form-check{
 
 }

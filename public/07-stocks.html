@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="header">
 				<!-- start topLine-->
-				<div class="topLine d-none d-md-block section" id="topLine">
+				<div class="topLine d-none d-lg-block section" id="topLine">
 					<div class="container">
 						<div class="row">
 							<div class="col d-none d-lg-block">
@@ -33,7 +33,7 @@
 								<a class="topLine__tel fw-600" href="tel:+7(495)120-06-43">+7 (495) 120-06-43
 								</a>
 							</div>
-							<div class="col-auto"><a class="link-secondary small" href="#">Обратный звонок </a></div>
+							<div class="col-auto"><a class="link-secondary small link-modal-custom-js" href="#modal-call">Обратный звонок </a></div>
 							<div class="col-auto">
 								<div class="soc">
 									<a class="soc__item" href="#" target="_blank">
@@ -64,7 +64,65 @@
 				<!-- end topLine-->
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<div class="container">
+					<div class="menu-mobile menu-mobile--js d-lg-none">
+						<div class="menu-mobile__inner">
+							<div class="container"> 
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дизайнерам</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="top-nav__container container">
+						<div class="searchBlock-wrap searchBlock-wrap--js">
+							<div class="search-block">
+								<form>
+									<input type="text" placeholder="Поиск"/>
+									<button>
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>
+									</button>
+									<div class="search-block__close">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</form>
+								<div class="search-block__result d-block">
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои дизайнерские
+									</a>
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои виноловые
+									</a>
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои виноловые
+									</a>
+									<a class="search-block__result-item" href="#">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>Обои виноловые
+									</a>
+								</div>
+							</div>
+						</div>
 						<div class="top-nav__row row">
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -83,49 +141,78 @@
 </svg></a>
 								</div>
 							</div>
-							<div class="col-lg order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+							<div class="col-lg order-lg-0 order-last d-none d-lg-block">
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-auto order-lg-0 order-last">
+								<div class="top-btns-wrap">
+									<div class="container">
+										<div class="top-btns">
+											<a class="top-btns__btn d-lg-none" href="#">
+												<svg class="icon icon-home ">
+													<use xlink:href="img/svg/sprite.svg#home"></use>
+												</svg>
+												<div class="top-btns__title">Главная
+												</div>
+											</a>
+											<a class="top-btns__btn d-lg-none" href="#">
+												<svg class="icon icon-menu-small ">
+													<use xlink:href="img/svg/sprite.svg#menu-small"></use>
+												</svg>
+												<div class="top-btns__title">Каталог
+												</div>
+											</a>
+											<button class="top-btns__btn search-toggle search-toggle--js d-none d-lg-flex" type="button">
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+												<div class="top-btns__title">Поиск
+												</div>
+											</button>
+											<a class="top-btns__btn link-modal-custom-js" href="#modal-cabinet"> 
+												<svg class="icon icon-user ">
+													<use xlink:href="img/svg/sprite.svg#user"></use>
+												</svg>
+												<div class="top-btns__title">Профиль
+												</div>
+											</a>
+											<a class="top-btns__btn current" href="#"> 
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg>
+												<div class="top-btns__title">Избр
+												</div>
+											</a>
+											<button class="top-btns__btn" type="button"> 
+												<div class="top-btns__inner">
+													<svg class="icon icon-basket ">
+														<use xlink:href="img/svg/sprite.svg#basket"></use>
+													</svg>
+													<div class="top-btns__counter">4
+													</div>
+												</div>
+												<div class="top-btns__title">Корзина
+												</div>
+											</button>
 										</div>
-										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Обои</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
-										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-none d-sm-block">
-								<div class="top-btns">
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-search ">
-											<use xlink:href="img/svg/sprite.svg#search"></use>
-										</svg>
-									</button>
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-user ">
-											<use xlink:href="img/svg/sprite.svg#user"></use>
-										</svg>
-									</button>
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-like ">
-											<use xlink:href="img/svg/sprite.svg#like"></use>
-										</svg>
-									</button>
-									<button class="top-btns__btn" type="button"> 
-										<svg class="icon icon-basket ">
-											<use xlink:href="img/svg/sprite.svg#basket"></use>
-										</svg>
-										<div class="top-btns__counter">4
-										</div>
-									</button>
+							<div class="col-auto d-lg-none"> 
+								<div class="search-toggle search-toggle--mobile search-toggle--js">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
 								</div>
 							</div>
-							<div class="col-auto d-sm-none"> 
+							<div class="col-auto d-lg-none"> 
 								<a class="top-nav__tel" href="tel:+7(495)120-06-43">
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
@@ -260,8 +347,23 @@
 					</div>
 					<div class="footer__body">
 						<div class="footer__row row">
-							<div class="footer__col col-sm">
-								<div class="footer__title d-none d-sm-block">Каталог товаров
+							<div class="footer__mobile-mnu-wrap col-12 d-sm-none">
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Дизайнерам</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="footer__col col-sm d-none d-sm-block">
+								<div class="footer__title">Каталог товаров
 								</div>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Флизелиновые обои</a></li>
@@ -280,8 +382,8 @@
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
 								</ul>
 							</div>
-							<div class="footer__col-menu col-sm-auto">
-								<div class="footer__title d-none d-sm-block">О компании
+							<div class="footer__col-menu col-sm-auto d-none d-sm-block">
+								<div class="footer__title">О компании
 								</div>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
@@ -330,7 +432,7 @@
 								<div class="row g-3"><a class="col-auto" href="#"> <img src="img/svg/googleplay.svg" alt=""/></a><a class="col-auto" href="#"> <img src="img/svg/appstore.svg" alt=""/></a></div>
 							</div>
 							<div class="col-md-auto align-self-center order-last">
-								<a class="footer__btn" href="#">Обратная связь
+								<a class="footer__btn link-modal-custom-js" href="#modal-call">Обратная связь
 								</a>
 							</div>
 						</div>
@@ -346,29 +448,247 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div id="modal-call" style="display: none">
-			<div class="modal-win">
-				<div class="form-wrap">
-					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-							</div>
-							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+		<div class="modal-custom modal-custom--cabinet" id="modal-cabinet">
+			<div class="toggle-menu-mobile toggle-menu-mobile--2js on"><span></span>
+			</div>
+			<div class="modal-custom__title">Войдите или зарегистрируйтесь на&nbsp;сайте
+			</div>
+			<div class="tabs">
+				<div class="tabs__caption">
+					<div class="tabs__btn active">Вход</div>
+					<div class="tabs__btn">Регистрация</div>
+				</div>
+				<div class="tabs__wrap">
+					<div class="tabs__content">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Телефон или e-mail"/><span class="form-wrap__input-title">Телефон или e-mail</span>
+									</label>
+									<div class="input-clear input-clear--js">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="input-btn-wrap">
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="Пароль"/><span class="form-wrap__input-title">Пароль</span>
+										</label>
+										<div class="input-clear input-clear--js">
+											<svg class="icon icon-close ">
+												<use xlink:href="img/svg/sprite.svg#close"></use>
+											</svg>
+										</div>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="input-btn input-btn--password-toggle">
+										 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4L20 20" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="path-line"/>
+<path d="M16.5 16.756C15.1474 17.4846 13.6186 18 12 18C6.47715 18 2 12 2 12C2 12 4.08842 9.20123 7.17205 7.4267M19.5 14.6337C21.0559 13.2652 22 12 22 12C22 12 17.5228 6 12 6C11.6625 6 11.3289 6.02241 11 6.06448" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3229 13.4999C12.9703 13.8111 12.5072 13.9999 12 13.9999C10.8954 13.9999 10 13.1045 10 11.9999C10 11.4604 10.2136 10.9708 10.5609 10.6111" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+									</div>
+								</div>
+								<div class="text-end"><a class="tdu" href="#">Забыли пароль? </a></div>
+								<button class="form-wrap__btn btn-primary w-100" type="submit">  Войти
+								</button>
+								<div class="text-center text-secondary mb-4">или через соцсети</div>
+								<div class="soc-btns">
+									<button class="soc-btns__btn soc-btns__btn--vk" type="button"> 
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+										<div class="soc-btns__btn-text">Вконтакте
+										</div>
+									</button>
+									<button class="soc-btns__btn soc-btns__btn--fb" type="button"> 
+										<svg class="icon icon-fb-btn ">
+											<use xlink:href="img/svg/sprite.svg#fb-btn"></use>
+										</svg>
+										<div class="soc-btns__btn-text">Facebook
+										</div>
+									</button>
+									<button class="soc-btns__btn soc-btns__btn--ya" type="button"> <img src="img/svg/yandex.png" alt=""/>
+										<div class="soc-btns__btn-text">Яндекс
+										</div>
+									</button>
+								</div>
+								<div class="form-wrap__policy">Авторизуясь на&nbsp;сайте, Вы&nbsp;принимаете условия <a href="#">Пользовательского соглашения</a>,  <a href="#">Политики конфиденциальности </a> и&nbsp;подтверждаете согласие на&nbsp;передачу и&nbsp;обработку своих данных
+								</div>
+							</form>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					</div>
+					<div class="tabs__content active">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+									</label>
+									<div class="input-clear input-clear--js">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="E-mail"/><span class="form-wrap__input-title">E-mail</span>
+									</label>
+									<div class="input-clear input-clear--js">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="input-btn-wrap"> 
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="Пароль"/><span class="form-wrap__input-title">Пароль</span>
+										</label>
+										<div class="input-clear input-clear--js">
+											<svg class="icon icon-close ">
+												<use xlink:href="img/svg/sprite.svg#close"></use>
+											</svg>
+										</div>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="input-btn input-btn--password-toggle">
+										 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4L20 20" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="path-line"/>
+<path d="M16.5 16.756C15.1474 17.4846 13.6186 18 12 18C6.47715 18 2 12 2 12C2 12 4.08842 9.20123 7.17205 7.4267M19.5 14.6337C21.0559 13.2652 22 12 22 12C22 12 17.5228 6 12 6C11.6625 6 11.3289 6.02241 11 6.06448" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3229 13.4999C12.9703 13.8111 12.5072 13.9999 12 13.9999C10.8954 13.9999 10 13.1045 10 11.9999C10 11.4604 10.2136 10.9708 10.5609 10.6111" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+									</div>
+								</div>
+								<div class="input-btn-wrap"> 
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="Повторите пароль"/><span class="form-wrap__input-title">Повторите пароль</span>
+										</label>
+										<div class="input-clear input-clear--js">
+											<svg class="icon icon-close ">
+												<use xlink:href="img/svg/sprite.svg#close"></use>
+											</svg>
+										</div>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="input-btn input-btn--password-toggle">
+										 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4L20 20" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="path-line"/>
+<path d="M16.5 16.756C15.1474 17.4846 13.6186 18 12 18C6.47715 18 2 12 2 12C2 12 4.08842 9.20123 7.17205 7.4267M19.5 14.6337C21.0559 13.2652 22 12 22 12C22 12 17.5228 6 12 6C11.6625 6 11.3289 6.02241 11 6.06448" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3229 13.4999C12.9703 13.8111 12.5072 13.9999 12 13.9999C10.8954 13.9999 10 13.1045 10 11.9999C10 11.4604 10.2136 10.9708 10.5609 10.6111" stroke="#05141F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 
+									</div>
+								</div>
+								<button class="form-wrap__btn btn-primary w-100" type="submit">Зарегистрироваться
+								</button>
+								<div class="text-center text-secondary mb-4">или через соцсети</div>
+								<div class="soc-btns">
+									<button class="soc-btns__btn soc-btns__btn--vk" type="button"> 
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+										<div class="soc-btns__btn-text">Вконтакте
+										</div>
+									</button>
+									<button class="soc-btns__btn soc-btns__btn--fb" type="button"> 
+										<svg class="icon icon-fb-btn ">
+											<use xlink:href="img/svg/sprite.svg#fb-btn"></use>
+										</svg>
+										<div class="soc-btns__btn-text">Facebook
+										</div>
+									</button>
+									<button class="soc-btns__btn soc-btns__btn--ya" type="button"> <img src="img/svg/yandex.png" alt=""/>
+										<div class="soc-btns__btn-text">Яндекс
+										</div>
+									</button>
+								</div>
+								<div class="form-wrap__policy">Авторизуясь на&nbsp;сайте, Вы&nbsp;принимаете условия <a href="#">Пользовательского соглашения</a>,  <a href="#">Политики конфиденциальности </a> и&nbsp;подтверждаете согласие на&nbsp;передачу и&nbsp;обработку своих данных
+								</div>
+							</form>
 						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-							</label>
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<div class="modal-custom modal-custom--cabinet" id="modal-call">
+			<div class="toggle-menu-mobile toggle-menu-mobile--2js on"><span></span>
+			</div>
+			<div class="modal-custom__title">Заказать обратный звонок
+			</div>
+			<div class="modal-custom__sub-text">Оставьте контакты и уточните свой вопрос. Менеджер свяжется с вами 
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+						</label>
+						<div class="invalid-feedback">Поле обязательно для заполнения</div>
+						<div class="input-clear input-clear--js">
+							<svg class="icon icon-close ">
+								<use xlink:href="img/svg/sprite.svg#close"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/><span class="form-wrap__input-title">E-mail</span>
+						</label>
+						<div class="input-clear input-clear--js">
+							<svg class="icon icon-close ">
+								<use xlink:href="img/svg/sprite.svg#close"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий или вопрос (необязательно)"></textarea> 
+						<div class="input-clear input-clear--js">
+							<svg class="icon icon-close ">
+								<use xlink:href="img/svg/sprite.svg#close"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 «О персональных данных», на условиях и для целей, определенных в Политике конфиденциальности</span>
+						</label>
+					</div>
+					<button class="form-wrap__btn btn-primary w-100" type="submit">  Отправить 
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="modal-custom modal-custom--cabinet" id="modal-test-call">
+			<div class="toggle-menu-mobile toggle-menu-mobile--2js on"><span></span>
+			</div>
+			<div class="phone-block">
+				<div class="phone-block__phone">+7 ••• •••  <span class="text-primary">XX XX</span>
+				</div>
+				<div class="phone-block__text">Звонок от Golden Decor
+				</div>
+			</div>
+			<div class="modal-custom__title">Звонок-сброс
+			</div>
+			<div class="modal-custom__sub-text">Для подтверждения регистрации мы совершим бесплатный звонок-сброс с уникального номера на&nbsp;<span class="text-primary d-inline-block">+7 987 654-32-10</span>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control number-js" name="text" type="text" placeholder="Введите последние 4 цифры"/><span class="form-wrap__input-title">Введите последние 4 цифры</span>
+						</label> 
+						<div class="input-clear input-clear--js">
+							<svg class="icon icon-close ">
+								<use xlink:href="img/svg/sprite.svg#close"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn-primary w-100" type="submit">  Отправить 
+					</button>
+				</form>
+			</div>
+		</div>
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
@@ -376,5 +696,31 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+				var center = [55.672428, 37.582709];
+				var myMap1 = new ymaps.Map('map', {
+					center: center,
+					zoom: 10,
+					controls: ['zoomControl']
+				});
+				var myPlacemark1 = new ymaps.Placemark(center, {
+					// Свойства.
+					// Содержимое иконки, балуна и хинта.
+					hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
+					balloonContent: 'г. Москва, Нахимовский проспект, дом 24'
+				});
+				myMap1.geoObjects.add(myPlacemark1);
+				myMap1.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap1.behaviors.disable('drag');
+				}
+			}
+			
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

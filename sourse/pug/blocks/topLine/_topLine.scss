@@ -10,6 +10,7 @@
 		--sPB: #{rem(8)};
 		.row{
 			align-items: center;
+			--bs-gutter-x: 18px;
 		}
 		.menu{
 			@include media-breakpoint-up(xl) {

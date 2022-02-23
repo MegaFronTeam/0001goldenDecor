@@ -11,11 +11,13 @@ mixin footer()
 			+e.body
 
 				+e.row.row
-					+e.col.col-sm
-						+e.title.d-none.d-sm-block Каталог товаров
+					+e.mobile-mnu-wrap.col-12.d-sm-none
+						+mnumobile
+					+e.col.col-sm.d-none.d-sm-block
+						+e.title Каталог товаров
 						+mnu4
-					+e.col-menu.col-sm-auto
-						+e.title.d-none.d-sm-block О компании
+					+e.col-menu.col-sm-auto.d-none.d-sm-block
+						+e.title О компании
 						+mnu2
 					+e.col-contact.col-lg-auto.order-md-0.order-last
 						.mb-2: +e.tel(href="tel:+7(495)120-06-43") +7 (495) 120-06-43
@@ -36,7 +38,7 @@ mixin footer()
 							a.col-auto(href="#")  
 								img(src="img/svg/appstore.svg", alt="")
 					.col-md-auto.align-self-center.order-last
-						+e.btn(href="#") Обратная связь
+						+e.btn(href="#modal-call").link-modal-custom-js Обратная связь
 			+e.footer
 				+e.row.row
 					+e.copy.col @ 2021 Golden Decor. Все права защищены, Любое использование материалов сайта без разрешения запрещено.

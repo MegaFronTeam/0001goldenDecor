@@ -1,8 +1,9 @@
 // start .sOurStores
 .sOurStores {
-	// --sPT: ;
-	// --sPB: ;
+	--sPT: #{rem(55)};
+	--sPB: #{rem(95)};
 	--sTPB: #{rem(32)};
+	box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
 	.section-title {
 		h2 {
 			margin-bottom: 0;
@@ -10,42 +11,178 @@
 		}
 		.row {
 			--bs-gutter-x: #{rem(24)};
-			--bs-gutter-y: calc(var(--bs-gutter-x) * 0.7);
+			--bs-gutter-y: var(--bs-gutter-x);
 			align-items: flex-end;
 		}
 	}
-	.tab {
-		&__caption {
-			display: flex;
-			flex-wrap: nowrap;
-			@include roww(24px, m);
+	&__btn {
+		width: 100%;
+		padding: rem(10) rem(16);
+		@include media-breakpoint-up(xl) {
+			padding: rem(15);
 		}
-		&__btn {
-			padding-top: rem(6);
-			padding-bottom: rem(6);
-			padding-left: 0;
-			padding-right: 0;
+	}
+	&__map {
+		position: relative;
+		overflow: hidden;
+		height: rem(332);
+		height: rem(375);
+		// margin-top: rem(60);
+		@include media-breakpoint-up(md) {
+		}
+		@include media-breakpoint-up(xl) {
+			height: rem(448);
+		}
+		
+
+		&-widget {
+			height: 100%;
+			width: 100%;
+			// @include media-breakpoint-up(md) {
+			// 	width: calc(((100vw - 100%) / 2) + 100%);
+			// }
+			// & > * {
+			// 	height: 100%;
+			// }
+			// .ymaps-2-1-79-ground-pane {
+			// 	//  @include mt;
+			// 	transition: filter 0.3s;
+			// }
+			// &:not(:hover) .ymaps-2-1-79-ground-pane {
+			// 	// filter: saturate(0);
+			// 	filter: grayscale(1);
+			// }
+		}
+	}
+	table {
+		width: 100%;
+		margin-top: rem(-16);
+		margin-bottom: rem(-16);
+		tr {
 			position: relative;
-			white-space: nowrap;
+			border-top: 1px solid rgba($color: #05141f, $alpha: 0.1);
+			border-bottom: 1px solid rgba($color: #05141f, $alpha: 0.1);
+			@include media-breakpoint-down(lg) {
+				@include roww(20px);
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			&:first-child {
+				border-top: none;
+			}
+			&:last-child {
+				border-bottom: none;
+			}
 			&::before {
+				@include mt;
 				content: "";
 				position: absolute;
-				top: 0px;
-				left: 0;
+				left: -30%;
+				top: 0;
+				width: 150vw;
+				height: 100%;
+				background-color: transparent;
+				z-index: -1;
+			}
+			&:hover {
+				&::before {
+					background-color: #f8f8f8;
+				}
+				.icon {
+					color: $yellow;
+				}
+			}
+		}
+		td {
+			font-size: rem(14);
+			padding: rem(20) rem(10);
+			@include media-breakpoint-up(lg) {
+			padding: rem(24) rem(10);
+			}
+			@include media-breakpoint-up(xl) {
+				padding: rem(32) rem(16);
+			}
+			@include media-breakpoint-down(lg) {
+				width: 50%;
+			}
+			@include media-breakpoint-down(sm) {
 				width: 100%;
-				height: 3px;
-				background-color: currentColor;
-				transform-origin: left;
-				transform: scaleX(var(--show, 0));
-				@include mt;
 			}
-			&.active {
+			p {
+				margin-bottom: 3px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				span {
+					color: #9ba1a5;
+				}
+			}
+			a[href^="mailto"] {
+				&:not(:hover) {
+					color: #9ba1a5;
+				}
+			}
+			a[href^="tel"] {
 				font-weight: 600;
+				font-size: rem(18);
+				line-height: calc(24 / 18);
+				margin-bottom: rem(10);
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(3);
+				}
 			}
-			&:hover,
-			&.active {
-				--show: 1;
-				color: $primary;
+			&:first-child {
+				@include media-breakpoint-up(lg) {
+					padding-left: 0;
+					width: 30%;
+				}
+				@include media-breakpoint-down(lg) {
+					padding-bottom: 0;
+					width: 100%;
+				}
+				.sOurStores__cell {
+					display: flex;
+					align-items: center;
+					h5 {
+						font-weight: 600;
+						margin-bottom: 0;
+						text-decoration: underline;
+						line-height: calc(24 / 18);
+					}
+					.icon {
+						@include mt;
+						font-size: rem(30);
+						margin-right: rem(16);
+						min-width: rem(30);
+					}
+				}
+			}
+			&:nth-child(2) {
+				@include media-breakpoint-down(lg) {
+					padding-bottom: 0;
+				}
+				.sOurStores__cell {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+			&:nth-child(3) {
+				.sOurStores__cell {
+					display: inline-flex;
+					flex-direction: column;
+				}
+				@include media-breakpoint-down(lg) {
+					padding-bottom: 0;
+				}
+			}
+			&:last-child {
+				margin-left: auto;
+				width: 100%;
+				@include media-breakpoint-up(lg) {
+					width: 17%;
+					padding-right: 0;
+				}
 			}
 		}
 	}

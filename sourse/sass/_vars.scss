@@ -68,7 +68,7 @@ $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
-$red: #dc3545 !default;
+$red: #F82B2B;
 $orange: #fd7e14 !default;
 $yellow: #E8A200;
 $green: #198754 !default;
@@ -635,8 +635,8 @@ $form-label-color: null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: 8px !default;
+$input-padding-x: 0 !default;
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-base !default;
@@ -689,9 +689,9 @@ $form-color-width: 3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width: 1em !default;
+$form-check-input-width: 1.6em !default;
 $form-check-min-height: $font-size-base * $line-height-base !default;
-$form-check-padding-start: $form-check-input-width+.5em !default;
+$form-check-padding-start: $form-check-input-width+1.2em !default;
 $form-check-margin-bottom: .125rem !default;
 $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
@@ -709,7 +709,7 @@ $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $form-check-input-checked-color: $component-active-color !default;
 $form-check-input-checked-bg-color: $component-active-bg !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.31479 8.85849L0.132955 5.44128C-0.0443184 5.25327 -0.0443184 4.94725 0.132955 4.75723L0.775686 4.07419C0.95296 3.88618 1.24114 3.88618 1.41842 4.07419L3.63661 6.46634L8.58118 1.14101C8.75846 0.952997 9.04664 0.952997 9.22391 1.14101L9.86664 1.82505C10.0439 2.01306 10.0439 2.32008 9.86664 2.50709L3.95752 8.85849C3.78025 9.0465 3.49206 9.0465 3.31479 8.85849Z' fill='white'/%3E%3C/svg%3E%0A");
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color: $component-active-color !default;

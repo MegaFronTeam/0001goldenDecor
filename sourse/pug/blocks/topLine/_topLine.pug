@@ -1,6 +1,6 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.d-none.d-md-block#topLine.section&attributes(attributes)
+	+b.topLine.d-none.d-lg-block#topLine.section&attributes(attributes)
 		.container
 			.row
 				.col.d-none.d-lg-block
@@ -8,7 +8,7 @@ mixin topLine()
 				.col-auto
 					+e.tel(href="tel:+7(495)120-06-43").fw-600 +7 (495) 120-06-43
 				.col-auto
-					a.link-secondary.small(href="#") Обратный звонок 
+					a.link-secondary.small(href="#modal-call").link-modal-custom-js Обратный звонок 
 				.col-auto
 					+soc()
 	// end topLine
