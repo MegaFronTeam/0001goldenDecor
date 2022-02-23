@@ -11,15 +11,17 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/footer/_footer.pug
 //- include ../blocks/sCategeries/_sCategeries.pug
+//- include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sCart/_sCart.pug
+include ../blocks/sBasketList/_sBasketList.pug
 include ../blocks/sCatalog/_sCatalog.pug
-include ../blocks/sBlog/_sBlog.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '09-article.jpg'
+	- let  bg= '05-cart.jpg'
 
 block title
-	- let  title= inner.head.titleArticle
+	- let  title= inner.head.titleCart
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -31,12 +33,12 @@ block pagecontent
 	//- +headerBlock
 	+page-head({
 		title,
-		date: '15 января 2022 г.',
-		back: "В журнал"
-	}).--article
+		back: "В карточку товара",
+		cart: true
+	})
 		+breadcrumb('Главная', 'Журнал')
-	+sContent()
-	
+	+sCart('addMore')
+		+sBasketList()
 	+footer()
       
 
