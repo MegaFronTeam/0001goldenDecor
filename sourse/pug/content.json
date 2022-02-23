@@ -211,7 +211,8 @@
 			"titleAboutCompany": "О компании",
 			"titleStocks": "Акции",
 			"titleJournal": "Статьи об обоях",
-			"titleContacts": "Контакты"
+			"titleContacts": "Контакты",
+			"titleCart": "Корзина"
 		}
 	},
 	"sAboutBlock": {

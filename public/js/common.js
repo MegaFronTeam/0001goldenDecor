@@ -246,7 +246,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tab');
+	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -367,6 +367,26 @@ function eventHandler() {
 		},
 	});
 
+	const sContentSlider = new Swiper('.sContent__slider--js', {  
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 40,
+		breakpoints: {
+			640: {
+				slidesPerView: 2
+			},
+			1024: {
+				slidesPerView: 3
+			},
+		},
+	});
+
+	const pageHeadSlider = new Swiper('.page-head__slider--js', {  
+		slidesPerView: "auto",
+		freeMode: true,
+		spaceBetween: 0
+	});
+
 	$(".footer__link-more").click(function () {
 		$(".hidden-block").slideDown();
 		$(".footer__link-more").hide();
@@ -375,6 +395,28 @@ function eventHandler() {
 	// $('.header').hcSticky({
   //   // stickTo: $('#content')
   // });
+
+	const convertImages = (query, callback) => {
+		const images = document.querySelectorAll(query);
+
+		images.forEach(image => {
+			fetch(image.src)
+				.then(res => res.text())
+				.then(data => {
+					const parser = new DOMParser();
+					const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+					if (image.id) svg.id = image.id;
+					if (image.className) svg.classList = image.classList;
+
+					image.parentNode.replaceChild(svg, image);
+				})
+				.then(callback)
+				.catch(error => console.error(error))
+		});
+	};
+
+	convertImages('.img-svg');
 
 };
 if (document.readyState !== 'loading') {

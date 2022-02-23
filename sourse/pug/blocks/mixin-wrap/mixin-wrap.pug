@@ -73,9 +73,9 @@ mixin page-head(data)
 		.container
 			block
 			if data.back
-				+e.back(href="#")
+				+e.back(href="#")!= data.back
 					+icon('chevron-left')
-					| В каталог
+					//- | В каталог
 			+e.wrap
 				if data.date
 					p!= data.date
@@ -87,3 +87,15 @@ mixin page-head(data)
 						+b.top-btns
 							+e.btn
 								+icon("like")
+			if data.cart
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin page-head-item(num, text)
+							+e.slide.swiper-slide
+								+e.item&attributes(attributes)
+									span!= num
+									p!= text
+						+page-head-item("01", "Список товаров").active
+						+page-head-item("02", "Личные данные")
+						+page-head-item("03", "Способ доставки")
+						+page-head-item("04", "Способ оплаты")

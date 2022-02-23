@@ -13,7 +13,9 @@ mixin sContent()
 				+e.wrap
 					h2= sArticle.title
 					.row
-						each item in sArticle.items
-							.col-sm-6.col-lg-4
-								+blog-item-2(item.i,item.t,item.p, item.text)
+						+e.slider--js.swiper
+							.swiper-wrapper
+								each item in sBlog.items
+									+e.slide.swiper-slide
+										+blog-item-2(item.i,item.t,item.p, item.text)
 	// end sContent
