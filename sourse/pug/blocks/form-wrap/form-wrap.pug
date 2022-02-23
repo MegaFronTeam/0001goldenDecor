@@ -25,11 +25,12 @@ mixin input(placeholder,  t='text', label= placeholder, name= t)
 		if label
 			label
 				+t(t,placeholder, name)&attributes(attributes)
-				+e.SPAN.input-title= label
-				block
+				+e.SPAN.input-title= label 
 		else
 			+t(t,placeholder, name)&attributes(attributes)
 		block
+		+b.input-clear--js
+			+icon("close")
 	// +e.input-wrap
 
 //- wrapper for form
@@ -65,6 +66,7 @@ mixin add-file(n)
 
 
 mixin policy()
+	+e.policy Авторизуясь на&nbsp;сайте, Вы&nbsp;принимаете условия #[a(href="#") Пользовательского соглашения],  #[a(href="#") Политики конфиденциальности ] и&nbsp;подтверждаете согласие на&nbsp;передачу и&nbsp;обработку своих данных
+mixin policy2()
 	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+		+in-c('checkbox','Я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 «О персональных данных», на условиях и для целей, определенных в Политике конфиденциальности')(checked)

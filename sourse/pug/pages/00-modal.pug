@@ -14,11 +14,19 @@ block title
 	title= title
 block pagecontent
 	//- +topLine()
-	script(load="part/head.html")
+	 
 	.section.container
+		h1 Страница для  демонстрации модальных окон
 		.row
 			mixin btn(id, name)
 				.col-auto.mb-2
 					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
 			+btn("modal-call", "modal-call")
+
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#modal-call").link-modal-custom-js Обратный звонок 
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#modal-cabinet").link-modal-custom-js  Логин
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#modal-test-call").link-modal-custom-js  Звонок-сброс
 

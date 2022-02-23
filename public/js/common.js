@@ -110,7 +110,10 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
+		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		let InputNumber = [].slice.call(document.querySelectorAll('.number-js'));
+		InputNumber.forEach(element => element.setAttribute("pattern", "[+][0-9]{4}"));
+		Inputmask({"mask":"9999", showMaskOnHover: false}).mask(InputNumber);
 	}, 
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -180,7 +183,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
@@ -323,6 +326,58 @@ function eventHandler() {
 	}, { passive: true });
 
 
+
+	$(document).on("click", '.input-btn--password-toggle ', function () {
+		var x = this.parentElement.querySelector(".form-control");
+		if (x.type === "password") {
+			this.classList.add("show")
+			x.type = "text";
+		} else {
+			this.classList.remove("show")
+			x.type = "password";
+		}
+	})
+
+	// custom modal
+	$(document).on("click", '.link-modal-custom-js  ', function (e) {
+		e.preventDefault();
+		var x = this.hash;
+		document.body.classList.add("fixed2");
+		$(x).addClass("active")
+	})
+	$(document).on("click", '.toggle-menu-mobile--2js ', function (e) {
+		e.preventDefault(); 
+		document.body.classList.remove("fixed2");
+		$('.modal-custom').removeClass("active")
+	})
+	
+	
+	document.addEventListener('mouseup', (event) => {
+		let modal = event.target.closest("   .modal-custom.active");  
+		if (!modal) { 
+			document.body.classList.remove("fixed2");
+			$('.modal-custom').removeClass("active")
+		};
+	}, { passive: true });
+	// /custom modal
+
+
+
+	$(document).on("change, input" , ".form-control", function () {
+		if (this.value != '' || this.value != this.defaultValue) {
+				$(this).parents('.form-group').find(`.input-clear--js`).addClass("active")
+			}
+			else {
+			$(this).parents('.form-group').find(`.input-clear--js`).removeClass("active")
+			
+		}
+	})
+	$(document).on("click" , ".input-clear--js ", function () {
+		$(this).removeClass("active")
+			$(this).parents('.form-group').find(`.form-control`).val('')
+		
+	})
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
