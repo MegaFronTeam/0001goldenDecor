@@ -269,17 +269,25 @@ function eventHandler() {
 	});
 	const sCatalogSlider = new Swiper('.sCatalog__slider--js, .sBlog__slider--js', {  
 		slidesPerView: 'auto',
-		watchOverflow: true,
+		watchOverflow: true, 
+		// resistance: false, 
+		// shortSwipes: false, 
+		// allowTouchMove: false, 
+		// touchMoveStopPropagation: true, 
+		// virtualTranslate: true, 
+		// touchStartPreventDefault: false, 
+		// slideToClickedSlide: true, 
+		// uniqueNavElements: false, 
 		spaceBetween: 24,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		breakpoints: { 
-			768: {
-				spaceBetween: 40
-			}
-		}
+		// breakpoints: { 
+		// 	768: {
+		// 		spaceBetween: 40
+		// 	}
+		// }
 	});
 
 	const menuSlider = new Swiper('.menu-slider--js', {  

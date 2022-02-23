@@ -38,21 +38,24 @@
 
 
 .addBlock{
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
+	background: #F8F8F8;
+	width: 142px;
+	color: var(--color, #{$primary}); 
 	display: flex;
 	position: relative;
 	overflow: hidden;
 	input{
+		background: #F8F8F8;
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: rem(48);
+		// flex: 0 0 1%;
+		width: calc(142px - 62px);
 	}
 	&__btn{
 		color: inherit;
-		height: rem(45);
+		height: rem(48);
 		position: relative;
 		border-radius: 23px;
 		background: none !important;
@@ -62,11 +65,11 @@
 		background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		width: 31px;
 		&::before,
 		&::after{
 			content: '';
-			width: 10px;
+			width: 14px;
 			height: 2px; 
 			background-color: currentColor;
 			@include a-cent;

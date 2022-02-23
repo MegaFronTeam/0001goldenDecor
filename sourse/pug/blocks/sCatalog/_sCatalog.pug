@@ -1,4 +1,4 @@
-mixin  catalog-item(i,t,p,pr)
+mixin  catalog-item(i,t,p,pr,addblock)
 	+b.catalog-item
 		+e.btn--like(type="button")
 			+icon("like")
@@ -7,11 +7,15 @@ mixin  catalog-item(i,t,p,pr)
 		+e.title: a(href="#")= t
 		p= p
 		+e.footer
+		
 			.row
 				.col
 					+e.price= pr
-				.col-auto
-					+e.btn--add(type="button")
+				.col-auto.swiper-no-swiping
+					if addblock
+						+addblock()
+					else
+						+e.btn--add(type="button")
 mixin sCatalog(t, a, showMore)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
@@ -37,7 +41,7 @@ mixin sCatalog(t, a, showMore)
 					.swiper-wrapper
 						each item in catalog.items.new
 							+e.slide.swiper-slide
-								+catalog-item(item.i,item.t,item.p,item.pr)
+								+catalog-item(item.i,item.t,item.p,item.pr, item.addblock)
 					.d-none.d-md-block
 						+arrow
 	// end sCatalog
