@@ -12,7 +12,24 @@ mixin sOurStores(data)
 									.tabs__btn.active Списком
 									.tabs__btn На карте
 				.tabs__content.active
-					p ТАБЛИЦА Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur vitae magnam corrupti ipsa aut possimus consequuntur quidem qui. Doloribus quam eum placeat vel obcaecati, ab in cupiditate! Ad, fugit!
+					table
+						- for (var x = 0; x < 4; x++)
+							tr
+								td
+									+e.cell
+										+icon('map-pin')
+										h5 Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор
+								td
+									+e.cell
+										p г. Москва, Нахимовский проспект, дом&nbsp;24
+										p #[span Режим работы:] 09:00&nbsp;&mdash; 21:00
+								td
+									+e.cell
+										a(href='tel:+74959876543') +7 (495) 987-65-43
+										a(href='mailto:info@goldendecor.ru') info@goldendecor.ru
+								td
+									+e.btn.btn.btn-primary(href="#") Подробнее
+					
 				.tabs__content
 					p КАРТА Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur vitae magnam corrupti ipsa aut possimus consequuntur quidem qui. Doloribus quam eum placeat vel obcaecati, ab in cupiditate! Ad, fugit!
 

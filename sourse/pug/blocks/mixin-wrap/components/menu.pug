@@ -38,9 +38,3 @@ mixin mnu5()
 			each link in categories3
 				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
 //- menu
-
-mixin mnu6()
-	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each link in sOurStores
-			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
-//- menu
