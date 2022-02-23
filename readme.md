@@ -7,3 +7,4 @@
 7. <https://megafronteam.github.io/0001goldenDecor/public/08-journal.html>
 8. <https://megafronteam.github.io/0001goldenDecor/public/09-article.html>
 9. <https://megafronteam.github.io/0001goldenDecor/public/10-contacts.html>
+9. <https://megafronteam.github.io/0001goldenDecor/public/11-vacancies.html>
