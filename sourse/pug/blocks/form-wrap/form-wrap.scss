@@ -7,6 +7,11 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 &::placeholder {
+			color: #6c757d;
+			opacity: 0;
+	}
+		 
  	}
  	&__btn{
  		cursor: pointer;
@@ -15,7 +20,32 @@
  		width: 100%;
  		display: block;
  	}
+
+	 &__input-title{
+		 position: absolute;
+		 left: 0;
+		 bottom: 8px;
+		 font-size: 16px;
+		 color: #05141F; 
+		 opacity: 0.5;
+		 transform-origin: left ;
+		 pointer-events: none;
+		 @include mt;
+		}
+		&__input:-webkit-autofill ~&__input-title,
+		&__input:focus~&__input-title, &__input:not(:placeholder-shown)~&__input-title, &__input.form-select~&__input-title
+		// &__input:focus  + &__input-title,
+		// &__input:not(:placeholder-shown)  + &__input-title
+		{
+			transform: scale(.86) translateY(-32px) ;
+		}
 }
+
+.form-group{
+	position: relative;
+	margin-bottom: 44px;
+}
+
 
 
 .parsley-error{
