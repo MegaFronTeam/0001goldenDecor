@@ -61,15 +61,6 @@
 		{"name":"Свет"},
 		{"name":"Текстиль"}
 	],
-	"sOurStores": [
-		{
-			"name": "Списком",
-			"active": "true"
-		},
-		{
-			"name": "На карте"
-		}
-	],
 	"social": [
 		"instagram",
 		"viber",
@@ -229,7 +220,8 @@
 			"titleCatalog": "Виниловые обои",
 			"titleAboutCompany": "О компании",
 			"titleStocks": "Акции",
-			"titleJournal": "Статьи об обоях"
+			"titleJournal": "Статьи об обоях",
+			"titleContacts": "Контакты"
 		}
 	},
 	"sAboutBlock": {
