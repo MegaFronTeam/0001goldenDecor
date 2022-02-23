@@ -14,6 +14,11 @@
 			align-items: flex-end;
 		}
 	}
+	&__cell {
+		.icon {
+			font-size: rem(30);
+		}
+	}
 	.tab {
 		&__caption {
 			display: flex;
