@@ -146,3 +146,32 @@ a {
 }
 
 
+
+
+.modal-custom{
+	background: #FFFFFF;
+	width: 496px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1200;
+	padding: 56px;
+	&__title{
+		@include rfs(40px);
+		line-height: calc(48 / 40);
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+	.toggle-menu-mobile{
+		right: 16px;
+		top: 16px;
+		position: absolute;
+	}
+}
+
+.form-control{
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}

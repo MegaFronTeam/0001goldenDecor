@@ -14,46 +14,7 @@
 			align-items: flex-end;
 		}
 	}
-	&__cell {
-		.icon {
-			font-size: rem(30);
-		}
-	}
-	.tab {
-		&__caption {
-			display: flex;
-			flex-wrap: nowrap;
-			@include roww(24px, m);
-		}
-		&__btn {
-			padding-top: rem(6);
-			padding-bottom: rem(6);
-			padding-left: 0;
-			padding-right: 0;
-			position: relative;
-			white-space: nowrap;
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0px;
-				left: 0;
-				width: 100%;
-				height: 3px;
-				background-color: currentColor;
-				transform-origin: left;
-				transform: scaleX(var(--show, 0));
-				@include mt;
-			}
-			&.active {
-				font-weight: 600;
-			}
-			&:hover,
-			&.active {
-				--show: 1;
-				color: $primary;
-			}
-		}
-	}
+	
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
