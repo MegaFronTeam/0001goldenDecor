@@ -4,6 +4,6 @@
 4. <https://megafronteam.github.io/0001goldenDecor/public/04-card-product.html>
 5. <https://megafronteam.github.io/0001goldenDecor/public/06-about-company.html>
 6. <https://megafronteam.github.io/0001goldenDecor/public/07-stocks.html>
-6. <https://megafronteam.github.io/0001goldenDecor/public/07-contacts.html>
 7. <https://megafronteam.github.io/0001goldenDecor/public/08-journal.html>
 8. <https://megafronteam.github.io/0001goldenDecor/public/09-article.html>
+9. <https://megafronteam.github.io/0001goldenDecor/public/10-contacts.html>
