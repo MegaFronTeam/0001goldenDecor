@@ -22,7 +22,7 @@ mixin sCatalog(t, a, showMore)
 					.row
 						.h2.col-auto
 							a.text-secondary.active(href="#")= t 
-						.h2.col
+						+e.title.h2.col
 							a.text-secondary(href="#")= a 
 						if showMore
 							.col-auto.order-md-last
@@ -41,3 +41,31 @@ mixin sCatalog(t, a, showMore)
 					.d-none.d-md-block
 						+arrow
 	// end sCatalog
+
+mixin sCatalog2(t, a, showMore)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		if a
+			+b.section-title
+				
+				.row
+					.h2.col-auto
+						a.text-secondary.active(href="#")= t 
+					+e.title.h2.col
+						a.text-secondary(href="#")= a 
+					if showMore
+						.col-auto.order-md-last
+							+b.link-more(href="#")
+								.d-none.d-sm-inline Смотреть все
+								+icon("chevron-right")
+						.col-12
+						.col
+							+e.menu-wrap
+								+mnu3
+			+e.slider--js.swiper
+				.swiper-wrapper
+					each item in cart.items.new
+						+e.slide.swiper-slide
+							+catalog-item(item.i,item.t,item.p,item.pr)
+				.d-none.d-md-block
+					+arrow

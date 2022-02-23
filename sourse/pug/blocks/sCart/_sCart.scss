@@ -3,13 +3,31 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: ;
+	padding-bottom: rem(32);
+	@include media-breakpoint-up(xl) {
+		padding-bottom: 0;
+	}
 	.row {
 		--bs-gutter-x: 0;
 	}
 	&__col-order {
+		order: 3;
 		@include media-breakpoint-up(xl) {
+			order: unset;
 			max-width: rem(400);
 			border-right: 1px solid rgba(0, 0, 0, 0.1);
+		}
+	}
+	&__col-basket {
+		order: 1;
+		@include media-breakpoint-up(xl) {
+			order: unset;
+		}
+	}
+	&__col-add-more {
+		order: 2;
+		@include media-breakpoint-up(xl) {
+			order: unset;
 		}
 	}
 	&__wrap {
@@ -122,6 +140,35 @@
 			font-size: rem(16);
 			line-height: 1.50em;
 			flex-grow: 1;
+		}
+	}
+	.sCatalog {
+		padding-top: rem(32);
+		padding-bottom: rem(60);
+		position: relative;
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(96);
+			padding-bottom: rem(138);
+		}
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 200em;
+			height: 1px;
+			left: -50em;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		.section-title {
+			&__title {
+				display: none;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

@@ -19,13 +19,11 @@ mixin sBasketList(data)
 				td
 					span 8 600 ₽
 				td
-					+e.control
-						+icon('favorite')
-						+icon('delete')
-		+e.basket-list
+					+icon('favorite')
+					+icon('delete')
 			table
 				td
-					+pic('basket-img-1.jpg', "bg", 0)
+					+pic('basket-img-2.jpg', "bg", 0)
 				td 
 					p 1838 Wallcoverings Willow Stone Blue Silver
 					p Артикул R458702556DF
@@ -36,14 +34,12 @@ mixin sBasketList(data)
 					span /руб
 				td
 					span 2 400 ₽
-				td
-					+e.control
-						+icon('favorite')
-						+icon('delete')
-		+e.basket-list
+				td.active
+					+icon('favorite')
+					+icon('delete')
 			table
 				td
-					+pic('basket-img-1.jpg', "bg", 0)
+					+pic('basket-img-3.jpg', "bg", 0)
 				td 
 					p 1838 Wallcoverings Willow Stone Blue Silver
 					p Артикул R458702556DF
@@ -55,7 +51,9 @@ mixin sBasketList(data)
 				td
 					span 2 690 ₽
 				td
-					+e.control
-						+icon('favorite')
-						+icon('delete')
+					+icon('favorite')
+					+icon('delete')
+		+form-wrap()
+			+input('Промокод', 'text', 'Промокод')
+			+e.BUTTON.btn.btn-primary(type="submit"  ) Применить
 	// end sBasketList

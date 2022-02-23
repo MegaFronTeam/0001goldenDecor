@@ -1,4 +1,4 @@
-mixin sCart(data)
+mixin sCart(addMore)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
@@ -33,6 +33,9 @@ mixin sCart(data)
 							img(src="img/svg/extra-2.svg", alt="").img-svg
 							p Закажите поклейку обоев от 250 ₽ / м2
 							+icon('chevron-right')
-				.col-xl
+				+e.col-basket.col-xl
 					block
+				if addMore
+					+e.col-add-more.col-12 
+						+sCatalog2('Добавьте к заказу', '1')
 	// end sCart
