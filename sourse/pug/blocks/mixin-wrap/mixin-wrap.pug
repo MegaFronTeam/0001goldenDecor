@@ -95,8 +95,8 @@ mixin page-head(data)
 								+e.item&attributes(attributes)
 									span!= num
 									p!= text
-						+page-head-item("01", "Список товаров").active
-						+page-head-item("02", "Личные данные")
+						+page-head-item("01", "Список товаров").done
+						+page-head-item("02", "Личные данные").active
 						+page-head-item("03", "Способ доставки")
 						+page-head-item("04", "Способ оплаты")
 
@@ -113,3 +113,20 @@ mixin searchBlock()
 				+e.result-item(href="#")
 					+icon("search")
 					= item
+
+mixin checkout(btn, back, proceed)
+	+b.checkout
+		.container
+			+e.wrap
+				if proceed
+					+e.BUTTON.proceed.btn.btn-outline-secondary!= proceed
+				if back
+					+e.BUTTON.back.btn!= back
+				+e.BUTTON.btn.btn.btn-primary!= btn
+
+mixin deliveryOption()
+	+b.deliveryOption
+		+e.content
+			+in-c("radio", 'Доставка по Москве')(checked)
+			+in-c("radio", 'Самовывоз')
+			+in-c("radio", 'Доставка по России')

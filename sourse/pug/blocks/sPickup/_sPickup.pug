@@ -1,0 +1,22 @@
+mixin sPickup(data)
+	// start sPickup
+	+b.SECTION.sPickup.section#sPickup&attributes(attributes)
+		h4 Способ доставки
+		+deliveryOption()
+		.tabs
+				+b.section-title
+					.row
+						.col
+							p Выберите магазин:
+						.col-auto
+								.tabs__caption
+									.tabs__btn.active Списком
+									.tabs__btn На карте
+				.tabs__content.active
+					
+				.tabs__content
+					+e.map
+						+e.map-widget#map
+					+form-wrap()
+						+input('Ваш комментарий к заказу', 'textarea')
+	// end sPickup

@@ -1,0 +1,55 @@
+// start .sDeliveryMethod
+.sDeliveryMethod {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	padding-top: rem(16);
+	// padding-bottom: rem(32);
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(30);
+		padding-left: rem(41);
+		// padding-bottom: rem(56);
+	}
+	h4 {
+		@include rfs(20px);
+		font-weight: 600;
+		margin-bottom: rem(32);
+	}
+	.form-wrap {
+		position: relative;
+		&__input-wrap {
+			&:first-child {
+				margin-bottom: rem(48);
+			}
+		}
+		textarea {
+			min-height: rem(120);
+		}
+		button {
+			@include mt;
+			position: absolute;
+			right: 0;
+			bottom: 8px;
+			background-color: transparent;
+			border: none;
+			.icon {
+				font-size: rem(24);
+				margin-right: rem(4);
+			}
+			span {
+				vertical-align: middle;
+				font-size: rem(14);
+			}
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDeliveryMethod

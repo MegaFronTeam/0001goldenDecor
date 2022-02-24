@@ -217,3 +217,105 @@
 		}
 	}
 }
+
+.checkout {
+	position: relative;
+	padding: rem(30) 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	@include media-breakpoint-up(md) {
+		padding: rem(8) 0;
+	}
+	&__wrap {
+		display: flex;
+	}
+	button {
+		font-weight: 600;
+		font-size: rem(18);
+		padding: rem(16);
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			max-width: rem(260);
+		}
+	}
+	&__proceed, &__back {
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+	&__proceed {
+		color: $body-color;
+		border-color: $body-color;
+		margin-right: auto;
+		&:hover {
+			background-color: $yellow;
+			border-color: $yellow;
+		}
+	}
+	&__back {
+		width: auto;
+		max-width: none;
+		margin-left: auto;
+		&:hover {
+			color: $yellow;
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include media-breakpoint-up(md) {
+			position: static;
+		}
+	}
+}
+
+.deliveryOption {
+	margin-bottom: rem(32);
+	overflow-x: auto;
+	padding-top: 1px;
+	&__content {
+		display: flex;
+		// justify-content: space-between;
+		min-width: rem(841);
+		@include media-breakpoint-up(lg) {
+			min-width: auto;
+		}
+	}
+	.custom-input {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: rem(16);
+		margin-bottom: 0;
+		text-align: center;
+		cursor: pointer;
+		&__input {
+			cursor: pointer;
+			position: absolute;
+			border-radius: 0;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			margin-left: 0;
+			border: 2px solid transparent;
+			background-color: #F8F8F8;
+			&:checked {
+				background-image: none;
+				background-color: transparent;
+				border-color: #05141F;
+				border-radius: 0;
+				width: 100%;
+				height: 100%;
+				& + span {
+					font-weight: 500;
+				}
+			}
+		}
+		&__text {
+			position: relative;
+			z-index: 2;
+		}
+	}
+}
