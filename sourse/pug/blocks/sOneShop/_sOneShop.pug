@@ -1,0 +1,49 @@
+mixin sOneShop(data)
+	// start sOneShop
+	+b.sOneShop.section#sOneShop&attributes(attributes)
+		.container
+			+e.row-main.row
+				.col-lg-6
+					+page-head({
+						title,
+						back: "В контакты"
+					})
+						+breadcrumb('Главная', 'Контакты', 'Golden Decor в ТК Каширский Двор')
+					+e.slider-wrapper
+						+e.slider--js.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 4; x++)
+									+e.slide.swiper-slide
+										+e.img-wrap(data-fancybox='sAbout' data-src=`img/@2x/sOneShop-1.png`)
+											+pic('sOneShop-1.png','bg')
+							.d-none.d-sm-block
+								+arrow
+						.swiper-pagination
+						+e.btn(href="#") Заказать звонок
+					+e.info
+						+e.info-item
+							h5 Адрес шоурума
+							p Москва, Каширское шоссе, дом&nbsp;19, корпус 1. Строительный гипермаркет Каширский Двор. Магазин 2-С94 расположен на&nbsp;2&nbsp;этаже торгового комплекса.
+						+e.info-item
+							.row
+								.col-auto.col-sm-6
+									h5 Телефон
+									+e.tel(href="tel:+7495987-65-43") +7 (495) 987-65-43
+									.text-secondary Многоканальный
+								.col-auto
+									h5 Режим работы
+									div
+										span.text-secondary Пн-Пт 
+										| с&nbsp;10:00 до&nbsp;19:00
+									div
+										span.text-secondary Сб-Вс 
+										| с&nbsp;10:00 до&nbsp;18:00
+						+e.info-item
+							h5 E-mail
+							+e.mail(href="mailto:kashirka@golden-decor.ru") kashirka@golden-decor.ru
+
+
+				.col-lg-6
+					+e.map
+						+e.map-widget#map
+	// end sOneShop

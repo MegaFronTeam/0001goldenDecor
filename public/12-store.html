@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Корзина</title>
+		<title>Магазин Golden Decor в ТК Каширский Двор</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -13,7 +13,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="05-cart.jpg">
+	<body class="main-page" data-bg="12-store.jpg">
 		<div class="main-wrapper">
 			<div class="header">
 				<!-- start topLine-->
@@ -224,454 +224,74 @@
 				</div>
 				<!-- end top-nav-->
 			</div>
-			<div class="page-head">
+			<!-- start sOneShop-->
+			<div class="sOneShop section" id="sOneShop">
 				<div class="container">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Журнал</span>
-									<meta itemprop="position" content="2"/></a></li>
-						</ol>
-					</nav>
-					<a class="page-head__back" href="#">В карточку товара
-						<svg class="icon icon-chevron-left ">
-							<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-						</svg>
-					</a>
-					<div class="page-head__wrap">
-						<h1>Корзина</h1>
-					</div>
-					<div class="page-head__slider page-head__slider--js swiper">
-						<div class="swiper-wrapper">
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item active"><span>01</span>
-										<p>Список товаров</p>
+					<div class="sOneShop__row-main row">
+						<div class="col-lg-6">
+							<div class="page-head">
+								<div class="container">
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+											<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+													<meta itemprop="position" content="1"/></a></li>
+											<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
+													<meta itemprop="position" content="2"/></a></li>
+											<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Golden Decor в ТК Каширский Двор</span>
+													<meta itemprop="position" content="3"/></a></li>
+										</ol>
+									</nav>
+									<a class="page-head__back" href="#">В контакты
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</a>
+									<div class="page-head__wrap">
+										<h1>Магазин Golden Decor в ТК Каширский Двор</h1>
 									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>02</span>
-										<p>Личные данные</p>
-									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>03</span>
-										<p>Способ доставки</p>
-									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>04</span>
-										<p>Способ оплаты</p>
-									</div>
-								</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- start sCart-->
-			<section class="sCart section" id="sCart">
-				<div class="container">
-					<div class="row">
-						<div class="sCart__col-order col-xl">
-							<div class="sCart__wrap">
-								<div class="sCart__order-info">
-									<table>
-										<thead>
-											<th colspan="2">
-												<h2>Ваш заказ</h2>
-											</th>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Товары (4 шт)</td>
-												<td>9 390 ₽</td>
-											</tr>
-											<tr>
-												<td>Доставка</td>
-												<td>0 ₽</td>
-											</tr>
-											<tr>
-												<td colspan="2">Укажите адрес, чтобы узнать стоимость доставки</td>
-											</tr>
-										</tbody>
-										<tfoot>
-											<tr>
-												<td colspan="2">
-													<h5>Итого:</h5>
-												</td>
-											</tr>
-											<tr>
-												<td>Сумма заказа</td>
-												<td>9 390 ₽</td>
-											</tr>
-										</tfoot>
-									</table>
-								</div>
-								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-1.svg" alt=""/>
-									<p>Бесплатная доставка при заказе от 15 000 ₽</p>
-								</a>
-								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-2.svg" alt=""/>
-									<p>Закажите поклейку обоев от 250 ₽ / м2</p>
-									<svg class="icon icon-chevron-right ">
-										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-						<div class="sCart__col-basket col-xl">
-							<!-- start sBasketList-->
-							<div class="sBasketList">
-								<div class="sBasketList__head">
-									<h5>Список товаров</h5><a href="#">Очистить </a>
-								</div>
-								<div class="sBasketList__basket-list">
-									<table>
-										<td>
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/basket-img-1.webp"/><img class="object-fit-js" src="img/@2x/basket-img-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</td>
-										<td> 
-											<p>1838 Wallcoverings Willow Stone Blue Silver</p>
-											<p>Артикул R458702556DF</p>
-											<p>Флезелиновые обои </p>
-										</td>
-										<td class="text-center">
-											<div class="addBlock">
-												<button class="addBlock__btn addBlock__btn--minus" type="button">
-												</button>
-												<input type="text" value="1"/>
-												<button class="addBlock__btn addBlock__btn--plus" type="button">
-												</button>
-											</div><span>4 400 ₽ </span><span>/руб</span>
-										</td>
-										<td><span>8 600 ₽</span></td>
-										<td>
-											<svg class="icon icon-favorite ">
-												<use xlink:href="img/svg/sprite.svg#favorite"></use>
-											</svg>
-											<svg class="icon icon-delete ">
-												<use xlink:href="img/svg/sprite.svg#delete"></use>
-											</svg>
-										</td>
-									</table>
-									<table>
-										<td>
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/basket-img-2.webp"/><img class="object-fit-js" src="img/@2x/basket-img-2.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</td>
-										<td> 
-											<p>1838 Wallcoverings Willow Stone Blue Silver</p>
-											<p>Артикул R458702556DF</p>
-											<p>Флезелиновые обои </p>
-										</td>
-										<td class="text-center">
-											<div class="addBlock">
-												<button class="addBlock__btn addBlock__btn--minus" type="button">
-												</button>
-												<input type="text" value="1"/>
-												<button class="addBlock__btn addBlock__btn--plus" type="button">
-												</button>
-											</div><span>2 400 ₽</span><span>/руб</span>
-										</td>
-										<td><span>2 400 ₽</span></td>
-										<td class="active">
-											<svg class="icon icon-favorite ">
-												<use xlink:href="img/svg/sprite.svg#favorite"></use>
-											</svg>
-											<svg class="icon icon-delete ">
-												<use xlink:href="img/svg/sprite.svg#delete"></use>
-											</svg>
-										</td>
-									</table>
-									<table>
-										<td>
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/basket-img-3.webp"/><img class="object-fit-js" src="img/@2x/basket-img-3.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</td>
-										<td> 
-											<p>1838 Wallcoverings Willow Stone Blue Silver</p>
-											<p>Артикул R458702556DF</p>
-											<p>Флезелиновые обои </p>
-										</td>
-										<td class="text-center">
-											<div class="addBlock">
-												<button class="addBlock__btn addBlock__btn--minus" type="button">
-												</button>
-												<input type="text" value="1"/>
-												<button class="addBlock__btn addBlock__btn--plus" type="button">
-												</button>
-											</div><span>2 690 ₽</span><span>/руб</span>
-										</td>
-										<td><span>2 690 ₽</span></td>
-										<td>
-											<svg class="icon icon-favorite ">
-												<use xlink:href="img/svg/sprite.svg#favorite"></use>
-											</svg>
-											<svg class="icon icon-delete ">
-												<use xlink:href="img/svg/sprite.svg#delete"></use>
-											</svg>
-										</td>
-									</table>
-								</div>
-								<div class="form-wrap">
-									<form>
-										<div class="form-wrap__input-wrap form-group">
-											<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Промокод"/><span class="form-wrap__input-title">Промокод</span>
-											</label>
-											<div class="input-clear input-clear--js">
-												<svg class="icon icon-close ">
-													<use xlink:href="img/svg/sprite.svg#close"></use>
-												</svg>
-											</div>
-										</div>
-										<!-- +e.input-wrap-->
-										<button class="form-wrap__btn btn-primary" type="submit">Применить
-										</button>
-									</form>
 								</div>
 							</div>
-							<!-- end sBasketList-->
-						</div>
-						<div class="sCart__col-add-more col-12"> 
-							<!-- start sCatalog-->
-							<div class="sCatalog section">
-								<div class="section-title">
-									<div class="row">
-										<div class="h2 col-auto"><a class="text-secondary active" href="#">Добавьте к заказу</a></div>
-										<div class="section-title__title h2 col"><a class="text-secondary" href="#">1</a>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__slider sCatalog__slider--js swiper">
+							<div class="sOneShop__slider-wrapper">
+								<div class="sOneShop__slider sOneShop__slider--js swiper">
 									<div class="swiper-wrapper">
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img class="object-fit-js" src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Валик прикатной для обоев</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">1 200 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
+										<div class="sOneShop__slide swiper-slide">
+											<div class="sOneShop__img-wrap" data-fancybox="sAbout" data-src="img/@2x/sOneShop-1.png">
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/sOneShop-1.webp"/><img class="object-fit-js" src="img/@2x/sOneShop-1.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
 											</div>
 										</div>
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img class="object-fit-js" src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Клей Момент для стыков</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">980 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
+										<div class="sOneShop__slide swiper-slide">
+											<div class="sOneShop__img-wrap" data-fancybox="sAbout" data-src="img/@2x/sOneShop-1.png">
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/sOneShop-1.webp"/><img class="object-fit-js" src="img/@2x/sOneShop-1.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
 											</div>
 										</div>
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img class="object-fit-js" src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Валик Proffi для стыков</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">2 550 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
+										<div class="sOneShop__slide swiper-slide">
+											<div class="sOneShop__img-wrap" data-fancybox="sAbout" data-src="img/@2x/sOneShop-1.png">
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/sOneShop-1.webp"/><img class="object-fit-js" src="img/@2x/sOneShop-1.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
 											</div>
 										</div>
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-10.webp"/><img class="object-fit-js" src="img/@2x/prod-10.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Ножницы острые</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">230 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img class="object-fit-js" src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Валик Proffi для стыков</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">2 550 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img class="object-fit-js" src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Клей Момент для стыков</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">980 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__slide swiper-slide">
-											<div class="catalog-item">
-												<button class="catalog-item__btn catalog-item__btn--like" type="button">
-													<svg class="icon icon-like ">
-														<use xlink:href="img/svg/sprite.svg#like"></use>
-													</svg>
-												</button>
-												<a class="catalog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img class="object-fit-js" src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="catalog-item__title"><a href="#">Валик прикатной для обоев</a>
-												</div>
-												<p>Артикул: R458702556DF</p>
-												<div class="catalog-item__footer">
-													<div class="row">
-														<div class="col">
-															<div class="catalog-item__price">1 200 ₽
-															</div>
-														</div>
-														<div class="col-auto swiper-no-swiping">
-															<button class="catalog-item__btn catalog-item__btn--add" type="button">
-															</button>
-														</div>
-													</div>
-												</div>
+										<div class="sOneShop__slide swiper-slide">
+											<div class="sOneShop__img-wrap" data-fancybox="sAbout" data-src="img/@2x/sOneShop-1.png">
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/sOneShop-1.webp"/><img class="object-fit-js" src="img/@2x/sOneShop-1.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
 											</div>
 										</div>
 									</div>
-									<div class="d-none d-md-block">
+									<div class="d-none d-sm-block">
 										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
 											<svg class="icon icon-arrow-left ">
 												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
@@ -684,12 +304,47 @@
 										</div>
 									</div>
 								</div>
+								<div class="swiper-pagination"></div>
+								<a class="sOneShop__btn" href="#">Заказать звонок
+								</a>
+							</div>
+							<div class="sOneShop__info">
+								<div class="sOneShop__info-item">
+									<h5>Адрес шоурума</h5>
+									<p>Москва, Каширское шоссе, дом&nbsp;19, корпус 1. Строительный гипермаркет Каширский Двор. Магазин 2-С94 расположен на&nbsp;2&nbsp;этаже торгового комплекса.</p>
+								</div>
+								<div class="sOneShop__info-item">
+									<div class="row">
+										<div class="col-auto col-sm-6">
+											<h5>Телефон</h5>
+											<a class="sOneShop__tel" href="tel:+7495987-65-43">+7 (495) 987-65-43
+											</a>
+											<div class="text-secondary">Многоканальный</div>
+										</div>
+										<div class="col-auto">
+											<h5>Режим работы</h5>
+											<div><span class="text-secondary">Пн-Пт </span>с&nbsp;10:00 до&nbsp;19:00</div>
+											<div><span class="text-secondary">Сб-Вс </span>с&nbsp;10:00 до&nbsp;18:00</div>
+										</div>
+									</div>
+								</div>
+								<div class="sOneShop__info-item">
+									<h5>E-mail</h5>
+									<a class="sOneShop__mail" href="mailto:kashirka@golden-decor.ru">kashirka@golden-decor.ru
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sOneShop__map">
+								<div class="sOneShop__map-widget" id="map">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end sCart-->
+			</div>
+			<!-- end sOneShop-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__head">

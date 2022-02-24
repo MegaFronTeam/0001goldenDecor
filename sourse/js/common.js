@@ -267,6 +267,19 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 	});
+	const sOneShopSlider = new Swiper('.sOneShop__slider--js', {
+		slidesPerView: 'auto',
+		loop: true,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 	const sCatalogSlider = new Swiper('.sCatalog__slider--js, .sBlog__slider--js', {  
 		slidesPerView: 'auto',
 		watchOverflow: true, 
