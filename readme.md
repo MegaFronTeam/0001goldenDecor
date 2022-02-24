@@ -12,3 +12,4 @@
 12. <https://megafronteam.github.io/0001goldenDecor/public/09-article.html>
 13. <https://megafronteam.github.io/0001goldenDecor/public/10-contacts.html>
 14. <https://megafronteam.github.io/0001goldenDecor/public/11-vacancies.html>
+14. <https://megafronteam.github.io/0001goldenDecor/public/12-store.html>
