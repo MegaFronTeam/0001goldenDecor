@@ -50,6 +50,12 @@
 		@include block(290, 192); 
 	}
 	&__title{
+		a{
+			&::before{
+				content: '';
+				@include a-cent;
+			}
+		}
 		font-weight: 500;
 		padding-bottom: rem(28);
 		// margin-bottom: rem(14);
@@ -61,5 +67,6 @@
 	p{ 
 		opacity: 0.5;
 		margin-bottom: 0;
+		
 	}
 }
