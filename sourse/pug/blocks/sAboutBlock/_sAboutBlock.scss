@@ -27,7 +27,7 @@
 		}
 	}
 	&__content {
-		.logo-wrap {
+		picture {
 			margin-bottom: rem(30);
 			@include media-breakpoint-up(lg) {
 				margin-bottom: 0;

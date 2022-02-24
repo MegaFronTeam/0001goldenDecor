@@ -127,8 +127,11 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sPartners/_sPartners';
 @import '../pug/blocks/sContact/_sContact';
 @import '../pug/blocks/sOurStores/_sOurStores';
+@import '../pug/blocks/sVacancies/_sVacancies';
 @import '../pug/blocks/sStocks/_sStocks';
 @import '../pug/blocks/sJournal/_sJournal';
+@import '../pug/blocks/sCart/_sCart';
+@import '../pug/blocks/sBasketList/_sBasketList';
 
 @import "media"; // Всегда в конце
 

@@ -1,0 +1,41 @@
+mixin sCart(addMore)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			.row
+				+e.col-order.col-xl
+					+e.wrap
+						+e.order-info
+							table
+								thead
+									th(colspan="2")
+										h2 Ваш заказ
+								tbody
+									tr
+										td Товары (4 шт)
+										td 9 390 ₽
+									tr
+										td Доставка
+										td 0 ₽
+									tr
+										td(colspan="2") Укажите адрес, чтобы узнать стоимость доставки
+								tfoot
+									tr
+										td(colspan="2")
+											h5 Итого:
+									tr
+										td Сумма заказа
+										td 9 390 ₽
+						+e.extra(href="#")
+							img(src="img/svg/extra-1.svg", alt="").img-svg
+							p Бесплатная доставка при заказе от 15 000 ₽
+						+e.extra(href="#")
+							img(src="img/svg/extra-2.svg", alt="").img-svg
+							p Закажите поклейку обоев от 250 ₽ / м2
+							+icon('chevron-right')
+				+e.col-basket.col-xl
+					block
+				if addMore
+					+e.col-add-more.col-12 
+						+sCatalog2('Добавьте к заказу', '1')
+	// end sCart

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Контакты</title>
+		<title>Корзина</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -13,7 +13,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="07-contacts.jpg">
+	<body class="main-page" data-bg="05-cart.jpg">
 		<div class="main-wrapper">
 			<div class="header">
 				<!-- start topLine-->
@@ -230,204 +230,466 @@
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Журнал</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
+					<a class="page-head__back" href="#">В карточку товара
+						<svg class="icon icon-chevron-left ">
+							<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+						</svg>
+					</a>
 					<div class="page-head__wrap">
-						<h1>Контакты</h1>
+						<h1>Корзина</h1>
 					</div>
-				</div>
-			</div>
-			<!-- start sContact-->
-			<div class="sContact section" id="sContact">
-				<div class="container">
-					<div class="sContact__row row">
-						<div class="sContact__col col-sm-6 col-lg-4">
-							<h5>ИП&nbsp;Абилов Гашим Балахан Оглы</h5>
-							<div class="sContact__item">
-								<div><span class="text-secondary">ОГРН </span>311774607600626</div>
-								<div><span class="text-secondary">ИНН </span>772600136339</div>
-							</div>
-						</div>
-						<div class="sContact__col col-sm-6 col-lg-4">
-							<h5>Наш адрес</h5>
-							<div class="sContact__item">
-								<div class="text-secondary">г. Москва, Каширское шоссе, д.19. кор.&nbsp;1. 2&nbsp;этаж, пав. 2-C94</div>
-							</div>
-						</div>
-						<div class="sContact__col col-sm-6 col-lg-4">
-							<h5>Режим работы</h5>
-							<div class="sContact__item">
-								<div><span class="text-secondary">Пн-Пт </span>с&nbsp;10:00 до&nbsp;19:00</div>
-								<div><span class="text-secondary">Сб-Вс </span>с&nbsp;10:00 до&nbsp;18:00</div>
-							</div>
-						</div>
-						<div class="sContact__col col-sm-6 col-lg-4">
-							<h5>Телефоны</h5>
-							<div class="sContact__row-sm row">
-								<div class="col-auto">
-									<div class="sContact__item">
-										<a class="sContact__tel" href="tel:+74959876543">+7 (495) 987-65-43
-										</a>
-										<div class="small text-secondary">Многоканальный</div>
+					<div class="page-head__slider page-head__slider--js swiper">
+						<div class="swiper-wrapper">
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item active"><span>01</span>
+										<p>Список товаров</p>
 									</div>
 								</div>
-								<div class="col-auto">
-									<div class="sContact__item">
-										<a class="sContact__tel" href="tel:+79257715577">+7 (925) 771-55-77
-										</a>
-										<div class="small text-secondary">Мобильный телефон</div>
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item"><span>02</span>
+										<p>Личные данные</p>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="sContact__col col-sm-6 col-lg-4">
-							<h5>Гарантийный отдел</h5>
-							<div class="sContact__item">
-								<a class="sContact__tel" href="tel:+74951200643">+7 (495) 120-06-43
-								</a>
-								<a class="sContact__mail" href="maito:sale@golden-decor.ru">sale@golden-decor.ru
-								</a>
-							</div>
-						</div>
-						<div class="sContact__col col-sm-6 col-lg-4">
-							<h5>Оптовый отдел</h5>
-							<div class="sContact__item">
-								<a class="sContact__tel" href="tel:+79295790787">+7 (929) 579-07-87
-								</a>
-								<a class="sContact__mail" href="maito:vbaklanov@okdecor.ru">vbaklanov@okdecor.ru
-								</a>
-							</div>
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item"><span>03</span>
+										<p>Способ доставки</p>
+									</div>
+								</div>
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item"><span>04</span>
+										<p>Способ оплаты</p>
+									</div>
+								</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end sContact-->
-			<!-- start sOurStores-->
-			<section class="sOurStores section" id="sOurStores">
+			<!-- start sCart-->
+			<section class="sCart section" id="sCart">
 				<div class="container">
-					<div class="tabs">
-						<div class="section-title">
-							<div class="row">
-								<div class="col">
-									<h2>Наши магазины</h2>
+					<div class="row">
+						<div class="sCart__col-order col-xl">
+							<div class="sCart__wrap">
+								<div class="sCart__order-info">
+									<table>
+										<thead>
+											<th colspan="2">
+												<h2>Ваш заказ</h2>
+											</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Товары (4 шт)</td>
+												<td>9 390 ₽</td>
+											</tr>
+											<tr>
+												<td>Доставка</td>
+												<td>0 ₽</td>
+											</tr>
+											<tr>
+												<td colspan="2">Укажите адрес, чтобы узнать стоимость доставки</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2">
+													<h5>Итого:</h5>
+												</td>
+											</tr>
+											<tr>
+												<td>Сумма заказа</td>
+												<td>9 390 ₽</td>
+											</tr>
+										</tfoot>
+									</table>
 								</div>
-								<div class="col-auto">
-									<div class="tabs__caption">
-										<div class="tabs__btn active">Списком</div>
-										<div class="tabs__btn">На карте</div>
+								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-1.svg" alt=""/>
+									<p>Бесплатная доставка при заказе от 15 000 ₽</p>
+								</a>
+								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-2.svg" alt=""/>
+									<p>Закажите поклейку обоев от 250 ₽ / м2</p>
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="sCart__col-basket col-xl">
+							<!-- start sBasketList-->
+							<div class="sBasketList">
+								<div class="sBasketList__head">
+									<h5>Список товаров</h5><a href="#">Очистить </a>
+								</div>
+								<div class="sBasketList__basket-list">
+									<table>
+										<td>
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/basket-img-1.webp"/><img class="object-fit-js" src="img/@2x/basket-img-1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</td>
+										<td> 
+											<p>1838 Wallcoverings Willow Stone Blue Silver</p>
+											<p>Артикул R458702556DF</p>
+											<p>Флезелиновые обои </p>
+										</td>
+										<td class="text-center">
+											<div class="addBlock">
+												<button class="addBlock__btn addBlock__btn--minus" type="button">
+												</button>
+												<input type="text" value="1"/>
+												<button class="addBlock__btn addBlock__btn--plus" type="button">
+												</button>
+											</div><span>4 400 ₽ </span><span>/руб</span>
+										</td>
+										<td><span>8 600 ₽</span></td>
+										<td>
+											<svg class="icon icon-favorite ">
+												<use xlink:href="img/svg/sprite.svg#favorite"></use>
+											</svg>
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</td>
+									</table>
+									<table>
+										<td>
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/basket-img-2.webp"/><img class="object-fit-js" src="img/@2x/basket-img-2.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</td>
+										<td> 
+											<p>1838 Wallcoverings Willow Stone Blue Silver</p>
+											<p>Артикул R458702556DF</p>
+											<p>Флезелиновые обои </p>
+										</td>
+										<td class="text-center">
+											<div class="addBlock">
+												<button class="addBlock__btn addBlock__btn--minus" type="button">
+												</button>
+												<input type="text" value="1"/>
+												<button class="addBlock__btn addBlock__btn--plus" type="button">
+												</button>
+											</div><span>2 400 ₽</span><span>/руб</span>
+										</td>
+										<td><span>2 400 ₽</span></td>
+										<td class="active">
+											<svg class="icon icon-favorite ">
+												<use xlink:href="img/svg/sprite.svg#favorite"></use>
+											</svg>
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</td>
+									</table>
+									<table>
+										<td>
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/basket-img-3.webp"/><img class="object-fit-js" src="img/@2x/basket-img-3.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</td>
+										<td> 
+											<p>1838 Wallcoverings Willow Stone Blue Silver</p>
+											<p>Артикул R458702556DF</p>
+											<p>Флезелиновые обои </p>
+										</td>
+										<td class="text-center">
+											<div class="addBlock">
+												<button class="addBlock__btn addBlock__btn--minus" type="button">
+												</button>
+												<input type="text" value="1"/>
+												<button class="addBlock__btn addBlock__btn--plus" type="button">
+												</button>
+											</div><span>2 690 ₽</span><span>/руб</span>
+										</td>
+										<td><span>2 690 ₽</span></td>
+										<td>
+											<svg class="icon icon-favorite ">
+												<use xlink:href="img/svg/sprite.svg#favorite"></use>
+											</svg>
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</td>
+									</table>
+								</div>
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Промокод"/><span class="form-wrap__input-title">Промокод</span>
+											</label>
+											<div class="input-clear input-clear--js">
+												<svg class="icon icon-close ">
+													<use xlink:href="img/svg/sprite.svg#close"></use>
+												</svg>
+											</div>
+										</div>
+										<!-- +e.input-wrap-->
+										<button class="form-wrap__btn btn-primary" type="submit">Применить
+										</button>
+									</form>
+								</div>
+							</div>
+							<!-- end sBasketList-->
+						</div>
+						<div class="sCart__col-add-more col-12"> 
+							<!-- start sCatalog-->
+							<div class="sCatalog section">
+								<div class="section-title">
+									<div class="row">
+										<div class="h2 col-auto"><a class="text-secondary active" href="#">Добавьте к заказу</a></div>
+										<div class="section-title__title h2 col"><a class="text-secondary" href="#">1</a>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__slider sCatalog__slider--js swiper">
+									<div class="swiper-wrapper">
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img class="object-fit-js" src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Валик прикатной для обоев</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">1 200 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img class="object-fit-js" src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Клей Момент для стыков</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">980 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img class="object-fit-js" src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Валик Proffi для стыков</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">2 550 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-10.webp"/><img class="object-fit-js" src="img/@2x/prod-10.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Ножницы острые</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">230 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img class="object-fit-js" src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Валик Proffi для стыков</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">2 550 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img class="object-fit-js" src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Клей Момент для стыков</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">980 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="catalog-item">
+												<button class="catalog-item__btn catalog-item__btn--like" type="button">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</button>
+												<a class="catalog-item__img-wrap bg-wrap" href="#">
+													<!-- picture-->
+													<picture class="picture-bg"> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img class="object-fit-js" src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+												<div class="catalog-item__title"><a href="#">Валик прикатной для обоев</a>
+												</div>
+												<p>Артикул: R458702556DF</p>
+												<div class="catalog-item__footer">
+													<div class="row">
+														<div class="col">
+															<div class="catalog-item__price">1 200 ₽
+															</div>
+														</div>
+														<div class="col-auto swiper-no-swiping">
+															<button class="catalog-item__btn catalog-item__btn--add" type="button">
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="d-none d-md-block">
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-arrow-left ">
+												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tabs__content active">
-							<table>
-								<tr>
-									<td>
-										<div class="sOurStores__cell">
-											<svg class="icon icon-map-pin ">
-												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
-											</svg>
-											<h5>Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор</h5>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell">
-											<p>г. Москва, Нахимовский проспект, дом&nbsp;24</p>
-											<p><span>Режим работы:</span> 09:00&nbsp;&mdash; 21:00</p>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell"><a href="tel:+74959876543">+7 (495) 987-65-43</a><a href="mailto:info@goldendecor.ru">info@goldendecor.ru</a>
-										</div>
-									</td>
-									<td>
-										<a class="sOurStores__btn btn btn-primary" href="#">Подробнее
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="sOurStores__cell">
-											<svg class="icon icon-map-pin ">
-												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
-											</svg>
-											<h5>Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор</h5>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell">
-											<p>г. Москва, Нахимовский проспект, дом&nbsp;24</p>
-											<p><span>Режим работы:</span> 09:00&nbsp;&mdash; 21:00</p>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell"><a href="tel:+74959876543">+7 (495) 987-65-43</a><a href="mailto:info@goldendecor.ru">info@goldendecor.ru</a>
-										</div>
-									</td>
-									<td>
-										<a class="sOurStores__btn btn btn-primary" href="#">Подробнее
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="sOurStores__cell">
-											<svg class="icon icon-map-pin ">
-												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
-											</svg>
-											<h5>Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор</h5>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell">
-											<p>г. Москва, Нахимовский проспект, дом&nbsp;24</p>
-											<p><span>Режим работы:</span> 09:00&nbsp;&mdash; 21:00</p>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell"><a href="tel:+74959876543">+7 (495) 987-65-43</a><a href="mailto:info@goldendecor.ru">info@goldendecor.ru</a>
-										</div>
-									</td>
-									<td>
-										<a class="sOurStores__btn btn btn-primary" href="#">Подробнее
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="sOurStores__cell">
-											<svg class="icon icon-map-pin ">
-												<use xlink:href="img/svg/sprite.svg#map-pin"></use>
-											</svg>
-											<h5>Магазин Golden Decor в&nbsp;ТК&nbsp;Каширский Двор</h5>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell">
-											<p>г. Москва, Нахимовский проспект, дом&nbsp;24</p>
-											<p><span>Режим работы:</span> 09:00&nbsp;&mdash; 21:00</p>
-										</div>
-									</td>
-									<td>
-										<div class="sOurStores__cell"><a href="tel:+74959876543">+7 (495) 987-65-43</a><a href="mailto:info@goldendecor.ru">info@goldendecor.ru</a>
-										</div>
-									</td>
-									<td>
-										<a class="sOurStores__btn btn btn-primary" href="#">Подробнее
-										</a>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div class="tabs__content">
-							<p>КАРТА Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis pariatur vitae magnam corrupti ipsa aut possimus consequuntur quidem qui. Doloribus quam eum placeat vel obcaecati, ab in cupiditate! Ad, fugit!</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sOurStores-->
+			<!-- end sCart-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__head">
@@ -792,5 +1054,31 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+				var center = [55.672428, 37.582709];
+				var myMap1 = new ymaps.Map('map', {
+					center: center,
+					zoom: 10,
+					controls: ['zoomControl']
+				});
+				var myPlacemark1 = new ymaps.Placemark(center, {
+					// Свойства.
+					// Содержимое иконки, балуна и хинта.
+					hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
+					balloonContent: 'г. Москва, Нахимовский проспект, дом 24'
+				});
+				myMap1.geoObjects.add(myPlacemark1);
+				myMap1.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap1.behaviors.disable('drag');
+				}
+			}
+			
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

@@ -1,0 +1,59 @@
+mixin sBasketList(data)
+	// start sBasketList
+	+b.sBasketList&attributes(attributes)
+		+e.head
+			h5 Список товаров
+			a(href="#") Очистить 
+		+e.basket-list
+			table
+				td
+					+pic('basket-img-1.jpg', "bg", 0)
+				td 
+					p 1838 Wallcoverings Willow Stone Blue Silver
+					p Артикул R458702556DF
+					p Флезелиновые обои 
+				td.text-center
+					+addblock()
+					span 4 400 ₽ 
+					span /руб
+				td
+					span 8 600 ₽
+				td
+					+icon('favorite')
+					+icon('delete')
+			table
+				td
+					+pic('basket-img-2.jpg', "bg", 0)
+				td 
+					p 1838 Wallcoverings Willow Stone Blue Silver
+					p Артикул R458702556DF
+					p Флезелиновые обои 
+				td.text-center
+					+addblock()
+					span 2 400 ₽
+					span /руб
+				td
+					span 2 400 ₽
+				td.active
+					+icon('favorite')
+					+icon('delete')
+			table
+				td
+					+pic('basket-img-3.jpg', "bg", 0)
+				td 
+					p 1838 Wallcoverings Willow Stone Blue Silver
+					p Артикул R458702556DF
+					p Флезелиновые обои 
+				td.text-center
+					+addblock()
+					span 2 690 ₽
+					span /руб
+				td
+					span 2 690 ₽
+				td
+					+icon('favorite')
+					+icon('delete')
+		+form-wrap()
+			+input('Промокод', 'text', 'Промокод')
+			+e.BUTTON.btn.btn-primary(type="submit"  ) Применить
+	// end sBasketList
