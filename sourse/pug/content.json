@@ -113,6 +113,13 @@
 					"pr": "8 200 ₽"
 				},
 				{
+					"i": "2",
+					"t": "1838 Wallcoverings Willow Stone",
+					"p": "Артикул: R458702556DF",
+					"pr": "4 980 ₽",
+					"addblock": "true"
+				},
+				{
 					"i": "3",
 					"t": "1838 Wallcoverings Willow Stone",
 					"p": "Артикул: R458702556DF",
@@ -123,13 +130,6 @@
 					"t": "1838 Wallcoverings Willow Stone",
 					"p": "Артикул: R458702556DF",
 					"pr": "7 490 ₽"
-				},
-				{
-					"i": "2",
-					"t": "1838 Wallcoverings Willow Stone",
-					"p": "Артикул: R458702556DF",
-					"pr": "4 980 ₽",
-					"addblock": "true"
 				},
 				{
 					"i": "5",
