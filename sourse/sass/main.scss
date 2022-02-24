@@ -133,6 +133,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sCart/_sCart';
 @import '../pug/blocks/sBasketList/_sBasketList';
 @import '../pug/blocks/sOneShop/_sOneShop';
+@import '../pug/blocks/sPersonalData/_sPersonalData';
+@import '../pug/blocks/sDeliveryMethod/_sDeliveryMethod';
+@import '../pug/blocks/sPickup/_sPickup';
 
 @import "media"; // Всегда в конце
 

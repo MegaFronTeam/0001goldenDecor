@@ -1,0 +1,13 @@
+mixin sDeliveryMethod(data)
+	// start sDeliveryMethod
+	+b.SECTION.sDeliveryMethod.section#sDeliveryMethod&attributes(attributes)
+		.container
+			h4 Способ доставки
+			+deliveryOption()
+			+form-wrap()
+				+input('Адрес доставки')
+					button(type="button")
+						+icon('map')
+						span Карта
+				+input('Ваш комментарий к заказу', 'textarea')
+	// end sDeliveryMethod

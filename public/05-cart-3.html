@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Корзина</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -13,7 +13,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="09-article.jpg">
+	<body class="main-page" data-bg="">
 		<div class="main-wrapper">
 			<div class="header">
 				<!-- start topLine-->
@@ -224,7 +224,7 @@
 				</div>
 				<!-- end top-nav-->
 			</div>
-			<div class="page-head page-head--article">
+			<div class="page-head">
 				<div class="container">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
@@ -234,174 +234,152 @@
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
-					<a class="page-head__back" href="#">В журнал
+					<a class="page-head__back" href="#">В карточку товара
 						<svg class="icon icon-chevron-left ">
 							<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
 						</svg>
 					</a>
 					<div class="page-head__wrap">
-						<p>15 января 2022 г.</p>
+						<h1>Корзина</h1>
+					</div>
+					<div class="page-head__slider page-head__slider--js swiper">
+						<div class="swiper-wrapper">
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item done"><span>01</span>
+										<p>Список товаров</p>
+									</div>
+								</div>
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item active"><span>02</span>
+										<p>Личные данные</p>
+									</div>
+								</div>
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item"><span>03</span>
+										<p>Способ доставки</p>
+									</div>
+								</div>
+								<div class="page-head__slide swiper-slide">
+									<div class="page-head__item"><span>04</span>
+										<p>Способ оплаты</p>
+									</div>
+								</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- start sContent-->
-			<section class="sContent section" id="sContent">
+			<!-- start sCart-->
+			<section class="sCart section" id="sCart">
 				<div class="container">
-					<div class="sContent__wrap">
-						<p>Дизайнерские обои&nbsp;&mdash; это продукт творческой мысли, не&nbsp;имеющий аналогов на&nbsp;рынке. В&nbsp;отличие от&nbsp;типовых коллекций он&nbsp;учитывает предпочтения покупателя относительно цвета, фактуры, орнамента, материала. Тем, кто стремится красиво и&nbsp;нестандартно оформить жилье, рекомендуется отказаться от&nbsp;продукции, серийно выпускаемой на&nbsp;фабриках и&nbsp;заводах, в&nbsp;пользу покупки элитных обоев.</p>
-						<!-- picture-->
-						<picture> 
-							<source type="image/webp" srcset="img/@2x/webp/sContent-bg.webp"/><img class="object-fit-js" src="img/@2x/sContent-bg.jpg" alt="" loading="lazy"/>
-						</picture>
-						<!-- /picture-->
-						<p>Премиальный продукт изготавливают из&nbsp;качественного материала. Его отличают высокие технико-эксплуатационные свойства. В&nbsp;производстве элитных обоев применяется натуральное сырье и&nbsp;красящие составы. На&nbsp;замену тонкой бумаге приходят бамбук, шелк, текстиль, кожа и&nbsp;другие основы, использующиеся для производства уникального стенового покрытия.</p>
-						<p>При производстве дизайнерских обоев выдерживаются стандарты и&nbsp;нормы ГОСТа. Уделяется внимание каждой детали&nbsp;&mdash; от&nbsp;состава материала до&nbsp;оттенка цвета стенового покрытия. В&nbsp;разработке премиальной продукции участвуют ведущие бюро дизайна. Над проектом работает не&nbsp;пара-тройка специалистов&nbsp;&mdash; универсалов, а&nbsp;десятки дизайнеров, имеющих специализированные знания.</p>
-						<p>Нанесённый на&nbsp;дизайнерские обои рисунок не&nbsp;применяется в&nbsp;масштабной штамповке. Стеновое покрытие делается на&nbsp;заказ или выбирается из&nbsp;авторской коллекции производителя. В&nbsp;узких кругах высоким спросом пользуется продукция брендов Rasch Gebr GmbH &amp;&nbsp;KG, BN&nbsp;International, Grandeco. Фундаментально новые решения в&nbsp;сфере декорирования стен предлагают Momenti, Andrew Martin, NLXL, De&nbsp;Gournay, Fromental.</p>
-					</div>
-				</div>
-				<div class="sContent__blog-wrap">
-					<div class="container">
-						<div class="sContent__wrap">
-							<h2>Будьте в курсе</h2>
-							<div class="row">
-								<div class="sContent__slider sContent__slider--js swiper">
-									<div class="swiper-wrapper">
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-1.webp"/><img class="object-fit-js" src="img/@2x/blog-1.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Что такое </a>
-													</div>
-													<p>22 декабря 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-2.webp"/><img class="object-fit-js" src="img/@2x/blog-2.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Как подобрать шторы под обои?</a>
-													</div>
-													<p>18 декабря 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-3.webp"/><img class="object-fit-js" src="img/@2x/blog-3.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Рисунок обоев: нюансы выбора</a>
-													</div>
-													<p>26 ноября 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-4.webp"/><img class="object-fit-js" src="img/@2x/blog-4.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Модные обои: новинки и тенденции 2021</a>
-													</div>
-													<p>5 ноября 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-5.webp"/><img class="object-fit-js" src="img/@2x/blog-5.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Как подобрать шторы под обои?</a>
-													</div>
-													<p>18 декабря 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-1.webp"/><img class="object-fit-js" src="img/@2x/blog-1.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Что такое дизайнерские и элитные обои?</a>
-													</div>
-													<p>22 декабря 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-4.webp"/><img class="object-fit-js" src="img/@2x/blog-4.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Модные обои: новинки и тенденции 2021</a>
-													</div>
-													<p>5 ноября 2021 г.</p>
-												</div>
-											</div>
-										</div>
-										<div class="sContent__slide swiper-slide">
-											<div class="blog-item">
-												<a class="blog-item__img-wrap bg-wrap" href="#">
-													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/blog-1.webp"/><img class="object-fit-js" src="img/@2x/blog-1.jpg" alt="" loading="lazy"/>
-													</picture>
-													<!-- /picture-->
-												</a>
-												<div class="blog-item__caption">
-													<div class="blog-item__title"><a href="#">Что такое дизайнерские и элитные обои?</a>
-													</div>
-													<p>22 декабря 2021 г.</p>
-												</div>
-											</div>
+					<div class="row">
+						<div class="sCart__col-order col-xl">
+							<div class="sCart__wrap">
+								<div class="sCart__order-info">
+									<table>
+										<thead>
+											<th colspan="2">
+												<h2>Ваш заказ</h2>
+											</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Товары (4 шт)</td>
+												<td>9 390 ₽</td>
+											</tr>
+											<tr>
+												<td>Доставка</td>
+												<td>0 ₽</td>
+											</tr>
+											<tr>
+												<td colspan="2">Укажите адрес, чтобы узнать стоимость доставки</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2">
+													<h5>Итого:</h5>
+												</td>
+											</tr>
+											<tr>
+												<td>Сумма заказа</td>
+												<td>9 390 ₽</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-1.svg" alt=""/>
+									<p>Бесплатная доставка при заказе от 15 000 ₽</p>
+								</a>
+								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-2.svg" alt=""/>
+									<p>Закажите поклейку обоев от 250 ₽ / м2</p>
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="sCart__col-basket col-xl">
+							<!-- start sDeliveryMethod-->
+							<section class="sDeliveryMethod section" id="sDeliveryMethod">
+								<div class="container">
+									<h4>Способ доставки</h4>
+									<div class="deliveryOption">
+										<div class="deliveryOption__content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Доставка по Москве</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__text form-check-label">Самовывоз</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__text form-check-label">Доставка по России</span>
+											</label>
 										</div>
 									</div>
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Адрес доставки"/><span class="form-wrap__input-title">Адрес доставки</span>
+												</label>
+												<button type="button">
+													<svg class="icon icon-map ">
+														<use xlink:href="img/svg/sprite.svg#map"></use>
+													</svg><span>Карта</span>
+												</button>
+												<div class="input-clear input-clear--js">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg>
+												</div>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий к заказу"></textarea><span class="form-wrap__input-title">Ваш комментарий к заказу</span>
+												</label>
+												<div class="input-clear input-clear--js">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg>
+												</div>
+											</div>
+											<!-- +e.input-wrap-->
+										</form>
+									</div>
 								</div>
-							</div>
+							</section>
+							<!-- end sDeliveryMethod-->
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sContent-->
+			<!-- end sCart-->
+			<div class="checkout">
+				<div class="container">
+					<div class="checkout__wrap">
+						<button class="checkout__back btn">На шаг назад
+						</button>
+						<button class="checkout__btn btn btn-primary">Продолжить
+						</button>
+					</div>
+				</div>
+			</div>
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__head">

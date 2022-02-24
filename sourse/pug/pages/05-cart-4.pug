@@ -13,12 +13,12 @@ include ../blocks/footer/_footer.pug
 //- include ../blocks/sCategeries/_sCategeries.pug
 //- include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sCart/_sCart.pug
-include ../blocks/sBasketList/_sBasketList.pug
+include ../blocks/sPickup/_sPickup.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '05-cart.jpg'
+	- let  bg= ''
 
 block title
 	- let  title= inner.head.titleCart
@@ -37,9 +37,9 @@ block pagecontent
 		cart: true
 	})
 		+breadcrumb('Главная', 'Журнал')
-	+sCart('addMore')
-		+sBasketList()
-	+checkout('Оформить заказ', '' ,'Продолжить покупки')
+	+sCart()
+		+sPickup()
+	+checkout('Продолжить', 'На шаг назад' ,'')
 	+footer()
       
 
