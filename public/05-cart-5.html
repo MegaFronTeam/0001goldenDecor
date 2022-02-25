@@ -323,6 +323,64 @@
 							<!-- start sPaymentMethod-->
 							<div class="sPaymentMethod">
 								<h4>Способ доставки</h4>
+								<div class="form-wrap">
+									<form>
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="choiceOption">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
+														<h5>Онлайн на сайте*</h5>
+														<p>МИР, Visa, MasterCard, Maestro, GooglePay, ApplePay</p></span></span>
+													</label>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="choiceOption">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" checked="checked"/><span class="custom-input__wrap"><span class="custom-input__content">
+														<h5>Наличными</h5>
+														<p>Курьеру / При самовывозе (только для Москвы и МО)</p></span></span>
+													</label>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="choiceOption">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
+														<h5>Безналичным платежом</h5>
+														<p>Для физических лиц и для организаций</p></span></span>
+													</label>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="choiceOption">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
+														<h5>Банковской картой</h5>
+														<p>Курьеру / При самовывозе (только для Москвы и МО)</p></span></span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="sPaymentMethod__promocode">
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Промокод"/><span class="form-wrap__input-title">Промокод</span>
+												</label>
+												<div class="input-clear input-clear--js">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg>
+												</div>
+											</div>
+											<!-- +e.input-wrap-->
+											<button class="form-wrap__btn btn-primary" type="submit">Применить
+											</button>
+										</form>
+									</div>
+								</div>
+								<p>*Для оплаты (ввода реквизитов Вашей карты) Вы&nbsp;будете перенаправлены на&nbsp;платёжный шлюз ПАО СБЕРБАНК. Соединение с&nbsp;платёжным шлюзом и&nbsp;передача информации осуществляется в&nbsp;защищённом режиме с&nbsp;использованием протокола шифрования SSL. В&nbsp;случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By&nbsp;Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального пароля.</p>
+								<p>Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не&nbsp;будет предоставлена третьим лицам за&nbsp;исключением случаев, предусмотренных законодательством РФ. Проведение платежей по&nbsp;банковским картам осуществляется в&nbsp;строгом соответствии с&nbsp;требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.</p>
 							</div>
 							<!-- end sPaymentMethod-->
 						</div>
@@ -700,7 +758,7 @@
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
-		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"> </script>
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>

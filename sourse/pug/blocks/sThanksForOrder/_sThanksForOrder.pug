@@ -1,0 +1,12 @@
+mixin sThanksForOrder(data)
+	// start sThanksForOrder
+	+b.SECTION.sThanksForOrder.section#sThanksForOrder&attributes(attributes)
+		.container
+			+breadcrumb('Главная', 'Корзина')
+			+e.wrap
+				+e.icon
+					+icon('done')
+				h1 Спасибо, ваш заказ  №3982 оформлен!
+				p В&nbsp;ближайшее время оператор свяжется с&nbsp;Вами и&nbsp;уточнит детали доставки!
+				button.btn.btn-primary Вернуться на главную
+	// end sThanksForOrder

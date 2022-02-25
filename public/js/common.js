@@ -440,7 +440,14 @@ function eventHandler() {
 			$(this).parents('.form-group').find(`.form-control`).val('')
 		
 	})
-	
+
+		// var Sticky =new hcSticky('.checkou', {
+		
+	// });
+
+	$('.checkout').hcSticky({
+		
+  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

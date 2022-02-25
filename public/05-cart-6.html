@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Корзина</title>
+		<title>Спасибо, ваш заказ</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -14,7 +14,7 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 	</head>
-	<body class="main-page" data-bg="">
+	<body class="main-page" data-bg="05-cart-6.jpg">
 		<div class="main-wrapper">
 			<div class="header">
 				<!-- start topLine-->
@@ -225,210 +225,30 @@
 				</div>
 				<!-- end top-nav-->
 			</div>
-			<div class="page-head">
+			<!-- start sThanksForOrder-->
+			<section class="sThanksForOrder section" id="sThanksForOrder">
 				<div class="container">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Журнал</span>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
-					<a class="page-head__back" href="#">В карточку товара
-						<svg class="icon icon-chevron-left ">
-							<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-						</svg>
-					</a>
-					<div class="page-head__wrap">
-						<h1>Корзина</h1>
-					</div>
-					<div class="page-head__slider page-head__slider--js swiper">
-						<div class="swiper-wrapper">
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item done"><span>01</span>
-										<p>Список товаров</p>
-									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item active"><span>02</span>
-										<p>Личные данные</p>
-									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>03</span>
-										<p>Способ доставки</p>
-									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>04</span>
-										<p>Способ оплаты</p>
-									</div>
-								</div>
+					<div class="sThanksForOrder__wrap">
+						<div class="sThanksForOrder__icon">
+							<svg class="icon icon-done ">
+								<use xlink:href="img/svg/sprite.svg#done"></use>
+							</svg>
 						</div>
-					</div>
-				</div>
-			</div>
-			<!-- start sCart-->
-			<section class="sCart section" id="sCart">
-				<div class="container">
-					<div class="row">
-						<div class="sCart__col-order col-xl">
-							<div class="sCart__wrap">
-								<div class="sCart__order-info">
-									<table>
-										<thead>
-											<th colspan="2">
-												<h2>Ваш заказ</h2>
-											</th>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Товары (4 шт)</td>
-												<td>9 390 ₽</td>
-											</tr>
-											<tr>
-												<td>Доставка</td>
-												<td>0 ₽</td>
-											</tr>
-											<tr>
-												<td colspan="2">Укажите адрес, чтобы узнать стоимость доставки</td>
-											</tr>
-										</tbody>
-										<tfoot>
-											<tr>
-												<td colspan="2">
-													<h5>Итого:</h5>
-												</td>
-											</tr>
-											<tr>
-												<td>Сумма заказа</td>
-												<td>9 390 ₽</td>
-											</tr>
-										</tfoot>
-									</table>
-								</div>
-								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-1.svg" alt=""/>
-									<p>Бесплатная доставка при заказе от 15 000 ₽</p>
-								</a>
-								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-2.svg" alt=""/>
-									<p>Закажите поклейку обоев от 250 ₽ / м2</p>
-									<svg class="icon icon-chevron-right ">
-										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-						<div class="sCart__col-basket col-xl">
-							<!-- start sPickup-->
-							<section class="sPickup section" id="sPickup">
-								<h4>Способ доставки</h4>
-								<div class="deliveryOption">
-									<div class="deliveryOption__content">
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Доставка по Москве</span>
-										</label>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__text form-check-label">Самовывоз</span>
-										</label>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__text form-check-label">Доставка по России</span>
-										</label>
-									</div>
-								</div>
-								<div class="tabs">
-									<div class="section-title">
-										<div class="row">
-											<div class="col">
-												<p>Выберите магазин:</p>
-											</div>
-											<div class="col-auto">
-												<div class="tabs__caption">
-													<div class="tabs__btn active">Списком</div>
-													<div class="tabs__btn">На карте</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="tabs__content active">
-										<div class="form-wrap">
-											<form>
-												<div class="choiceOption">
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
-														<h5>Магазин Golden Decor в ТК Каширский Двор</h5>
-														<p>г. Москва, Каширское шоссе, дом 19, корпус 1</p></span><span class="custom-input__content">
-														<p>Режим работы:</p>
-														<p>09:00 — 21:00</p></span></span>
-													</label>
-												</div>
-												<div class="choiceOption">
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
-														<h5>Магазин Golden Decor в ТЦ Экспострой</h5>
-														<p>г. Москва, Нахимовский проспект, дом 24</p></span><span class="custom-input__content">
-														<p>Режим работы:</p>
-														<p>09:00 — 22:00</p></span></span>
-													</label>
-												</div>
-												<div class="choiceOption">
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
-														<h5>Магазин Golden Decor в ТЦ Тройка</h5>
-														<p>г. Москва, ул. Верхняя Красносельская 3А</p></span><span class="custom-input__content">
-														<p>Режим работы:</p>
-														<p>09:00 — 22:00</p></span></span>
-													</label>
-												</div>
-											</form>
-										</div>
-										<div class="form-wrap">
-											<form>
-												<div class="form-wrap__input-wrap form-group">
-													<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий к заказу"></textarea><span class="form-wrap__input-title">Ваш комментарий к заказу</span>
-													</label>
-													<div class="input-clear input-clear--js">
-														<svg class="icon icon-close ">
-															<use xlink:href="img/svg/sprite.svg#close"></use>
-														</svg>
-													</div>
-												</div>
-												<!-- +e.input-wrap-->
-											</form>
-										</div>
-									</div>
-									<div class="tabs__content">
-										<div class="sPickup__map">
-											<div class="sPickup__map-widget" id="map">
-											</div>
-										</div>
-										<div class="form-wrap">
-											<form>
-												<div class="form-wrap__input-wrap form-group">
-													<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий к заказу"></textarea><span class="form-wrap__input-title">Ваш комментарий к заказу</span>
-													</label>
-													<div class="input-clear input-clear--js">
-														<svg class="icon icon-close ">
-															<use xlink:href="img/svg/sprite.svg#close"></use>
-														</svg>
-													</div>
-												</div>
-												<!-- +e.input-wrap-->
-											</form>
-										</div>
-									</div>
-								</div>
-							</section>
-							<!-- end sPickup-->
-						</div>
+						<h1>Спасибо, ваш заказ  №3982 оформлен!</h1>
+						<p>В&nbsp;ближайшее время оператор свяжется с&nbsp;Вами и&nbsp;уточнит детали доставки!</p>
+						<button class="btn btn-primary">Вернуться на главную</button>
 					</div>
 				</div>
 			</section>
-			<!-- end sCart-->
-			<div class="checkout">
-				<div class="container">
-					<div class="checkout__wrap">
-						<button class="checkout__back btn">На шаг назад
-						</button>
-						<button class="checkout__btn btn btn-primary">Продолжить
-						</button>
-					</div>
-				</div>
-			</div>
+			<!-- end sThanksForOrder-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__head">
