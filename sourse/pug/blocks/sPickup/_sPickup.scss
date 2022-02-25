@@ -64,18 +64,23 @@
 				@include media-breakpoint-up(md) {
 					margin-right: rem(32);
 				}
-				&:checked[type=radio] {
-					background-image: url(../img/svg/check.svg);
+				&[type=radio] {
 					&:before {
 						content: '';
 						position: absolute;
 						width: 100%;
 						height: 100%;
-						border: 2px solid #05141F;
+						border: 2px solid transparent;
 						top: 0;
 						left: 0;
 					}
-				}
+					&:checked {
+						background-image: url(../img/svg/check.svg);
+						&:before {
+							border-color: $body-color;
+						}
+					}
+				} 
 			}
 			&__wrap {
 				display: flex;
