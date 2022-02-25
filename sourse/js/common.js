@@ -335,9 +335,9 @@ function eventHandler() {
 		$(".footer__link-more").hide();
 	});
 
-	// $('.header').hcSticky({
-  //   // stickTo: $('#content')
-  // });
+	$('.header').hcSticky({
+    // stickTo: $('#content')
+  });
 
 	const convertImages = (query, callback) => {
 		const images = document.querySelectorAll(query);
