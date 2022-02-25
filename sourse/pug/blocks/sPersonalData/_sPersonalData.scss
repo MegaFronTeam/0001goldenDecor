@@ -1,0 +1,59 @@
+// start .sPersonalData
+.sPersonalData {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	padding-top: rem(16);
+	// padding-bottom: rem(32);
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(30);
+		padding-left: rem(41);
+		// padding-bottom: rem(56);
+	}
+	h4 {
+		@include rfs(20px);
+		font-weight: 600;
+		margin-bottom: rem(32);
+	}
+	&__log-in {
+		display: flex;
+		background-color: #F8F8F8;
+		align-items: center;
+		padding: rem(16) rem(32);
+		flex-direction: column;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(32);
+			flex-direction: row;
+		}
+		p {
+			@include media-breakpoint-up(sm)  {
+				margin-bottom: 0;
+				max-width: rem(408);
+			}
+		}
+		button {
+			width: 100%;
+			max-width: rem(162);
+			font-weight: 600;
+			padding: rem(16);
+			@include media-breakpoint-up(sm) {
+				margin-left: auto;
+			}
+		}
+	}
+	.form-wrap {
+		&__col {
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(26);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPersonalData

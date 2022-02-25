@@ -1,0 +1,18 @@
+mixin sPersonalData(data)
+	// start sPersonalData
+	+b.sPersonalData&attributes(attributes)
+		h4 Личные данные
+		+e.log-in
+			p Авторизуйтесь, чтобы мы&nbsp;смогли подгрузить данные о&nbsp;вас из&nbsp;личного кабинета
+			button.btn.btn-primary Войти
+		+form-wrap()
+			.row
+				.col-md-6
+					+input('Ваше имя')
+				.col-md-6
+					+input('Телефон', 'tel')(required)
+				.col-md-6
+					+input('E-mail', 'email')
+				+e.col.col-12
+					+policy2()
+	// end sPersonalData
