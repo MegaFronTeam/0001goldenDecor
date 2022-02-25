@@ -40,5 +40,28 @@ block pagecontent
 	//- })
 	//- 	+breadcrumb('Главная', 'Контакты', 'Golden Decor в ТК Каширский Двор')
 	+sOneShop()
+	script.
+		ymaps.ready(init);
+		function init() {
+			var center = [55.672428, 37.582709];
+			var myMap1 = new ymaps.Map('map', {
+				center: center,
+				zoom: 10,
+				controls: ['zoomControl']
+			});
+			var myPlacemark1 = new ymaps.Placemark(center, {
+				// Свойства.
+				// Содержимое иконки, балуна и хинта.
+				hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
+				balloonContent: 'г. Москва, Нахимовский проспект, дом 24'
+			});
+			myMap1.geoObjects.add(myPlacemark1);
+			myMap1.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				// ... отключаем перетаскивание карты
+				myMap1.behaviors.disable('drag');
+			}
+		}
 	+footer()
 
