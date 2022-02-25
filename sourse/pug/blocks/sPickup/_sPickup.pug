@@ -13,7 +13,33 @@ mixin sPickup(data)
 									.tabs__btn.active Списком
 									.tabs__btn На карте
 				.tabs__content.active
-					
+					+form-wrap
+						+in-c('radio')
+							+e.wrap
+								+e.content
+									h5 Магазин Golden Decor в ТК Каширский Двор
+									p г. Москва, Каширское шоссе, дом 19, корпус 1
+								+e.content
+									p Режим работы:
+									p 09:00 — 21:00
+						+in-c('radio')(checked)
+							+e.wrap
+								+e.content
+									h5 Магазин Golden Decor в ТЦ Экспострой
+									p г. Москва, Нахимовский проспект, дом 24
+								+e.content
+									p Режим работы:
+									p 09:00 — 22:00
+						+in-c('radio')
+							+e.wrap
+								+e.content
+									h5 Магазин Golden Decor в ТЦ Тройка
+									p г. Москва, ул. Верхняя Красносельская 3А
+								+e.content
+									p Режим работы:
+									p 09:00 — 22:00
+					+form-wrap()
+						+input('Ваш комментарий к заказу', 'textarea')
 				.tabs__content
 					+e.map
 						+e.map-widget#map
