@@ -26,16 +26,11 @@ mixin sCart(addMore)
 									tr
 										td Сумма заказа
 										td 9 390 ₽
-						+e.extra(href="#")
-							img(src="img/svg/extra-1.svg", alt="").img-svg
-							p Бесплатная доставка при заказе от 15 000 ₽
-						+e.extra(href="#")
-							img(src="img/svg/extra-2.svg", alt="").img-svg
-							p Закажите поклейку обоев от 250 ₽ / м2
-							+icon('chevron-right')
+						+extraOption('1', 'Бесплатная доставка при заказе от 15 000 ₽')
+						+extraOption('2', 'Закажите поклейку обоев от 250 ₽ / м2', 'icon')
 				+e.col-basket.col-xl
 					block
 				if addMore
 					+e.col-add-more.col-12 
-						+sCatalog2('Добавьте к заказу', '1')
+						+sCatalog2('Добавьте к заказу')
 	// end sCart

@@ -15,6 +15,8 @@ include ../blocks/sCatalog/_sCatalog.pug
 //- include ../blocks/sAbout/_sAbout.pug
 //- include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sBuy/_sBuy.pug
+include ../blocks/sCardProduct/_sCardProduct.pug
+include ../blocks/sProductSlider/_sProductSlider.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -33,16 +35,12 @@ block pagecontent
 	//- +headerBlock
 	+page-head({
 		title: '1838 Wallcoverings Willow Stone Blue Silver',
-		back: true,
+		back: 'В каталог',
 		favorite: true
-	})
+	}).--product
 		+breadcrumb('Главная', 'Обои', `Виниловые обои`)
-	.container
-		.row
-			.col-lg-4
-				+sBuy()
-			.col-lg-8 
-				//- +sCatalog("Новинки",'Акции')
+	+sCardProduct()
+	+checkout('Купить', '', '', 'info').--product
 	+footer()
       
 

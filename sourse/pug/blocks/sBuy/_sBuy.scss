@@ -3,22 +3,6 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: ;
-	border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
-	padding-top: rem(32);
-	padding-right: rem(70);
-	&__price {
-		display: flex;
-		a {
-			@include mt;
-			max-width: rem(98);
-			margin-left: auto;
-			// font-size: rem(16);
-			text-decoration: underline;
-			&:hover {
-				text-decoration-color: transparent;
-			}
-		}
-	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -27,6 +27,9 @@
 	&__map {
 		@include block(800,384);
 		margin-bottom: rem(32);
+		@include media-breakpoint-down(sm) {
+			--ratio: 713/800;
+		}
 	}
 	&__map-widget {
 		position: absolute !important;
@@ -44,6 +47,33 @@
 			&:last-of-type {
 				margin-bottom: rem(56);
 			}
+		}
+	}
+	.ymaps-2-1-79-balloon__content {
+		max-width: rem(250);
+		width: rem(250);
+		padding: rem(20) 0 rem(20) rem(20);
+		img {
+			margin-bottom: rem(16);
+		}
+		h5 {
+			font-weight: 600;
+			font-size: rem(16);
+			margin-bottom: rem(8);
+		}
+		p {
+			font-size: rem(14);
+			margin-bottom: rem(16);
+		}
+		span {
+			font-size: rem(14);
+			&:first-of-type {
+				opacity: 0.5;
+			}
+		}
+		& > ymaps {
+			width: 100% !important;
+			height: 100% !important;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

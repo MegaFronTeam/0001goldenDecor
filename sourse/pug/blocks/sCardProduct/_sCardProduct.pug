@@ -1,0 +1,40 @@
+mixin sCardProduct(data)
+	// start sCardProduct
+	+b.SECTION.sCardProduct.section#sCardProduct&attributes(attributes)
+		.container
+			.row
+				+e.col-buy.col-xl-4
+					//- +sBuy()
+					+e.price
+						h2 12 044 ₽
+						a(href="#") Рассчитать колличество
+					+e.contentBtn
+						button.btn.btn-primary.w-100 Купить
+						//- +e.wrapBtn 
+							
+					button.btn.btn-outline-secondary.w-100 Купить в 1 клик
+					+e.productDesc
+						table
+							tr
+								td Артикул
+								td TC71789-44
+							tr
+								td Вид обоев
+								td Винил на флизелине
+							tr
+								td Цвет
+								td Темно-серый
+							tr
+								td Размер
+								td 10,05 х 1,06 м
+							tr
+								td Комплект
+								td Рулон обоев - 1 шт
+					+extraOption('1', 'Бесплатная доставка при заказе от 15 000 ₽')
+					+extraOption('3', 'Примерить онлайн', 'icon')
+					+extraOption('2', 'Закажите поклейку обоев от 250 ₽ / м2', 'icon')
+				+e.col-product-info.col-xl-8
+					+sProductSlider()
+				+e.col-catalog.col-12
+					+sCatalog2('Сопутствующие товары')
+	// end sCardProduct

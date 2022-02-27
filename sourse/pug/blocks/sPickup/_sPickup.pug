@@ -14,7 +14,7 @@ mixin sPickup(data)
 									.tabs__btn На карте
 				.tabs__content.active
 					+form-wrap
-						+choiceOption('Магазин Golden Decor в ТК Каширский Двор', 'г. Москва, Каширское шоссе, дом 19, корпус 1', '09:00 — 21:00')
+						+choiceOption('Магазин Golden Decor в ТК Каширский Двор', 'г. Москва, Каширское шоссе, дом 19, корпус 1', '09:00 — 21:00')(checked)
 						+choiceOption('Магазин Golden Decor в ТЦ Экспострой', 'г. Москва, Нахимовский проспект, дом 24', '09:00 — 22:00')
 						+choiceOption('Магазин Golden Decor в ТЦ Тройка', 'г. Москва, ул. Верхняя Красносельская 3А', '09:00 — 22:00')
 					+form-wrap()
@@ -22,7 +22,47 @@ mixin sPickup(data)
 				.tabs__content
 					+e.map
 						+e.map-widget#map
-
+							script.
+								ymaps.ready(init);
+								function init() {
+									var center = [55.75380038320217,37.62071970898438];
+									var myMap1 = new ymaps.Map('map', {
+										center: center,
+										zoom: 10,
+										controls: ['zoomControl']
+									});
+									var contentBalloon1 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТК Каширский Двор</h5>' + '<p>г. Москва, Каширское шоссе, дом 19, корпус 1</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
+									var contentBalloon2 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Экспострой</h5>' + '<p>г. Москва, Нахимовский проспект, дом 24</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
+									var contentBalloon3 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Тройка</h5>' + '<p>г. Москва, ул. Верхняя Красносельская 3А</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
+									var collection = new ymaps.GeoObjectCollection();
+									collection
+										.add(new ymaps.Placemark([55.67455635081638,37.64072341673275], { 
+											balloonContent: contentBalloon1, 
+										}))
+										.add(new ymaps.Placemark([55.684072399488265,37.55676825847164], { 
+											balloonContent: contentBalloon2, 
+										}))
+										.add(new ymaps.Placemark([55.78843546026375,37.656384548873845], { 
+											balloonContent: contentBalloon3
+										}))
+									myMap1.geoObjects.add(collection);
+									
+									//- collection.events.add('click', function (e) {
+									//- 		// Получим ссылку на геообъект, по которому кликнул пользователь.
+									//- 		var target = e.get('target');
+									//- 		// Зададим контент боковой панели.
+									//- 		panel.setContent(target.properties.get('balloonContent'));
+									//- 		// Переместим центр карты по координатам метки с учётом заданных отступов.
+									//- 		map.panTo(target.geometry.getCoordinates(), {useMapMargin: true});
+									//- });
+									//- myMap1.geoObjects.add(myPlacemark1);
+									myMap1.behaviors.disable('scrollZoom');
+									//на мобильных устройствах... (проверяем по userAgent браузера)
+									if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+										// ... отключаем перетаскивание карты
+										myMap1.behaviors.disable('drag');
+									}
+								};
 					+form-wrap()
 						+input('Ваш комментарий к заказу', 'textarea')
 	// end sPickup

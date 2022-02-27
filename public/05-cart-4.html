@@ -227,44 +227,46 @@
 			</div>
 			<div class="page-head">
 				<div class="container">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Журнал</span>
-									<meta itemprop="position" content="2"/></a></li>
-						</ol>
-					</nav>
-					<a class="page-head__back" href="#">В карточку товара
-						<svg class="icon icon-chevron-left ">
-							<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-						</svg>
-					</a>
-					<div class="page-head__wrap">
-						<h1>Корзина</h1>
-					</div>
-					<div class="page-head__slider page-head__slider--js swiper">
-						<div class="swiper-wrapper">
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item done"><span>01</span>
-										<p>Список товаров</p>
+					<div class="page-head__content-wrap">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Журнал</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<a class="page-head__back" href="#">В карточку товара
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</a>
+						<div class="page-head__wrap">
+							<h1>Корзина</h1>
+						</div>
+						<div class="page-head__slider page-head__slider--js swiper">
+							<div class="swiper-wrapper">
+									<div class="page-head__slide swiper-slide">
+										<div class="page-head__item done"><span>01</span>
+											<p>Список товаров</p>
+										</div>
 									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item active"><span>02</span>
-										<p>Личные данные</p>
+									<div class="page-head__slide swiper-slide">
+										<div class="page-head__item active"><span>02</span>
+											<p>Личные данные</p>
+										</div>
 									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>03</span>
-										<p>Способ доставки</p>
+									<div class="page-head__slide swiper-slide">
+										<div class="page-head__item"><span>03</span>
+											<p>Способ доставки</p>
+										</div>
 									</div>
-								</div>
-								<div class="page-head__slide swiper-slide">
-									<div class="page-head__item"><span>04</span>
-										<p>Способ оплаты</p>
+									<div class="page-head__slide swiper-slide">
+										<div class="page-head__item"><span>04</span>
+											<p>Способ оплаты</p>
+										</div>
 									</div>
-								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -308,10 +310,10 @@
 										</tfoot>
 									</table>
 								</div>
-								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-1.svg" alt=""/>
+								<a class="extraOption" href="#"><img class="img-svg" src="img/svg/extra-1.svg" alt=""/>
 									<p>Бесплатная доставка при заказе от 15 000 ₽</p>
 								</a>
-								<a class="sCart__extra" href="#"><img class="img-svg" src="img/svg/extra-2.svg" alt=""/>
+								<a class="extraOption" href="#"><img class="img-svg" src="img/svg/extra-2.svg" alt=""/>
 									<p>Закажите поклейку обоев от 250 ₽ / м2</p>
 									<svg class="icon icon-chevron-right ">
 										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
@@ -351,7 +353,7 @@
 										<div class="form-wrap">
 											<form>
 												<div class="choiceOption">
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__wrap"><span class="custom-input__content">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio" checked="checked"/><span class="custom-input__wrap"><span class="custom-input__content">
 														<h5>Магазин Golden Decor в ТК Каширский Двор</h5>
 														<p>г. Москва, Каширское шоссе, дом 19, корпус 1</p></span><span class="custom-input__content">
 														<p>Режим работы:</p>
@@ -394,6 +396,48 @@
 									<div class="tabs__content">
 										<div class="sPickup__map">
 											<div class="sPickup__map-widget" id="map">
+												<script>
+													ymaps.ready(init);
+													function init() {
+														var center = [55.75380038320217,37.62071970898438];
+														var myMap1 = new ymaps.Map('map', {
+															center: center,
+															zoom: 10,
+															controls: ['zoomControl']
+														});
+														var contentBalloon1 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТК Каширский Двор</h5>' + '<p>г. Москва, Каширское шоссе, дом 19, корпус 1</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
+														var contentBalloon2 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Экспострой</h5>' + '<p>г. Москва, Нахимовский проспект, дом 24</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
+														var contentBalloon3 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Тройка</h5>' + '<p>г. Москва, ул. Верхняя Красносельская 3А</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
+														var collection = new ymaps.GeoObjectCollection();
+														collection
+															.add(new ymaps.Placemark([55.67455635081638,37.64072341673275], { 
+																balloonContent: contentBalloon1, 
+															}))
+															.add(new ymaps.Placemark([55.684072399488265,37.55676825847164], { 
+																balloonContent: contentBalloon2, 
+															}))
+															.add(new ymaps.Placemark([55.78843546026375,37.656384548873845], { 
+																balloonContent: contentBalloon3
+															}))
+														myMap1.geoObjects.add(collection);
+														
+														//- collection.events.add('click', function (e) {
+														//- 		// Получим ссылку на геообъект, по которому кликнул пользователь.
+														//- 		var target = e.get('target');
+														//- 		// Зададим контент боковой панели.
+														//- 		panel.setContent(target.properties.get('balloonContent'));
+														//- 		// Переместим центр карты по координатам метки с учётом заданных отступов.
+														//- 		map.panTo(target.geometry.getCoordinates(), {useMapMargin: true});
+														//- });
+														//- myMap1.geoObjects.add(myPlacemark1);
+														myMap1.behaviors.disable('scrollZoom');
+														//на мобильных устройствах... (проверяем по userAgent браузера)
+														if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+															// ... отключаем перетаскивание карты
+															myMap1.behaviors.disable('drag');
+														}
+													};
+												</script>
 											</div>
 										</div>
 										<div class="form-wrap">

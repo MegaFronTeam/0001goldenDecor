@@ -71,34 +71,35 @@ mixin top-btns()
 mixin page-head(data)
 	+b.page-head&attributes(attributes)
 		.container
-			block
-			if data.back
-				+e.back(href="#")!= data.back
-					+icon('chevron-left')
-					//- | В каталог
-			+e.wrap
-				if data.date
-					p!= data.date
-				if data.title
-					h1!= data.title
-				if data.favorite
-					+e.btn.btn(type="button") 
-						| В избранное
-						+b.top-btns
-							+e.btn
-								+icon("like")
-			if data.cart
-				+e.slider--js.swiper
-					.swiper-wrapper
-						mixin page-head-item(num, text)
-							+e.slide.swiper-slide
-								+e.item&attributes(attributes)
-									span!= num
-									p!= text
-						+page-head-item("01", "Список товаров").done
-						+page-head-item("02", "Личные данные").active
-						+page-head-item("03", "Способ доставки")
-						+page-head-item("04", "Способ оплаты")
+			+e.content-wrap
+				block
+				if data.back
+					+e.back(href="#")!= data.back
+						+icon('chevron-left')
+						//- | В каталог
+				+e.wrap
+					if data.date
+						p!= data.date
+					if data.title
+						h1!= data.title
+					if data.favorite
+						+e.btn.btn(type="button")
+							span В избранное
+							+b.top-btns
+								+e.btn
+									+icon("like")
+				if data.cart
+					+e.slider--js.swiper
+						.swiper-wrapper
+							mixin page-head-item(num, text)
+								+e.slide.swiper-slide
+									+e.item&attributes(attributes)
+										span!= num
+										p!= text
+							+page-head-item("01", "Список товаров").done
+							+page-head-item("02", "Личные данные").active
+							+page-head-item("03", "Способ доставки")
+							+page-head-item("04", "Способ оплаты")
 
 mixin searchBlock()
 	+b.search-block
@@ -114,10 +115,14 @@ mixin searchBlock()
 					+icon("search")
 					= item
 
-mixin checkout(btn, back, proceed)
-	+b.checkout
+mixin checkout(btn, back, proceed, info)
+	+b.checkout&attributes(attributes)
 		.container
 			+e.wrap
+				if info
+					+e.info
+						p 1838 Wallcoverings Willow Stone Blue Silver
+						p 12 044 ₽
 				if proceed
 					+e.BUTTON.proceed.btn.btn-outline-secondary!= proceed
 				if back
@@ -142,3 +147,10 @@ mixin choiceOption(title, text, time)
 					+e.content
 						p Режим работы:
 						p!= time
+
+mixin extraOption(num, text, icon)
+	+b.extraOption(href="#")
+		img(src=`img/svg/extra-${num}.svg`, alt="").img-svg
+		p!= text
+		if icon
+			+icon('chevron-right') 
