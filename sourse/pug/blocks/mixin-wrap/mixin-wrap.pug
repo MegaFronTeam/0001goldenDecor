@@ -150,7 +150,7 @@ mixin choiceOption(title, text, time)
 
 mixin extraOption(num, text, icon)
 	+b.extraOption(href="#")
-		img(src=`img/svg/extra-${num}.svg`, alt="").img-svg
+		img(src=`img/svg/extra-${num}.svg`, alt="")
 		p!= text
 		if icon
 			+icon('chevron-right') 

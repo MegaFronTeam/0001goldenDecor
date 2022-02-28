@@ -9,8 +9,9 @@ mixin sCardProduct(data)
 						h2 12 044 ₽
 						a(href="#") Рассчитать колличество
 					+e.contentBtn
-						button.btn.btn-primary.w-100 Купить
-						//- +e.wrapBtn 
+						+e.BUTTON.btn.btn.btn-primary.w-100 Купить
+						+e.wrapBtn 
+							+addblock()
 							
 					button.btn.btn-outline-secondary.w-100 Купить в 1 клик
 					+e.productDesc

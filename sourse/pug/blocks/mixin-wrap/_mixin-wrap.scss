@@ -497,14 +497,19 @@
 	.icon {
 		// margin-left: 10px;
 		font-size: rem(24);
-		flex-grow: 1;
+		@include media-breakpoint-up(xl) {
+			min-width: rem(24);
+			flex-grow: 1;
+		}
 	}
 	p {
 		margin-bottom: 0;
 		font-size: rem(16);
-		max-width: rem(190);
 		line-height: 1.50em;
 		flex-grow: 1;
 		margin-left: rem(16);
+		@include media-breakpoint-up(xl) {
+			max-width: rem(190);
+		}
 	}
 }

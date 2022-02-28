@@ -106,6 +106,24 @@
 			top: 0;
 		}
 	}
+	&__contentBtn {
+		button {
+			
+		}
+	}
+	&__wrapBtn {
+		display: none;
+	}
+	.addBlock {
+		width: auto;
+		button {
+			padding: rem(30) rem(12);
+		}
+		input {
+			width: 100%;
+			height: rem(60);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

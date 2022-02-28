@@ -15,6 +15,12 @@
 	&__slider {
 		picture {
 			@include block(680, 516);
+			@include media-breakpoint-up(xl) {
+				--ratio: 516/680;
+			}
+			@include media-breakpoint-up(md) {
+				--ratio: 312/680;
+			}
 			img {
 				position: absolute;
 				top: 0;

@@ -468,6 +468,11 @@ function eventHandler() {
 			prevEl: ".swiper-button-prev",
 		}
 	});
+	
+	$('.sCardProduct__btn').on("click", function() {
+		$('.sCardProduct__wrapBtn').addClass('d-block');
+		$('.sCardProduct__btn').addClass('d-none');
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
