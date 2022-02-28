@@ -1,0 +1,30 @@
+mixin sGoods(data)
+	// start sGoods
+	+b.SECTION.sGoods.section#sGoods&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-filter.col-lg-3
+					+sFilter()
+				+e.col-catalog.col-lg-9
+					+e.sort
+						+e.good-num
+							span Товаров
+							span 3560
+						+e.sorting
+							+form-wrap()
+								+input('По популярности', 'select', '')
+					.row
+						.col-sm-6
+							+catalog-item(1, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '2 800 ₽', '', 'true')
+						.col-sm-6
+							+catalog-item(2, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '4 590 ₽', '', 'true')
+						.col-sm-6
+							+catalog-item(3, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '6 900 ₽', 'addblock', 'true')
+						.col-sm-6
+							+catalog-item(4, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '3 450 ₽', '', 'true')
+						.col-sm-6
+							+catalog-item(5, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '2 780 ₽', '', 'true')
+						.col-sm-6
+							+catalog-item(6, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '5 690 ₽', '', 'true')
+					button.btn.btn-outline-secondary.w-100 Показать еще
+	// end sGoods

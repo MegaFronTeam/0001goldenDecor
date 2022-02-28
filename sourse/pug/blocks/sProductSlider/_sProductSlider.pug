@@ -2,7 +2,8 @@ mixin sProductSlider(data)
 	// start sProductSlider
 	+b.sProductSlider&attributes(attributes)
 		.container
-			+e.wrap
+			+e.slider-wrap
+				//- +e.wrap
 				+e.slider--js.swiper
 					.swiper-wrapper
 						mixin slide2(i)
@@ -12,53 +13,53 @@ mixin sProductSlider(data)
 						+slide2(2)
 						+slide2(3)
 						+slide2(4)
-				+arrow()
-			+e.slider-thumbs--js.swiper
-				.swiper-wrapper
-					mixin slide(i)
-						+e.slide.swiper-slide
-							+e.img-wrap--thumbs
-								+pic(`sProductSlider-sm-${i}.jpg`, `bg`, 0)
-								//- img(src=`img/@2x/sProject-sm-${i}.jpg` alt='')
-					+slide(1)
-					+slide(2)
-					+slide(3)
-					+slide(4)
-			+e.description
-				h2 Описание
-				p Вот уже более чем 100 лет Thibaut не&nbsp;перестает удивлять своих клиентов оригинальными изображениями на&nbsp;тему многоликой природы. Птицы, животные, орнаменты растений и&nbsp;элементы сельской жизни предстают на&nbsp;полотнах в&nbsp;самых неожиданных традициях английской, французской, итальянской или восточной изобразительной школы.
-				h2 Характеристики
-				+e.specification
-					table
-						tr
-							td Особенности
-							td Моющиеся, Износостойкие
-						tr
-							td Основа обоев
-							td Флизелин
-						tr
-							td Материал
-							td Винил на флизелине
-						tr
-							td Стиль дизайна
-							td Минимализм, Современный
-						tr
-							td Цвета
-							td Темно-серый
-					table
-						tr
-							td Бренд
-							td 1838 Wallcoverings Willow
-						tr
-							td Коллекция
-							td Springs
-						tr
-							td Страна
-							td Италия
-						tr
-							td Длина х Ширина
-							td 10,05 х 1,06 м
-						tr
-							td Тип помещения
-							td Гостиная, спальня, кабинет
+					+arrow()
+				+e.slider-thumbs--js.swiper
+					.swiper-wrapper
+						mixin slide(i)
+							+e.slide.swiper-slide
+								+e.img-wrap--thumbs
+									+pic(`sProductSlider-sm-${i}.jpg`, `bg`, 0)
+									//- img(src=`img/@2x/sProject-sm-${i}.jpg` alt='')
+						+slide(1)
+						+slide(2)
+						+slide(3)
+						+slide(4)
+			//- +e.description
+			//- 	h2 Описание
+			//- 	p Вот уже более чем 100 лет Thibaut не&nbsp;перестает удивлять своих клиентов оригинальными изображениями на&nbsp;тему многоликой природы. Птицы, животные, орнаменты растений и&nbsp;элементы сельской жизни предстают на&nbsp;полотнах в&nbsp;самых неожиданных традициях английской, французской, итальянской или восточной изобразительной школы.
+			//- 	h2 Характеристики
+			//- 	+e.specification
+			//- 		table
+			//- 			tr
+			//- 				td Особенности
+			//- 				td Моющиеся, Износостойкие
+			//- 			tr
+			//- 				td Основа обоев
+			//- 				td Флизелин
+			//- 			tr
+			//- 				td Материал
+			//- 				td Винил на флизелине
+			//- 			tr
+			//- 				td Стиль дизайна
+			//- 				td Минимализм, Современный
+			//- 			tr
+			//- 				td Цвета
+			//- 				td Темно-серый
+			//- 		table
+			//- 			tr
+			//- 				td Бренд
+			//- 				td 1838 Wallcoverings Willow
+			//- 			tr
+			//- 				td Коллекция
+			//- 				td Springs
+			//- 			tr
+			//- 				td Страна
+			//- 				td Италия
+			//- 			tr
+			//- 				td Длина х Ширина
+			//- 				td 10,05 х 1,06 м
+			//- 			tr
+			//- 				td Тип помещения
+			//- 				td Гостиная, спальня, кабинет
 	// end sProductSlider

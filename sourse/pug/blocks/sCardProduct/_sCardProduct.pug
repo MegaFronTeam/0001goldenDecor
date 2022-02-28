@@ -3,7 +3,7 @@ mixin sCardProduct(data)
 	+b.SECTION.sCardProduct.section#sCardProduct&attributes(attributes)
 		.container
 			.row
-				+e.col-buy.col-xl-4
+				+e.col-buy.col-xl-4.d-none.d-xl-block
 					//- +sBuy()
 					+e.price
 						h2 12 044 ₽
@@ -12,7 +12,6 @@ mixin sCardProduct(data)
 						+e.BUTTON.btn.btn.btn-primary.w-100 Купить
 						+e.wrapBtn 
 							+addblock()
-							
 					button.btn.btn-outline-secondary.w-100 Купить в 1 клик
 					+e.productDesc
 						table
@@ -36,6 +35,72 @@ mixin sCardProduct(data)
 					+extraOption('2', 'Закажите поклейку обоев от 250 ₽ / м2', 'icon')
 				+e.col-product-info.col-xl-8
 					+sProductSlider()
+					+e.contentWrap.d-block.d-xl-none
+						+e.price
+							h2 12 044 ₽
+							a(href="#") Рассчитать колличество
+						+e.contentBtn
+							+e.BUTTON.btn.btn.btn-primary.w-100 Купить
+							+e.wrapBtn 
+								+addblock()
+						button.btn.btn-outline-secondary.w-100 Купить в 1 клик
+						+e.productDesc
+							table
+								tr
+									td Артикул
+									td TC71789-44
+								tr
+									td Вид обоев
+									td Винил на флизелине
+								tr
+									td Цвет
+									td Темно-серый
+								tr
+									td Размер
+									td 10,05 х 1,06 м
+								tr
+									td Комплект
+									td Рулон обоев - 1 шт
+						+extraOption('1', 'Бесплатная доставка при заказе от 15 000 ₽')
+						+extraOption('3', 'Примерить онлайн', 'icon')
+						+extraOption('2', 'Закажите поклейку обоев от 250 ₽ / м2', 'icon')
+					+e.description
+						h2 Описание
+						p Вот уже более чем 100 лет Thibaut не&nbsp;перестает удивлять своих клиентов оригинальными изображениями на&nbsp;тему многоликой природы. Птицы, животные, орнаменты растений и&nbsp;элементы сельской жизни предстают на&nbsp;полотнах в&nbsp;самых неожиданных традициях английской, французской, итальянской или восточной изобразительной школы.
+						h2 Характеристики
+						+e.specification
+							table
+								tr
+									td Особенности
+									td Моющиеся, Износостойкие
+								tr
+									td Основа обоев
+									td Флизелин
+								tr
+									td Материал
+									td Винил на флизелине
+								tr
+									td Стиль дизайна
+									td Минимализм, Современный
+								tr
+									td Цвета
+									td Темно-серый
+							table
+								tr
+									td Бренд
+									td 1838 Wallcoverings Willow
+								tr
+									td Коллекция
+									td Springs
+								tr
+									td Страна
+									td Италия
+								tr
+									td Длина х Ширина
+									td 10,05 х 1,06 м
+								tr
+									td Тип помещения
+									td Гостиная, спальня, кабинет
 				+e.col-catalog.col-12
 					+sCatalog2('Сопутствующие товары')
 	// end sCardProduct

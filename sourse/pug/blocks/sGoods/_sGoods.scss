@@ -1,0 +1,80 @@
+// start .sGoods
+.sGoods {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	&__row {
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: 0;
+		}
+	}
+	&__col-filter {
+		padding-top: rem(24);
+		padding-right: 0;
+		@include media-breakpoint-up(lg) {
+			border-right: 1px solid rgba(0, 0, 0, 0.1);
+			padding-top: rem(32);
+			padding-right: rem(30);
+		}
+	}
+	&__col-catalog {
+		padding-top: rem(24);
+		padding-bottom: rem(19);
+		padding-left: 0;
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(40);
+			padding-top: rem(32);
+			padding-bottom: rem(83);
+		}
+		.row {
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(40)};
+		}
+		& > button {
+			color: $body-color;
+			border-color: $body-color;
+			border-width: 2px;
+			padding: rem(16);
+			margin-top: rem(24);
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(64);
+			}
+		}
+	}
+	&__sort {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: rem(24);
+	}
+	&__sorting {
+		.form-wrap {
+			&__input-wrap {
+				padding-top: 0;
+				margin-bottom: 0;
+			}
+			&__input {
+				box-shadow: none !important;
+				border: none;
+				// font-size: rem(16);
+				padding: 0 rem(24) 0 0;
+			}
+		}
+	}
+	&__good-num {
+		display: flex;
+		span {
+			&:first-child {
+				opacity: 0.5;
+				margin-right: rem(4);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sGoods

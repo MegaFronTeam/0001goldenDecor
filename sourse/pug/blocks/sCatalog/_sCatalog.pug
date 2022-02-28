@@ -1,8 +1,11 @@
-mixin  catalog-item(i,t,p,pr,addblock)
+mixin  catalog-item(i,t,p,pr,addblock, haveInStock)
 	+b.catalog-item
 		+e.btn--like(type="button")
 			+icon("like")
 		+e.img-wrap(href="#").bg-wrap
+			if haveInStock
+				+e.have-in-stock
+					span В наличии
 			+pic(`prod-${i}.jpg`,'bg').picture-bg
 		+e.title: a(href="#")= t
 		p= p

@@ -11,6 +11,7 @@
 			padding-top: rem(32);
 			padding-right: rem(70);
 			border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+			order: unset;
 		}
 		& > button {
 			padding: rem(17) rem(12);
@@ -20,14 +21,15 @@
 			font-weight: 600;
 			margin-bottom: rem(40);
 		}
-		@include media-breakpoint-up(xl) {
-			order: unset;
-		}
 	}
 	&__col-product-info {
 		order: 1;
+		padding-top: rem(16);
 		@include media-breakpoint-up(xl) {
 			order: unset;
+			padding-top: rem(32);
+			padding-bottom: rem(106);
+			padding-left: rem(40);
 		}
 	}
 	&__col-catalog {
@@ -38,7 +40,10 @@
 	}
 	&__price {
 		display: flex;
-		margin-bottom: rem(36);
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(36);
+		}
 		h2 {
 			font-weight: 600;
 		}
@@ -106,10 +111,8 @@
 			top: 0;
 		}
 	}
-	&__contentBtn {
-		button {
-			
-		}
+	&__btn {
+		margin-bottom: rem(16);
 	}
 	&__wrapBtn {
 		display: none;
@@ -122,6 +125,83 @@
 		input {
 			width: 100%;
 			height: rem(60);
+		}
+	}
+	&__description {
+		padding-top: rem(32);
+		padding-bottom: rem(32);
+		@include media-breakpoint-up(xl) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		h2 {
+			font-weight: 600;
+			margin-bottom: rem(16);
+			font-size: rem(20);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(40);
+				margin-bottom: rem(32);
+			}
+			& + p {
+				margin-bottom: rem(32);
+				line-height: 1.50em;
+				@include media-breakpoint-up(xl) {
+					margin-bottom: rem(56);
+				}
+			}
+		 }
+	}
+	&__specification {
+		display: flex;
+		flex-direction: column;
+
+		@include media-breakpoint-up(sm) {
+			flex-direction: row;
+			justify-content: space-between;
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-start;
+			}
+		}
+		table {
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+			}
+			&:first-of-type {
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 0;
+				}
+			}
+			tr {
+				&:not(:last-child) {
+					td {
+						padding-bottom: rem(16);
+					}
+				}
+			}
+			td {
+				font-size: rem(14);
+				vertical-align: text-top;
+				&:nth-child(odd) {
+					color: #9BA1A5;
+				}
+				&:nth-child(even) {
+					text-decoration-line: underline;
+				}
+				&:not(:last-child) {
+					// padding-bottom: rem(16);
+				}
+			}
+		}
+	}
+	&__contentWrap {
+		& > button {
+			padding: rem(17) rem(12);
+			color: $body-color;
+			border-color: $body-color;
+			border-width: 2px;
+			font-weight: 600;
+			margin-bottom: rem(40);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

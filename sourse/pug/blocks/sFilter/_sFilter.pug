@@ -1,22 +1,50 @@
 mixin sFilter(data)
 	// start sFilter
 	+b.sFilter&attributes(attributes)
-		//- .dd-group-js
-		//- 	.dd-head-js.d-flex.d-lg-none.justify-content-between
-		//- 		+icon('filter') 
-		//- 		| Фильтры
-		//- 	+e.wrap.dd-content-js
-		//- 		+e.title
-		//- 			h4 Фильтры
-		//- 		+e.body
-		//- 			+ddGroup()
-		//- 				.row
-		//- 					.col-md-6.col-lg-12
-		//- 						+ddGroupItem('Навесы').active 
-		//- 							+e.wrap
-		//- 								+in-c("checkbox", 'Для машин')
-		//- 								+in-c("checkbox", 'К дому')(checked) 
-		//- 								+in-c("checkbox", 'Для бассейна')
-		//- 								+in-c("checkbox", 'Кованые')(checked)
-		//- 								+in-c("checkbox", 'Другие типы навесов')
+		.dd-group-js
+			.dd-head-js.d-flex.d-lg-none.justify-content-between
+				+icon('filter') 
+				| Фильтры
+			+e.wrap.dd-content-js
+				+e.title
+					h4 Фильтры
+				+e.body
+					+ddGroup()
+						+ddGroupItem('Тип').active 
+							+e.wrap
+								+form-wrap
+									+in-c("checkbox", 'Бесшовные')
+									+in-c("checkbox", 'Флезелиновые')
+									+in-c("checkbox", 'Виниловые')(checked)
+									+in-c("checkbox", 'Декоративный элемент')
+									+in-c("checkbox", 'Бордюр')
+									+in-c("checkbox", 'Панно / Фотообои')
+									+in-c("checkbox", 'Под покраску')
+						+ddGroupItem('Тип помещения').active 
+							+e.wrap
+								+form-wrap
+									+in-c("checkbox", 'Кухня')
+									+in-c("checkbox", 'Коридор')
+									+in-c("checkbox", 'Холл')
+									+in-c("checkbox", 'Гостинная')(checked)
+									+in-c("checkbox", 'Спальня')
+									+in-c("checkbox", 'Кабинет')
+						+ddGroupItem('Основа обоев').active 
+							+e.wrap
+								+form-wrap
+									+in-c("checkbox", 'Бумага')
+									+in-c("checkbox", 'Флизелин')(checked)
+						+ddGroupItem('Страна').active 
+							+e.wrap
+								+form-wrap
+									+in-c("checkbox", 'Бельгия')
+									+in-c("checkbox", 'Италия')(checked)
+						+ddGroupItem('Бренд').active 
+							+e.wrap
+								+form-wrap
+									+in-c("checkbox", '4Seasons')
+									+in-c("checkbox", '1838 Wallcoverings')(checked)
+			//- +e.reset-filter
+			//- 	+icon('undo')
+			//- 	span Очистить фильтр
 	// end sFilter

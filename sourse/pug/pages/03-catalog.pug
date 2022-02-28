@@ -15,6 +15,7 @@ include ../blocks/sCatalog/_sCatalog.pug
 //- include ../blocks/sAbout/_sAbout.pug
 //- include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sFilter/_sFilter.pug
+include ../blocks/sGoods/_sGoods.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -35,12 +36,7 @@ block pagecontent
 		title
 	})
 		+breadcrumb('Главная', 'Обои', `Виниловые обои`)
-	.container
-		.row
-			.col-lg-3
-				+sFilter()
-			.col-lg-9
-				//- +sCatalog("Новинки",'Акции')
+	+sGoods()
 	+footer()
       
 
