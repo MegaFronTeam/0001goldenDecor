@@ -454,8 +454,12 @@ function eventHandler() {
 		slidesPerView: 4,
 		watchSlidesProgress: true,
 		breakpoints: {
+			768: {
+				spaceBetween: 16,
+			},
 			992: {
 				direction: "vertical",
+				slidesPerView: 'auto',
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 				watchOverflow: true,

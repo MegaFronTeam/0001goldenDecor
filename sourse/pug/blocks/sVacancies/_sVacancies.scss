@@ -33,17 +33,17 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-		&.active {
-			.accordion-item__head {
-				&::before {
-					opacity: 1;
-					height: 100%;
-				}
-				.icon {
-					transform: rotateX(180deg);
-				}
-			}
-		}
+		// &.active {
+		// 	.accordion-item__head {
+		// 		&::before {
+		// 			opacity: 1;
+		// 			height: 100%;
+		// 		}
+		// 		.icon {
+		// 			transform: rotateX(180deg);
+		// 		}
+		// 	}
+		// }
 		&__head {
 			position: relative;
 			cursor: pointer;
@@ -67,6 +67,15 @@
 				background-color: #f8f8f8;
 				opacity: 0;
 				z-index: -1;
+			}
+			&.active {
+				&::before {
+					opacity: 1;
+					height: 100%;
+				}
+				.icon {
+					transform: rotateX(180deg);
+				}
 			}
 			.row {
 				--bs-gutter-x: var(--btnHeight);
