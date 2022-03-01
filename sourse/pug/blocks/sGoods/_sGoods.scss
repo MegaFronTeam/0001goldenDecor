@@ -65,6 +65,13 @@
 				border: none;
 				// font-size: rem(16);
 				padding: 0 rem(24) 0 0;
+				@include media-breakpoint-down(sm) {
+					padding: rem(8) rem(24) rem(8) rem(16);
+					border: 1px solid #CDD0D2;
+					font-size: 16px;
+					line-height: 1.5;
+					background-position: 95%;
+				}
 			}
 		}
 	}
