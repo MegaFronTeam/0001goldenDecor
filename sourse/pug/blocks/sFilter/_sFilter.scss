@@ -47,6 +47,129 @@
 				margin-bottom: rem(16);
 			}
 		}
+		&__color-wrap {
+			form {
+				@include roww(15px, m);
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.form-wrap {
+				label {
+					width: auto;
+				}
+			}
+			.custom-input {
+				padding-left: 0;
+				&__input {
+					width: rem(35);
+					height: rem(35);
+					border-radius: 50%;
+					border: 1px solid #D0D0D0;
+					margin-left: 0;
+					cursor: pointer;
+					&:checked {
+						background-image: url(../img/svg/check-black.svg);
+						background-size: 50%;
+						background-color: transparent;
+					}
+				}
+				&:nth-child(1) {
+					.custom-input__input {
+						background-color: #9C9C9C;
+					}
+				}
+				&:nth-child(2) {
+					.custom-input__input {
+						background-color: #C3E6FE;
+					}
+				}
+				&:nth-child(3) {
+					.custom-input__input {
+						background-color: #C0987E;
+					}
+				}
+				&:nth-child(4) {
+					.custom-input__input {
+						background-color: #04A1E2;
+					}
+				}
+				&:nth-child(5) {
+					.custom-input__input {
+						background-color: #9D1A1A;
+					}
+				}
+				&:nth-child(6) {
+					.custom-input__input {
+						background-color: #39814F;
+					}
+				}
+				&:nth-child(7) {
+					.custom-input__input {
+						background-color: #924900;
+					}
+				}
+				&:nth-child(8) {
+					.custom-input__input {
+						background-color: #FFFFFF;
+					}
+				}
+				&:nth-child(9) {
+					.custom-input__input {
+						background-color: #F0CA00;
+					}
+				}
+				&:nth-child(10) {
+					.custom-input__input {
+						background-color: #FFFEE7;
+					}
+				}
+				&:nth-child(11) {
+					.custom-input__input {
+						background-color: #F38B48;
+					}
+				}
+				&:nth-child(12) {
+					.custom-input__input {
+						background-color: #6B3CA6;
+					}
+				}
+				&:nth-child(13) {
+					.custom-input__input {
+						background-color: #D956B4;
+					}
+				}
+				&:nth-child(14) {
+					.custom-input__input {
+						background-color: #424242;
+					}
+				}
+			}
+		}
+	}
+	.irs {
+		&-from, &-to, &-single, &-min, &-max {
+			visibility: hidden !important;
+			display: none;
+			position: absolute !important;
+		}
+		&-line {
+			position: sticky;
+		}
+		&-handle {
+			top: -10px;
+		}
+		&-bar {
+			top: 0;
+		}
+		&--round {
+			height: 30px;
+		}
+	}
+	.extra-controls {
+		display: flex;
+		input {
+			width: 100%;
+		}
 	}
 	// &__reset-filter {
 	// 	.icon {

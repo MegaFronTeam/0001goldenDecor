@@ -10,40 +10,58 @@ mixin sFilter(data)
 					h4 Фильтры
 				+e.body
 					+ddGroup()
-						+ddGroupItem('Тип').active 
-							+e.wrap
+						+ddGroupItem('Тип').active
+							+form-wrap
+								+in-c("checkbox", 'Бесшовные')
+								+in-c("checkbox", 'Флезелиновые')
+								+in-c("checkbox", 'Виниловые')(checked)
+								+in-c("checkbox", 'Декоративный элемент')
+								+in-c("checkbox", 'Бордюр')
+								+in-c("checkbox", 'Панно / Фотообои')
+								+in-c("checkbox", 'Под покраску')
+						+ddGroupItem('Тип помещения').active
+							+form-wrap
+								+in-c("checkbox", 'Кухня')
+								+in-c("checkbox", 'Коридор')
+								+in-c("checkbox", 'Холл')
+								+in-c("checkbox", 'Гостинная')(checked)
+								+in-c("checkbox", 'Спальня')
+								+in-c("checkbox", 'Кабинет')
+						+ddGroupItem('Цвет').active 
+							+e.color-wrap
 								+form-wrap
-									+in-c("checkbox", 'Бесшовные')
-									+in-c("checkbox", 'Флезелиновые')
-									+in-c("checkbox", 'Виниловые')(checked)
-									+in-c("checkbox", 'Декоративный элемент')
-									+in-c("checkbox", 'Бордюр')
-									+in-c("checkbox", 'Панно / Фотообои')
-									+in-c("checkbox", 'Под покраску')
-						+ddGroupItem('Тип помещения').active 
-							+e.wrap
-								+form-wrap
-									+in-c("checkbox", 'Кухня')
-									+in-c("checkbox", 'Коридор')
-									+in-c("checkbox", 'Холл')
-									+in-c("checkbox", 'Гостинная')(checked)
-									+in-c("checkbox", 'Спальня')
-									+in-c("checkbox", 'Кабинет')
+									+in-c("checkbox", '')(checked)
+									+in-c("checkbox", '')(checked)
+									+in-c("checkbox", '')(checked)
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
+									+in-c("checkbox", '')
 						+ddGroupItem('Основа обоев').active 
-							+e.wrap
-								+form-wrap
-									+in-c("checkbox", 'Бумага')
-									+in-c("checkbox", 'Флизелин')(checked)
+							+form-wrap
+								+in-c("checkbox", 'Бумага')
+								+in-c("checkbox", 'Флизелин')(checked)
+						+ddGroupItem('Цена').active 
+							.range-slider
+								input.js-range-slider(type='text' value='')
+							.extra-controls
+								input.js-input-from(type='text' value='₽')
+								input.js-input-to(type='text' value='0')
 						+ddGroupItem('Страна').active 
-							+e.wrap
-								+form-wrap
-									+in-c("checkbox", 'Бельгия')
-									+in-c("checkbox", 'Италия')(checked)
+							+form-wrap
+								+in-c("checkbox", 'Бельгия')
+								+in-c("checkbox", 'Италия')(checked)
 						+ddGroupItem('Бренд').active 
-							+e.wrap
-								+form-wrap
-									+in-c("checkbox", '4Seasons')
-									+in-c("checkbox", '1838 Wallcoverings')(checked)
+							+form-wrap
+								+in-c("checkbox", '4Seasons')
+								+in-c("checkbox", '1838 Wallcoverings')(checked)
 			//- +e.reset-filter
 			//- 	+icon('undo')
 			//- 	span Очистить фильтр
