@@ -2,11 +2,11 @@ mixin sFilter(data)
 	// start sFilter
 	+b.sFilter&attributes(attributes)
 		.dd-group-js
-			.dd-head-js.d-flex.d-lg-none.justify-content-between
+			+e.btn.dd-head-js.d-lg-none
 				+icon('filter') 
 				| Фильтры
 			+e.wrap.dd-content-js
-				+e.title
+				+e.title.d-none.d-lg-block
 					h4 Фильтры
 				+e.body
 					+ddGroup()

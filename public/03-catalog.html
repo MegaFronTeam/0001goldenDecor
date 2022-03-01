@@ -253,13 +253,13 @@
 							<!-- start sFilter-->
 							<div class="sFilter">
 								<div class="dd-group-js">
-									<div class="dd-head-js d-flex d-lg-none justify-content-between">
+									<div class="sFilter__btn dd-head-js d-lg-none">
 										<svg class="icon icon-filter ">
 											<use xlink:href="img/svg/sprite.svg#filter"></use>
 										</svg>Фильтры
 									</div>
 									<div class="sFilter__wrap dd-content-js">
-										<div class="sFilter__title">
+										<div class="sFilter__title d-none d-lg-block">
 											<h4>Фильтры</h4>
 										</div>
 										<div class="sFilter__body">
@@ -445,28 +445,32 @@
 							<!-- end sFilter-->
 						</div>
 						<div class="sGoods__col-catalog col-lg-9">
-							<div class="sGoods__sort">
-								<div class="sGoods__good-num"><span>Товаров</span><span>3560</span>
-								</div>
-								<div class="sGoods__sorting">
-									<div class="form-wrap">
-										<form>
-											<div class="form-wrap__input-wrap form-group">
-												<select class="form-wrap__input form-select" name="select">
-													<option value="По популярности">По популярности</option>
-													<option value=" placeholder 1">placeholder 1</option>
-													<option value=" placeholder 2">placeholder 2</option>
-													<option value=" placeholder 3">placeholder 3</option>
-													<option value=" placeholder 4">placeholder 4</option>
-												</select>
-												<div class="input-clear input-clear--js">
-													<svg class="icon icon-close ">
-														<use xlink:href="img/svg/sprite.svg#close"></use>
-													</svg>
+							<div class="sGoods__sort-row row justify-content-between">
+								<div class="col-12 col-sm-auto order-sm-last">
+									<div class="sGoods__sorting">
+										<div class="form-wrap">
+											<form>
+												<div class="form-wrap__input-wrap form-group">
+													<select class="form-wrap__input form-select" name="select">
+														<option value="По популярности">По популярности</option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select>
+													<div class="input-clear input-clear--js">
+														<svg class="icon icon-close ">
+															<use xlink:href="img/svg/sprite.svg#close"></use>
+														</svg>
+													</div>
 												</div>
-											</div>
-											<!-- +e.input-wrap-->
-										</form>
+												<!-- +e.input-wrap-->
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sGoods__good-num"><span>Товаров</span><span>3560</span>
 									</div>
 								</div>
 							</div>
