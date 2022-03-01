@@ -15,6 +15,23 @@ mixin sGoods(data)
 							+e.good-num
 								span Товаров
 								span 3560
+					+e.row-filter.row
+						.col-auto
+							+e.filterOption
+								span В наличии
+								a(href="#")
+						.col-auto
+							+e.filterOption
+								span Гостинная
+								a(href="#")
+						.col-auto
+							+e.filterOption
+								span Флизелин
+								a(href="#")
+						.col-auto
+							+e.filterOption
+								span Италия
+								a(href="#")
 					.row
 						.col-sm-6
 							+catalog-item(1, '1838 Wallcoverings Willow Stone Blue Silver', 'Код товара: R458702556DF', '2 800 ₽', '', 'true')

@@ -9,6 +9,10 @@ mixin sFilter(data)
 				+e.title.d-none.d-lg-block
 					h4 Фильтры
 				+e.body
+					+e.filterHead
+						+e.BUTTON.filterCloseBtn
+						h5 Фильтры
+						a(href="#") Сбросить
 					+ddGroup()
 						+ddGroupItem('Тип').active
 							+form-wrap
@@ -68,7 +72,7 @@ mixin sFilter(data)
 							+form-wrap
 								+in-c("checkbox", '4Seasons')
 								+in-c("checkbox", '1838 Wallcoverings')(checked)
-			//- +e.reset-filter
-			//- 	+icon('undo')
-			//- 	span Очистить фильтр
+		//- +e.reset-filter
+		//- 	+icon('undo')
+		//- 	span Очистить фильтр
 	// end sFilter

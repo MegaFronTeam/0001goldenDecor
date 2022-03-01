@@ -544,6 +544,10 @@ function eventHandler() {
 		$(this).prop("value", val);
 	});
 
+	$('.sFilter__filterCloseBtn').click(function () {
+		$('.sFilter__wrap').css({"display":"none"});
+		$('.sFilter__btn').removeClass('active');
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
