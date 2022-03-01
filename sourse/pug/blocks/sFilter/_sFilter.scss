@@ -21,6 +21,11 @@
 			margin-right: 4px;
 			font-size: rem(24);
 		}
+		@include media-breakpoint-down(lg) {
+			& + .sFilter__wrap {
+				display: none;
+			}
+		}
 	}
 	&__title {
 		padding-bottom: rem(32);
