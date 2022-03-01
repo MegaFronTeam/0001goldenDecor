@@ -501,7 +501,6 @@ function eventHandler() {
 			max: max,
 			from: 890,
 			to: 18090,
-			postfix: "₽",
 			onStart: updateInputs,
 			onChange: updateInputs,
 			onFinish: updateInputs

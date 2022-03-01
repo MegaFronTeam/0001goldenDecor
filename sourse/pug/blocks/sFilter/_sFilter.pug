@@ -30,20 +30,20 @@ mixin sFilter(data)
 						+ddGroupItem('Цвет').active 
 							+e.color-wrap
 								+form-wrap
-									+in-c("checkbox", '')(checked)
-									+in-c("checkbox", '')(checked)
-									+in-c("checkbox", '')(checked)
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
-									+in-c("checkbox", '')
+									+in-c("checkbox", '')(checked, style="--checkColor: #9C9C9C")
+									+in-c("checkbox", '')(checked, style="--checkColor: #C3E6FE")
+									+in-c("checkbox", '')(checked, style="--checkColor: #C0987E")
+									+in-c("checkbox", '')(style="--checkColor: #04A1E2")
+									+in-c("checkbox", '')(style="--checkColor: #9D1A1A")
+									+in-c("checkbox", '')(style="--checkColor: #39814F")
+									+in-c("checkbox", '')(style="--checkColor: #924900")
+									+in-c("checkbox", '')(style="--checkColor: #FFFFFF")
+									+in-c("checkbox", '')(style="--checkColor: #F0CA00")
+									+in-c("checkbox", '')(style="--checkColor: #FFFEE7")
+									+in-c("checkbox", '')(style="--checkColor: #F38B48")
+									+in-c("checkbox", '')(style="--checkColor: #6B3CA6")
+									+in-c("checkbox", '')(style="--checkColor: #D956B4")
+									+in-c("checkbox", '')(style="--checkColor: #424242")
 						+ddGroupItem('Основа обоев').active 
 							+form-wrap
 								+in-c("checkbox", 'Бумага')
@@ -52,8 +52,14 @@ mixin sFilter(data)
 							.range-slider
 								input.js-range-slider(type='text' value='')
 							.extra-controls
-								input.js-input-from(type='text' value='₽')
-								input.js-input-to(type='text' value='0')
+								label
+									span от
+									input.js-input-from(type='text' value='0')
+									span ₽
+								label
+									span до
+									input.js-input-to(type='text' value='0')
+									span ₽
 						+ddGroupItem('Страна').active 
 							+form-wrap
 								+in-c("checkbox", 'Бельгия')

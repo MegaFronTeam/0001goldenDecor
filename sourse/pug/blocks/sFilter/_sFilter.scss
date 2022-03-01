@@ -60,6 +60,7 @@
 			}
 			.custom-input {
 				padding-left: 0;
+				--checkColor: $white;
 				&__input {
 					width: rem(35);
 					height: rem(35);
@@ -67,82 +68,83 @@
 					border: 1px solid #D0D0D0;
 					margin-left: 0;
 					cursor: pointer;
+					background-color: var(--checkColor);
 					&:checked {
 						background-image: url(../img/svg/check-black.svg);
 						background-size: 50%;
-						background-color: transparent;
+						// background-color: transparent;
 					}
 				}
-				&:nth-child(1) {
-					.custom-input__input {
-						background-color: #9C9C9C;
-					}
-				}
-				&:nth-child(2) {
-					.custom-input__input {
-						background-color: #C3E6FE;
-					}
-				}
-				&:nth-child(3) {
-					.custom-input__input {
-						background-color: #C0987E;
-					}
-				}
-				&:nth-child(4) {
-					.custom-input__input {
-						background-color: #04A1E2;
-					}
-				}
-				&:nth-child(5) {
-					.custom-input__input {
-						background-color: #9D1A1A;
-					}
-				}
-				&:nth-child(6) {
-					.custom-input__input {
-						background-color: #39814F;
-					}
-				}
-				&:nth-child(7) {
-					.custom-input__input {
-						background-color: #924900;
-					}
-				}
-				&:nth-child(8) {
-					.custom-input__input {
-						background-color: #FFFFFF;
-					}
-				}
-				&:nth-child(9) {
-					.custom-input__input {
-						background-color: #F0CA00;
-					}
-				}
-				&:nth-child(10) {
-					.custom-input__input {
-						background-color: #FFFEE7;
-					}
-				}
-				&:nth-child(11) {
-					.custom-input__input {
-						background-color: #F38B48;
-					}
-				}
-				&:nth-child(12) {
-					.custom-input__input {
-						background-color: #6B3CA6;
-					}
-				}
-				&:nth-child(13) {
-					.custom-input__input {
-						background-color: #D956B4;
-					}
-				}
-				&:nth-child(14) {
-					.custom-input__input {
-						background-color: #424242;
-					}
-				}
+				// &:nth-child(1) {
+				// 	.custom-input__input {
+				// 		background-color: #9C9C9C;
+				// 	}
+				// }
+				// &:nth-child(2) {
+				// 	.custom-input__input {
+				// 		background-color: #C3E6FE;
+				// 	}
+				// }
+				// &:nth-child(3) {
+				// 	.custom-input__input {
+				// 		background-color: #C0987E;
+				// 	}
+				// }
+				// &:nth-child(4) {
+				// 	.custom-input__input {
+				// 		background-color: #04A1E2;
+				// 	}
+				// }
+				// &:nth-child(5) {
+				// 	.custom-input__input {
+				// 		background-color: #9D1A1A;
+				// 	}
+				// }
+				// &:nth-child(6) {
+				// 	.custom-input__input {
+				// 		background-color: #39814F;
+				// 	}
+				// }
+				// &:nth-child(7) {
+				// 	.custom-input__input {
+				// 		background-color: #924900;
+				// 	}
+				// }
+				// &:nth-child(8) {
+				// 	.custom-input__input {
+				// 		background-color: #FFFFFF;
+				// 	}
+				// }
+				// &:nth-child(9) {
+				// 	.custom-input__input {
+				// 		background-color: #F0CA00;
+				// 	}
+				// }
+				// &:nth-child(10) {
+				// 	.custom-input__input {
+				// 		background-color: #FFFEE7;
+				// 	}
+				// }
+				// &:nth-child(11) {
+				// 	.custom-input__input {
+				// 		background-color: #F38B48;
+				// 	}
+				// }
+				// &:nth-child(12) {
+				// 	.custom-input__input {
+				// 		background-color: #6B3CA6;
+				// 	}
+				// }
+				// &:nth-child(13) {
+				// 	.custom-input__input {
+				// 		background-color: #D956B4;
+				// 	}
+				// }
+				// &:nth-child(14) {
+				// 	.custom-input__input {
+				// 		background-color: #424242;
+				// 	}
+				// }
 			}
 		}
 	}
@@ -166,9 +168,48 @@
 		}
 	}
 	.extra-controls {
-		display: flex;
+		// display: flex;
+		@extend .row;
+		--bs-gutter-x: #{rem(16)};
+		font-size: rem(16);
+		line-height: 1.5;
+		label {
+			// @include roww(5px, m);
+			@extend .col-6;
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding-bottom: rem(10);
+			// border-bottom: 1px solid $body-color;
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: calc(100% - var(--bs-gutter-x));
+				height: 1px;
+				left: calc(var(--bs-gutter-x) / 2);
+				background-color:  $body-color;
+				bottom: 0;
+			}
+			span {
+				display: block;
+				&:first-child {
+					margin-right: 5px;
+				}
+				&:last-child {
+					margin-left: 5px;
+				}
+			}
+		}
 		input {
+			@include mt;
 			width: 100%;
+			border-color: transparent;
+			border-width: 1px;
+			&:focus {
+				border-color: $body-color;
+				outline: none;
+			}
 		}
 	}
 	// &__reset-filter {
