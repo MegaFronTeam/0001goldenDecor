@@ -2,6 +2,9 @@
 .sCardProduct {
 	--sPT: 0;
 	--sPB: 0;
+	position: relative;
+
+	overflow: hidden;
 	// --sTPB: ;
 	&__col-buy {
 		order: 2;
@@ -59,6 +62,10 @@
 		}
 	}
 	&__contentBtn {
+		@include media-breakpoint-down(lg) {
+			position: sticky;
+			bottom: 60px;
+		}
 		margin-bottom: rem(16);
 		button {
 			padding: rem(17) rem(12);

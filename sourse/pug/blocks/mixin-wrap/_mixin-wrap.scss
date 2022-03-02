@@ -243,10 +243,35 @@
 	}
 }
 
+.sticky-wrap{
+	position: relative;
+}
+
 .checkout {
 	position: relative;
+	position: sticky;
+	@include mt;
+	transform: translateY(var(--active, 100%));
+	visibility: var(--active, hidden);
+	@include media-breakpoint-up(lg) {
+	&.active{
+		--active: ' ';
+	}
+}
+	@include media-breakpoint-down(lg) {
+	&.active2{
+		--active: ' ';
+	}
+}
+
+	bottom: 0;
 	padding: rem(40) 0;
+
+	z-index: 300;
 	background-color: $white;
+	@include media-breakpoint-down(lg) { 
+		bottom: 64px;
+	}
 	@include media-breakpoint-up(md) {
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 		padding: rem(8) 0;

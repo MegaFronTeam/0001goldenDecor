@@ -39,8 +39,9 @@ block pagecontent
 		favorite: true
 	}).--product
 		+breadcrumb('Главная', 'Обои', `Виниловые обои`)
-	+sCardProduct()
-	+checkout('Купить', '', '', 'info').--product
+	+b.sticky-wrap
+		+sCardProduct()
+		+checkout('Купить', '', '', 'info').--product
 	+footer()
       
 

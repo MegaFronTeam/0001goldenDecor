@@ -10,6 +10,7 @@
 	}
 	&__col-filter {
 		padding-top: rem(24);
+		position: relative;
 		// padding-right: 0;
 		// position: relative;
 		@include media-breakpoint-up(lg) {
@@ -136,7 +137,13 @@
 	}
 	&__reset-filter {
 		@include mt;
-		position: relative;
+		// position: relative;
+		position: sticky;
+		// position: absolute;
+		background-color: #fff;
+		z-index: 100;
+		right: 0;
+
 		bottom: 0;
 		left: 0;
 		padding: rem(16) 0;
@@ -152,9 +159,12 @@
 			content: '';
 			position: absolute;	
 			display: block;
-			width: 50vw;
-			height: 1px;
-			background-color: rgba(0, 0, 0, 0.1);
+			width: 100vw;
+			height: 100%;
+			// background-color: 
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+			z-index: -1;
 			top: 0;
 			right: rem(-30);
 		}

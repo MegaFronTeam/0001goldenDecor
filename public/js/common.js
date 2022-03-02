@@ -351,6 +351,19 @@ function eventHandler() {
 	$('.header').hcSticky({
     // stickTo: $('#content')
   });
+	// $('.sGoods__reset-filter--js').hcSticky({
+	// 	stickTo: $('.sGoods__col-filter'),
+	// 	bottom: 0,
+	// 	bottomEnd: 70,
+  //   innerTop: 12,
+  //   offResolutions: [-1200]     
+	// 	// mobileFirst: true,
+	// 		// responsive: {
+	// 		// 	992: {
+	// 		// 		disable: true
+	// 		// 	}
+	// 		// }
+  // });
 
 	const convertImages = (query, callback) => {
 		const images = document.querySelectorAll(query);
@@ -445,9 +458,9 @@ function eventHandler() {
 		
 	// });
 
-	$('.checkout').hcSticky({
+	// $('.checkout').hcSticky({
 		
-  });
+  // });
 	var sProductSliderThumbs = new Swiper(".sProductSlider__slider-thumbs--js", {
 		loop: true,
 		spaceBetween: 8,
@@ -549,15 +562,74 @@ function eventHandler() {
 	});
 
 	$('.sFilter__filterCloseBtn').click(function () {
-		$('.sFilter__wrap').css({"display":"none"});
+		$('.sFilter__wrap').removeClass('active');
 		$('.sFilter__btn').removeClass('active');
 		document.body.classList.remove("fixed");
 	});
-
+	
 	$(".sFilter__btn").click(function () {
+		$('.sFilter__wrap').addClass('active');
 		// $(this).toggleClass("active").next().slideToggle();
 		document.body.classList.add("fixed");
 	})
+
+
+
+
+
+// Получаем нужный элемент
+	var element = document.querySelectorAll('.sCardProduct__col-buy .sCardProduct__contentBtn');
+	var element2 = document.querySelectorAll('.sCardProduct__contentWrap .sCardProduct__contentBtn');
+	
+	var Visible = function (target, cl) {
+		// Все позиции элемента
+		var targetPosition = {
+				top: window.pageYOffset + target.getBoundingClientRect().top,
+				left: window.pageXOffset + target.getBoundingClientRect().left,
+				right: window.pageXOffset + target.getBoundingClientRect().right,
+				bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+			},
+			// Получаем позиции окна
+			windowPosition = {
+				top: window.pageYOffset,
+				left: window.pageXOffset,
+				right: window.pageXOffset + document.documentElement.clientWidth,
+				bottom: window.pageYOffset + document.documentElement.clientHeight
+			};
+	
+		if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+			targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+			targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+			targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+			// Если элемент полностью видно, то запускаем следующий код
+		 $(".checkout--product").removeClass(cl)
+		} else {
+			$(".checkout--product").addClass(cl)
+			// Если элемент не видно, то запускаем этот код
+			// console.clear();
+		};
+	};
+
+	if (element) {
+		element.forEach((el) => { 
+			// Запускаем функцию при прокрутке страницы
+			window.addEventListener('scroll', function() {
+				Visible (el, 'active');
+			}, { passive: true });
+						Visible(el, 'active'); 
+		}) 
+	}
+	
+	if (element2) {
+		element2.forEach((el) => { 
+			// Запускаем функцию при прокрутке страницы
+			window.addEventListener('scroll', function() {
+				Visible (el, 'active2');
+			}, { passive: true });
+						Visible(el, 'active2'); 
+		}) 
+	}
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
