@@ -6,6 +6,7 @@
 	padding-bottom: 0;
 	@include media-breakpoint-up(lg) {
 		padding-bottom: rem(83);
+		flex-grow: 1;
 	}
 	&__btn {
 		@extend .btn, .btn-primary;
@@ -26,6 +27,21 @@
 				display: none;
 			}
 		}
+		&.active {
+			& + .sFilter__wrap {
+				.dd-group {
+					height: calc(100vh - 68px);
+					overflow-y: auto;
+					overflow-x: hidden;
+					@include media-breakpoint-down(lg) {
+						padding-right: 10px;
+						padding-bottom: 32px;
+						padding-right: 16px;
+    				padding-left: 16px;
+					}
+				}
+			}
+		}
 	}
 	&__title {
 		padding-bottom: rem(32);
@@ -43,6 +59,7 @@
 		&__head {
 			@include mt;
 			display: flex;
+			cursor: pointer;
 			justify-content: space-between;
 			align-items: center;
 			margin-bottom: rem(0);
@@ -70,6 +87,7 @@
 			}
 		}
 		.custom-input {
+			cursor: pointer;
 			&:not(:last-child) {
 				margin-bottom: rem(16);
 			}
@@ -184,22 +202,29 @@
 			top: 0;
 			height: 100%;
 			.dd-group {
-				max-width: 327px;
+				max-width: 360px;
 				margin-left: auto;
 				margin-right: auto;
+			}
+		}
+		& > .dd-group {
+			@include media-breakpoint-down(lg) {
+				padding-top: 16px;
 			}
 		}
 	}
 	&__filterHead {
 		display: flex;
-		max-width: 327px;
+		max-width: 360px;
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 22px;
 		padding-bottom: 22px;
+		padding-right: 16px;
+    padding-left: 16px;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 16px;
+		// margin-bottom: 16px;
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
@@ -249,9 +274,9 @@
 		}
 	}
 	// &__reset-filter {
-	// 	position: absolute;
-	// 	bottom: 0;
-	// 	left: 0;
+	// 	// position: absolute;
+	// 	// bottom: 0;
+	// 	// left: 0;
 	// 	.icon {
 	// 		fill: none;
 	// 		stroke: currentColor;

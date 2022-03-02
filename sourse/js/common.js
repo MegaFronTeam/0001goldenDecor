@@ -551,7 +551,13 @@ function eventHandler() {
 	$('.sFilter__filterCloseBtn').click(function () {
 		$('.sFilter__wrap').css({"display":"none"});
 		$('.sFilter__btn').removeClass('active');
+		document.body.classList.remove("fixed");
 	});
+
+	$(".sFilter__btn").click(function () {
+		// $(this).toggleClass("active").next().slideToggle();
+		document.body.classList.add("fixed");
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
