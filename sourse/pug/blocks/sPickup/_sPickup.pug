@@ -25,6 +25,8 @@ mixin sPickup(data)
 							script.
 								ymaps.ready(init);
 								function init() {
+									const mark = 'img/svg/map.png';
+									const markColor = 'img/svg/map-color.png';
 									var center = [55.75380038320217,37.62071970898438];
 									var myMap1 = new ymaps.Map('map', {
 										center: center,
@@ -34,7 +36,19 @@ mixin sPickup(data)
 									var contentBalloon1 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТК Каширский Двор</h5>' + '<p>г. Москва, Каширское шоссе, дом 19, корпус 1</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
 									var contentBalloon2 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Экспострой</h5>' + '<p>г. Москва, Нахимовский проспект, дом 24</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
 									var contentBalloon3 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Тройка</h5>' + '<p>г. Москва, ул. Верхняя Красносельская 3А</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
-									var collection = new ymaps.GeoObjectCollection();
+									var collection = new ymaps.GeoObjectCollection(null, 
+										{
+											hideIconOnBalloonOpen: false,
+											iconLayout: 'default#image',
+											iconImageHref: mark,
+											// Размеры метки.
+											
+											iconImageSize: [30, 32],
+											// Смещение левого верхнего угла иконки относительно
+											// её "ножки" (точки привязки).
+											//- iconImageOffset: [-16, -20]
+										}
+									);
 									collection
 										.add(new ymaps.Placemark([55.67455635081638,37.64072341673275], { 
 											balloonContent: contentBalloon1, 
@@ -46,16 +60,21 @@ mixin sPickup(data)
 											balloonContent: contentBalloon3
 										}))
 									myMap1.geoObjects.add(collection);
-									
-									//- collection.events.add('click', function (e) {
-									//- 		// Получим ссылку на геообъект, по которому кликнул пользователь.
-									//- 		var target = e.get('target');
-									//- 		// Зададим контент боковой панели.
-									//- 		panel.setContent(target.properties.get('balloonContent'));
-									//- 		// Переместим центр карты по координатам метки с учётом заданных отступов.
-									//- 		map.panTo(target.geometry.getCoordinates(), {useMapMargin: true});
-									//- });
-									//- myMap1.geoObjects.add(myPlacemark1);
+									collection.events
+										.add('balloonopen', e => {
+											var target = e.get('target');
+											target.options.set('iconImageHref', markColor);
+											$(".sPickup__map-caption").html(`<div class="content">${target.properties.get('balloonContent')}</div><div class="closeButton"></div></div>`);
+										})
+										.add('balloonclose', (e) => {
+												$(".sPickup__map-caption").html("");
+											e.get('target').options.set('iconImageHref', mark)
+											});
+
+									$(document).on('click', '.closeButton', function () {
+										map.balloon.close()
+										// $(document).
+									});
 									myMap1.behaviors.disable('scrollZoom');
 									//на мобильных устройствах... (проверяем по userAgent браузера)
 									if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -63,6 +82,8 @@ mixin sPickup(data)
 										myMap1.behaviors.disable('drag');
 									}
 								};
+					+e.container
+						+e.map-caption.container
 					+form-wrap()
 						+input('Ваш комментарий к заказу', 'textarea')
 	// end sPickup

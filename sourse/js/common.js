@@ -472,7 +472,7 @@ function eventHandler() {
 			},
 			992: {
 				direction: "vertical",
-				slidesPerView: 'auto',
+				slidesPerView: '4',
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 				watchOverflow: true,
@@ -580,6 +580,7 @@ function eventHandler() {
 // Получаем нужный элемент
 	var element = document.querySelectorAll('.sCardProduct__col-buy .sCardProduct__contentBtn');
 	var element2 = document.querySelectorAll('.sCardProduct__contentWrap .sCardProduct__contentBtn');
+	var element3 = document.querySelectorAll('.page-head');
 	
 	var Visible = function (target, cl) {
 		// Все позиции элемента
@@ -602,9 +603,9 @@ function eventHandler() {
 			targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
 			targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
 			// Если элемент полностью видно, то запускаем следующий код
-		 $(".checkout--product").removeClass(cl)
+		 $(".checkout").removeClass(cl)
 		} else {
-			$(".checkout--product").addClass(cl)
+			$(".checkout").addClass(cl)
 			// Если элемент не видно, то запускаем этот код
 			// console.clear();
 		};
@@ -626,7 +627,16 @@ function eventHandler() {
 			window.addEventListener('scroll', function() {
 				Visible (el, 'active2');
 			}, { passive: true });
-						Visible(el, 'active2'); 
+						Visible(el, 'active2');
+		}) 
+	}
+	if (element3) {
+		element3.forEach((el) => { 
+			// Запускаем функцию при прокрутке страницы
+			window.addEventListener('scroll', function() {
+				Visible (el, 'active active2');
+			}, { passive: true });
+						Visible(el, 'active active2'); 
 		}) 
 	}
 	

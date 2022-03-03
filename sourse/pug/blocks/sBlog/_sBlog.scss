@@ -2,6 +2,7 @@
 .sBlog {
 		// --sPT: ;
 		// --sPB: ;
+		overflow-x: hidden;
 		@include media-breakpoint-up(lg) {
 			--sPB: 120px;
 

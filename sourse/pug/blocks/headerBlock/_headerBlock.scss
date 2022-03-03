@@ -1,6 +1,7 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px; 
+	overflow-x: hidden;
 	@include media-breakpoint-up(sm) {
 
 		--sPT: 19px;

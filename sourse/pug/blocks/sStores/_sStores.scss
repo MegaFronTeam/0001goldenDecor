@@ -3,6 +3,7 @@
 	--sPT: #{rem(28)};
 	--sPB: #{rem(48)};
 	// --sTPB: ;
+	overflow-x: hidden;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(56)};
 		--sPB: #{rem(80)};
