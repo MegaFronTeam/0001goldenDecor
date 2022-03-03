@@ -580,7 +580,7 @@ function eventHandler() {
 // Получаем нужный элемент
 	var element = document.querySelectorAll('.sCardProduct__col-buy .sCardProduct__contentBtn');
 	var element2 = document.querySelectorAll('.sCardProduct__contentWrap .sCardProduct__contentBtn');
-	var element3 = document.querySelectorAll('.page-head');
+	// var element3 = document.querySelectorAll('.header');
 	
 	var Visible = function (target, cl) {
 		// Все позиции элемента
@@ -630,15 +630,15 @@ function eventHandler() {
 						Visible(el, 'active2');
 		}) 
 	}
-	if (element3) {
-		element3.forEach((el) => { 
-			// Запускаем функцию при прокрутке страницы
-			window.addEventListener('scroll', function() {
-				Visible (el, 'active active2');
-			}, { passive: true });
-						Visible(el, 'active active2'); 
-		}) 
-	}
+	// if (element3) {
+	// 	element3.forEach((el) => { 
+	// 		// Запускаем функцию при прокрутке страницы
+	// 		window.addEventListener('scroll', function() {
+	// 			Visible (el, 'active active2');
+	// 		}, { passive: true });
+	// 					Visible(el, 'active active2'); 
+	// 	}) 
+	// }
 	
 };
 if (document.readyState !== 'loading') {
@@ -653,7 +653,7 @@ ymaps.ready(function () {
 	const markIcon = 'img/svg/map.png';
 	const markIconColor = 'img/svg/map-color.png';
 	var center = [55.75380038320217,37.62071970898438];
-	var myMap = new ymaps.Map('map', {
+	var myMap = new ymaps.Map('map2', {
 					center,
 					zoom: 10,
 					behaviors: ['default', 'scrollZoom']
@@ -682,7 +682,7 @@ ymaps.ready(function () {
 							iconImageSize: [30, 32],
 							// Смещение левого верхнего угла иконки относительно
 							// её "ножки" (точки привязки).
-							//- iconImageOffset: [-16, -20]
+							iconImageOffset: [-15, -32]
 					};
 			},
 			points = [
@@ -702,11 +702,15 @@ ymaps.ready(function () {
 			.add('balloonopen', e => {
 				var target = e.get('target');
 				target.options.set('iconImageHref', markIconColor);
+				target.options.set({iconImageSize: [68, 74]});
+				target.options.set({iconImageOffset: [-34, -74]});
 				$(".sPickup__map-caption").html(`<div class="content">${target.properties.get('balloonContent')}</div><div class="closeButton"></div></div>`);
 			})
 			.add('balloonclose', (e) => {
 				var target = e.get('target');
 				target.options.set('iconImageHref', markIcon);
+				target.options.set({iconImageSize: [30, 32]});
+				target.options.set({iconImageOffset: [-15, -32]});
 					$(".sPickup__map-caption").html(""); 
 				});
 
@@ -740,4 +744,10 @@ ymaps.ready(function () {
 		myMap.balloon.close()
 	// $(document).
 	});
+	myMap.behaviors.disable('scrollZoom');
+	//на мобильных устройствах... (проверяем по userAgent браузера)
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		// ... отключаем перетаскивание карты
+		myMap.behaviors.disable('drag');
+	}
 });

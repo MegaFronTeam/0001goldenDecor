@@ -396,140 +396,7 @@
 									</div>
 									<div class="tabs__content active">
 										<div class="sPickup__map">
-											<div class="sPickup__map-widget" id="map">
-												<script>
-													//- ymaps.ready(init);
-													//- function init() {
-													//- 	const mark = 'img/svg/map.png';
-													//- 	const markColor = 'img/svg/map-color.png';
-													//- 	var center = [55.75380038320217,37.62071970898438];
-													//- 	var myMap1 = new ymaps.Map('map', {
-													//- 		center: center,
-													//- 		zoom: 10,
-													//- 		controls: ['zoomControl']
-													//- 	});
-													
-													//- 	var contentBalloon1 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТК Каширский Двор</h5>' + '<p>г. Москва, Каширское шоссе, дом 19, корпус 1</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
-													//- 	var contentBalloon2 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Экспострой</h5>' + '<p>г. Москва, Нахимовский проспект, дом 24</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
-													//- 	var contentBalloon3 = '<img src="../img/@2x/haveStore.png">' + '<h5>Магазин Golden Decor в ТЦ Тройка</h5>' + '<p>г. Москва, ул. Верхняя Красносельская 3А</p>' + '<span> Режим работы:</span> <span>10:00 — 22:00</span>'
-													//- 	var collection = new ymaps.GeoObjectCollection(null, 
-													//- 		{
-													//- 			hideIconOnBalloonOpen: false,
-													//- 			iconLayout: 'default#image',
-													//- 			iconImageHref: mark,
-													//- 			// Размеры метки.
-																
-													//- 			iconImageSize: [30, 32],
-													//- 			// Смещение левого верхнего угла иконки относительно
-													//- 			// её "ножки" (точки привязки).
-													//- 			//- iconImageOffset: [-16, -20]
-													//- 		}
-													//- 	);
-													//- 	collection
-													//- 		.add(new ymaps.Placemark([55.67455635081638,37.64072341673275], { 
-													//- 			balloonContent: contentBalloon1, 
-													//- 		}))
-													//- 		.add(new ymaps.Placemark([55.684072399488265,37.55676825847164], { 
-													//- 			balloonContent: contentBalloon2, 
-													//- 		}))
-													//- 		.add(new ymaps.Placemark([55.78843546026375,37.656384548873845], { 
-													//- 			balloonContent: contentBalloon3
-													//- 		}))
-													//- 		.add(new ymaps.Placemark([55.744522,37.616378], { 
-													//- 			balloonContent: contentBalloon3
-													//- 		}))
-													//- 		.add(new ymaps.Placemark([55.716733,37.589988], { 
-													//- 			balloonContent: contentBalloon3
-													//- 		}))
-													//- 	myMap1.geoObjects.add(collection);
-													//- 	collection.events
-													//- 		.add('balloonopen', e => {
-													//- 			var target = e.get('target');
-													//- 			target.options.set('iconImageHref', markColor);
-													//- 			$(".sPickup__map-caption").html(`<div class="content">${target.properties.get('balloonContent')}</div><div class="closeButton"></div></div>`);
-													//- 		})
-													//- 		.add('balloonclose', (e) => {
-													//- 				$(".sPickup__map-caption").html("");
-													//- 			e.get('target').options.set('iconImageHref', mark)
-													//- 			});
-													
-													//- 	$(document).on('click', '.closeButton', function () {
-													//- 		map.balloon.close()
-													//- 		// $(document).
-													//- 	});
-													
-													
-													//- 	//- Cluster START
-													//- 	clusterer = new ymaps.Clusterer({
-													//- 		preset: 'twirl#invertedVioletClusterIcons',
-													//- 		groupByCoordinates: false,
-													//- 		clusterDisableClickZoom: false
-													//- 	});
-													//- 	getPointData = function (index) {
-													//- 		return {
-													//- 				iconImageHref: mark,
-													//- 				balloonContentBody: 'балун <strong>метки ' + index + '</strong>',
-													//- 				clusterCaption: 'метка <strong>' + index + '</strong>'
-													//- 		};
-													//- 	};
-													//- 	getPointOptions = function () {
-													//- 		return {
-													//- 				preset: 'twirl#violetIcon'
-													//- 		};
-													//- 	};
-													//- 	//- points = [
-													//- 	//- 	[55.744522,37.616378], [55.716733,37.589988]
-													//- 	//- ];
-													//- 	geoObjects = [];
-													//- 	for(var i = 0, len = collection.length; i < len; i++) {
-													//- 		geoObjects[i] = new ymaps.Placemark(collection[i], getPointData(i));
-													//- 	};
-													//- 	clusterer.options.set({
-													//- 		gridSize: 80,
-													//- 		clusterDisableClickZoom: false
-													//- 	});
-													//- 	 clusterer.events.once('objectsaddtomap', function () {
-													//- 		myMap.setBounds(clusterer.getBounds());
-													//- 	});
-													//- 	clusterer.add(geoObjects);
-													//- 	clusterer.events
-													//- 		// Можно слушать сразу несколько событий, указывая их имена в массиве.
-													//- 		.add(['mouseenter', 'mouseleave'], function (e) {
-													//- 			var target = e.get('target'), // Геообъект - источник события.
-													//- 					eType = e.get('type'), // Тип события.
-													//- 					zIndex = Number(eType === 'mouseenter') * 1000; // 1000 или 0 в зависимости от типа события.
-													
-													//- 			target.options.set('zIndex', zIndex);
-													//- 		});
-													//- 	clusterer.events.add('objectsaddtomap', function () {
-													//- 		for(var i = 0, len = geoObjects.length; i < len; i++) {
-													//- 			var geoObject = geoObjects[i],
-													//- 							geoObjectState = clusterer.getObjectState(geoObject),
-													//- 			// признак, указывающий, находится ли объект в видимой области карты
-													//- 					isShown = geoObjectState.isShown,
-													//- 			// признак, указывающий, попал ли объект в состав кластера
-													//- 					isClustered = geoObjectState.isClustered,
-													//- 			// ссылка на кластер, в который добавлен объект
-													//- 					cluster = geoObjectState.cluster;
-													
-													//- 			if(window.console) {
-													//- 					console.log('Геообъект: %s, находится в видимой области карты: %s, в составе кластера: %s', i, isShown, isClustered);
-													//- 			}
-													//- 		}
-													//- 	});
-													
-													//- 	myMap1.geoObjects.add(clusterer);
-													//- 	//- Cluster END
-													
-													
-													//- 	myMap1.behaviors.disable('scrollZoom');
-													//- 	//на мобильных устройствах... (проверяем по userAgent браузера)
-													//- 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-													//- 		// ... отключаем перетаскивание карты
-													//- 		myMap1.behaviors.disable('drag');
-													//- 	}
-													//- };
-												</script>
+											<div class="sPickup__map-widget" id="map2">
 											</div>
 										</div>
 										<div class="sPickup__container">
@@ -559,7 +426,7 @@
 				</div>
 			</section>
 			<!-- end sCart-->
-			<div class="checkout">
+			<div class="checkout active active2">
 				<div class="container">
 					<div class="checkout__wrap">
 						<button class="checkout__back btn">На шаг назад
