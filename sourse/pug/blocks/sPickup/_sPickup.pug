@@ -12,14 +12,14 @@ mixin sPickup(data)
 								.tabs__caption
 									.tabs__btn.active Списком
 									.tabs__btn На карте
-				.tabs__content
+				.tabs__content.active
 					+form-wrap
 						+choiceOption('Магазин Golden Decor в ТК Каширский Двор', 'г. Москва, Каширское шоссе, дом 19, корпус 1', '09:00 — 21:00')(checked)
 						+choiceOption('Магазин Golden Decor в ТЦ Экспострой', 'г. Москва, Нахимовский проспект, дом 24', '09:00 — 22:00')
 						+choiceOption('Магазин Golden Decor в ТЦ Тройка', 'г. Москва, ул. Верхняя Красносельская 3А', '09:00 — 22:00')
 					+form-wrap()
 						+input('Ваш комментарий к заказу', 'textarea')
-				.tabs__content.active
+				.tabs__content
 					+e.map
 						+e.map-widget#map2
 					+e.container
