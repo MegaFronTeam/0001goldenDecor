@@ -450,6 +450,69 @@
 															map.balloon.close()
 															// $(document).
 														});
+														//- Cluster START
+														clusterer = new ymaps.Clusterer({
+															preset: 'twirl#invertedVioletClusterIcons',
+															groupByCoordinates: false,
+															clusterDisableClickZoom: false
+														});
+														getPointData = function (index) {
+															return {
+																	iconImageHref: mark,
+																	balloonContentBody: 'балун <strong>метки ' + index + '</strong>',
+																	clusterCaption: 'метка <strong>' + index + '</strong>'
+															};
+														};
+														getPointOptions = function () {
+															return {
+																	preset: 'twirl#violetIcon'
+															};
+														};
+														points = [
+															[55.744522,37.616378], [55.716733,37.589988]
+														];
+														geoObjects = [];
+														for(var i = 0, len = points.length; i < len; i++) {
+															geoObjects[i] = new ymaps.Placemark(points[i], getPointData(i), getPointOptions(), {
+																iconImageHref: mark
+															});
+														};
+														clusterer.options.set({
+															gridSize: 80,
+															clusterDisableClickZoom: false
+														});
+														 clusterer.events.once('objectsaddtomap', function () {
+															myMap.setBounds(clusterer.getBounds());
+														});
+														clusterer.add(geoObjects);
+														clusterer.events
+															// Можно слушать сразу несколько событий, указывая их имена в массиве.
+															.add(['mouseenter', 'mouseleave'], function (e) {
+																var target = e.get('target'), // Геообъект - источник события.
+																		eType = e.get('type'), // Тип события.
+																		zIndex = Number(eType === 'mouseenter') * 1000; // 1000 или 0 в зависимости от типа события.
+													
+																target.options.set('zIndex', zIndex);
+															});
+														clusterer.events.add('objectsaddtomap', function () {
+															for(var i = 0, len = geoObjects.length; i < len; i++) {
+																var geoObject = geoObjects[i],
+																				geoObjectState = clusterer.getObjectState(geoObject),
+																// признак, указывающий, находится ли объект в видимой области карты
+																		isShown = geoObjectState.isShown,
+																// признак, указывающий, попал ли объект в состав кластера
+																		isClustered = geoObjectState.isClustered,
+																// ссылка на кластер, в который добавлен объект
+																		cluster = geoObjectState.cluster;
+													
+																if(window.console) {
+																		console.log('Геообъект: %s, находится в видимой области карты: %s, в составе кластера: %s', i, isShown, isClustered);
+																}
+															}
+														});
+													
+														myMap1.geoObjects.add(clusterer);
+														//- Cluster END
 														myMap1.behaviors.disable('scrollZoom');
 														//на мобильных устройствах... (проверяем по userAgent браузера)
 														if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

@@ -53,6 +53,25 @@
 	.ymaps-2-1-79-balloon {
 		display: none;
 	}
+	.ymaps-2-1-79-placemark-overlay {
+		& > .ymaps-2-1-79-svg-icon {
+			background: $body-color;
+			border: 2px solid #FFFFFF;
+			border-radius: 50%;
+			width: 30px !important;
+			height: 30px !important;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white !important;
+		}
+		.ymaps-2-1-79-svg-icon-content {
+			position: static !important;
+			font-weight: 600 !important;
+			font-size: rem(15) !important;
+			height: auto !important;
+		}
+	}
 	&__map-caption {
 		width: auto;
 		@include media-breakpoint-up(lg) {
