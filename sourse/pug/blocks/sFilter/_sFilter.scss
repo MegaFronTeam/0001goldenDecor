@@ -63,6 +63,7 @@
 		h4 {
 			font-weight: 600;
 			margin-bottom: 0;
+			font-size: rem(21);
 		}
 	}
 	&__wrap {
@@ -95,8 +96,21 @@
 		&__item {
 			&:not(:last-of-type) {
 				border-bottom: 1px solid rgba($color: #05141F, $alpha: 0.1);
-				padding-bottom: rem(24);
+				padding-bottom: rem(17);
 				margin-bottom: rem(24);
+			}
+			&:nth-child(5) {
+				padding-bottom: rem(47);
+				.dd-group__head {
+					&.active {
+						margin-bottom: rem(34);
+					}
+				}
+			}
+		}
+		.range-slider {
+			& > .irs {
+				margin-bottom: rem(8);
 			}
 		}
 		.custom-input {
@@ -104,10 +118,14 @@
 			&:not(:last-child) {
 				margin-bottom: rem(16);
 			}
+			&__input {
+				width: rem(20);
+				height: rem(20);
+			}
 		}
 		&__color-wrap {
 			form {
-				@include roww(15px, m);
+				@include roww(10px, m);
 				display: flex;
 				flex-wrap: wrap;
 			}
@@ -119,6 +137,7 @@
 			.custom-input {
 				padding-left: 0;
 				--checkColor: $white;
+				margin-bottom: rem(10) !important;
 				&__input {
 					width: rem(35);
 					height: rem(35);
@@ -286,21 +305,6 @@
 			margin-bottom: 0;
 		}
 	}
-	// &__reset-filter {
-	// 	// position: absolute;
-	// 	// bottom: 0;
-	// 	// left: 0;
-	// 	.icon {
-	// 		fill: none;
-	// 		stroke: currentColor;
-	// 		stroke-width: 2px;
-	// 		font-size: rem(24);
-	// 		margin-right: rem(24);
-	// 	}
-	// 	span {
-	// 		font-weight: 600;
-	// 	}
-	// }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

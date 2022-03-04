@@ -9,6 +9,7 @@
 		padding-top: rem(30);
 		padding-left: rem(41);
 		// padding-bottom: rem(56);
+		padding-right: rem(41);
 	}
 	h4 {
 		@include rfs(20px);
@@ -19,11 +20,11 @@
 		display: flex;
 		background-color: #F8F8F8;
 		align-items: center;
-		padding: rem(16) rem(32);
+		padding: rem(13) rem(32);
 		flex-direction: column;
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(sm) {
-			margin-bottom: rem(32);
+			margin-bottom: rem(33);
 			flex-direction: row;
 		}
 		p {

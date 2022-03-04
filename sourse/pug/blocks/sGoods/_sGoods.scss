@@ -19,6 +19,7 @@
 			padding-right: rem(30);
 			display: flex;
     	flex-direction: column;
+			max-width: rem(291);
 		}
 	}
 	&__col-catalog {
@@ -32,7 +33,7 @@
 		}
 		.row {
 			--bs-gutter-x: #{rem(32)};
-			--bs-gutter-y: #{rem(40)};
+			--bs-gutter-y: #{rem(43)};
 		}
 		& > button {
 			color: $body-color;
@@ -97,23 +98,24 @@
 		}
 	}
 	&__filterOption {
-		padding: rem(3) rem(12);
+		padding: rem(3) rem(8) rem(3) rem(12);
 		background-color: #F8F8F8;
 		border: 1px solid #E5E5E5;
 		border-radius: 4px;
 		span {
 			font-size: rem(14);
 			line-height: 1.43em;
-			margin-right: rem(12);
+			margin-right: rem(4);
 		}
 		button {
 			display: inline-block;
 			position: relative;
-			width: 9px;
-			height: 9px;padding: 0;
+			width: 14px;
+			height: 14px;
+			padding: 0;
 			background-color: transparent;
 			border: none;
-			vertical-align: middle;
+			vertical-align: super;
 			&:after, &:before {
 				@include mt;
 				content: '';
@@ -181,6 +183,25 @@
 		}
 		&:hover {
 			color: $yellow;
+		}
+	}
+	.catalog-item {
+		&__img-wrap {
+			margin-bottom: rem(14);
+		}
+		p {
+			margin-bottom: 0;
+		}
+		&__footer {
+			.row {
+				--bs-gutter-y: 4px;
+			}
+		}
+		&__price {
+			font-size: rem(23);
+		}
+		&__btn--like {
+			top: rem(15);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

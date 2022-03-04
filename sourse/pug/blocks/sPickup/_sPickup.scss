@@ -8,9 +8,12 @@
 	@include media-breakpoint-up(xl) {
 		padding-top: rem(30);
 		padding-left: rem(41);
+		padding-right: rem(41);
 		// padding-bottom: rem(56);
+		padding-bottom: rem(71);
 	}
 	.section-title {
+		margin-bottom: rem(19);
 		p {
 			margin-bottom: 0;
 			// font-size: rem(13);
@@ -136,6 +139,11 @@
 			&:after {
 				transform: translateY(-50%) rotate(45deg);
 			}
+		}
+	}
+	.form-wrap {
+		textarea {
+			min-height: rem(122);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

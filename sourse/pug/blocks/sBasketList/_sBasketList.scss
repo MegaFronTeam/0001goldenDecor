@@ -8,7 +8,7 @@
 	@include media-breakpoint-up(xl) {
 		padding-top: rem(30);
 		padding-left: rem(41);
-		padding-bottom: rem(56);
+		padding-bottom: rem(66);
 	}
 	&__head {
 		display: flex;
@@ -75,7 +75,7 @@
 			&:nth-child(3) {
 				.addBlock {
 					// width: 157px;
-					margin-bottom: rem(24);
+					margin-bottom: rem(11);
 				}
 				span {
 					font-size: rem(14);
@@ -194,18 +194,19 @@
 			@include media-breakpoint-up(md) {
 				flex-grow: 1;
 				padding-right: rem(32);
+				max-width: rem(638);
 				margin-bottom: 0;
 			}
 		}
 		button {
-			margin-top: 0;
+			margin-top: rem(9);
 			margin-bottom: 0;
 			width: 100%;
 			font-size: rem(14);
 			padding: rem(11) rem(16);
 			@include media-breakpoint-up(md) {
 				padding: rem(16);
-				font-size: rem(18);
+				font-size: rem(15);
 				max-width: rem(162);
 			}
 		}

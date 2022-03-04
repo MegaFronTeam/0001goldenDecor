@@ -9,6 +9,7 @@
 		padding-top: rem(30);
 		padding-left: rem(41);
 		padding-bottom: rem(96);
+		padding-right: rem(41);
 	}
 	.row {
 		--bs-gutter-x: #{rem(32)};
@@ -21,6 +22,9 @@
 	}
 	.choiceOption {
 		.custom-input {
+			display: flex;
+    	align-items: center;
+			padding-left: rem(24);
 			&__input {
 				margin-right: rem(24);
 			}

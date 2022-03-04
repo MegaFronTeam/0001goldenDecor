@@ -7,7 +7,7 @@
 	padding-bottom: rem(24);
 	@include media-breakpoint-up(xl) {
 		padding-left: 0;
-		padding-bottom: rem(56);
+		padding-bottom: rem(38);
 	}
 	&__slider-wrap {
 		@include media-breakpoint-up(lg) {
@@ -28,10 +28,10 @@
 		@include media-breakpoint-up(lg) {
 			width: 14%;
 			margin-left: rem(24);
-			height: 440px;
+			height: 333px;
 		}
 		@include media-breakpoint-only(xl) {
-			height: 370px;
+			height: 333px;
 			width: 15%;
 		}
 
@@ -51,7 +51,8 @@
 	}
 	&__slider {
 		@include media-breakpoint-up(lg) {
-			width: calc(100% - var(--bs-gutter-x) - 15%);
+			// width: calc(100% - var(--bs-gutter-x) - 15%);
+			width: 100%;
 		}
 		picture {
 			@include block(680, 516);

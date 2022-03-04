@@ -3,12 +3,12 @@ mixin sGoods(data)
 	+b.SECTION.sGoods.section#sGoods&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-filter.col-lg-3
+				+e.col-filter.col-lg
 					+sFilter()
 					+e.BUTTON.reset-filter
 						+icon('undo')
 						span Очистить фильтр
-				+e.col-catalog.col-lg-9
+				+e.col-catalog.col-lg
 					+e.sort-row.row.justify-content-between
 						.col-12.col-sm-auto.order-sm-last
 							+e.sorting

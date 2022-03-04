@@ -1,4 +1,4 @@
-mixin sCart(addMore)
+mixin sCart(addMore, promocode)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
@@ -19,6 +19,10 @@ mixin sCart(addMore)
 										td 0 ₽
 									tr
 										td(colspan="2") Укажите адрес, чтобы узнать стоимость доставки
+									if promocode
+										+e.TR.promocode
+											td Промокод
+											td -390 ₽
 								tfoot
 									tr
 										td(colspan="2")

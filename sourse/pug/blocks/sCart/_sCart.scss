@@ -68,10 +68,27 @@
 							}
 						}
 					}
-					&:last-child {
+					&:nth-child(3) {
 						td {
+							&:first-child {
+								text-align: left;
+								font-weight: 400;
+								color: $body-color;
+							}
 							padding-bottom: rem(30);
 							line-height: 1.14em;
+						}
+					}
+				}
+				.sCart__promocode {
+					line-height: 1.14em;
+					text-align: left;
+					font-weight: 400;
+					td {
+						padding-bottom: rem(30);
+						&:last-child {
+							text-align: right;
+							font-weight: 600;
 						}
 					}
 				}
@@ -120,7 +137,7 @@
 		position: relative;
 		@include media-breakpoint-up(xl) {
 			padding-top: rem(96);
-			padding-bottom: rem(138);
+			padding-bottom: rem(96);
 		}
 		&::before {
 			content: '';
@@ -137,6 +154,27 @@
 		// &::after {
 		// 	bottom: 0;
 		// }
+	}
+	&--promocode {
+		.sCart__order-info {
+			table {
+				tbody {
+					tr {
+						&:nth-child(3) {
+							td {
+								&:first-child {
+									text-align: left;
+									font-weight: 400;
+									color: $body-color;
+								}
+								padding-bottom: rem(10);
+								line-height: 1.14em;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
