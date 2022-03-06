@@ -53,14 +53,24 @@
 			margin-right: 4px;
 			font-size: rem(24);
 		}
-		// &.btn-bottom {
-		// 	position: sticky;
-		// 	transform: translateY(100vh);
-		// }
-		// &.active {
-		// 	transform: translateY(calc(100vh - 57px));
-		// }
 	}
+	// &__btn-bottom {
+	// 	@extend .btn, .btn-primary;
+	// 	// position: sticky;
+	// 	position: sticky;
+	// 	width: calc(100vh + var(--bs-gutter-x));
+	// 	transform: translateY(100vh);
+	// 	z-index: 10000;
+	// 	bottom: 0;
+	// 	left: calc(-1 * var(--bs-gutter-x));
+	// 	transform: translateY(var(--active,100vh));
+	// 	visibility: var(--active,hidden);
+	// 	&.active {
+	// 		bottom: 64px;
+	// 		// transform: translateY(calc(100vh - 57px));
+	// 		--active: " ";
+	// 	}
+	// }
 	
 	
 	&__title {

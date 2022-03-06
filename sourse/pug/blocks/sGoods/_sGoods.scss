@@ -3,6 +3,7 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: ;
+	overflow: hidden;
 	&__row {
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: 0;
@@ -207,6 +208,32 @@
 			.icon-favorite {
 				fill: #e8a200;
 				stroke: #e8a200;
+			}
+		}
+	}
+	&__btn-bottom {
+		@extend .btn, .btn-primary;
+		// position: sticky;
+		position: sticky;
+		transform: translateY(100vh);
+		z-index: 10000;
+		bottom: 0;
+		// left: calc(-1 * var(--bs-gutter-x));
+		width: calc(100vh + var(--bs-gutter-x));
+		width: 100%;
+		left: 0;
+		@include mt;
+		transform: translateY(var(--active, 100%));
+		visibility: var(--active, hidden);
+		@include media-breakpoint-up(lg) {
+			&.active{
+				--active: ' ';
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			bottom: 64px;
+			&.active2{
+				--active: ' ';
 			}
 		}
 	}

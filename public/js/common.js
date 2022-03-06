@@ -609,6 +609,17 @@ function eventHandler() {
 			// Если элемент не видно, то запускаем этот код
 			// console.clear();
 		};
+		if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+			targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+			targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+			targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+			// Если элемент полностью видно, то запускаем следующий код
+		 $(".sGoods__btn-bottom").removeClass(cl)
+		} else {
+			$(".sGoods__btn-bottom").addClass(cl)
+			// Если элемент не видно, то запускаем этот код
+			// console.clear();
+		};
 	};
 
 	if (element) {
