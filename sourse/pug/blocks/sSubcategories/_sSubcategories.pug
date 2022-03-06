@@ -2,7 +2,7 @@ mixin card-item(i ,title, ...items)
 	a(href="#")
 		+e.item.bg-wrap&attributes(attributes)
 			+pic(`sSubcategories-bg-${i}.jpg`, 'bg', 0).picture-bg
-			h6!= title
+			div!= title
 			each item in items 
 				p!= item
 

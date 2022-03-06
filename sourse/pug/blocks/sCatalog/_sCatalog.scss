@@ -122,6 +122,11 @@
 			top: rem(12);
 			right: rem(16);
 		}
+		.icon-favorite {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px
+		}
 		&--add{
 			@extend .btn-primary;
 			position: relative;

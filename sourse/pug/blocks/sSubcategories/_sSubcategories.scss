@@ -56,7 +56,8 @@
 				z-index: 1;
 			}
 		}
-		h6 {
+		div {
+			@extend .h6;
 			@include rfs(18px);
 			// max-width: rem(128);
 			line-height: 1em;

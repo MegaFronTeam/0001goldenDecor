@@ -580,7 +580,7 @@ function eventHandler() {
 // Получаем нужный элемент
 	var element = document.querySelectorAll('.sCardProduct__col-buy .sCardProduct__contentBtn');
 	var element2 = document.querySelectorAll('.sCardProduct__contentWrap .sCardProduct__contentBtn');
-	// var element3 = document.querySelectorAll('.header');
+	var element3 = document.querySelectorAll('.sFilter__btn');
 	
 	var Visible = function (target, cl) {
 		// Все позиции элемента
@@ -630,15 +630,15 @@ function eventHandler() {
 						Visible(el, 'active2');
 		}) 
 	}
-	// if (element3) {
-	// 	element3.forEach((el) => { 
-	// 		// Запускаем функцию при прокрутке страницы
-	// 		window.addEventListener('scroll', function() {
-	// 			Visible (el, 'active active2');
-	// 		}, { passive: true });
-	// 					Visible(el, 'active active2'); 
-	// 	}) 
-	// }
+	if (element3) {
+		element3.forEach((el) => { 
+			// Запускаем функцию при прокрутке страницы
+			window.addEventListener('scroll', function() {
+				Visible (el, 'active active2');
+			}, { passive: true });
+						Visible(el, 'active active2'); 
+		}) 
+	}
 	
 };
 if (document.readyState !== 'loading') {

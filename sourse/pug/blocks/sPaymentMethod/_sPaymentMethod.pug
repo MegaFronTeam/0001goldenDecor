@@ -4,13 +4,13 @@ mixin sPaymentMethod(data)
 		h4 Способ доставки
 		+form-wrap
 			.row
-				.col-lg-6
+				.col-md-6
 					+choiceOption('Онлайн на сайте*', 'МИР, Visa, MasterCard, Maestro, GooglePay, ApplePay')
-				.col-lg-6
+				.col-md-6
 					+choiceOption('Наличными', 'Курьеру / При самовывозе (только для Москвы и МО)')(checked)
-				.col-lg-6
+				.col-md-6
 					+choiceOption('Безналичным платежом', 'Для физических лиц и для организаций')
-				.col-lg-6
+				.col-md-6
 					+choiceOption('Банковской картой', 'Курьеру / При самовывозе (только для Москвы и МО)')
 		+e.promocode
 			+form-wrap()

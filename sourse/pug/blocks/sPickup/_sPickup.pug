@@ -28,13 +28,11 @@ mixin sPickup(data)
 							const markIconColor = 'img/svg/map-color.png';
 							var center = [55.75380038320217,37.62071970898438];
 							var myMap = new ymaps.Map('map2', {
-											center,
+											center: center,
 											zoom: 10,
-											behaviors: ['default', 'scrollZoom']
-									}, {
-											searchControlProvider: 'yandex#search'
+											controls: ['zoomControl']
 									}), 
-											clusterer = new ymaps.Clusterer({ 
+									clusterer = new ymaps.Clusterer({ 
 											preset: 'islands#invertedVioletClusterIcons', 
 											groupByCoordinates: false, 
 											clusterDisableClickZoom: true,

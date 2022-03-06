@@ -171,9 +171,9 @@
 			right: rem(-30);
 		}
 		.icon {
-			fill: none;
-			stroke: currentColor;
-			stroke-width: 2px;
+			// fill: none;
+			// stroke: currentColor;
+			// stroke-width: 2px;
 			font-size: rem(24);
 			margin-right: rem(24);
 		}
@@ -202,6 +202,12 @@
 		}
 		&__btn--like {
 			top: rem(15);
+		}
+		&.active {
+			.icon-favorite {
+				fill: #e8a200;
+				stroke: #e8a200;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

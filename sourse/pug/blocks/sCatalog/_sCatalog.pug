@@ -1,7 +1,7 @@
 mixin  catalog-item(i,t,p,pr,addblock, haveInStock)
-	+b.catalog-item
+	+b.catalog-item&attributes(attributes)
 		+e.btn--like(type="button")
-			+icon("like")
+			+icon("favorite")
 		+e.img-wrap(href="#").bg-wrap
 			if haveInStock
 				+e.have-in-stock

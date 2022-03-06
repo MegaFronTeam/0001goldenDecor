@@ -23,7 +23,7 @@
 			overflow-x: hidden;
 			@include media-breakpoint-down(lg) {
 				padding-right: 10px;
-				padding-bottom: 32px;
+				padding-bottom: 80px;
 				padding-right: 16px;
 				padding-left: 16px;
 			}
@@ -53,6 +53,13 @@
 			margin-right: 4px;
 			font-size: rem(24);
 		}
+		// &.btn-bottom {
+		// 	position: sticky;
+		// 	transform: translateY(100vh);
+		// }
+		// &.active {
+		// 	transform: translateY(calc(100vh - 57px));
+		// }
 	}
 	
 	
@@ -303,6 +310,22 @@
 			font-weight: 600;
 			font-size: 20px;
 			margin-bottom: 0;
+		}
+	}
+	&__btn-showMore {
+		@include media-breakpoint-down(lg) {
+			display: block;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			font-size: 16px;
+			font-weight: 600;
+			z-index: 1000;
+		}
+		@include media-breakpoint-up(lg) {
+			display: none;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
