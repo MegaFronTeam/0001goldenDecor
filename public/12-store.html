@@ -13,7 +13,6 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 	</head>
 	<body class="main-page" data-bg="12-store.jpg">
 		<div class="main-wrapper">
@@ -160,48 +159,32 @@
 											<a class="top-btns__btn d-lg-none" href="#">
 												<svg class="icon icon-home ">
 													<use xlink:href="img/svg/sprite.svg#home"></use>
-												</svg>
-												<div class="top-btns__title">Главная
-												</div>
+												</svg><span class="top-btns__title">Главная</span>
 											</a>
 											<a class="top-btns__btn d-lg-none" href="#">
 												<svg class="icon icon-menu-small ">
 													<use xlink:href="img/svg/sprite.svg#menu-small"></use>
-												</svg>
-												<div class="top-btns__title">Каталог
-												</div>
+												</svg><span class="top-btns__title">Каталог</span>
 											</a>
 											<button class="top-btns__btn search-toggle search-toggle--js d-none d-lg-flex" type="button">
 												<svg class="icon icon-search ">
 													<use xlink:href="img/svg/sprite.svg#search"></use>
-												</svg>
-												<div class="top-btns__title">Поиск
-												</div>
+												</svg><span class="top-btns__title">Поиск</span>
 											</button>
 											<a class="top-btns__btn link-modal-custom-js" href="#modal-cabinet"> 
 												<svg class="icon icon-user ">
 													<use xlink:href="img/svg/sprite.svg#user"></use>
-												</svg>
-												<div class="top-btns__title">Профиль
-												</div>
+												</svg><span class="top-btns__title">Профиль</span>
 											</a>
 											<a class="top-btns__btn current" href="#"> 
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-												<div class="top-btns__title">Избр
-												</div>
+												</svg><span class="top-btns__title">Избр</span>
 											</a>
-											<button class="top-btns__btn" type="button"> 
-												<div class="top-btns__inner">
-													<svg class="icon icon-basket ">
-														<use xlink:href="img/svg/sprite.svg#basket"></use>
-													</svg>
-													<div class="top-btns__counter">4
-													</div>
-												</div>
-												<div class="top-btns__title">Корзина
-												</div>
+											<button class="top-btns__btn" type="button"> <span class="top-btns__inner">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg><span class="top-btns__counter">4</span></span><span class="top-btns__title">Корзина</span>
 											</button>
 										</div>
 									</div>
@@ -342,36 +325,6 @@
 						<div class="col-lg-6">
 							<div class="sOneShop__map">
 								<div class="sOneShop__map-widget" id="map3">
-									<script>
-										function init() {
-											const markIcon = '../img/svg/map.png';
-											//- const markIconColor = 'img/svg/map-color.png';
-											var center = [55.672428, 37.582709];
-											var myMap2 = new ymaps.Map('map3', {
-												center: center,
-												zoom: 10,
-												controls: ['zoomControl']
-											});
-											var myPlacemark = new ymaps.Placemark(center, {
-												// Свойства.
-												// Содержимое иконки, балуна и хинта.
-												hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
-												balloonContent: 'г. Москва, Нахимовский проспект, дом 24',
-											}, {
-												iconImageHref: markIcon,
-												iconImageSize: [30, 32],
-												iconImageOffset: [-15, -32]
-											});
-											myMap2.geoObjects.add(myPlacemark);
-											myMap2.behaviors.disable('scrollZoom');
-											//на мобильных устройствах... (проверяем по userAgent браузера)
-											if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-												// ... отключаем перетаскивание карты
-												myMap2.behaviors.disable('drag');
-											}
-										}
-										ymaps.ready(init);
-									</script>
 								</div>
 							</div>
 						</div>
@@ -546,20 +499,14 @@
 									<button class="soc-btns__btn soc-btns__btn--vk" type="button"> 
 										<svg class="icon icon-vk ">
 											<use xlink:href="img/svg/sprite.svg#vk"></use>
-										</svg>
-										<div class="soc-btns__btn-text">Вконтакте
-										</div>
+										</svg><span class="soc-btns__btn-text">Вконтакте</span>
 									</button>
 									<button class="soc-btns__btn soc-btns__btn--fb" type="button"> 
 										<svg class="icon icon-fb-btn ">
 											<use xlink:href="img/svg/sprite.svg#fb-btn"></use>
-										</svg>
-										<div class="soc-btns__btn-text">Facebook
-										</div>
+										</svg><span class="soc-btns__btn-text">Facebook</span>
 									</button>
-									<button class="soc-btns__btn soc-btns__btn--ya" type="button"> <img src="img/svg/yandex.png" alt=""/>
-										<div class="soc-btns__btn-text">Яндекс
-										</div>
+									<button class="soc-btns__btn soc-btns__btn--ya" type="button"> <img src="img/svg/yandex.png" alt=""/><span class="soc-btns__btn-text">Яндекс</span>
 									</button>
 								</div>
 								<div class="form-wrap__policy">Авторизуясь на&nbsp;сайте, Вы&nbsp;принимаете условия <a href="#">Пользовательского соглашения</a>,  <a href="#">Политики конфиденциальности </a> и&nbsp;подтверждаете согласие на&nbsp;передачу и&nbsp;обработку своих данных
@@ -635,20 +582,14 @@
 									<button class="soc-btns__btn soc-btns__btn--vk" type="button"> 
 										<svg class="icon icon-vk ">
 											<use xlink:href="img/svg/sprite.svg#vk"></use>
-										</svg>
-										<div class="soc-btns__btn-text">Вконтакте
-										</div>
+										</svg><span class="soc-btns__btn-text">Вконтакте</span>
 									</button>
 									<button class="soc-btns__btn soc-btns__btn--fb" type="button"> 
 										<svg class="icon icon-fb-btn ">
 											<use xlink:href="img/svg/sprite.svg#fb-btn"></use>
-										</svg>
-										<div class="soc-btns__btn-text">Facebook
-										</div>
+										</svg><span class="soc-btns__btn-text">Facebook</span>
 									</button>
-									<button class="soc-btns__btn soc-btns__btn--ya" type="button"> <img src="img/svg/yandex.png" alt=""/>
-										<div class="soc-btns__btn-text">Яндекс
-										</div>
+									<button class="soc-btns__btn soc-btns__btn--ya" type="button"> <img src="img/svg/yandex.png" alt=""/><span class="soc-btns__btn-text">Яндекс</span>
 									</button>
 								</div>
 								<div class="form-wrap__policy">Авторизуясь на&nbsp;сайте, Вы&nbsp;принимаете условия <a href="#">Пользовательского соглашения</a>,  <a href="#">Политики конфиденциальности </a> и&nbsp;подтверждаете согласие на&nbsp;передачу и&nbsp;обработку своих данных
@@ -745,4 +686,38 @@
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+	<script>
+		function init() {
+			const markIcon = 'img/svg/map.png';
+			//- const markIconColor = 'img/svg/map-color.png';
+			var center = [55.672428, 37.582709];
+			var myMap2 = new ymaps.Map('map3', {
+		
+				center: center,
+				zoom: 10,
+				controls: ['zoomControl']
+			});
+			var myPlacemark = new ymaps.Placemark(center, {
+				// Свойства.
+				// Содержимое иконки, балуна и хинта.
+				hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
+				balloonContent: 'г. Москва, Нахимовский проспект, дом 24',
+			}, {
+				hideIconOnBalloonOpen: false,
+				iconLayout: 'default#image',
+				iconImageHref: markIcon,
+				iconImageSize: [30, 32],
+				iconImageOffset: [-15, -32]
+			});
+			myMap2.geoObjects.add(myPlacemark);
+			myMap2.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				// ... отключаем перетаскивание карты
+				myMap2.behaviors.disable('drag');
+			}
+		}
+		ymaps.ready(init);
+	</script>
 </html>

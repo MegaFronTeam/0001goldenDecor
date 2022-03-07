@@ -42,3 +42,38 @@ block pagecontent
 	+sOneShop()
 	+footer()
 
+block map
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+
+	script.
+		function init() {
+			const markIcon = 'img/svg/map.png';
+			//- const markIconColor = 'img/svg/map-color.png';
+			var center = [55.672428, 37.582709];
+			var myMap2 = new ymaps.Map('map3', {
+
+				center: center,
+				zoom: 10,
+				controls: ['zoomControl']
+			});
+			var myPlacemark = new ymaps.Placemark(center, {
+				// Свойства.
+				// Содержимое иконки, балуна и хинта.
+				hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
+				balloonContent: 'г. Москва, Нахимовский проспект, дом 24',
+			}, {
+				hideIconOnBalloonOpen: false,
+				iconLayout: 'default#image',
+				iconImageHref: markIcon,
+				iconImageSize: [30, 32],
+				iconImageOffset: [-15, -32]
+			});
+			myMap2.geoObjects.add(myPlacemark);
+			myMap2.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				// ... отключаем перетаскивание карты
+				myMap2.behaviors.disable('drag');
+			}
+		}
+		ymaps.ready(init);
