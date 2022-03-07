@@ -573,6 +573,18 @@ function eventHandler() {
 		document.body.classList.add("fixed");
 	})
 
+	$('.sFilter__filterCloseBtn').click(function () {
+		$('.sFilter__wrap').removeClass('active');
+		$('.sGoods__btn-bottom').removeClass('active');
+		document.body.classList.remove("fixed");
+	});
+	
+	$(".sGoods__btn-bottom").click(function () {
+		$('.sFilter__wrap').addClass('active');
+		// $(this).toggleClass("active").next().slideToggle();
+		document.body.classList.add("fixed");
+	})
+
 
 
 
