@@ -1338,7 +1338,7 @@ $breadcrumb-bg: null !default;
 $breadcrumb-divider-color: $secondary !default;
 $breadcrumb-active-color: $gray-600 !default;
 // $breadcrumb-divider: quote("/") !default;
-$breadcrumb-divider: url('../img/svg/breadcrumb-divider.svg') !default;
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.12498 9.91665C5.97565 9.91665 5.82632 9.85948 5.71257 9.74573C5.48448 9.51765 5.48448 9.14898 5.71257 8.9209L7.64048 6.99298L5.78548 5.07207C5.56207 4.8399 5.56848 4.47065 5.80007 4.24723C6.03223 4.02382 6.40148 4.03023 6.6249 4.26123L8.87773 6.59457C9.09882 6.82382 9.0959 7.18723 8.87073 7.4124L6.5374 9.74573C6.42365 9.85948 6.27432 9.91665 6.12498 9.91665' fill='%23697279'/%3E%3C/svg%3E%0A") !default;
 $breadcrumb-divider-flipped: $breadcrumb-divider !default;
 $breadcrumb-border-radius: null !default;
 // scss-docs-end breadcrumb-variables
