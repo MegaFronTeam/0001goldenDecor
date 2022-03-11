@@ -348,7 +348,7 @@ function eventHandler() {
 		$(".footer__link-more").hide();
 	});
 
-	$('.header').hcSticky({
+	$('.header--js').hcSticky({
     // stickTo: $('#content')
   });
 	// $('.sGoods__reset-filter--js').hcSticky({
