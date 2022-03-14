@@ -35,7 +35,53 @@
 				font-size: rem(24);
 			}
 		}
-		 
+		&__wrap {
+			position: relative;
+			cursor: pointer;
+			.icon {
+				@include mt;
+				font-size: rem(11);
+				stroke-width: 2px;
+				min-width: 11px;
+				stroke: currentColor;
+				margin-left: rem(13);
+			}
+			&:hover {
+				color: $yellow;
+				a {
+					color: $yellow;
+				}
+				.topLine__content {
+					transform: translateY(0);
+				}
+			}
+		}
+		&__numWrap {
+			position: relative;
+		}
+		&__content {
+			@include mt;
+			position: absolute;
+			border: 1px solid $light;
+			top: 120%;
+			width: 100%;
+			background-color: $white;
+			transform: translateY(-200%);
+			z-index: 10;
+			a {
+				padding: rem(12) rem(12) rem(12) rem(11);
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&__numHeadline {
+			font-size: rem(14);
+			color: $secondary;
+			margin-bottom: rem(8);
+		}
+		&__num {
+			font-weight: 600;
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

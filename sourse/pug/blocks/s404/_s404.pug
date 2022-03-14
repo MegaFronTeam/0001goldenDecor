@@ -1,0 +1,10 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		.container
+			+e.wrap.text-center
+				+pic('404pic.png')
+				h2 Тут ничего нет
+				p Попробуйте вернуться назад или поищите что-нибудь другое. Код ошибки: 404
+				a(href="/").btn.btn-primary На главную
+	// end s404

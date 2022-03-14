@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+ 
+include ../blocks/footer/_footer.pug
+//- include ../blocks/sCategeries/_sCategeries.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/s404/_s404.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '404.jpg'
+
+block title
+	- let  title= 'Тут ничего нет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	.header.header--js
+		+topLine
+		+top-nav()
+	//- +headerBlock
+	+s404()
+	
+	+footer()
+      
+
+
+

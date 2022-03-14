@@ -15,3 +15,7 @@
 15. <https://megafronteam.github.io/0001goldenDecor/public/10-contacts.html>
 16. <https://megafronteam.github.io/0001goldenDecor/public/11-vacancies.html>
 17. <https://megafronteam.github.io/0001goldenDecor/public/12-store.html>
+
+## March 2022
+
+18. <https://megafronteam.github.io/0001goldenDecor/public/404.html> 
