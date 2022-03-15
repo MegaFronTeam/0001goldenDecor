@@ -26,13 +26,11 @@
 	picture {
 		position: absolute;
 		top: calc(-1 * var(--sPT));
-		right: 0;
 		z-index: -1;
+		display: none;
 		@include media-breakpoint-up(lg) {
 			right: rem(-87);
-		}
-		@include media-breakpoint-down(lg) {
-			display: none;
+			display: block;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
