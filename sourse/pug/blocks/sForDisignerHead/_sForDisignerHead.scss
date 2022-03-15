@@ -4,7 +4,9 @@
 	--sPB: #{rem(110)};
 	// --sTPB: ;
 	.container {
-		max-width: 1103px;
+		@include media-breakpoint-up(lg) {
+			max-width: 1103px;
+		}
 	}
 	.section-title {
 		max-width: rem(500);
@@ -29,7 +31,7 @@
 		@include media-breakpoint-up(lg) {
 			right: rem(-87);
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}
