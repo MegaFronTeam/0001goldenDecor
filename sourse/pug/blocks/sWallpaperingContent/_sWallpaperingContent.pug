@@ -1,0 +1,26 @@
+mixin sWallpaperingContent(data)
+	// start sWallpaperingContent
+	+b.sWallpaperingContent.section#sWallpaperingContent&attributes(attributes)
+		.container
+			p Наша компания предоставляет услуги по&nbsp;поклейке обоев профессионального уровня качества. Специалисты быстро и&nbsp;грамотно осуществят отделку стен и&nbsp;потолков различных помещений: отдельных комнат, квартир, домов или других объектов. Независимо от&nbsp;сложности предварительной подготовки стеновых поверхностей поклейка обоями производится мастерами в&nbsp;самые сжатые сроки при высочайшем уровне качества.
+			table
+				thead
+					tr
+						th Наименование услуги
+						th(colspan="2") Стоимость
+				tbody
+					mixin tableContent(td1)
+						tr
+							td!= td1
+								div
+							td от 170 ₽/м кв
+							td: a(href="#modal-request").btn.btn-primary.link-modal-custom-js Заказать
+					+tableContent('Поклейка обоев')
+					+tableContent('Поклейка обоев под покраску')
+					+tableContent('Поклейка флизелиновых обоев ')
+					+tableContent('Поклейка фотообоев')
+					+tableContent('Поклейка обоев с подбором рисунка')
+					tr.d-md-none
+						td(colspan="3"): a(href="#modal-request").btn.btn-primary.link-modal-custom-js  Заказать
+
+	// end sWallpaperingContent

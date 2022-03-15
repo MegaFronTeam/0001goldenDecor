@@ -198,6 +198,11 @@ a {
 			margin-bottom: 24px;
 		}
 	}
+
+	p {
+		color: rgba($color: $body-color, $alpha: 0.5);
+		margin-bottom: 0;
+	}
 }
 
 

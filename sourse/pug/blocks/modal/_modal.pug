@@ -92,6 +92,33 @@ mixin modal()
 			+policy2()
 			+e.BUTTON.btn.btn-primary(type="submit"  ).w-100   Отправить 
 
+	+modal-custom-body()#modal-application
+		+e.title Заказать поклейку обоев
+		+e.sub-text Наш специалист свяжется с вами, подробно проконсультирует и ответит на ваши вопросы.
+		+form-wrap
+			+input('Фамилия имя отчество')
+			+input('Телефон', 'tel')
+				.invalid-feedback Поле обязательно для заполнения
+			+input('E-mail', 'email')
+			+input('Дата рождения')
+			+input('Сопроводительное письмо', 'textarea','')
+			p Сканы диплома, сертификатов об&nbsp;образовании. Можно прикрепить несколько файлов в&nbsp;формате jpg, png или pdf, размером не&nbsp;более 20&nbsp;Мб.
+			+input('Нажмите чтобы загрузить файлы', 'file','')
+			+policy2()
+			+e.BUTTON.btn.btn-primary(type="submit"  ).w-100   Отправить 
+
+	+modal-custom-body()#modal-request
+		+e.title Заказать поклейку обоев
+		+e.sub-text Наш специалист свяжется с вами, подробно проконсультирует и ответит на ваши вопросы.
+		+form-wrap
+			+input('Ваше имя')
+			+input('Телефон', 'tel')
+				.invalid-feedback Поле обязательно для заполнения
+			+input('E-mail', 'email')
+			+input('Ваш комментарий или вопрос (необязательно)', 'textarea','') 
+			+policy2()
+			+e.BUTTON.btn.btn-primary(type="submit"  ).w-100   Отправить 
+
 
 	+modal-custom-body()#modal-test-call
 		+b.phone-block

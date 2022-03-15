@@ -18,4 +18,7 @@
 
 ## March 2022
 
-18. <https://megafronteam.github.io/0001goldenDecor/public/404.html> 
+1. <https://megafronteam.github.io/0001goldenDecor/public/404.html> 
+2. <https://megafronteam.github.io/0001goldenDecor/public/13-shipping-and-payment.html> 
+3. <https://megafronteam.github.io/0001goldenDecor/public/14-wallpapering.html> 
+4. <https://megafronteam.github.io/0001goldenDecor/public/15-forDisigner.html> 

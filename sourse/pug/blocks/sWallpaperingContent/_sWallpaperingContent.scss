@@ -1,0 +1,111 @@
+// start .sWallpaperingContent
+.sWallpaperingContent {
+	--sPT: #{rem(24)};
+	--sPB: #{rem(50)};
+	// --sTPB: ;
+	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(137)};
+	}
+	p {
+		margin-bottom: rem(30);
+		max-width: rem(800);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+	}
+	table {
+		width: 100%;
+		thead {
+			th {
+				color: #9BA1A5;
+				padding-bottom: rem(16);
+				font-weight: 400;
+			}
+		}
+		tbody {
+			tr {
+				position: relative;
+				div {
+					&:before {
+						@include mt;
+						content: '';
+						position: absolute;
+						display: block;
+						height: 100%;
+						width: 200vw;
+						top: 0;
+						left: -100vw;
+						z-index: -1;
+					}
+				}
+				&:hover {
+					div {
+						&:before {
+							background-color: #F8F8F8;
+						}
+					}
+				}
+				&:not(:first-child) {
+					td {
+						border-top: 1px solid rgba($color: $body-color, $alpha: 0.1);
+					}
+				}
+				&:last-child {
+					td {
+						@include media-breakpoint-down(md) {
+							border: none;
+							padding-right: 0;
+						}
+					}
+				}
+			}
+			td {
+				font-size: rem(18);
+				padding: rem(16) 0;
+				border-bottom: 1px solid rgba($color: $body-color, $alpha: 0.1);
+				&:nth-child(1) {
+					font-weight: 600;
+					@include media-breakpoint-up(lg) {
+						width: rem(650);
+					}
+					@include media-breakpoint-down(md) {
+						padding-right: 15px;
+						font-size: 13px;
+					}
+				}
+				&:nth-child(2) {
+					// font-size: rem(18);
+					@include media-breakpoint-up(lg) {
+						width: rem(420);
+					}
+				}
+				&:nth-child(3) {
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+					@include media-breakpoint-up(lg) {
+						width: rem(202);
+					}
+				}
+			}
+		}
+		a {
+			width: 100%;
+			font-weight: 600;
+			@include media-breakpoint-up(md) {
+				padding: rem(8) 0;
+			}
+			@include media-breakpoint-up(lg) {
+				padding: rem(15) 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sWallpaperingContent

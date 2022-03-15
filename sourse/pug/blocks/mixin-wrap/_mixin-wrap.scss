@@ -550,3 +550,18 @@
 		}
 	}
 }
+
+.page-with-page-head-2 {
+	.page-head {
+		padding-bottom: rem(54);
+		h1,
+		a:not(:hover) {
+			color: $white;
+		}
+	}
+	.breadcrumb .breadcrumb-item {
+		&:before {
+			color: $white;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-mixin sOurStores(data)
+mixin sOurStores(title)
 	// start sOurStores
 	+b.SECTION.sOurStores.section#sOurStores&attributes(attributes)
 		.container
@@ -6,7 +6,10 @@ mixin sOurStores(data)
 				+b.section-title
 					.row
 						.col
-							h2 Наши магазины
+							if title
+								h2!= title
+							else
+								h4 Пункты самовывоза в Москве
 						.col-auto
 								.tabs__caption
 									.tabs__btn.active Списком

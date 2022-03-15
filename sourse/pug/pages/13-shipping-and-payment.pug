@@ -1,0 +1,48 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+ 
+include ../blocks/footer/_footer.pug
+//- include ../blocks/sCategeries/_sCategeries.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sBlog/_sBlog.pug
+//- include ../blocks/sAboutBlock/_sAboutBlock.pug
+//- include ../blocks/sStores/_sStores.pug
+//- include ../blocks/sOurEmployees/_sOurEmployees.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sOurStores/_sOurStores.pug
+include ../blocks/sShippingAndPayment/_sShippingAndPayment.pug
+include ../blocks/sOurStores/_sOurStores.pug
+include ../blocks/sPayment/_sPayment.pug
+
+block variables
+	- let  mainPage= 'main-page'
+	- let  bg= '13-shipping-and-payment.jpg'
+
+block title
+	- let  title= 'Доставка и оплата'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	.header.header--js
+		+topLine
+		+top-nav()
+	//- +headerBlock
+	+page-head({
+		title
+	})
+		+breadcrumb('Главная', 'Вакансии')
+	+sShippingAndPayment()
+	+sOurStores().sOurStores--shipping-page
+	+sPayment()
+	+footer()
+block map
+	+mapBlock()

@@ -1,0 +1,58 @@
+// start .sPayment
+.sPayment {
+	--sPT: 0;
+	--sPB: #{rem(50)};
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(119)};
+	}
+	&__wrap {
+		max-width: rem(800);
+	}
+	.section-title {
+		margin-bottom: rem(32);
+		h2 {
+			margin-bottom: rem(32);
+		}
+	}
+	p {
+		margin-bottom: 0;
+		color: $secondary;
+	}
+	&__row {
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(20)};
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+	}
+	.choiceOption {
+		height: 100%;
+		.custom-input {
+			cursor: default;
+			position: relative;
+			height: 100%;
+			padding-left: rem(88);
+			&__input {
+				@include a-cent(y);
+				left: rem(24);
+				background-image: url(../img/svg/check-black.svg);
+			}
+			&__content {
+				margin-bottom: 0;
+			}
+		}
+		.form-check-input:disabled {
+			opacity: 1;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPayment

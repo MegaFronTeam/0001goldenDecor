@@ -70,6 +70,8 @@ mixin top-btns()
 
 mixin page-head(data)
 	+b.page-head&attributes(attributes)
+		if data.pic
+			+pic('wallpapering-bg.jpg', 'bg', 0).picture-bg
 		.container
 			+e.content-wrap
 				block

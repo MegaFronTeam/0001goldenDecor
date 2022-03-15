@@ -10,6 +10,10 @@
 			margin-bottom: 0;
 			min-width: 288px;
 		}
+		h4 {
+			font-weight: 600;
+			margin-bottom: 0;
+		}
 		.row {
 			--bs-gutter-x: #{rem(24)};
 			--bs-gutter-y: var(--bs-gutter-x);
@@ -279,6 +283,11 @@
 		&__content {
 			position: relative;
 		}
+	}
+	&--shipping-page {
+		--sPT: 0;
+		--sPB: #{rem(51)};
+		box-shadow: none;
 	}
 	@include media-breakpoint-up(xl) {
 	}
