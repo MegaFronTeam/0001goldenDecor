@@ -7,12 +7,12 @@
 		--sPT: #{rem(88)};
 		--sPB: #{rem(96)};
 	}
-	.row {
-		--bs-gutter-y: #{rem(13)};
-		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: #{rem(66)};
-		}
-	}
+	// .row {
+	// 	--bs-gutter-y: #{rem(13)};
+	// 	@include media-breakpoint-up(lg) {
+	// 		--bs-gutter-x: #{rem(66)};
+	// 	}
+	// }
 	.section-title {
 		margin-bottom: 0;
 		h2 {
@@ -36,10 +36,21 @@
 			max-width: 1103px;
 		}
 	}
-	&__item {
+	ul {
+		list-style-type: none;
+		margin-bottom: rem(56);
+		@include media-breakpoint-up(sm) {
+			columns: 2;
+		}
+	}
+	li {
 		display: flex;
 		align-items: center;
-		span {
+		&:not(:last-child) {
+			margin-bottom: rem(13);
+		}
+		&:before {
+			content: '';
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -49,6 +60,10 @@
 			background-color: $yellow;
 			// display: block;
 			margin-right: rem(24);
+			margin-left: rem(20);
+			background-image: url(../img/svg/done.svg);
+			background-repeat: no-repeat;
+			background-position: 50%;
 			.icon {
 				font-size: rem(15);
 				color: $body-color;
@@ -64,10 +79,11 @@
 	}
 	a {
 		padding: rem(16.4) rem(29);
-		margin-top: rem(64);
 		width: auto;
 		margin-right: auto;
 		margin-left: auto;
+		display: block;
+		width: max-content;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

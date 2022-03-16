@@ -17,18 +17,19 @@ mixin blog-item(i,t,p,text)
 //- 			p= p
 //- 			p= text
 
-mixin sBlog(data)
+mixin sBlog(showMore, title)
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container 
 				+b.section-title 
 					.row
 						.col 
-							h2= sBlog.title
-						.col-auto.order-md-last
-							+b.link-more(href="#")
-								.d-none.d-sm-inline Смотреть все
-								+icon("chevron-right")
+							h2!= title
+						if showMore
+							.col-auto.order-md-last
+								+b.link-more(href="#")
+									.d-none.d-sm-inline Смотреть все
+									+icon("chevron-right")
 				+e.slider--js.swiper
 					.swiper-wrapper
 						each item in sBlog.items

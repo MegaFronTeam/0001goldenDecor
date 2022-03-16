@@ -6,23 +6,20 @@ mixin sForDisignerBody(data)
 			+b.section-title.text-center
 				h2 Для вас и ваших проектов
 			+pic('sForDisignerBody-img-1.png', '', 0)
-			.row 
-					mixin forDisigner-item(text)
-						.col-sm-6
-							+e.item
-								span: +icon('done')
-								p!=text
-					+forDisigner-item('Идеальные условия для каждого (дизайнера, декоратора, архитектора и т.д)')
-					+forDisigner-item('Идеальные условия для каждого (дизайнера, декоратора, архитектора и т.д)')
-					+forDisigner-item('Прозрачная программа по карте дизайнера')
-					+forDisigner-item('Прозрачная программа по карте дизайнера')
-					+forDisigner-item('Диванные зоны для работы с клиентом')
-					+forDisigner-item('Диванные зоны для работы с клиентом')
-					+forDisigner-item('Семинары, презентации и поездки на фабрики')
-					+forDisigner-item('Семинары, презентации и поездки на фабрики')
-					+forDisigner-item('Эксклюзивная информация о новинках. Акции и конкурсы, подарки и призы.')
-					+forDisigner-item('Эксклюзивная информация о новинках. Акции и конкурсы, подарки и призы.')
-					+forDisigner-item('Возможность персонального консультанта в любом удобном для Вас магазине')
-					+forDisigner-item('Возможность персонального консультанта в любом удобном для Вас магазине')
-					a(href="#modal-application").btn.btn-primary.link-modal-custom-js Получить карту дизайнера
+			ul 
+				mixin forDisigner-item(text)
+					li: p!=text
+				+forDisigner-item('Идеальные условия для каждого (дизайнера, декоратора, архитектора и&nbsp;т.д)')
+				+forDisigner-item('Прозрачная программа по&nbsp;карте дизайнера')
+				+forDisigner-item('Диванные зоны для работы с&nbsp;клиентом')
+				+forDisigner-item('Семинары, презентации и&nbsp;поездки на&nbsp;фабрики')
+				+forDisigner-item('Эксклюзивная информация о&nbsp;новинках. Акции и&nbsp;конкурсы, подарки и&nbsp;призы.')
+				+forDisigner-item('Возможность персонального консультанта в&nbsp;любом удобном для Вас магазине')
+				+forDisigner-item('Идеальные условия для каждого (дизайнера, декоратора, архитектора и&nbsp;т.д)')
+				+forDisigner-item('Прозрачная программа по&nbsp;карте дизайнера')
+				+forDisigner-item('Диванные зоны для работы с&nbsp;клиентом')
+				+forDisigner-item('Семинары, презентации и&nbsp;поездки на&nbsp;фабрики')
+				+forDisigner-item('Эксклюзивная информация о&nbsp;новинках. Акции и&nbsp;конкурсы, подарки и&nbsp;призы.')
+				+forDisigner-item('Возможность персонального консультанта в&nbsp;любом удобном для Вас магазине')
+			a(href="#modal-application").btn.btn-primary.link-modal-custom-js Получить карту дизайнера
 	// end sForDisignerBody

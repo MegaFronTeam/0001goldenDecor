@@ -19,17 +19,15 @@ include ../blocks/footer/_footer.pug
 //- include ../blocks/sOurEmployees/_sOurEmployees.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sOurStores/_sOurStores.pug
-include ../blocks/sForDisignerHead/_sForDisignerHead.pug
-include ../blocks/sForDisignerBody/_sForDisignerBody.pug
-include ../blocks/sBlog/_sBlog.pug
-include ../blocks/sStores/_sStores.pug
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sUserInfo/_sUserInfo.pug
 
 block variables
 	- let  mainPage= ''
 	- let  bg= '15-forDisigner.jpg'
 
 block title
-	- let  title= 'Дизайнерам'
+	- let  title= 'Личный кабинет'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -38,11 +36,9 @@ block pagecontent
 		+top-nav()
 	//- +headerBlock
 	+page-head({
-		title
+		title: 'Иван Иванов'
 	})
-		+breadcrumb('Главная', 'Вакансии')
-	+sForDisignerHead()
-	+sForDisignerBody()
-	+sBlog('', 'События для дизайнеров')
-	+sStores()
+		+breadcrumb('Главная', 'Личный кабинет')
+	+sCabinet()
+		+sUserInfo()
 	+footer()

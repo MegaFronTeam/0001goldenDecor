@@ -1,0 +1,20 @@
+mixin sCabinet(data)
+	// start sCabinet
+	+b.sCabinet.section#sCabinet&attributes(attributes)
+		.container
+			.row
+				+e.col-cabinet-option.col-xl
+					ul
+						mixin cabinet-option-item(title, text)
+							li&attributes(attributes)
+								a(href="#")
+									span!= title
+									+e.SPAN.optionText!= text
+									+icon('chevron-right')
+						+cabinet-option-item('Мой профиль', 'Личные данные, смена пароля, удаление аккаунта').active
+						+cabinet-option-item('Избранное', 'Добавленные товары из&nbsp;каталога и&nbsp;карточки товара')
+						+cabinet-option-item('Мои заказы', 'Актуальные заказы, а&nbsp;также&nbsp;те, которые вы&nbsp;уже получили.')
+						+cabinet-option-item('Мои адреса', 'Актуальные заказы, а&nbsp;также&nbsp;те, которые вы&nbsp;уже получили.')
+				+e.col-body.col-xl
+					block
+	// end sCabinet

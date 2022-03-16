@@ -310,11 +310,11 @@ function eventHandler() {
 	});
 
 	const sStoresSlider = new Swiper('.sStores__slider--js', {  
-		slidesPerView: 2,
+		slidesPerView: 1,
 		watchOverflow: true,
 		spaceBetween: 35,
 		breakpoints: {
-			640: {
+			400: {
 				slidesPerView: 2
 			},
 			1024: {

@@ -1,0 +1,46 @@
+mixin sUserInfo(data)
+	// start sUserInfo
+	+b.sUserInfo#sUserInfo&attributes(attributes)
+		+e.wrap
+			h4 Персональные данные
+			+form-wrap()
+				.row
+					.col-sm-6
+						+input('Имя' ,"text")
+					.col-sm-6
+						+input('Фамилия' ,"text")
+					.col-sm-6
+						+input('Отчество' ,"text")
+					.col-sm-6
+						+input('Дата рождения' ,"text")
+					.col-sm-6
+						+input('Пол', "select")
+					.col-12
+						button.btn.btn-primary Сохранить изменения
+		+e.wrap
+			h4 Контактные данные
+			.row
+				.col-sm
+					+e.changeInfo
+						a(href="#")
+							+icon('edit-pencil')
+						p Email
+						p goldendecor@gmail.com
+					p Пожалуйста, подтвердите новый email. Код активации отправлен на alexandr_ma@bk.ru. Если письма не видно, проверьте папку «Спам».
+				.col-sm
+					+e.changeInfo
+						a(href="#")
+							+icon('edit-pencil')
+						p Номер телефона
+						p +7 (987) 654-32-10
+		+e.wrap
+			h4 Настройки безопасности
+			.row
+				.col-sm
+					+e.changeInfo
+						a(href="#")
+							+icon('edit-pencil')
+						p Пароль
+						p &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+	// end sUserInfo
+	
