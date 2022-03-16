@@ -1,8 +1,12 @@
 // start .sForDisignerHead
 .sForDisignerHead {
-	--sPT: #{rem(72)};
-	--sPB: #{rem(110)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(35)};
 	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(72)};
+		--sPB: #{rem(110)};
+	}
 	.container {
 		@include media-breakpoint-up(lg) {
 			max-width: 1103px;

@@ -20,6 +20,7 @@ include ../blocks/footer/_footer.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sOurStores/_sOurStores.pug
 include ../blocks/sForDisignerHead/_sForDisignerHead.pug
+include ../blocks/sForDisignerBody/_sForDisignerBody.pug
 
 block variables
 	- let  mainPage= ''
@@ -39,4 +40,5 @@ block pagecontent
 	})
 		+breadcrumb('Главная', 'Вакансии')
 	+sForDisignerHead()
+	+sForDisignerBody()
 	+footer()
