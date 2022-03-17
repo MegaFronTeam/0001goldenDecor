@@ -22,3 +22,11 @@
 2. <https://megafronteam.github.io/0001goldenDecor/public/13-shipping-and-payment.html> 
 3. <https://megafronteam.github.io/0001goldenDecor/public/14-wallpapering.html> 
 4. <https://megafronteam.github.io/0001goldenDecor/public/15-forDisigner.html> 
+
+### Личный кабинет
+
+1. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet.html> 
+2. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-2.html> 
+3. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-3.html> 
+4. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-4.html> 
+5. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-5.html> 
