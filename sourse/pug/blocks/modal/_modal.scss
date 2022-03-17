@@ -5,6 +5,16 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	.is-close {
+		top: 16px !important;
+		right: 16px !important;
+		color: rgba($color: #14181F, $alpha: 0.5) !important;
+		box-shadow: none !important;
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
 }
 .modal-win {
 
@@ -15,7 +25,9 @@
 	width: rem(1500);
 	// min-height: 100%; 
 	padding: 40px;
-
+	@include media-breakpoint-up(lg) {
+		padding: rem(80) rem(80) rem(80) rem(130);
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -25,6 +37,30 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	&__title {
+		color: $body-color;
+		font-weight: 600;
+		margin-bottom: rem(32);
+	}
+	&__after-headline {
+		color: $secondary;
+		margin-bottom: rem(30);
+	}
+	.form-wrap {
+		&__input-wrap {
+			max-width: rem(384);
+			margin-bottom: rem(40);
+		}
+		button {
+			max-width: rem(226);
+			margin-top: 0;
+		}
+	}
+	&__btn {
+		max-width: rem(226);
+		margin-top: 0;
+		padding: rem(16) 0;
 	}
 }
 
@@ -143,6 +179,7 @@ a {
 		width: 100% !important;
 		min-height: 100%; 
 		transform: none !important;
+		z-index: 100000;
 	}
 }
 

@@ -1,4 +1,4 @@
-mixin sBasketList(data)
+mixin sBasketList(form)
 	// start sBasketList
 	+b.sBasketList&attributes(attributes)
 		+e.head
@@ -53,7 +53,8 @@ mixin sBasketList(data)
 				td
 					+icon('favorite')
 					+icon('delete')
-		+form-wrap()
-			+input('Промокод', 'text', 'Промокод')
-			+e.BUTTON.btn.btn-primary(type="submit"  ) Применить
+		if form
+			+form-wrap()
+				+input('Промокод', 'text', 'Промокод')
+				+e.BUTTON.btn.btn-primary(type="submit"  ) Применить
 	// end sBasketList

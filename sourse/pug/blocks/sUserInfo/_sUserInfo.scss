@@ -3,26 +3,52 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: ;
+	padding-bottom: rem(35);
 	.row {
 		--bs-gutter-x: #{rem(32)};
 	}
 	&__wrap {
 		position: relative;
 		padding-top: rem(32);
-		padding-bottom: rem(56);
 		@include media-breakpoint-up(xl) {
+			padding-bottom: rem(87);
 			padding-left: rem(40);
-
 		}
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 200vh;
-			height: 1px;
-			background-color: rgba(0, 0, 0, 0.1);
-			bottom: 0;
-			left: 0;
+		&:not(:last-child) {
+			padding-bottom: rem(56);
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 200vh;
+				height: 1px;
+				background-color: rgba(0, 0, 0, 0.1);
+				bottom: 0;
+				left: 0;
+				@include media-breakpoint-down(lg) {
+					left: -100vh;
+				}
+			}
+		}
+		&--footer {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			a {
+				display: block;
+				margin-bottom: rem(32);
+				text-decoration: underline;
+				&:not(:hover) {
+					color: $secondary;
+				}
+			}
+			button {
+				border-color: $body-color;
+				color: $body-color;
+				width: 100%;
+				max-width: rem(384);
+				font-weight: 600;
+			}
 		}
 	}
 	h4 {
@@ -36,6 +62,7 @@
 			// border-bottom: ;
 		}
 		select {
+			cursor: pointer;
 			box-shadow: none;
 			border: none;
 			border-bottom: 1px solid #ced4da;
@@ -44,15 +71,22 @@
 			width: 100%;
 			max-width: rem(384);
 			padding: rem(17) 0;
+			margin-top: rem(24);
 		}
 	}
 	&__changeInfo {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
 		background-color: #F8F8F8;
 		max-width: rem(384);
 		padding: rem(20) rem(20) rem(18);
 		position: relative;
 		p {
+			position: relative;
+			z-index: 5;
 			margin-bottom: 0;
+			width: max-content;
 			&:first-of-type {
 				font-size: rem(12);
 				opacity: 0.5;
@@ -60,11 +94,15 @@
 			}
 		}
 		a {
-			position: absolute;
-			display: block;
-			right: rem(20);
-			top: rem(20);
-			z-index: 1;
+			&:before {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+			}
 		}
 		.icon {
 			font-size: rem(24);

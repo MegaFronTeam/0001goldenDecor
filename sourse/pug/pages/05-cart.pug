@@ -37,8 +37,8 @@ block pagecontent
 		cart: true
 	})
 		+breadcrumb('Главная', 'Журнал')
-	+sCart('addMore')
-		+sBasketList()
+	+sCart('addMore', '', 'true')
+		+sBasketList('true')
 	+checkout('Оформить заказ', '' ,'Продолжить покупки').active.active2
 	+footer()
       

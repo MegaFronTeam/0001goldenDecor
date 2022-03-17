@@ -1,0 +1,13 @@
+mixin sFavorite(data)
+	// start sFavorite
+	+b.sFavorite#sFavorite&attributes(attributes)
+		+e.row.row
+			.col
+				h4 Избранное
+			.col-auto
+				+e.BUTTON.btn.btn Очистить
+		.row
+			-for(i=1; i<5; i++)
+				.col-sm-6
+					+catalog-item(i, '1838 Wallcoverings Willow Stone', 'Артикул: R458702556DF', '8 200 ₽')
+	// end sFavorite

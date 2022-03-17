@@ -205,9 +205,15 @@
 			top: rem(15);
 		}
 		&.active {
-			.icon-favorite {
-				fill: #e8a200;
-				stroke: #e8a200;
+			.catalog-item__btn--like {
+				color: $yellow;
+				.icon-favorite {
+					fill: currentColor;
+					stroke: currentColor;
+				}
+				&:hover {
+					color: $white;
+				}
 			}
 		}
 	}

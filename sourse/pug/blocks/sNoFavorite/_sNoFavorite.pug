@@ -1,0 +1,13 @@
+mixin sNoFavorite(data)
+	// start sNoFavorite
+	+b.SECTION.sNoFavorite.section#sNoFavorite&attributes(attributes)
+		.container
+			h4 Избранное
+			+e.wrap
+				.top-btns__btn
+					+icon('like')
+					span.top-btns__counter 0
+				h2 Ещё не&nbsp;готовы к&nbsp;покупке?
+				p Жмите ♡ на&nbsp;странице товара и&nbsp;добавляйте сюда&nbsp;то, что нравится. И&nbsp;если цена на&nbsp;эти товары упадёт, мы&nbsp;вам напишем.
+				a(href="/").btn.btn-primary На главную
+	// end sNoFavorite

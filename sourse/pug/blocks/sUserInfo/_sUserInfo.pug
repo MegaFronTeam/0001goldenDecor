@@ -22,25 +22,31 @@ mixin sUserInfo(data)
 			.row
 				.col-sm
 					+e.changeInfo
-						a(href="#")
+						+e.changeInfo-wrap
+							p Email
+							p goldendecor@gmail.com
+						a(href="#modal-edit-email").link-modal-js
 							+icon('edit-pencil')
-						p Email
-						p goldendecor@gmail.com
 					p Пожалуйста, подтвердите новый email. Код активации отправлен на alexandr_ma@bk.ru. Если письма не видно, проверьте папку «Спам».
 				.col-sm
 					+e.changeInfo
-						a(href="#")
+						+e.changeInfo-wrap
+							p Номер телефона
+							p +7 (987) 654-32-10
+						a(href="#modal-edit-email").link-modal-js
 							+icon('edit-pencil')
-						p Номер телефона
-						p +7 (987) 654-32-10
 		+e.wrap
 			h4 Настройки безопасности
 			.row
 				.col-sm
 					+e.changeInfo
-						a(href="#")
+						+e.changeInfo-wrap
+							p Пароль
+							p &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+						a(href="#modal-edit-email").link-modal-js
 							+icon('edit-pencil')
-						p Пароль
-						p &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+		+e.wrap--footer
+			a(href="#") Согласие на&nbsp;обработку персональных данных
+			button.btn.btn-outline-secondary Удалить кабинет
 	// end sUserInfo
 	

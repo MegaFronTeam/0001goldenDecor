@@ -149,6 +149,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sForDisignerBody/_sForDisignerBody';
 @import '../pug/blocks/sCabinet/_sCabinet';
 @import '../pug/blocks/sUserInfo/_sUserInfo';
+@import '../pug/blocks/sFavorite/_sFavorite';
+@import '../pug/blocks/sMyOrders/_sMyOrders';
+@import '../pug/blocks/sNoFavorite/_sNoFavorite';
 
 @import "media"; // Всегда в конце
 

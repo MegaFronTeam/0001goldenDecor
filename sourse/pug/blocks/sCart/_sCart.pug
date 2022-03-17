@@ -1,4 +1,4 @@
-mixin sCart(addMore, promocode)
+mixin sCart(addMore, promocode, extraOptions, reply)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
@@ -30,8 +30,11 @@ mixin sCart(addMore, promocode)
 									tr
 										td Сумма заказа
 										td 9 390 ₽
-						+extraOption('1', 'Бесплатная доставка при заказе от 15 000 ₽')
-						+extraOption('2', 'Закажите поклейку обоев от 250 ₽ / м2', 'icon')
+						if reply
+							+e.BUTTON.btn.btn.btn-outline-secondary.w-100 Повторить заказ
+						if extraOptions
+							+extraOption('1', 'Бесплатная доставка при заказе от 15 000 ₽')
+							+extraOption('2', 'Закажите поклейку обоев от 250 ₽ / м2', 'icon')
 				+e.col-basket.col-xl
 					block
 				if addMore

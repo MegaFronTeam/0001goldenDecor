@@ -177,6 +177,13 @@
 			}
 		}
 	}
+	&__btn {
+		color: $body-color;
+		border-color: $body-color;
+		border-width: 2px;
+		padding: rem(17) 0;
+		font-weight: 600;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
