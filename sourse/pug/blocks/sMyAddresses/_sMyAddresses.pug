@@ -1,0 +1,19 @@
+mixin sMyAddresses(data)
+	// start sMyAddresses
+	+b.SECTION.sMyAddresses.section#sMyAddresses&attributes(attributes)
+		.container
+			h4 Мои адреса
+			+e.content
+				+icon('map-pin')
+				p г. Москва, улица Название улицы, д.&nbsp;56&nbsp;корпус&nbsp;5, кв.&nbsp;48
+				a(href="#") 
+					+icon('delete')
+			+e.content
+				+icon('map-pin')
+				p г. Оренбург, улица Название улицы, д. 87/4, кв.&nbsp;157
+				a(href="#") 
+					+icon('delete')
+			button.btn.btn-outline-secondary.w-100 
+				+icon('plus')
+				| Добавить новый адрес
+	// end sMyAddresses

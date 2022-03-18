@@ -9,6 +9,15 @@ mixin sGoods(data)
 						+icon('undo')
 						span Очистить фильтр
 				+e.col-catalog.col-lg
+					+e.row-brands.row
+						-for(i=1; i<23; i++)
+							.col-auto
+								+e.A.brands-link(href="#") 
+									+pic(`brands-${i}.png`, 'bg', 0)
+						.col-12
+							+e.brands-btn.active.text-center
+								button Свернуть
+									+icon('chevron-down')
 					+e.sort-row.row.justify-content-between
 						.col-12.col-sm-auto.order-sm-last
 							+e.sorting

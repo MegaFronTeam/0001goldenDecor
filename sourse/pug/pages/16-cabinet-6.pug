@@ -1,0 +1,44 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+ 
+include ../blocks/footer/_footer.pug
+//- include ../blocks/sCategeries/_sCategeries.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sBlog/_sBlog.pug
+//- include ../blocks/sAboutBlock/_sAboutBlock.pug
+//- include ../blocks/sStores/_sStores.pug
+//- include ../blocks/sOurEmployees/_sOurEmployees.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sOurStores/_sOurStores.pug
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sMyAddresses/_sMyAddresses.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg= '16-cabinet-6.jpg'
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	.header.header--js
+		+topLine
+		+top-nav()
+	//- +headerBlock
+	+page-head({
+		title: 'Иван Иванов'
+	})
+		+breadcrumb('Главная', 'Личный кабинет')
+	+sCabinet()
+		+sMyAddresses()
+	+footer()

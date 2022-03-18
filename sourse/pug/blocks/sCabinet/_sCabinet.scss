@@ -11,6 +11,7 @@
 	}
 	&__col-cabinet-option {
 		order: 2;
+		min-height: rem(616);
 		@include media-breakpoint-up(xl) {
 			order: unset;
 			max-width: rem(400);

@@ -250,6 +250,63 @@
 			font-size: 24px;
 		}
 	}
+
+	&__row-brands {
+		--bs-gutter-x: #{rem(8)} !important;
+		--bs-gutter-y: var(--bs-gutter-x) !important;
+	}
+	&__brands-link {
+		width: 145px;
+		background-color: #F8F8F8;
+		padding: rem(13) rem(20);
+		border: 2px solid transparent;
+		display: block;
+		display: block;
+		&:hover {
+			border-color: $body-color;
+		}
+		picture {
+			@include block(105, 104);
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	&__brands-btn {
+		position: relative;
+		margin-top: rem(32);
+		margin-bottom: rem(22);
+		button {
+			background-color: $white;
+			border: none;
+			padding: 0 rem(15);
+		}
+		.icon {
+			font-size: rem(24);
+			margin-left: 4px;
+
+		}
+		&.active {
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+		&:before {
+			content: '';
+			@include a-cent(y);
+			// position: absolute;
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: rgba($color: $body-color, $alpha: 0.1);
+			left: 0;
+			z-index: -2;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

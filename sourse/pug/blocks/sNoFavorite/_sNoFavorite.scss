@@ -23,6 +23,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		.top-btns__btn {
+			cursor: default;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: rem(32);
@@ -32,6 +33,11 @@
 			border-radius: 50%;
 			.icon {
 				font-size: rem(36);
+			}
+			&:hover {
+				background-color: inherit;
+				color: inherit;
+				border-color: #dfdfdf;
 			}
 		}
 		.top-btns__counter {

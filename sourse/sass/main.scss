@@ -152,6 +152,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sFavorite/_sFavorite';
 @import '../pug/blocks/sMyOrders/_sMyOrders';
 @import '../pug/blocks/sNoFavorite/_sNoFavorite';
+@import '../pug/blocks/sMyAddresses/_sMyAddresses';
 
 @import "media"; // Всегда в конце
 
