@@ -252,7 +252,7 @@
 	}
 
 	&__row-brands {
-		--bs-gutter-x: #{rem(8)} !important;
+		--bs-gutter-x: #{rem(16)} !important;
 		--bs-gutter-y: var(--bs-gutter-x) !important;
 	}
 	&__brands-link {
@@ -261,7 +261,10 @@
 		padding: rem(13) rem(20);
 		border: 2px solid transparent;
 		display: block;
-		display: block;
+		@include media-breakpoint-down(lg) {
+			width: 128px;
+
+		}
 		&:hover {
 			border-color: $body-color;
 		}
@@ -276,16 +279,51 @@
 			}
 		}
 	}
+	&__brands-link2 {
+		display: block;
+		padding: rem(16);
+		display: flex;
+		flex-direction: column;
+		background-color: #F8F8F8;
+		width: 145px;
+		height: 130px;
+		border: 2px solid transparent;
+		@include media-breakpoint-down(lg) {
+			width: 128px;
+		}
+		&:hover {
+			border-color: $body-color;
+			h5 {
+	
+				text-decoration: underline;
+			}
+		}
+		h5 {
+			font-weight: 600;
+			flex-grow: 1;
+			color: $body-color;
+		}
+		p {
+			color: #9BA1A5;
+			font-size: rem(12);
+			margin-bottom: 0;
+		}
+	}
+	&__col {
+		&:nth-child(n + 7) {
+			display: none;
+		}
+	}
 	&__brands-btn {
 		position: relative;
 		margin-top: rem(32);
 		margin-bottom: rem(21);
-		button {
-			background-color: $white;
-			border: none;
-			padding: 0 rem(15);
-		}
+		background-color: transparent;
+		border: none;
+		padding: 0 rem(15);
+		width: 100%;
 		.icon {
+			@include mt;
 			font-size: rem(24);
 			margin-left: 4px;
 
@@ -305,6 +343,16 @@
 			background-color: rgba($color: $body-color, $alpha: 0.1);
 			left: 0;
 			z-index: -2;
+		}
+		&::after {
+			content: '';
+			width: 172px;
+			height: 100%;
+			z-index: -1;
+			background-color: $white;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

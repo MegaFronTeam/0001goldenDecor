@@ -1,3 +1,54 @@
+mixin brands(i)
+	+e.row-brands.row.justify-content-center.justify-content-lg-start
+		-for(i=1; i<23; i++)
+			+e.col--js.col-auto
+				+e.A.brands-link(href="#") 
+					+pic(`brands-${i}.png`, 'bg', 0)
+	.col-12.text-center
+		+e.BUTTON.brands-btn.text-center
+				+e.SPAN.btn-text Все бренды
+				+icon('chevron-down')
+
+mixin brands2()
+	+e.row-brands.row
+		mixin brand-link2(title, text)
+			+e.col--js.col-auto
+				+e.A.brands-link2(href="#") 
+					h5!= title
+					p!= text
+		+brand-link2('Inverno', 'Коллекция')
+		+brand-link2('Primavera', 'Коллекция')
+		+brand-link2('Dream Again Michalsky', 'Коллекция')
+		+brand-link2('Boho Bena ', 'Коллекция')
+		+brand-link2('California', 'Коллекция')
+		+brand-link2('Ambasador', 'Коллекция')
+		+brand-link2('Inverno', 'Коллекция')
+		+brand-link2('Primavera', 'Коллекция')
+		+brand-link2('Dream Again Michalsky', 'Коллекция')
+		+brand-link2('Boho Bena ', 'Коллекция')
+		+brand-link2('California', 'Коллекция')
+		+brand-link2('Ambasador', 'Коллекция')
+		+brand-link2('Inverno', 'Коллекция')
+		+brand-link2('Primavera', 'Коллекция')
+		+brand-link2('Dream Again Michalsky', 'Коллекция')
+		+brand-link2('Boho Bena ', 'Коллекция')
+		+brand-link2('California', 'Коллекция')
+		+brand-link2('Ambasador', 'Коллекция')
+		+brand-link2('Inverno', 'Коллекция')
+		+brand-link2('Primavera', 'Коллекция')
+		+brand-link2('Dream Again Michalsky', 'Коллекция')
+		+brand-link2('Boho Bena ', 'Коллекция')
+		+brand-link2('California', 'Коллекция')
+		+brand-link2('Ambasador', 'Коллекция')
+	.col-12.text-center
+		+e.BUTTON.brands-btn.text-center
+			+e.SPAN.btn-text Все бренды
+			+icon('chevron-down')
+	//- .col-12.text-center
+	//- 	+e.BUTTON.brands-btn.text-center
+	//- 			+e.SPAN.btn-text Все бренды
+	//- 			+icon('chevron-down')
+
 mixin sGoods(data)
 	// start sGoods
 	+b.SECTION.sGoods.section#sGoods&attributes(attributes)
@@ -9,15 +60,17 @@ mixin sGoods(data)
 						+icon('undo')
 						span Очистить фильтр
 				+e.col-catalog.col-lg
-					+e.row-brands.row
-						-for(i=1; i<23; i++)
-							.col-auto
-								+e.A.brands-link(href="#") 
-									+pic(`brands-${i}.png`, 'bg', 0)
-						.col-12
-							+e.brands-btn.active.text-center
-								button Свернуть
-									+icon('chevron-down')
+					block
+					//- +brands()
+					//- +e.row-brands.row
+					//- 	-for(i=1; i<23; i++)
+					//- 		+e.col--js.col-auto
+					//- 			+e.A.brands-link(href="#") 
+					//- 				+pic(`brands-${i}.png`, 'bg', 0)
+					//- .col-12
+					//- 	+e.BUTTON.brands-btn.text-center
+					//- 			+e.SPAN.btn-text Все бренды
+					//- 			+icon('chevron-down')
 					+e.sort-row.row.justify-content-between
 						.col-12.col-sm-auto.order-sm-last
 							+e.sorting

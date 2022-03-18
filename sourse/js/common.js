@@ -663,6 +663,23 @@ function eventHandler() {
 		}) 
 	}
 	
+	let textHidden = 'Все бренды';
+	let textShow = 'Свернуть';
+
+	$('.sGoods__brands-btn').click(function() {
+		$(this).toggleClass('active');
+		let text = this.querySelector('.sGoods__btn-text');
+		text.innerHTML = (text.innerHTML == textHidden) 
+			? textShow 
+			: textHidden;
+		$('.sGoods__col--js.active').slideUp(function() {
+			$(this).removeClass('active');
+		});
+		$('.sGoods__col--js:hidden').slideDown(function() {
+			$(this).addClass('active');
+		});
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
