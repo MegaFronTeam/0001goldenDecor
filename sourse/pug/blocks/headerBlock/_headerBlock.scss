@@ -14,6 +14,9 @@
 			padding-right: 0;
 		}
 	}
+	&__container {
+		position: relative;
+	}
 	.head-logo{
 		@include media-breakpoint-down(sm) {
 			img{
@@ -88,24 +91,24 @@
 
 	}
 	&__slider{
-		overflow: visible;
+		// overflow: visible;
 		max-width: 1283px;
-		&::before,
-		&::after{
-			z-index: 2;
-			content: '';
-			background-color: $body-bg;
-			height: 102%;
-			top: 0;
-			position: absolute;
-			width: 100vw;
-		}
-		&::before{
-			left: 100%;
-		}
-		&::after{
-			right: 100%;
-		}
+		// &::before,
+		// &::after{
+		// 	z-index: 2;
+		// 	content: '';
+		// 	background-color: $body-bg;
+		// 	height: 102%;
+		// 	top: 0;
+		// 	position: absolute;
+		// 	width: 100vw;
+		// }
+		// &::before{
+		// 	left: 100%;
+		// }
+		// &::after{
+		// 	right: 100%;
+		// }
 	}
 
 	.swiper-pagination{
@@ -118,6 +121,16 @@
 			z-index: 4;
 		}
 	}
+
+	.swiper-button-hand {
+		&-prev {
+			left: -10px;
+		}
+		&-next {
+			right: -10px;
+		}
+	}
+
 	@include media-breakpoint-down(sm) {
 		&__head{
 			position: relative;

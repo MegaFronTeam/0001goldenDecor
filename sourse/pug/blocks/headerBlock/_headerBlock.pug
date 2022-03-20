@@ -1,7 +1,7 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+		+e.container.container
 			+e.slider--js.swiper
 				.swiper-wrapper
 					- for (var x = 0; x < 3; x++)
@@ -15,7 +15,7 @@ mixin headerBlock()
 								+e.body
 									p Дизайны коллекции обоев Amazonia пронизаны философией гармонии.
 									+e.btn(href="#") Подробнее
-				.d-none.d-sm-block
-					+arrow
-				.swiper-pagination
+			.d-none.d-sm-block
+				+arrow
+			.swiper-pagination
 	// end headerBlock
