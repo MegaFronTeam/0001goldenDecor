@@ -23,7 +23,15 @@
 	}
 	&__item {
 		picture {
+			@include block(400, 247);
 			margin-bottom: rem(10);
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
 		}
 		p {
 			max-width: rem(169);

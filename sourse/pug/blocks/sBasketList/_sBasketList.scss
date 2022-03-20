@@ -61,8 +61,10 @@
 					}
 					&:nth-child(2) {
 						opacity: 0.5;
-						font-size: rem(14);
 						margin-bottom: 0;
+						@include media-breakpoint-up(lg) {
+							font-size: rem(14);
+						}
 					}
 					&:nth-child(3) {
 						display: none;
@@ -160,6 +162,7 @@
 				&:nth-child(2) {
 					width: calc(100% - 83px);
 					padding-left: rem(12);
+					padding-right: 10px;
 				}
 				&:nth-child(3) {
 					// flex-grow: 1;

@@ -16,7 +16,17 @@
 	}
 	table {
 		width: 100%;
+		@include media-breakpoint-down(sm) {
+			display: flex;
+			flex-direction: column;
+		}
 		thead {
+			tr {
+				@include media-breakpoint-down(sm) {
+					display: flex;
+					justify-content: space-between;
+				}
+			}
 			th {
 				color: #9BA1A5;
 				padding-bottom: rem(16);
@@ -26,6 +36,10 @@
 		tbody {
 			tr {
 				position: relative;
+				@include media-breakpoint-down(sm) {
+					display: flex;
+					flex-wrap: wrap;
+				}
 				div {
 					&:before {
 						@include mt;
@@ -73,19 +87,29 @@
 						padding-right: 15px;
 						font-size: 13px;
 					}
+					@include media-breakpoint-down(sm) {
+						width: 50%;
+					}
 				}
 				&:nth-child(2) {
 					// font-size: rem(18);
 					@include media-breakpoint-up(lg) {
 						width: rem(420);
 					}
+					@include media-breakpoint-down(sm) {
+						width: 50%;
+						text-align: right;
+					}
 				}
 				&:nth-child(3) {
-					@include media-breakpoint-down(md) {
-						display: none;
-					}
+					// @include media-breakpoint-down(md) {
+					// 	display: none;
+					// }
 					@include media-breakpoint-up(lg) {
 						width: rem(202);
+					}
+					@include media-breakpoint-down(sm) {
+						width: 100%;
 					}
 				}
 			}

@@ -58,8 +58,11 @@
 	}
 	.form-wrap {
 		&__input-wrap  {
-			max-width: rem(384);
 			// border-bottom: ;
+			@include media-breakpoint-up(sm) {
+				max-width: rem(384);
+
+			}
 		}
 		select {
 			cursor: pointer;

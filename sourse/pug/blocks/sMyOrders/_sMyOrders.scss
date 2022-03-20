@@ -19,18 +19,21 @@
 		// overflow: auto;
 	}
 	&__table-wrap {
-		// min-width: 500px;
-		// overflow: hidden;
+		overflow: auto;
 	}
 	table {
+		min-width: 500px;
 		width: 100%;
-		max-width: 100vw;
+		// max-width: 100vw;
 		thead {
 			th {
 				font-weight: 400;
 				font-size: rem(14);
 				color: #9BA1A5;
 				padding-bottom: rem(12);
+				@include media-breakpoint-down(md) {
+					// font-size: 10.5px;
+				}
 				&:nth-child(1) {
 					width: rem(217);
 				}
@@ -40,9 +43,12 @@
 				&:nth-child(3) {
 					width: rem(175);
 				}
+				&:nth-child(4) {
+					width: rem(80);
+				}
 				@include media-breakpoint-down(sm) {
 					font-size: 10px;
-					text-align: center;
+					// text-align: center;
 				}
 			}
 		}
@@ -87,21 +93,23 @@
 					}
 				}
 				@include media-breakpoint-down(sm) {
-					font-size: 10px;
+					// font-size: 10px;
 				}
 			}
 			div {
-				@include mt;
-				position: absolute;
-				display: block;
-				width: 400vw;
-				height: 100%;
-				background-color: transparent;
-				top: 0;
-				z-index: -1;
-				left: -100vw;
-				@include media-breakpoint-up(xl) {
-					left: rem(-40);
+				@include media-breakpoint-up(md) {
+					@include mt;
+					position: absolute;
+					display: block;
+					width: 400vw;
+					height: 100%;
+					background-color: transparent;
+					top: 0;
+					z-index: -1;
+					left: -100vw;
+					@include media-breakpoint-up(xl) {
+						left: rem(-40);
+					}
 				}
 			}
 		}

@@ -3,6 +3,7 @@
 	--sPT: #{rem(30)};
 	--sPB: #{rem(30)};
 	--sTPB: ;
+	overflow: hidden;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(88)};
 		--sPB: #{rem(96)};
@@ -39,7 +40,7 @@
 	ul {
 		list-style-type: none;
 		margin-bottom: rem(56);
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(lg) {
 			columns: 2;
 		}
 	}

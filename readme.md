@@ -31,3 +31,4 @@
 3. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-3.html> 
 4. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-4.html> 
 5. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-5.html> 
+5. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-6.html> 
