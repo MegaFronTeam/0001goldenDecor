@@ -50,12 +50,12 @@ mixin top-btns()
 				+e.btn(href="#").d-lg-none
 					+icon("home") 
 					+e.SPAN.title Главная
-				+e.btn(href="#").d-lg-none
+				+e.btn(href="#" class="catalog-toggle-js").d-lg-none
 					+icon("menu-small") 
 					+e.SPAN.title Каталог
-				+e.btn(type="button" class="search-toggle--js").d-none.d-lg-flex
-					+icon("search") 
-					+e.SPAN.title Поиск
+				//- +e.btn(type="button" class="search-toggle--js").d-none.d-lg-flex
+				//- 	+icon("search") 
+				//- 	+e.SPAN.title Поиск
 				+e.btn(href="#modal-cabinet").link-modal-custom-js 
 					+icon("user") 
 					+e.SPAN.title Профиль
@@ -104,17 +104,18 @@ mixin page-head(data)
 							+page-head-item("04", "Способ оплаты")
 
 mixin searchBlock()
-	+b.search-block
+	+b.search-block 
+		// вешать класс .show-result
 		form
-			input(type="text" placeholder="Поиск")
+			input(type="text" placeholder="Поиск товаров")
 			button
 				+icon("search")
 			+e.close
 				+icon("close")
-		+e.result.d-block
+		+e.result
 			each item in search
 				+e.result-item(href="#")
-					+icon("search")
+					//- +icon("search")
 					= item
 
 mixin checkout(btn, back, proceed, info)

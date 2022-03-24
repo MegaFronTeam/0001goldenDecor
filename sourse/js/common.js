@@ -680,6 +680,86 @@ function eventHandler() {
 		});
 	});
 
+
+	let catalog = document.querySelector(".catalog-menu--js");
+	
+	document.addEventListener("click", function (event) {
+		let toggleCatalog = document.querySelectorAll(".catalog-toggle-js");
+		
+		let menutoggle = document.querySelector(".toggle-menu-mobile");
+		let menutoggletarget =  event.target.closest(".toggle-menu-mobile.catalog-toggle-js");
+		let target = event.target.closest(".catalog-toggle-js");
+		
+		let targetcatalog = event.target.closest(".catalog-menu--js.active");
+		
+		
+		let col = $(".col-top-js");
+		// let targetMobile = event.target.closest(".top-btns__btn");
+		if (target) {
+			if (target.classList.contains("top-btns__btn")) {
+				event.preventDefault();
+					
+					catalog.classList.toggle('mobile-active');
+					// target.classList.toggle('active');
+					
+				menutoggle.classList.toggle('toggle-menu-mobile--js');
+				menutoggle.classList.toggle('on');
+				menutoggle.classList.toggle('catalog-toggle-js');
+			}
+			catalog.classList.toggle('active');
+			col.toggleClass('active');
+			// target.classList.toggle('active');
+			target.classList.remove('on');
+			document.querySelector("body").classList.toggle('fixed-catalog');
+			toggleCatalog.forEach(el => el.classList.toggle('active'))
+		}
+		if (menutoggletarget) {
+			catalog.classList.remove('mobile-active');
+			menutoggletarget.classList.add('toggle-menu-mobile--js');
+			menutoggletarget.classList.remove('on');
+			menutoggletarget.classList.remove('catalog-toggle-js');
+		}
+		// 	else if (!target && !targetcatalog && catalog.classList.contains("active")) {
+		// 	catalog.classList.remove('active');
+		// 	catalog.classList.remove('mobile-active');
+		// 	document.querySelector("body").classList.remove('fixed-catalog');
+		// 	toggleCatalog.forEach(el => el.classList.remove('active'))
+			
+		// }
+	})
+
+
+	catalog.addEventListener("click", function (event) {
+		if (!this.classList.contains("mobile-active")) return;
+		let link = event.target.closest(".menu-item-has-children>a")
+		if (!link) return;
+		event.preventDefault();
+		console.log(link);
+		let parent = link.parentElement;
+		let subMenu = parent.querySelector(".sub-menu");
+
+		let btnBack = document.createElement("li");
+		btnBack.classList.add('catalog-menu-back')
+		btnBack.innerHTML = link.innerText;
+		
+		subMenu.insertAdjacentElement('afterbegin', btnBack);
+		
+		btnBack.addEventListener("click", function () { 
+			subMenu.classList.remove('active');
+			document.querySelector(".overflowAll").classList.remove('overflowAll');
+			setTimeout(() => {
+				
+				this.remove();
+			}, 200);
+		})
+ 			// console.log(1);
+		catalog.classList.add('overflowAll');
+		subMenu.classList.add('active');
+	})
+	
+
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
