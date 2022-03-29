@@ -141,15 +141,15 @@
 			}
 		}
 		&__color-wrap {
+			@include roww(10px, m);
+			display: flex;
+			flex-wrap: wrap;
+			label {
+				width: auto;
+			}
 			form {
-				@include roww(10px, m);
-				display: flex;
-				flex-wrap: wrap;
 			}
 			.form-wrap {
-				label {
-					width: auto;
-				}
 			}
 			.custom-input {
 				padding-left: 0;
