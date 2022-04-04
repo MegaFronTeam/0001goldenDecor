@@ -111,9 +111,11 @@
 		}
 		.top-btns {
 			&__btn {
+				stroke: $body-color;
+				stroke-width: 2px;
 				&.active {
-					background-color: #e8a200;
-					color: #fff;
+					stroke: transparent;
+					color: #e8a200;
 				}
 			}
 		}
