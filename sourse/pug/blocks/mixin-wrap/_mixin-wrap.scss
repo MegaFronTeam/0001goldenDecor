@@ -109,6 +109,14 @@
 		.top-btns {
 			margin-left: rem(12);
 		}
+		.top-btns {
+			&__btn {
+				&.active {
+					background-color: #e8a200;
+					color: #fff;
+				}
+			}
+		}
 		&:hover {
 			.top-btns__btn {
 				background-color: #e8a200;
