@@ -113,9 +113,15 @@
 			&__btn {
 				stroke: $body-color;
 				stroke-width: 2px;
+				.icon {
+					fill: none;
+				}
 				&.active {
 					stroke: transparent;
 					color: #e8a200;
+					.icon {
+						fill: currentColor;
+					}
 				}
 			}
 		}
