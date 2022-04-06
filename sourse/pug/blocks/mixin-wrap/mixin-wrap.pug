@@ -88,8 +88,8 @@ mixin page-head(data)
 						+e.btn.btn(type="button")
 							span В&nbsp;избранное
 							+b.SPAN.top-btns
-								+e.SPAN.btn
-									+icon("like")
+								+e.SPAN.btn.active
+									+icon("favorite")
 				if data.cart
 					+e.slider--js.swiper
 						.swiper-wrapper
