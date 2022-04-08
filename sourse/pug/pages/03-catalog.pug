@@ -19,7 +19,7 @@ include ../blocks/sGoods/_sGoods.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '03-catalog.jpg'
+	- let  bg= 'added-product.jpg'
 
 block title
 	- let  title= inner.head.titleCatalog
@@ -39,7 +39,7 @@ block pagecontent
 	+sGoods()
 		+brands()
 	+footer()
-      
+	+addProduct()
 
 
 
