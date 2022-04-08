@@ -637,9 +637,16 @@
 		.icon {
 			font-size: rem(12);
 			color: $yellow;
+			@include media-breakpoint-down(md) {
+				vertical-align: sub;
+			}
 		}
 	}
 	&.active {
 		transform: translateX(0);
 	}
+}
+
+.catalog-page {
+	overflow: hidden;
 }
