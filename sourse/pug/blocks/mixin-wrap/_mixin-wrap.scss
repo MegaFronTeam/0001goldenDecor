@@ -597,7 +597,7 @@
 
 .addProduct {
 	@include mt;
-	position: absolute;
+	position: fixed;
 	background-color: rgba(5, 20, 31, 0.7);
 	backdrop-filter: blur(20px);
 	display: flex;
