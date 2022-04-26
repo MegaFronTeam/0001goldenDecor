@@ -1,0 +1,93 @@
+mixin sCalculationType(data)
+	// start sCalculationType
+	+b.SECTION.sCalculationType.section#sCalculationType&attributes(attributes)
+		h5 Тип расчета
+		+e.subtitle Выберите вариант по&nbsp;которому будет производиться расчет&nbsp;&mdash; по&nbsp;размерам комнаты или по&nbsp;размерам отдельных стен:
+		+deliveryOption2()
+		+e.title Размеры стен
+		+e.wrap
+			+e.count 1
+			+e.addblock-wrap
+				+e.addblock-title Длина комнаты
+				+addblock()
+			+e.addblock-wrap
+				+e.addblock-title Высота стены
+				+addblock()
+			+e.BUTTON.delete
+				+icon('delete')
+		+e.wrap--2
+			+e.count 2
+			+e.addblock-wrap
+				+e.addblock-title Длина стены
+				+addblock()
+			+e.addblock-wrap
+				+e.addblock-title Высота стены
+				+addblock()
+			+e.BUTTON.delete
+				+icon('delete')
+		+e.BUTTON.btn.btn.btn-primary + Добавить стену
+
+mixin sCalculationType2(data)
+	// start sCalculationType
+	+b.SECTION.sCalculationType.section#sCalculationType&attributes(attributes)
+		h5 Тип расчета
+		+e.subtitle Выберите вариант по&nbsp;которому будет производиться расчет&nbsp;&mdash; по&nbsp;размерам комнаты или по&nbsp;размерам отдельных стен:
+		+deliveryOption2()
+		+e.title Размеры комнаты
+		+e.row-addblock.row
+			.col-lg-6
+				+e.addblock-wrap
+					+e.addblock-title Длина комнаты
+					+addblock()
+			.col-lg-6
+				+e.addblock-wrap
+					+e.addblock-title Ширина комнаты
+					+addblock()
+			.col-lg-6
+				+e.addblock-wrap
+					+e.addblock-title Высота комнаты
+					+addblock()
+
+	// end sCalculationType
+
+mixin sCalculationType3(data)
+	// start sCalculationType
+	+b.sCalculationType.section#sCalculationType&attributes(attributes)
+		+e.title Окна
+		+e.wrap
+			+e.count 1
+			+e.addblock-wrap
+				+e.addblock-title Длина окна
+				+addblock()
+			+e.addblock-wrap
+				+e.addblock-title Высота окна
+				+addblock()
+			+e.BUTTON.delete
+				+icon('delete')
+		+e.wrap--2
+			+e.count 2
+			+e.addblock-wrap
+				+e.addblock-title Длина окна
+				+addblock()
+			+e.addblock-wrap
+				+e.addblock-title Высота окна
+				+addblock()
+			+e.BUTTON.delete
+				+icon('delete')
+		+e.BUTTON.btn.btn.btn-primary + Добавить стену
+
+mixin sCalculationType4(data)
+	// start sCalculationType
+	+b.sCalculationType.section#sCalculationType&attributes(attributes)
+		+e.title Двери
+		+e.wrap
+			+e.count 1
+			+e.addblock-wrap
+				+e.addblock-title Длина двери
+				+addblock()
+			+e.addblock-wrap
+				+e.addblock-title Высота двери
+				+addblock()
+			+e.BUTTON.delete
+				+icon('delete')
+		+e.BUTTON.btn.btn.btn-primary + Добавить стену

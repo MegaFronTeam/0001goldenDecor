@@ -1,0 +1,22 @@
+mixin sCalculationResult(data)
+	// start sCalculationResult
+	+b.SECTION.sCalculationResult.section#sCalculationResult&attributes(attributes)
+		h5 Результаты
+		+e.row.row
+			.col-lg-6
+				+e.wrap
+					p Периметр стен
+					+e.title.h2 58,4 м
+			.col-lg-6
+				+e.wrap
+					p Количество рулонов
+					+e.title.h2 8
+			.col-lg-6
+				+e.wrap
+					p Площадь стен под клей
+					+e.title.h2 45,47 м#[sup 2]
+			.col-lg-6
+				+e.wrap
+					p Общая стоимость
+					+e.title.h2 96 352 ₽
+	// end sCalculationResult

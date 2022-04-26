@@ -32,3 +32,11 @@
 4. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-4.html> 
 5. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-5.html> 
 5. <https://megafronteam.github.io/0001goldenDecor/public/16-cabinet-6.html> 
+
+### Калькулятор обоев
+
+1. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator.html>
+2. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-2.html>
+3. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-3.html>
+4. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-4.html>
+5. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-5.html>

@@ -1,0 +1,146 @@
+// start .sCalculationType
+.sCalculationType {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	max-width: rem(800);
+	padding-top: rem(32);
+	padding-bottom: rem(44);
+	@include media-breakpoint-down(md) {
+		padding-top: rem(16);
+		padding-bottom: rem(56);
+	}
+	h5 {
+		@include rfs(20px);
+		font-weight: 600;
+		margin-bottom: rem(32);
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__title {
+		@include rfs(20px);
+		font-weight: 600;
+		margin-bottom: rem(60);
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(29);
+		}
+	}
+	&__subtitle {
+		margin-bottom: rem(24);
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(16);
+		}
+	}
+	.deliveryOption {
+		@include media-breakpoint-down(md) {
+
+		}
+	}
+	&__addblock-title {
+		color: $secondary;
+		margin-bottom: rem(4);
+		position: absolute;
+		top: -24px;
+		left: 0;
+	}
+	&__row-addblock {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(32)};
+	}
+	.addBlock {
+		width: 100%;
+		justify-content: space-between;
+		&__btn {
+			width: rem(80);
+		}
+		&__input-wrap {
+			position: relative;
+			&::after {
+				content: var(--text);
+				font-size: rem(12);
+				color: $secondary;
+				// vertical-align: text-top;
+				position: absolute;
+				top: 50%;
+				left: 100%;
+				transform: translateY(-50%);
+			}
+			input {
+				font-weight: 600;
+				font-size: rem(22);
+			}
+		}
+	}
+	&__wrap {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #CDD0D2;
+		padding-bottom: rem(32);
+		margin-bottom: rem(56);
+		&--2 {
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-down(md) {
+			flex-wrap: wrap;
+    	justify-content: space-between;
+			margin-bottom: rem(24);
+		}
+	}
+	&__delete {
+		padding: rem(5);
+		background-color: transparent;
+		border: 2px solid rgba($color: $body-color, $alpha: 0.5);
+		border-radius: 50%;
+		.icon {
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+			color: rgba($color: $body-color, $alpha: 0.5);
+		}
+		@include media-breakpoint-down(md) {
+			order: 2;
+		}
+	}
+	&__addblock-wrap {
+		position: relative;
+		margin-right: rem(16);
+		width: 100%;
+		@include media-breakpoint-down(md) {
+			order: 3;
+			margin-right: 0;
+			margin-top: 40px;
+		}
+	}
+	&__count {
+		font-size: rem(20);
+		color: $secondary;
+		margin-right: rem(16);
+		@include media-breakpoint-down(md) {
+			order: 1;
+		}
+	}
+	&__btn {
+		padding: rem(16) 0;
+		width: 100%;
+		font-weight: 600;
+		font-size: rem(18);
+		@include media-breakpoint-up(md) {
+			max-width: rem(260);
+		}
+	}
+	&__row-addblock {
+		--bs-gutter-y: #{rem(60)};
+		--bs-gutter-x: #{rem(16)};
+		@include media-breakpoint-down(md) {
+			--bs-gutter-y: 0;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCalculationType

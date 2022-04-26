@@ -1,0 +1,41 @@
+mixin sCalculator(data)
+	// start sCalculator
+	+b.SECTION.sCalculator.section#sCalculator&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-info.col-xl
+					+e.wrap
+						table
+							tbody
+								tr 
+									td(colspan="2")
+										h3 1838 Wallcoverings Willow Stone
+								tr 
+									td(colspan="2")
+										+pic('sProductSlider-lg-1.png')
+								tr 
+									td(colspan="2")
+										h3 12 044 ₽
+								tr 
+									+e.TD.title Артикул
+									td
+										p TC71789-44
+								tr 
+									+e.TD.title Вид обоев
+									td
+										+e.link(href="#") Винил на флизелине
+								tr 
+									+e.TD.title Цвет
+									td
+										+e.link(href="#") Темно-серый
+								tr 
+									+e.TD.title Размер
+									td
+										+e.link(href="#") 10,05 х 1,06 м
+								tr 
+									+e.TD.title Комплект
+									td
+										p Рулон обоев - 1 шт
+				+e.col-body.col-xl
+					block
+	// end sCalculator

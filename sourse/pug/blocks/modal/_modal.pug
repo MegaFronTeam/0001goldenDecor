@@ -146,7 +146,7 @@ mixin modal()
 			+e.P.after-headline Введите новый email, на&nbsp;который будет выслано письмо для подтверждения нового адреса.
 			+form-wrap
 				+input('Новый email', 'email')
-				+e.BUTTON.btn.btn-primary.link-modal-js(type="submit" href='#modal-confirm-email').w-100 Далее
+				+e.btn.btn-primary.link-modal-js(type="submit" href='#modal-confirm-email').w-100 Далее
 
 	div(id="modal-confirm-email"  style="display: none" )
 		+b.modal-win

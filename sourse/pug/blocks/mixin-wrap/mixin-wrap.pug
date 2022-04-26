@@ -26,7 +26,8 @@ mixin ie11()
 mixin addblock()
 	+b.addBlock
 		+e.btn--minus(type="button")
-		input(type="text" value="1")
+		+e.input-wrap(style="--text: 'см'")
+			input(type="text" value="999")
 		+e.btn--plus(type="button")
 
 mixin logo()
@@ -102,6 +103,18 @@ mixin page-head(data)
 							+page-head-item("02", "Личные данные").active
 							+page-head-item("03", "Способ доставки")
 							+page-head-item("04", "Способ оплаты")
+				if data.calculator
+					+e.slider--js.swiper
+						.swiper-wrapper
+							mixin page-head-item(num, text)
+								+e.slide.swiper-slide
+									+e.item&attributes(attributes)
+										span!= num
+										p!= text
+							+page-head-item("01", "Комната").done
+							+page-head-item("02", "Окна").active
+							+page-head-item("03", "Двери")
+							+page-head-item("04", "Результаты")
 
 mixin searchBlock()
 	+b.search-block 
@@ -138,6 +151,12 @@ mixin deliveryOption()
 			+in-c("radio", 'Доставка по Москве')(checked)
 			+in-c("radio", 'Самовывоз')
 			+in-c("radio", 'Доставка по России')
+
+mixin deliveryOption2()
+	+b.deliveryOption
+		+e.content
+			+in-c("radio", 'По размерам стен')(checked)
+			+in-c("radio", 'По размерам комнаты')
 
 mixin choiceOption(title, text, time)
 	+b.choiceOption
