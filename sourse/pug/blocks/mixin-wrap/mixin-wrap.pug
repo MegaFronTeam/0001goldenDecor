@@ -145,6 +145,51 @@ mixin checkout(btn, back, proceed, info)
 					+e.BUTTON.back.btn!= back
 				+e.BUTTON.btn.btn.btn-primary!= btn
 
+mixin checkout2(btn, back, proceed, endStage)
+	+b.checkout--calculator&attributes(attributes)
+		.container-fluid.container-md
+			+e.wrap
+				if back
+					+e.BUTTON.back.btn
+						+icon('chevron-left')
+						!= back
+				if proceed
+					+e.BUTTON.proceed.btn.btn-outline-secondary!= proceed
+				if btn && endStage
+					+e.endStage-btn
+						+e.BUTTON.btn-back.btn.btn-primary
+							+icon('chevron-left')
+						+e.BUTTON.btn.btn.btn-primary!= btn
+						+e.BUTTON.btn-more-info.btn.btn-primary
+							span
+							span
+							span
+				else
+					+e.BUTTON.btn.btn.btn-primary!= btn
+
+mixin moreInfo()
+	+b.moreInfo
+			+e.close-cross
+				+icon('close')
+			+e.slide-down 
+				span
+			+e.btn-wrap
+				+e.BUTTON.proceed.btn.btn-outline-secondary Купить в 1 клик
+				+e.BUTTON.btn.btn.btn-primary В корзину
+
+mixin mobileInfo()
+	+b.mobileInfo
+		.container
+			+e.wrap
+				+pic('sProductSlider-lg-1.png', 'bg')
+				+e.text-wrap
+					p 1838 Wallcoverings Willow Stone
+					h6 12 044 ₽
+				+e.btn
+					span
+					span
+					span
+
 mixin deliveryOption()
 	+b.deliveryOption
 		+e.content

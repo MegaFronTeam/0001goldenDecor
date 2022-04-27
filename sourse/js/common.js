@@ -498,7 +498,17 @@ function eventHandler() {
 	}, { passive: true });
 	// /custom modal
 
-
+	document.addEventListener('mouseup', (event) => {
+		let modal = event.target.closest("   .moreInfo.active");  
+		if (!modal) { 
+			document.body.classList.remove("fixed3");
+			$('.moreInfo').removeClass("active")
+		};
+		if (!modal) { 
+			document.body.classList.remove("fixed3");
+			$('.sCalculator__col-info').removeClass("active")
+		};
+	}, { passive: true });
 
 	$(document).on("change, input" , ".form-control", function () {
 		if (this.value != '' || this.value != this.defaultValue) {
@@ -761,7 +771,33 @@ function eventHandler() {
 		subMenu.classList.add('active');
 	})
 	
+	$('.checkout__btn-more-info').on('click', function () {
+		$('.moreInfo').addClass('active');
+		document.body.classList.add("fixed3");
+	});
+	
+	$('.moreInfo__close-cross').on('click', function () {
+		$('.moreInfo').removeClass('active');
+		document.body.classList.remove("fixed3");
+	});
+	$('.moreInfo__slide-down').on('click', function () {
+		$('.moreInfo').removeClass('active');
+		document.body.classList.remove("fixed3");
+	});
 
+	$('.mobileInfo__btn').on('click', function () {
+		$('.sCalculator__col-info').addClass('active');
+		document.body.classList.add("fixed3");
+	});
+	
+	$('.sCalculator__close-cross').on('click', function () {
+		$('.sCalculator__col-info').removeClass('active');
+		document.body.classList.remove("fixed3");
+	});
+	$('.sCalculator__slide-down').on('click', function () {
+		$('.sCalculator__col-info').removeClass('active');
+		document.body.classList.remove("fixed3");
+	});
 
 
 };

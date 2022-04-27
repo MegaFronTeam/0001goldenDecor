@@ -15,10 +15,17 @@
 		}
 	}
 	&__col-info {
-		position: absolute;
+		@include mt;
+		position: fixed;
 		left: 0;
-		top: 0;
-		transform: translateY(200vh);
+		bottom: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+		&:not(.active) {
+			@include media-breakpoint-down(xl) {
+				transform: translateY(100%);
+			}
+		}
 		@include media-breakpoint-up(xl) {
 			position: static;
 			transform: none;
@@ -30,6 +37,42 @@
 		// 	max-width: rem(480);
 		// 	border-right: 1px solid rgba(0, 0, 0, 0.1);
 		// }
+		@include media-breakpoint-down(xl) {
+			background-color: $white;
+			width: 100%;
+			padding: rem(24);
+			border-radius: rem(12) rem(12) 0px 0px;
+			height: calc(100vh - 68px - 39px);
+			z-index: 9999;
+			table {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.sCalculator__slide-down {
+				position: absolute;
+				top: rem(11);
+				left: 50%;
+				transform: translateX(-50%);
+				cursor: pointer;
+				span {
+					display: block;
+					width: 40px;
+					height: 5px;
+					background-color: rgba(0, 0, 0, 0.2);
+					border-radius: 10px;
+				}
+			}
+			.sCalculator__close-cross {
+				position: absolute;
+				top: rem(11);
+				right: rem(11);
+				cursor: pointer;
+				.icon {
+					color: rgba(0,0,0,.6);
+					stroke: currentColor;
+				}
+			}
+		}
 	}
 	&__col-body {
 		@include media-breakpoint-up(xl) {

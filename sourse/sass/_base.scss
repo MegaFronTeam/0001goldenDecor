@@ -76,6 +76,7 @@ body {
 		overflow: hidden;
 	}
 	&.fixed-catalog,
+	&.fixed3,
 	&.fixed2,
 	&.fixed {
 		overflow: hidden;
@@ -93,6 +94,13 @@ body {
 	&.fixed2 {
 		&:before {
 			z-index: 1300;
+		}
+	}
+	&.fixed3 {
+		&:before {
+			z-index: 1300;
+			backdrop-filter: blur(6px);
+			background: rgba(0, 0, 0, 0.8);
 		}
 	}
 }

@@ -260,6 +260,9 @@
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(27);
 	}
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
 	&-item {
 		a {
 			&:not(:hover) {
@@ -392,6 +395,211 @@
 				}
 			}
 		} 
+	}
+	&--calculator {
+		// position: relative;
+		padding: 0;
+		--bs-gutter-x: 0;
+		.checkout {
+			&__wrap {
+				justify-content: flex-end;
+				@include media-breakpoint-up(md) {
+					align-items: center;
+				}
+				button {
+					position: static;
+					height: auto;
+					padding: rem(16) 0;
+					@include media-breakpoint-up(md) {
+						width: 50%;
+						height: 100%;
+					}
+					.icon {
+						font-size: rem(24);
+					}
+				}
+			}
+			&__back {
+				display: block;
+				margin-left: 0;
+			}
+			&__proceed {
+				margin-right: rem(24);
+				margin-left: auto;
+			}
+			&__endStage-btn {
+				width: 100%;
+				background-color: $primary;
+				@include media-breakpoint-down(md) {
+					position: absolute;
+					display: flex;
+				}
+				@include media-breakpoint-up(md) {
+					max-width: 16.25rem;
+				}
+				button {
+					@include media-breakpoint-up(md) {
+						width: 100%;
+					}
+				}
+			}
+			&__btn-back {
+				width: 15%;
+				@include media-breakpoint-up(md) {
+					display: none;
+				}
+				.icon {
+					color: $white;
+					font-size: rem(24);
+				}
+			}
+			&__btn-more-info {
+				// text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 2px;
+				width: 15%;
+				span {
+					display: block;
+					width: 4px;
+					height: 4px;
+					background-color: #fff;
+					border-radius: 50%;
+				}
+				@include media-breakpoint-up(md) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.moreInfo {
+	@include mt;
+	background-color: #fff;
+	border-radius: rem(12) rem(12) 0px 0px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	z-index: 2222;
+	display: flex;
+	align-items: flex-end;
+	padding: rem(24);
+	&:not(.active) {
+		transform: translateY(100%);
+	}
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
+	&__btn-wrap {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		width: 100%;
+		button {
+			width: 100%;
+			padding: rem(16) 0;
+			font-weight: 600;
+			font-size: rem(18);
+		}
+	}
+	&__proceed {
+		border-color: $primary;
+		color: $primary;
+	}
+	&__close-cross {
+		position: absolute;
+		top: rem(11);
+		right: rem(11);
+		cursor: pointer;
+		.icon {
+			color: $body-color;
+			stroke: currentColor;
+		}
+	}
+	&__slide-down {
+		position: absolute;
+		top: rem(11);
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		span {
+			display: block;
+			width: 40px;
+			height: 5px;
+			background-color: rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+		}
+	}
+}
+
+.mobileInfo {
+	background-color: $body-color;
+	padding: rem(10) 0;
+	@include media-breakpoint-up(xl) {
+		display: none;
+	}
+	&__wrap {
+		display: flex;
+		align-items: center;
+	}
+	picture {
+		@include block(40, 40);
+		width: 100%;
+		height: 100%;
+		max-width: rem(40);
+		max-height: rem(40);
+		margin-right: rem(12);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__wrap {
+		color: $white;
+		p {
+			margin-bottom: 0;
+		}
+		h6 {
+			font-size: rem(18);
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		display: flex;
+		gap: 2px;
+		margin-left: auto;
+		cursor: pointer;
+		position: relative;
+		&:before {
+			content: '';
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 50%;
+			top: 50%;
+			transform: translate(50%, -50%);
+		}
+		&:hover {
+			span {
+				background-color: $yellow;
+			}
+		}
+		span {
+			@include mt;
+			display: block;
+			width: 4px;
+			height: 4px;
+			background-color: $white;
+			border-radius: 50%;
+		}
 	}
 }
 

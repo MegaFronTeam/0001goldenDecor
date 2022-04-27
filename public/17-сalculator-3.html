@@ -268,6 +268,23 @@
 				</div>
 				<!-- end top-nav-->
 			</div>
+			<div class="mobileInfo">
+				<div class="container">
+					<div class="mobileInfo__wrap">
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/sProductSlider-lg-1.webp"/><img class="object-fit-js" src="img/@2x/sProductSlider-lg-1.png" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
+						<div class="mobileInfo__text-wrap">
+							<p>1838 Wallcoverings Willow Stone</p>
+							<h6>12 044 ₽</h6>
+						</div>
+						<div class="mobileInfo__btn"><span></span><span></span><span></span>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="page-head">
 				<div class="container">
 					<div class="page-head__content-wrap">
@@ -319,6 +336,13 @@
 				<div class="container">
 					<div class="sCalculator__row row">
 						<div class="sCalculator__col-info col-xl">
+							<div class="sCalculator__slide-down"><span></span>
+							</div>
+							<div class="sCalculator__close-cross">
+								<svg class="icon icon-close ">
+									<use xlink:href="img/svg/sprite.svg#close"></use>
+								</svg>
+							</div>
 							<div class="sCalculator__wrap">
 								<table>
 									<tbody>
@@ -466,9 +490,14 @@
 				</div>
 			</section>
 			<!-- end sCalculator-->
-			<div class="checkout active active2">
-				<div class="container">
+			<div class="checkout checkout--calculator active active2">
+				<div class="container-fluid container-md">
 					<div class="checkout__wrap">
+						<button class="checkout__back btn">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>На шаг назад
+						</button>
 						<button class="checkout__btn btn btn-primary">Далее
 						</button>
 					</div>

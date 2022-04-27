@@ -88,6 +88,7 @@
 		}
 	}
 	&__delete {
+		@include mt;
 		padding: rem(5);
 		background-color: transparent;
 		border: 2px solid rgba($color: $body-color, $alpha: 0.5);
@@ -100,6 +101,12 @@
 		}
 		@include media-breakpoint-down(md) {
 			order: 2;
+		}
+		&:hover {
+			background-color: rgba($color: $body-color, $alpha: 0.5);
+			.icon {
+				color: $white;
+			}
 		}
 	}
 	&__addblock-wrap {
