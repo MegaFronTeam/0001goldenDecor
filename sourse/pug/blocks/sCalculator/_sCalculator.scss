@@ -42,7 +42,7 @@
 			width: 100%;
 			padding: rem(24);
 			border-radius: rem(12) rem(12) 0px 0px;
-			height: calc(100vh - 68px - 39px);
+			height: calc((var(--vh, 1vh) * 100) - 68px - 39px);
 			z-index: 9999;
 			table {
 				margin-left: auto;

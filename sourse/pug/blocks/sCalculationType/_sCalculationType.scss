@@ -33,8 +33,12 @@
 		}
 	}
 	.deliveryOption {
-		@include media-breakpoint-down(md) {
-
+		overflow-x: hidden;
+		&__content {
+			min-width: auto;
+		}
+		.custom-input {
+			height: inherit;
 		}
 	}
 	&__addblock-title {
@@ -92,18 +96,19 @@
 		padding: rem(5);
 		background-color: transparent;
 		border: 2px solid rgba($color: $body-color, $alpha: 0.5);
+		color: rgba($color: $body-color, $alpha: 0.5);
 		border-radius: 50%;
 		.icon {
 			font-size: rem(24);
 			fill: none;
 			stroke: currentColor;
-			color: rgba($color: $body-color, $alpha: 0.5);
 		}
 		@include media-breakpoint-down(md) {
 			order: 2;
 		}
 		&:hover {
-			background-color: rgba($color: $body-color, $alpha: 0.5);
+			background-color: $black;
+			border-color: $black;
 			.icon {
 				color: $white;
 			}

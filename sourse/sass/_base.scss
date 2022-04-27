@@ -97,8 +97,11 @@ body {
 		}
 	}
 	&.fixed3 {
+		.header {
+			width: 100% !important;
+		}
 		&:before {
-			z-index: 1300;
+			z-index: 1199;
 			backdrop-filter: blur(6px);
 			background: rgba(0, 0, 0, 0.8);
 		}
