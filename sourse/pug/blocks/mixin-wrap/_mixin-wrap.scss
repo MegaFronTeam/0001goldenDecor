@@ -161,6 +161,7 @@
 		display: flex;
 		position: relative;
 		border-top: 1px solid #CDD0D2;
+		cursor: pointer;
 		span {
 			font-weight: 600;
 			margin-right: rem(12);
@@ -171,34 +172,27 @@
 			opacity: 0.5;
 			margin-bottom: 0;
 		}
-		&.active {
-			&::before {
-				content: '';
-				position: absolute;
-				display: block;
-				top: -1px;
-				left: 0;
-				height: 4px;
-				width: 100%;
-				background-color: $body-color;
-			}
-			p {
-				opacity: 1;
-			}
+		&::before{
+			content: '';
+			position: absolute;
+			display: block;
+			top: -1px;
+			left: 0;
+			height: 4px;
+			width: 100%;
+			background-color: var(--bg);
+
 		}
 		&.done {
-			&::before {
-				content: '';
-				position: absolute;
-				display: block;
-				top: -1px;
-				left: 0;
-				height: 4px;
-				width: 100%;
-				background-color: $yellow;
-			}
+			--bg: #{$yellow}; 
 			span {
 				color: $yellow;
+			}
+		}
+		&.active {
+			--bg: #{$body-color}; 
+			p {
+				opacity: 1;
 			}
 		}
 	}

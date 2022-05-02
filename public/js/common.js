@@ -800,6 +800,9 @@ function eventHandler() {
 	});
 
 
+	tabUnchor();
+	
+	tabStep();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -808,3 +811,102 @@ if (document.readyState !== 'loading') {
 }
 
  
+function tabUnchor(t=".tabs-main") {
+
+	let tabMain = document.querySelectorAll(t);
+	for (const iterator of tabMain) {
+		
+		iterator.addEventListener('click', function (el) {
+			let btn = el.target.closest(".tabs-main__btn")
+			if (!btn) return;
+			el.preventDefault();
+			let href = btn.getAttribute("href");
+			let contentActive = this.querySelector(".tabs-main__content.active");
+			contentActive.style.display = '';
+			contentActive.classList.remove("active")
+			$(href).fadeIn(function () {
+				this.classList.add('active')
+			})
+		})
+	}
+}
+
+
+function tabStep(t="#calc") {
+
+	let tabMain = document.querySelector(t); 
+	tabMain.addEventListener('click', function (el) {
+	
+		let btn = el.target.closest(".page-head__item")
+		if (!btn) return;
+		el.preventDefault();
+		let href = btn.dataset.step;
+		let btnActive = this.querySelector(".page-head__item.active");
+		
+		btn.classList.add("active");
+		btnActive.classList.remove("active");
+		btnActive.classList.add("done");
+		let contentActive = this.querySelector(".sCalculationType.active");
+		contentActive.style.display = '';
+		contentActive.classList.remove("active");
+
+		$(href).fadeIn(function () {
+			this.classList.add('active')
+		})
+	}) 
+
+	let prevBtn = tabMain.querySelector(".checkout__back")
+	let nextBtn = tabMain.querySelector(".checkout__btn.btn-primary")
+	nextBtn.addEventListener("click", function () {
+		let contentActive = tabMain.querySelector(".sCalculationType.active");
+		let next = contentActive.nextElementSibling;
+		if (next) {
+			let btnActive = tabMain.querySelector(".page-head__item.active");
+			let btnNext = btnActive.parentElement.nextElementSibling.querySelector(".page-head__item");
+
+			if (next.previousElementSibling) {
+				prevBtn.classList.remove("d-none")
+			}
+			else {
+				prevBtn.classList.add("d-none")
+				
+			}
+			contentActive.style.display = '';
+			contentActive.classList.remove("active"); 
+
+			btnActive.classList.remove("active"); 
+			btnActive.classList.add("done"); 
+			btnNext.classList.add("active"); 
+			
+			$(next).fadeIn(function () {
+				this.classList.add('active')
+			})
+		}
+	})
+	
+	prevBtn.addEventListener("click", function () {
+		let contentActive = tabMain.querySelector(".sCalculationType.active");
+		let prev = contentActive.previousElementSibling;
+
+		
+		if (prev) { 
+			let btnActive = tabMain.querySelector(".page-head__item.active");
+			let btnPrev = btnActive.parentElement.previousElementSibling.querySelector(".page-head__item");
+
+			btnActive.classList.remove("active"); 
+			btnActive.classList.add("done"); 
+			btnPrev.classList.add("active"); 
+
+			contentActive.style.display = '';
+			contentActive.classList.remove("active"); 
+			$(prev).fadeIn(function () {
+				this.classList.add('active')
+			})
+		}
+		if (!prev.previousElementSibling) {
+			
+			this.classList.add("d-none")
+		}
+	})
+
+}

@@ -912,3 +912,11 @@ iframe {
 .overflowAll{
 	overflow: hidden !important;
 }
+
+.tabs-main{
+	&__content{
+		&:not(.active) {
+			display: none;
+		}
+	}
+}

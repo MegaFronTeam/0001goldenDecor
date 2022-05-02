@@ -3,6 +3,9 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&:not(.active) {
+		display: none;
+	}
 	max-width: rem(800);
 	padding-top: rem(32);
 	padding-bottom: rem(44);

@@ -75,9 +75,9 @@ mixin page-head(data)
 			+pic('wallpapering-bg.jpg', 'bg', 0).picture-bg
 		.container
 			+e.content-wrap
-				block
+				block 
 				if data.back
-					+e.back(href="#")!= data.back
+					+e.back(href=(data.url || '#') class=(data.url ? 'tabs-main__btn': ''))!= data.back
 						+icon('chevron-left')
 						//- | В каталог
 				+e.wrap
@@ -111,10 +111,10 @@ mixin page-head(data)
 									+e.item&attributes(attributes)
 										span!= num
 										p!= text
-							+page-head-item("01", "Комната").done
-							+page-head-item("02", "Окна").active
-							+page-head-item("03", "Двери")
-							+page-head-item("04", "Результаты")
+							+page-head-item("01", "Комната")(data-step="#step-1").active
+							+page-head-item("02", "Окна")(data-step="#step-2")
+							+page-head-item("03", "Двери")(data-step="#step-3")
+							+page-head-item("04", "Результаты")(data-step="#step-4")
 
 mixin searchBlock()
 	+b.search-block 
@@ -145,12 +145,12 @@ mixin checkout(btn, back, proceed, info)
 					+e.BUTTON.back.btn!= back
 				+e.BUTTON.btn.btn.btn-primary!= btn
 
-mixin checkout2(btn, back, proceed, endStage)
+mixin checkout2(btn, back, proceed, endStage, backClass)
 	+b.checkout--calculator&attributes(attributes)
 		.container-fluid.container-md
 			+e.wrap
 				if back
-					+e.BUTTON.back.btn
+					+e.BUTTON.back.btn(class= backClass)
 						+icon('chevron-left')
 						!= back
 				if proceed

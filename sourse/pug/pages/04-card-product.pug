@@ -17,7 +17,8 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sBuy/_sBuy.pug
 include ../blocks/sCardProduct/_sCardProduct.pug
 include ../blocks/sProductSlider/_sProductSlider.pug
-
+include ../blocks/sCalculator/_sCalculator.pug
+include ../blocks/sCalculationType/_sCalculationType.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= '04-card-product.jpg'
@@ -33,15 +34,32 @@ block pagecontent
 		+topLine
 		+top-nav()
 	//- +headerBlock
-	+page-head({
-		title: '1838 Wallcoverings Willow Stone Blue Silver',
-		back: 'В каталог',
-		favorite: true
-	}).--product
-		+breadcrumb('Главная', 'Обои', `Виниловые обои`)
-	+b.sticky-wrap
-		+sCardProduct()
-		+checkout('Купить', '', '', 'info').--product
+	.tabs-main
+		.tabs-main__content#card
+			+page-head({
+				title: '1838 Wallcoverings Willow Stone Blue Silver',
+				back: 'В каталог',
+				favorite: true
+			}).--product
+				+breadcrumb('Главная', 'Обои', `Виниловые обои`)
+			+b.sticky-wrap
+				+sCardProduct()
+				+checkout('Купить', '', '', 'info').--product
+		.tabs-main__content#calc.active
+			+mobileInfo()
+			+page-head({
+				title,
+				back: "В карточку товара",
+				calculator: true,
+				url:'#card'
+			})
+				+breadcrumb('Главная', 'Корзина')
+			+sCalculator
+				+sCalculationType().active
+				+sCalculationType2()
+				+sCalculationType3()
+				+sCalculationType4()
+			+checkout2('Далее', 'На шаг назад' ,'','','d-none').active.active2
 	+footer()
       
 
