@@ -803,6 +803,10 @@ function eventHandler() {
 	tabUnchor();
 	
 	tabStep();
+
+	$('.popUp span').on('click', function () {
+		$('.popUp').hide();
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

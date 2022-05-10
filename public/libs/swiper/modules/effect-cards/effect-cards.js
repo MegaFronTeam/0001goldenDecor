@@ -11,8 +11,7 @@ export default function EffectCards(_ref) {
   extendParams({
     cardsEffect: {
       slideShadows: true,
-      transformEl: null,
-      rotate: true
+      transformEl: null
     }
   });
 
@@ -79,7 +78,7 @@ export default function EffectCards(_ref) {
       const scaleString = progress < 0 ? `${1 + (1 - scale) * progress}` : `${1 - (1 - scale) * progress}`;
       const transform = `
         translate3d(${tX}, ${tY}, ${tZ}px)
-        rotateZ(${params.rotate ? rotate : 0}deg)
+        rotateZ(${rotate}deg)
         scale(${scaleString})
       `;
 

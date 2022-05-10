@@ -257,7 +257,6 @@ class Swiper {
 
   getSlideClasses(slideEl) {
     const swiper = this;
-    if (swiper.destroyed) return '';
     return slideEl.className.split(' ').filter(className => {
       return className.indexOf('swiper-slide') === 0 || className.indexOf(swiper.params.slideClass) === 0;
     }).join(' ');

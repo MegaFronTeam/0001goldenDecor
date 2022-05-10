@@ -45,8 +45,6 @@ export default function addClasses() {
     'css-mode': params.cssMode
   }, {
     'centered': params.cssMode && params.centeredSlides
-  }, {
-    'watch-progress': params.watchSlidesProgress
   }], params.containerModifierClass);
   classNames.push(...suffixes);
   $el.addClass([...classNames].join(' '));
