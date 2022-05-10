@@ -814,7 +814,6 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
- 
 function tabUnchor(t=".tabs-main") {
 
 	let tabMain = document.querySelectorAll(t);
@@ -834,6 +833,7 @@ function tabUnchor(t=".tabs-main") {
 		})
 	}
 }
+
 
 
 function tabStep(t="#calc") {
