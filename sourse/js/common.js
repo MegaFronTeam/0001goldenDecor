@@ -800,9 +800,9 @@ function eventHandler() {
 	});
 
 
-	tabUnchor();
+	// tabUnchor();
 	
-	tabStep();
+	// tabStep();
 
 	$('.popUp span').on('click', function () {
 		$('.popUp').hide();

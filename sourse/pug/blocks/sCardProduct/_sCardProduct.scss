@@ -49,9 +49,9 @@
 	}
 	&__price {
 		display: flex;
-		margin-bottom: rem(16);
+		margin-bottom: rem(8);
 		@include media-breakpoint-up(xl) {
-			margin-bottom: rem(23);
+			// margin-bottom: rem(23);
 		}
 		h2 {
 			font-weight: 600;
@@ -143,6 +143,7 @@
 		input {
 			width: 100%;
 			height: rem(60);
+			flex-grow: 1;
 		}
 	}
 	&__description {
@@ -220,6 +221,139 @@
 			border-width: 2px;
 			font-weight: 600;
 			margin-bottom: rem(40);
+		}
+	}
+	&__moreInfo {
+		display: flex;
+		align-items: flex-start;
+		gap: 0 8px;
+		margin-bottom: rem(32);
+	}
+	&__fullPrice {
+		font-size: rem(20);
+		text-decoration-line: line-through;
+		color: $secondary;
+	}
+	&__have-in-stock {
+		display: flex;
+		align-items: center;
+		background-color: rgba($color: $primary, $alpha: 0.5);
+		padding: 3px 7px;
+		span {
+			color: $white;
+			font-size: rem(14);
+			font-weight: 500;
+			margin-left: 4px;
+		}
+	}
+	&__have-icon {
+		width: 12px;
+		height: 12px;
+		border: 1.5px solid $yellow;
+		color:  $yellow;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		.icon {
+			fill: currentColor;
+			font-size: rem(4);
+		}
+	}
+	&__chose {
+		p {
+			color: #9BA1A5;
+			margin-bottom: rem(15);
+		}
+	}
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 9px;
+		margin-bottom: rem(40);
+		img {
+			border: 1px solid #CDD0D2;
+		}
+		.custom-input {
+			cursor: pointer;
+			// height: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			position: relative;
+			text-align: center;
+			// width: 100%;
+			&__input {
+				background-color: transparent;
+				border: 2px solid transparent;
+				border-radius: 0;
+				cursor: pointer;
+				height: 100%;
+				left: 0;
+				margin-left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				&:checked {
+					background-color: transparent;
+					background-image: none;
+					border-color: #05141f;
+					border-radius: 0;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+		&--2 {
+			.custom-input {
+				padding: 16px 17px;
+				&__input {
+					z-index: -1;
+					background-color: #F8F8F8;
+					border: 2px solid transparent;
+					&:checked {
+						& + span {
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__choseColor {
+		display: flex;
+		align-items: center;
+		background-color: #F8F8F8;
+		padding: rem(10) rem(24);
+		margin-bottom: rem(35);
+		span {
+			width: 40px;
+			height: 40px;
+			border: 2px solid $body-color;
+			border-radius: 50%;
+			margin-right: rem(41);
+			position: relative;
+			display: block;
+			&::before, &::after {
+				content: '';
+				background-color: $body-color;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+			&::before {
+				width: 14px;
+				height: 2px;
+				transform: translate(-50%, -50%);
+			}
+			&::after {
+				width: 2px;
+				height: 14px;
+				transform: translate(-50%, -50%);
+			}
+		}
+		div {
+			margin-bottom: 0;
+			font-weight: 600;	
 		}
 	}
 	@include media-breakpoint-up(xl) {}

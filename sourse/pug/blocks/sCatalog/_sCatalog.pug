@@ -1,19 +1,28 @@
-mixin  catalog-item(i,t,p,pr,addblock, haveInStock)
+mixin  catalog-item(i,t,p,pr,addblock, haveInStock, haveInStock2, l1, l2, l3)
 	+b.catalog-item&attributes(attributes)
 		+e.btn--like(type="button")
 			+icon("favorite")
 		+e.img-wrap(href="#").bg-wrap
 			if haveInStock
 				+e.have-in-stock
-					span В наличии
+					+icon('Lock')
+					span Под заказ
+			if haveInStock2 
+				+e.have-in-stock
+					+e.have-icon
+						+icon('done')
+					span Под заказ
 			+pic(`prod-${i}.jpg`,'bg').picture-bg
+			+labels(l1, l2, l3)
 		+e.title: a(href="#")= t
 		p= p
 		+e.footer
 		
 			.row
-				.col
+				+e.col-price.col
 					+e.price= pr
+					+e.fullPrice 3 980 ₽
+					+quantity()
 				.col-auto.swiper-no-swiping
 					if addblock
 						+addblock()

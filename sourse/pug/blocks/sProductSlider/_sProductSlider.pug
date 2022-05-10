@@ -9,6 +9,7 @@ mixin sProductSlider(data)
 						mixin slide2(i)
 							+e.slide.swiper-slide
 								+pic(`sProductSlider-lg-${i}.png`, `bg`, 0)
+								+labels('true', 'true', 'true')
 						+slide2(1)
 						+slide2(2)
 						+slide2(3)
