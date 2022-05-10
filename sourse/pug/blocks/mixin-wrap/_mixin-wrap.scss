@@ -871,8 +871,8 @@
 	bottom: rem(30);
 	left: 50%;
 	transform: translate(-50%);
-	width: calc(77% + rem(16));
-	padding: rem(14.5) rem(16);
+	width: 77%;
+	padding: rem(14.5) rem(34) rem(14.5) rem(16);
 	z-index: 10000;
 	p, a {
 		font-size: rem(14);
@@ -887,9 +887,10 @@
 	span {
 		cursor: pointer;
 		position: absolute;
-		right: calc(rem(24) + rem(16));
+		right: rem(34);
 		top: 50%;
 		transform: translateY(-50%);
+		display: block;
 		&::after, &::before {
 			content: '';
 			position: absolute;
