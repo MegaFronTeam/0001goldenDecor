@@ -807,6 +807,30 @@ function eventHandler() {
 	$('.popUp span').on('click', function () {
 		$('.popUp').hide();
 	});
+
+	let colorsInputs = document.querySelectorAll('#chose-color .custom-input__input');
+	let selectedСolor = document.querySelectorAll('.sCardProduct__choseColor');
+	for (const input of colorsInputs) {
+		function setColor () {
+			if (input.checked) {
+				let color = input.getAttribute('style');
+				let title = input.nextElementSibling.innerText;
+				for (let i=0; i < selectedСolor.length; i++) {
+					let selectedTitle = selectedСolor[i].querySelector('.h5');
+					selectedСolor[i].setAttribute('style', color);
+					selectedTitle.innerText = title;
+				}
+			}
+		}
+		// setColor();
+		input.addEventListener('change', function() {
+			setColor();
+			for (let i=0; i < selectedСolor.length; i++) {
+				selectedСolor[i].classList.add('active');
+			}
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

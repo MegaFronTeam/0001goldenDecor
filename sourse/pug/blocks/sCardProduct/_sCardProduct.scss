@@ -333,9 +333,11 @@
 			margin-right: rem(41);
 			position: relative;
 			display: block;
+			background: var(--color, transparent);
+			flex: 0 0 auto;
 			&::before, &::after {
 				content: '';
-				background-color: $body-color;
+				background-color: var(--color, $body-color);
 				position: absolute;
 				left: 50%;
 				top: 50%;
@@ -354,6 +356,11 @@
 		div {
 			margin-bottom: 0;
 			font-weight: 600;	
+		}
+		&.active {
+			span {
+				border-color: #CDD0D2;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

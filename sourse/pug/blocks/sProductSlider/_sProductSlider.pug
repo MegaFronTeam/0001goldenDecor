@@ -8,12 +8,13 @@ mixin sProductSlider(data)
 					.swiper-wrapper
 						mixin slide2(i)
 							+e.slide.swiper-slide
-								+pic(`sProductSlider-lg-${i}.png`, `bg`, 0)
+								+pic(`sProductSlider-lg-${i}.png`)
 								+labels('true', 'true', 'true')
 						+slide2(1)
 						+slide2(2)
 						+slide2(3)
 						+slide2(4)
+						+slide2(5)
 					+arrow()
 				+e.slider-thumbs--js.swiper
 					.swiper-wrapper
@@ -26,6 +27,7 @@ mixin sProductSlider(data)
 						+slide(2)
 						+slide(3)
 						+slide(4)
+						+slide(5)
 			//- +e.description
 			//- 	h2 Описание
 			//- 	p Вот уже более чем 100 лет Thibaut не&nbsp;перестает удивлять своих клиентов оригинальными изображениями на&nbsp;тему многоликой природы. Птицы, животные, орнаменты растений и&nbsp;элементы сельской жизни предстают на&nbsp;полотнах в&nbsp;самых неожиданных традициях английской, французской, итальянской или восточной изобразительной школы.
