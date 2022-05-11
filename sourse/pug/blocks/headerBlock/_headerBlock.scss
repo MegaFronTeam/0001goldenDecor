@@ -151,6 +151,25 @@
 
 		}
 	}
+
+	&__text-wrap {
+		@include media-breakpoint-down(md) {
+			text-align: left;
+			padding: rem(32) rem(24);
+			.h1 {
+				margin-left: unset !important;
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		.slider-bg {
+			background-color: #566169;
+			img {
+				opacity: .5;
+				object-position: 72%;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
