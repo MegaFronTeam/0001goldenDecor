@@ -347,15 +347,9 @@
 							</div>
 							<div class="headerBlock__slide swiper-slide bg-wrap">
 								<div class="headerBlock__caption">
-									<!-- picture-->
-									<picture class="picture-bg slider-bg"> 
-										<source type="image/webp" srcset="img/@2x/webp/head-img-2.webp" media="(min-width:992px)"/>
-										<source type="image/webp" srcset="img/@1x/webp/head-img-2.webp"/>
-										<source type="image/jpg" srcset="img/@2x/head-img-2.jpg" media="(min-width:992px)"/>
-										<source type="image/jpg" srcset="img/@1x/head-img-2.jpg"/>
-										<source type="image/webp" srcset="img/@2x/webp/head-img-2.webp"/><img class="object-fit-js" src="img/@2x/head-img-2.jpg" alt="" loading="lazy"/>
+									<picture class="picture-bg slider-bg">
+										<source srcset="img/@2x/head-img-2.jpg" media="(min-width: 992px)"/><img class="object-fit-js" src="img/@2x/head-img-2-sm.jpg" alt="" loading="lazy"/>
 									</picture>
-									<!-- /picture-->
 									<div class="headerBlock__text-wrap">
 										<div class="h1">Скидка 20% на поклейку обоев</div>
 										<p>при покупке любых обоев в магазинах GoldenDecor  и интернет магазине</p>
@@ -1494,15 +1488,17 @@
 			</div>
 			<div class="modal-custom__title">Выберите цвет
 			</div>
-			<div class="search-block">
-				<form>
-					<input type="text" placeholder="Поиск товаров"/>
-					<button>
-						<svg class="icon icon-search ">
-							<use xlink:href="img/svg/sprite.svg#search"></use>
-						</svg>
-					</button>
-				</form>
+			<div class="modal-custom__search">
+				<div class="search-block">
+					<form>
+						<input type="text" placeholder="Поиск товаров"/>
+						<button>
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
 			</div>
 			<div class="modal-custom__chose"> 
 				<p>Выбор по семейству цветов</p>

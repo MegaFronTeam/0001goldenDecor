@@ -17,7 +17,10 @@ mixin headerBlock()
 									+e.btn(href="#") Подробнее
 					+e.slide.swiper-slide.bg-wrap
 						+e.caption
-							+pic('head-img-2.jpg', 'bg', '992px').picture-bg.slider-bg
+							//- +pic('head-img-2.jpg', 'bg', '992px').picture-bg.slider-bg
+							picture.picture-bg.slider-bg
+								source(srcset='img/@2x/head-img-2.jpg' media='(min-width: 992px)')
+								img(src='img/@2x/head-img-2-sm.jpg' alt='' loading="lazy").object-fit-js
 							+e.text-wrap
 								.h1 Скидка 20% на поклейку обоев
 								p при покупке любых обоев в магазинах GoldenDecor  и интернет магазине

@@ -161,12 +161,12 @@
 			}
 		}
 	}
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		.slider-bg {
 			// background-color: #566169;
 			img {
 				// opacity: .5;
-				object-position: 72%;
+				object-position: 3% 31%;
 			}
 		}
 	}

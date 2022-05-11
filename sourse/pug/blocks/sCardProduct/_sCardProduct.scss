@@ -325,42 +325,42 @@
 		background-color: #F8F8F8;
 		padding: rem(10) rem(24);
 		margin-bottom: rem(35);
-		span {
-			width: 40px;
-			height: 40px;
-			border: 2px solid $body-color;
-			border-radius: 50%;
-			margin-right: rem(41);
-			position: relative;
-			display: block;
-			background: var(--color, transparent);
-			flex: 0 0 auto;
-			&::before, &::after {
-				content: '';
-				background-color: var(--color, $body-color);
-				position: absolute;
-				left: 50%;
-				top: 50%;
-			}
-			&::before {
-				width: 14px;
-				height: 2px;
-				transform: translate(-50%, -50%);
-			}
-			&::after {
-				width: 2px;
-				height: 14px;
-				transform: translate(-50%, -50%);
-			}
-		}
 		div {
 			margin-bottom: 0;
 			font-weight: 600;	
 		}
 		&.active {
-			span {
+			.sCardProduct__plus {
 				border-color: #CDD0D2;
 			}
+		}
+	}
+	&__plus {
+		width: 40px;
+		height: 40px;
+		border: 2px solid $body-color;
+		border-radius: 50%;
+		margin-right: rem(41);
+		position: relative;
+		display: block;
+		background: var(--color, transparent);
+		flex: 0 0 auto;
+		&::before, &::after {
+			content: '';
+			background-color: var(--color, $body-color);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+		}
+		&::before {
+			width: 14px;
+			height: 2px;
+			transform: translate(-50%, -50%);
+		}
+		&::after {
+			width: 2px;
+			height: 14px;
+			transform: translate(-50%, -50%);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

@@ -159,11 +159,12 @@ mixin modal()
 
 	+modal-custom-body()#chose-color
 		+e.title Выберите цвет
-		+b.search-block
-			form
-				input(type="text" placeholder="Поиск товаров")
-				button
-					+icon("search")
+		+e.search
+			+b.search-block
+				form
+					input(type="text" placeholder="Поиск товаров")
+					button
+						+icon("search")
 		+e.chose 
 			p Выбор по семейству цветов
 			+e.content

@@ -265,24 +265,6 @@ a {
 	}
 }
 
-.search-block {
-	@include media-breakpoint-down(md) {
-		margin-left: 0;
-		&:before {
-			content: unset;
-		}
-	}
-	input {
-		border-radius: 0;
-		background-color: #F8F8F8 !important;
-	}
-	button {
-		.icon {
-			font-size: rem(24);
-		}
-	}
-}
-
 .modal-custom {
 	&__row {
 		--bs-gutter-x: #{rem(16)};
@@ -351,6 +333,25 @@ a {
 			}
 			p {
 				color: #000;
+			}
+		}
+	}
+	&__search {
+		.search-block {
+			@include media-breakpoint-down(md) {
+				margin-left: 0;
+				&:before {
+					content: unset;
+				}
+			}
+			input {
+				border-radius: 0;
+				background-color: #F8F8F8 !important;
+			}
+			button {
+				.icon {
+					font-size: rem(24);
+				}
 			}
 		}
 	}
