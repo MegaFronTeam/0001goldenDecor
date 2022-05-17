@@ -12,6 +12,7 @@
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page" data-bg="05-cart.jpg">
@@ -338,6 +339,18 @@
 											</tr>
 											<tr>
 												<td colspan="2">Укажите адрес, чтобы узнать стоимость доставки</td>
+											</tr>
+											<tr>
+												<td class="input-line" colspan="2">
+													<div class="sCart__input-wrap form-group"><input class="sCart__input form-control" name="text" type="text"/>
+														<div class="input-clear input-clear--js">
+															<svg class="icon icon-close ">
+																<use xlink:href="img/svg/sprite.svg#close"></use>
+															</svg>
+														</div>
+													</div>
+													<!-- +e.input-wrap-->
+												</td>
 											</tr>
 										</tbody>
 										<tfoot>
@@ -1173,14 +1186,7 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<p>Сканы диплома, сертификатов об&nbsp;образовании. Можно прикрепить несколько файлов в&nbsp;формате jpg, png или pdf, размером не&nbsp;более 20&nbsp;Мб.</p>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/>
-						<div class="input-clear input-clear--js">
-							<svg class="icon icon-close ">
-								<use xlink:href="img/svg/sprite.svg#close"></use>
-							</svg>
-						</div>
-					</div>
-					<!-- +e.input-wrap-->
+					<input class="filepond" type="file" name="filepond" multiple="" data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3"/>
 					<div class="form-wrap__policy">
 						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 «О персональных данных», на условиях и для целей, определенных в Политике конфиденциальности</span>
 						</label>
@@ -1489,6 +1495,11 @@
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>

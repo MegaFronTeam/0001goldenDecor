@@ -356,3 +356,21 @@ a {
 		}
 	}
 }
+
+.filepond {
+	margin-top: rem(16);
+	&--credits {
+		display: none;
+	}
+	&--drop-label {
+		cursor: pointer;
+		border: 2px dashed #05141F;
+		background: #F8F8F8;
+		label {
+			cursor: pointer;
+		}
+	}
+	&--list {
+		top: 6px !important;
+	}
+}

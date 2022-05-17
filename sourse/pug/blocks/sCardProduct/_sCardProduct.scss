@@ -22,14 +22,14 @@
 			order: unset;
 			max-width: rem(400);
 		}
-		& > button {
-			padding: rem(17) rem(12);
-			color: $body-color;
-			border-color: $body-color;
-			border-width: 2px;
-			font-weight: 600;
-			margin-bottom: rem(35);
-		}
+	}
+	&__btn-outline {
+		padding: rem(17) rem(12);
+		color: $body-color;
+		border-color: $body-color;
+		border-width: 2px;
+		font-weight: 600;
+		margin-bottom: rem(35);
 	}
 	&__col-product-info {
 		order: 1;
@@ -173,7 +173,7 @@
 	&__specification {
 		display: flex;
 		flex-direction: column;
-
+		align-items: flex-start;
 		@include media-breakpoint-up(sm) {
 			flex-direction: row;
 			justify-content: space-between;
@@ -214,14 +214,14 @@
 		}
 	}
 	&__contentWrap {
-		& > button {
-			padding: rem(17) rem(12);
-			color: $body-color;
-			border-color: $body-color;
-			border-width: 2px;
-			font-weight: 600;
-			margin-bottom: rem(40);
-		}
+	}
+	&__btn-outline {
+		padding: rem(17) rem(12);
+		color: $body-color;
+		border-color: $body-color;
+		border-width: 2px;
+		font-weight: 600;
+		margin-bottom: rem(40);
 	}
 	&__moreInfo {
 		display: flex;
@@ -304,17 +304,21 @@
 			}
 		}
 		&--2 {
-			.custom-input {
+			a {
 				padding: 16px 17px;
-				&__input {
-					z-index: -1;
-					background-color: #F8F8F8;
-					border: 2px solid transparent;
-					&:checked {
-						& + span {
-							font-weight: 600;
-						}
-					}
+				// z-index: -1;
+				background-color: #F8F8F8;
+				border: 2px solid transparent;
+				&:hover {
+					// font-weight: 600;
+					background-color: #fff;
+					border-color: $body-color;
+					color: inherit;
+				}
+				&.active {
+					border-color: $body-color;
+					background-color: #fff;
+					font-weight: 600;
 				}
 			}
 		}

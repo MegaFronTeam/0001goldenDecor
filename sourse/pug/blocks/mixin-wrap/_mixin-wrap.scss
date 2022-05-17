@@ -312,14 +312,14 @@
 		justify-content: space-between;
 	}
 	button {
-		font-weight: 600;
-		font-size: rem(18);
-		width: 100%;
-		height: 100%;
-		@include media-breakpoint-up(md) {
-			padding: rem(16);
-			max-width: rem(260);
-		}
+		// font-weight: 600;
+		// font-size: rem(18);
+		// width: 100%;
+		// height: 100%;
+		// @include media-breakpoint-up(md) {
+		// 	padding: rem(16);
+		// 	max-width: rem(260);
+		// }
 	}
 	&__proceed, &__back {
 		display: none;
@@ -334,6 +334,15 @@
 		&:hover {
 			background-color: $yellow;
 			border-color: $yellow;
+		}
+
+		font-weight: 600;
+		font-size: rem(18);
+		width: 100%;
+		height: 100%;
+		@include media-breakpoint-up(md) {
+			padding: rem(16);
+			max-width: rem(260);
 		}
 	}
 	&__back {
@@ -352,6 +361,15 @@
 		// height: rem(64);
 		@include media-breakpoint-up(md) {
 			position: static;
+		}
+
+		font-weight: 600;
+		font-size: rem(18);
+		width: 100%;
+		height: 100%;
+		@include media-breakpoint-up(md) {
+			padding: rem(16);
+			max-width: rem(260);
 		}
 	}
 	&.sticky {

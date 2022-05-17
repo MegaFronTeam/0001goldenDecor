@@ -56,8 +56,17 @@
 				}
 			}
 			tbody {
-				&:first-of-type {
-					border-bottom: 2px solid $body-color;
+				.input-line {
+					.sCart__input-wrap {
+						padding-top: 0;
+						margin-bottom: 0;
+					}
+					.sCart__input {
+						border-bottom: 2px solid $body-color;
+					}
+					.input-clear {
+						top: calc(var(--input-sp-top) + -9px);
+					}
 				}
 				tr {
 					&:not(:last-child) {
@@ -75,7 +84,7 @@
 								font-weight: 400;
 								color: $body-color;
 							}
-							padding-bottom: rem(30);
+							// padding-bottom: rem(30);
 							line-height: 1.14em;
 						}
 					}

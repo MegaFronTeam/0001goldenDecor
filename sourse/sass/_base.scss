@@ -687,6 +687,10 @@ iframe {
 				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
 			}
 		}
+
+		max-height: 506px;
+		overflow-x: hidden;
+		overflow-y: visible;
 	}
 	&__result-item {
 		padding: var(--sp);

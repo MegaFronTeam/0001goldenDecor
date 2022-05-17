@@ -19,6 +19,9 @@ mixin sCart(addMore, promocode, extraOptions, reply)
 										td 0 ₽
 									tr
 										td(colspan="2") Укажите адрес, чтобы узнать стоимость доставки
+									tr
+										td(colspan="2").input-line
+											+input()
 									if promocode
 										+e.TR.promocode
 											td Промокод
