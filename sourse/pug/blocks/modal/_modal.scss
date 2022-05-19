@@ -264,3 +264,113 @@ a {
 		line-height: 1;
 	}
 }
+
+.modal-custom {
+	&__row {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		width: 100%;
+		.custom-input {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: rem(45.5) rem(10) !important;
+			&__input {
+				background-color: var(--color, #CDD0D2) !important;
+				border-color: transparent;
+				z-index: -1;
+			}
+		}
+	}
+	&__chose {
+		p {
+			color: #9BA1A5;
+			margin-bottom: rem(15);
+		}
+	}
+	// --color-g: linear-gradient(90deg, #EE5858 0%, #F0E8A2 19.79%, #B1E8A9 39.06%, #41DDFF 58.33%, #BD65DC 80.21%, #E24A9C 100%);
+	// --color: ;
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 9px;
+		margin-bottom: rem(24);
+		.custom-input {
+			cursor: pointer;
+			margin-bottom: 0;
+			padding: 0;
+			position: relative;
+			text-align: center;
+			&__input {
+				background-color: transparent;
+				border-radius: 0;
+				cursor: pointer;
+				height: 100%;
+				left: 0;
+				margin-left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				&:checked {
+					background-color: transparent;
+					background-image: none;
+					border-color: #05141f;
+					border-radius: 0;
+					height: 100%;
+					width: 100%;
+					border-width: 2px;
+					& + p {
+						font-weight: 600;
+					}
+				}
+			}
+			&__color {
+				border: 1px solid #CDD0D2;
+				width: rem(56);
+				height: rem(56);
+				background: var(--color, #CDD0D2);
+				display: block;
+			}
+			p {
+				color: #000;
+			}
+		}
+	}
+	&__search {
+		.search-block {
+			@include media-breakpoint-down(md) {
+				margin-left: 0;
+				&:before {
+					content: unset;
+				}
+			}
+			input {
+				border-radius: 0;
+				background-color: #F8F8F8 !important;
+			}
+			button {
+				.icon {
+					font-size: rem(24);
+				}
+			}
+		}
+	}
+}
+
+.filepond {
+	margin-top: rem(16);
+	&--credits {
+		display: none;
+	}
+	&--drop-label {
+		cursor: pointer;
+		border: 2px dashed #05141F;
+		background: #F8F8F8;
+		label {
+			cursor: pointer;
+		}
+	}
+	&--list {
+		top: 6px !important;
+	}
+}

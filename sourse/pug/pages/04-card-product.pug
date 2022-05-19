@@ -34,32 +34,33 @@ block pagecontent
 		+topLine
 		+top-nav()
 	//- +headerBlock
-	.tabs-main
-		.tabs-main__content#card
-			+page-head({
-				title: '1838 Wallcoverings Willow Stone Blue Silver',
-				back: 'В каталог',
-				favorite: true
-			}).--product
-				+breadcrumb('Главная', 'Обои', `Виниловые обои`)
-			+b.sticky-wrap
-				+sCardProduct()
-				+checkout('Купить', '', '', 'info').--product
-		.tabs-main__content#calc.active
-			+mobileInfo()
-			+page-head({
-				title,
-				back: "В карточку товара",
-				calculator: true,
-				url:'#card'
-			})
-				+breadcrumb('Главная', 'Корзина')
-			+sCalculator
-				+sCalculationType().active
-				+sCalculationType2()
-				+sCalculationType3()
-				+sCalculationType4()
-			+checkout2('Далее', 'На шаг назад' ,'','','d-none').active.active2
+	+sCardProduct
+	//- .tabs-main
+	//- 	.tabs-main__content#card
+	//- 		+page-head({
+	//- 			title: '1838 Wallcoverings Willow Stone Blue Silver',
+	//- 			back: 'В каталог',
+	//- 			favorite: true
+	//- 		}).--product
+	//- 			+breadcrumb('Главная', 'Обои', `Виниловые обои`)
+	//- 		+b.sticky-wrap
+	//- 			+sCardProduct()
+	//- 			+checkout('Купить', '', '', 'info').--product
+	//- 	.tabs-main__content#calc.active
+	//- 		+mobileInfo()
+	//- 		+page-head({
+	//- 			title,
+	//- 			back: "В карточку товара",
+	//- 			calculator: true,
+	//- 			url:'#card'
+	//- 		})
+	//- 			+breadcrumb('Главная', 'Корзина')
+	//- 		+sCalculator
+	//- 			+sCalculationType().active
+	//- 			+sCalculationType2()
+	//- 			+sCalculationType3()
+	//- 			+sCalculationType4()
+	//- 		+checkout2('Далее', 'На шаг назад' ,'','','d-none').active.active2
 	+footer()
       
 

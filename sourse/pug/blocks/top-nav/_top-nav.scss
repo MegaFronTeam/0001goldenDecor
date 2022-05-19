@@ -374,7 +374,7 @@
 			margin-bottom: rem(74);
 			width: calc(100% / 3);
 		}
-		padding-left: calc(var(--bs-gutter-x) / 2 + 30px);
+		padding-left: calc(var(--bs-gutter-x) / 2 + 30px) !important;
 		&> a{
 
 			@include media-breakpoint-up(lg) {

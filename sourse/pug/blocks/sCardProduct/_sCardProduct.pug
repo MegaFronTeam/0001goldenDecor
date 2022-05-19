@@ -8,11 +8,41 @@ mixin sCardProduct(data)
 					+e.price
 						h2 12 044 ₽
 						a(href="#calc").tabs-main__btn Рассчитать колличество
+					+e.moreInfo
+						+e.fullPrice 3 980 ₽
+						+e.have-in-stock
+							+e.have-icon
+								+icon('done')
+							span В наличии
+						+quantity()
+					+e.chose 
+						p Выберите цвет
+						+e.content
+							+in-c("radio", '')(checked name='color')
+								+img('img/chose-img-1.jpg')
+							+in-c("radio", '')(name='color')
+								+img('img/chose-img-2.jpg')
+							+in-c("radio", '')(name='color')
+								+img('img/chose-img-3.jpg')
+							+in-c("radio", '')(name='color')
+								+img('img/chose-img-4.jpg')
+							+in-c("radio", '')(name='color')
+								+img('img/chose-img-5.jpg')
+					+e.choseColor(href="#chose-color").link-modal-custom-js
+						+e.plus
+						.h5 Выбрать цвет
+					+e.chose 
+						p Выберите фасовку
+						+e.content--2
+							+e.link(href='#').active 0,9 л
+							+e.link(href='#') 2,7 л
+							+e.link(href='#') 9 л
+							+e.link(href='#') 25 л
 					+e.contentBtn
 						+e.BUTTON.btn.btn.btn-primary.w-100 Купить
 						+e.wrapBtn 
 							+addblock()
-					button.btn.btn-outline-secondary.w-100 Купить в 1 клик
+					+e.btn-outline.btn.btn-outline-secondary.w-100 Купить в 1 клик
 					+e.productDesc
 						table
 							tr
@@ -101,6 +131,29 @@ mixin sCardProduct(data)
 								tr
 									td Тип помещения
 									td Гостиная, спальня, кабинет
+					+e.chose.d-block.d-xl-none
+						p Выберите цвет
+						+e.content
+							+in-c("radio", '')(checked name="color")
+								+img('img/chose-img-1.jpg')
+							+in-c("radio", '')(name="color")
+								+img('img/chose-img-2.jpg')
+							+in-c("radio", '')(name="color")
+								+img('img/chose-img-3.jpg')
+							+in-c("radio", '')(name="color")
+								+img('img/chose-img-4.jpg')
+							+in-c("radio", '')(name="color")
+								+img('img/chose-img-5.jpg')
+					+e.choseColor(href="#chose-color").link-modal-custom-js.d-flex.d-xl-none
+						span
+						.h5 Выбрать цвет
+					+e.chose.d-block.d-xl-none
+						p Выберите фасовку
+						+e.content--2
+							+in-c("radio", '0,9 л')(checked name='liter')
+							+in-c("radio", '2,7 л')(name='liter')
+							+in-c("radio", '9 л')(name='liter')
+							+in-c("radio", '25 л')(name='liter')
 				+e.col-catalog.col-12
 					+sCatalog2('Сопутствующие товары')
 	// end sCardProduct

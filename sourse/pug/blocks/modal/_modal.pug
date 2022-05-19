@@ -103,7 +103,8 @@ mixin modal()
 			+input('Дата рождения')
 			+input('Сопроводительное письмо', 'textarea','')
 			p Сканы диплома, сертификатов об&nbsp;образовании. Можно прикрепить несколько файлов в&nbsp;формате jpg, png или pdf, размером не&nbsp;более 20&nbsp;Мб.
-			+input('Нажмите чтобы загрузить файлы', 'file','')
+			//- +input('Нажмите чтобы загрузить файлы', 'file','')
+			input.filepond(type='file' name='filepond' multiple='' data-allow-reorder='true' data-max-file-size='3MB' data-max-files='3')
 			+policy2()
 			+e.BUTTON.btn.btn-primary(type="submit"  ).w-100   Отправить 
 
@@ -156,3 +157,110 @@ mixin modal()
 	// #modal-call
 	
 	// end modals
+
+	+modal-custom-body()#chose-color
+		+e.title Выберите цвет
+		+e.search
+			+b.search-block
+				form
+					input(type="text" placeholder="Поиск товаров")
+					button
+						+icon("search")
+		+e.chose 
+			p Выбор по семейству цветов
+			+e.content
+				+in-c("radio", '')(checked name='color')
+					+e.color(style=" --color: linear-gradient(90deg, #EE5858 0%, #F0E8A2 19.79%, #B1E8A9 39.06%, #41DDFF 58.33%, #BD65DC 80.21%, #E24A9C 100%);")
+				+in-c("radio", '')(name='color')
+					+e.color(style=" --color: #FF7A72")
+				+in-c("radio", '')(name='color')
+					+e.color(style=" --color: #FFE872")
+				+in-c("radio", '')(name='color')
+					+e.color(style=" --color: #86D080")
+				+in-c("radio", '')(name='color')
+					+e.color(style=" --color: #9DB7D6")
+				+in-c("radio", '')(name='color')
+					+e.color(style=" --color: #E7E7E7")
+		+e.content
+			+e.row.row
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #FFDB61")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #FFC16A")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #FFCF9E ")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #FFBA82")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #FFB529")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #FEE8AE")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F9E6CA")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F9E6C1")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F9E6C1")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F9BC9F")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F9AD88")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F2D6DC")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F2D6DC")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F6F3EC")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F5DDCC")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #BEEFDD")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #A9DAA8")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F4D8C7")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F2D1CE")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #B3C2DF")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #B3C2DF")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F2D1CE")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #B3C2DF")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #B3C2DF")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #F2D1CE")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #B3C2DF")
+						p Honey Pot SL-0977
+				.col-6
+					+in-c("radio", '')(name='color-list' style="--color: #B3C2DF")
+						p Honey Pot SL-0977

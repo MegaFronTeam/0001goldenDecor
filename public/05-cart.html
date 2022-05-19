@@ -12,6 +12,7 @@
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page" data-bg="05-cart.jpg">
@@ -339,6 +340,18 @@
 											<tr>
 												<td colspan="2">Укажите адрес, чтобы узнать стоимость доставки</td>
 											</tr>
+											<tr>
+												<td class="input-line" colspan="2">
+													<div class="sCart__input-wrap form-group"><input class="sCart__input form-control" name="text" type="text"/>
+														<div class="input-clear input-clear--js">
+															<svg class="icon icon-close ">
+																<use xlink:href="img/svg/sprite.svg#close"></use>
+															</svg>
+														</div>
+													</div>
+													<!-- +e.input-wrap-->
+												</td>
+											</tr>
 										</tbody>
 										<tfoot>
 											<tr>
@@ -512,18 +525,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img class="object-fit-js" src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Валик прикатной для обоев</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">1 200 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -543,18 +563,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img class="object-fit-js" src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Клей Момент для стыков</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">980 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -574,18 +601,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img class="object-fit-js" src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Валик Proffi для стыков</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">2 550 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -605,18 +639,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-10.webp"/><img class="object-fit-js" src="img/@2x/prod-10.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-10.webp"/><img src="img/@2x/prod-10.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Ножницы острые</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">230 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -636,18 +677,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img class="object-fit-js" src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-9.webp"/><img src="img/@2x/prod-9.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Валик Proffi для стыков</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">2 550 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -667,18 +715,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img class="object-fit-js" src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-8.webp"/><img src="img/@2x/prod-8.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Клей Момент для стыков</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">980 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -698,18 +753,25 @@
 												</button>
 												<a class="catalog-item__img-wrap bg-wrap" href="#">
 													<!-- picture-->
-													<picture class="picture-bg"> 
-														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img class="object-fit-js" src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/prod-7.webp"/><img src="img/@2x/prod-7.jpg" alt="" loading="lazy"/>
 													</picture>
 													<!-- /picture-->
+													<div class="labels">
+													</div>
 												</a>
 												<div class="catalog-item__title"><a href="#">Валик прикатной для обоев</a>
 												</div>
 												<p>Артикул: R458702556DF</p>
 												<div class="catalog-item__footer">
 													<div class="row">
-														<div class="col">
+														<div class="catalog-item__col-price col">
 															<div class="catalog-item__price">1 200 ₽
+															</div>
+															<div class="catalog-item__fullPrice">3 980 ₽
+															</div>
+															<div class="quantity">
+																<p>Осталось 6 шт</p>
 															</div>
 														</div>
 														<div class="col-auto swiper-no-swiping">
@@ -1124,14 +1186,7 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<p>Сканы диплома, сертификатов об&nbsp;образовании. Можно прикрепить несколько файлов в&nbsp;формате jpg, png или pdf, размером не&nbsp;более 20&nbsp;Мб.</p>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/>
-						<div class="input-clear input-clear--js">
-							<svg class="icon icon-close ">
-								<use xlink:href="img/svg/sprite.svg#close"></use>
-							</svg>
-						</div>
-					</div>
-					<!-- +e.input-wrap-->
+					<input class="filepond" type="file" name="filepond" multiple="" data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3"/>
 					<div class="form-wrap__policy">
 						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 «О персональных данных», на условиях и для целей, определенных в Политике конфиденциальности</span>
 						</label>
@@ -1264,8 +1319,187 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
+		<div class="modal-custom modal-custom--cabinet" id="chose-color">
+			<div class="toggle-menu-mobile toggle-menu-mobile--2js on"><span></span>
+			</div>
+			<div class="modal-custom__title">Выберите цвет
+			</div>
+			<div class="modal-custom__search">
+				<div class="search-block">
+					<form>
+						<input type="text" placeholder="Поиск товаров"/>
+						<button>
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="modal-custom__chose"> 
+				<p>Выбор по семейству цветов</p>
+				<div class="modal-custom__content">
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio" checked="checked"/><span class="custom-input__color" style=" --color: linear-gradient(90deg, #EE5858 0%, #F0E8A2 19.79%, #B1E8A9 39.06%, #41DDFF 58.33%, #BD65DC 80.21%, #E24A9C 100%);"></span>
+					</label>
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio"/><span class="custom-input__color" style=" --color: #FF7A72"></span>
+					</label>
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio"/><span class="custom-input__color" style=" --color: #FFE872"></span>
+					</label>
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio"/><span class="custom-input__color" style=" --color: #86D080"></span>
+					</label>
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio"/><span class="custom-input__color" style=" --color: #9DB7D6"></span>
+					</label>
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color" type="radio"/><span class="custom-input__color" style=" --color: #E7E7E7"></span>
+					</label>
+				</div>
+			</div>
+			<div class="modal-custom__content">
+				<div class="modal-custom__row row">
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #FFDB61;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #FFC16A;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #FFCF9E ;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #FFBA82;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #FFB529;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #FEE8AE;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F9E6CA;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F9E6C1;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F9E6C1;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F9BC9F;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F9AD88;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F2D6DC;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F2D6DC;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F6F3EC;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F5DDCC;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #BEEFDD;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #A9DAA8;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F4D8C7;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F2D1CE;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #B3C2DF;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #B3C2DF;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F2D1CE;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #B3C2DF;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #B3C2DF;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #F2D1CE;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #B3C2DF;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+					<div class="col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="color-list" type="radio" style="--color: #B3C2DF;"/>
+							<p>Honey Pot SL-0977</p>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>

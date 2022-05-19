@@ -800,9 +800,61 @@ function eventHandler() {
 	});
 
 
-	tabUnchor();
+	// tabUnchor();
 	
-	tabStep();
+	// tabStep();
+
+	$('.popUp span').on('click', function () {
+		$('.popUp').hide();
+	});
+
+	let colorsInputs = document.querySelectorAll('#chose-color .custom-input__input');
+	let selectedСolor = document.querySelectorAll('.sCardProduct__choseColor');
+	for (const input of colorsInputs) {
+		function setColor () {
+			if (input.checked) {
+				let color = input.getAttribute('style');
+				let title = input.nextElementSibling.innerText;
+				for (let i=0; i < selectedСolor.length; i++) {
+					let selectedTitle = selectedСolor[i].querySelector('.h5');
+					selectedСolor[i].setAttribute('style', color);
+					selectedTitle.innerText = title;
+				}
+			}
+		}
+		// setColor();
+		input.addEventListener('change', function() {
+			setColor();
+			for (let i=0; i < selectedСolor.length; i++) {
+				selectedСolor[i].classList.add('active');
+			}
+		});
+	}
+
+	FilePond.registerPlugin(
+		// encodes the file as base64 data
+		FilePondPluginFileEncode,
+
+		// validates the size of the file
+		FilePondPluginFileValidateSize,
+
+		// corrects mobile image orientation
+		FilePondPluginImageExifOrientation,
+
+		// previews dropped images
+		FilePondPluginImagePreview
+	);
+
+	// Select the file input and use 
+	// create() to turn it into a pond
+	FilePond.create(
+		document.querySelector('.filepond'),
+		{
+			// labelIdle: `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`,
+			labelIdle: `Перетащите свой файл  <br> или загрузите`,
+		}
+	);
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -810,7 +862,6 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
- 
 function tabUnchor(t=".tabs-main") {
 
 	let tabMain = document.querySelectorAll(t);
@@ -830,6 +881,7 @@ function tabUnchor(t=".tabs-main") {
 		})
 	}
 }
+
 
 
 function tabStep(t="#calc") {

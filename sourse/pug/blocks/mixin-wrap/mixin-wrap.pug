@@ -330,3 +330,25 @@ mixin addProduct()
 			p 1838 Wallcoverings Willow Stone Blue Silver&nbsp;&mdash; 1&nbsp;шт
 		+e.done
 			+icon('done')
+
+mixin popUp()
+	+b.popUp
+		p Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете #[a(href="#") условия обработки персональных данных]
+		span
+
+mixin labels(num, l2, l3)
+	+b.labels
+		if num
+			+e.number
+				+img('img/svg/num-bg.svg')
+				p -25%
+		if l2 
+			+e.label--blue
+				p Новинка
+		if l3 
+			+e.label--green
+				p Почти даром
+
+mixin quantity()
+	+b.quantity
+		p Осталось 6 шт
