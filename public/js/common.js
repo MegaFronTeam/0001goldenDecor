@@ -412,19 +412,19 @@ function eventHandler() {
 	$('.header--js').hcSticky({
     // stickTo: $('#content')
   });
-	// $('.sGoods__reset-filter--js').hcSticky({
-	// 	stickTo: $('.sGoods__col-filter'),
-	// 	bottom: 0,
-	// 	bottomEnd: 70,
-  //   innerTop: 12,
-  //   offResolutions: [-1200]     
-	// 	// mobileFirst: true,
-	// 		// responsive: {
-	// 		// 	992: {
-	// 		// 		disable: true
-	// 		// 	}
-	// 		// }
-  // });
+	$('.sticky-filter').hcSticky({
+		stickTo: $('.sGoods__col-filter'), 
+		top: 130,
+		// bottomEnd: 70,
+    // innerTop: 12,
+    // offResolutions: [-1200],
+		// mobileFirst: true,
+		// 	responsive: {
+		// 		992: {
+		// 			disable: true
+		// 		}
+		// 	}
+  });
 
 	const convertImages = (query, callback) => {
 		const images = document.querySelectorAll(query);
@@ -833,7 +833,9 @@ function tabUnchor(t=".tabs-main") {
 
 
 function tabStep(t="#calc") {
+	if(document.querySelector(t)) {
 
+	
 	let tabMain = document.querySelector(t); 
 	tabMain.addEventListener('click', function (el) {
 	
@@ -908,5 +910,5 @@ function tabStep(t="#calc") {
 			this.classList.add("d-none")
 		}
 	})
-
+}
 }

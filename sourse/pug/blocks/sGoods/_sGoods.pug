@@ -55,10 +55,11 @@ mixin sGoods(data)
 		.container
 			+e.row.row
 				+e.col-filter.col-lg
-					+sFilter()
-					+e.BUTTON.reset-filter
-						+icon('undo')
-						span Очистить фильтр
+					.sticky-filter
+						+sFilter()
+						+e.BUTTON.reset-filter
+							+icon('undo')
+							span Очистить фильтр
 				+e.col-catalog.col-lg
 					block
 					//- +brands()

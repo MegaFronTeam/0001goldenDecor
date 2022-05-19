@@ -14,7 +14,7 @@ mixin sFilter(data)
 					a(href="#") Сбросить
 				+ddGroup()
 					+e.wraper
-						+ddGroupItem('Тип').active
+						+ddGroupItem('Тип')
 							+in-c("checkbox", 'Бесшовные')
 							+in-c("checkbox", 'Флезелиновые')
 							+in-c("checkbox", 'Виниловые')(checked)
@@ -22,14 +22,14 @@ mixin sFilter(data)
 							+in-c("checkbox", 'Бордюр')
 							+in-c("checkbox", 'Панно / Фотообои')
 							+in-c("checkbox", 'Под покраску')
-						+ddGroupItem('Тип помещения').active
+						+ddGroupItem('Тип помещения')
 							+in-c("checkbox", 'Кухня')
 							+in-c("checkbox", 'Коридор')
 							+in-c("checkbox", 'Холл')
 							+in-c("checkbox", 'Гостинная')(checked)
 							+in-c("checkbox", 'Спальня')
 							+in-c("checkbox", 'Кабинет')
-						+ddGroupItem('Цвет').active 
+						+ddGroupItem('Цвет') 
 							+e.color-wrap
 								+in-c("checkbox", '')(checked, style="--checkColor: #9C9C9C")
 								+in-c("checkbox", '')(checked, style="--checkColor: #C3E6FE")
@@ -45,10 +45,10 @@ mixin sFilter(data)
 								+in-c("checkbox", '')(style="--checkColor: #6B3CA6")
 								+in-c("checkbox", '')(style="--checkColor: #D956B4")
 								+in-c("checkbox", '')(style="--checkColor: #424242")
-						+ddGroupItem('Основа обоев').active
+						+ddGroupItem('Основа обоев')
 							+in-c("checkbox", 'Бумага')
 							+in-c("checkbox", 'Флизелин')(checked)
-						+ddGroupItem('Цена').active
+						+ddGroupItem('Цена')
 							.range-slider
 								input.js-range-slider(type='text' value='')
 							.extra-controls
@@ -60,10 +60,10 @@ mixin sFilter(data)
 									span до
 									input.js-input-to(type='text' value='0')
 									span ₽
-						+ddGroupItem('Страна').active
+						+ddGroupItem('Страна')
 							+in-c("checkbox", 'Бельгия')
 							+in-c("checkbox", 'Италия')(checked)
-						+ddGroupItem('Бренд').active 
+						+ddGroupItem('Бренд') 
 							+in-c("checkbox", '4Seasons')
 							+in-c("checkbox", '1838 Wallcoverings')(checked)
 				+e.BUTTON.btn-showMore.btn.btn-primary Показать 325

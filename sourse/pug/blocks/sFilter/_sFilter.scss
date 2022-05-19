@@ -21,6 +21,11 @@
 			height: calc(100vh - 68px);
 			overflow-y: auto;
 			overflow-x: hidden;
+			// &__content{
+			// 	&:not(.active){
+			// 		display:none;
+			// 	}
+			// }
 			@include media-breakpoint-down(lg) {
 				padding-right: 10px;
 				padding-bottom: 80px;
@@ -37,7 +42,7 @@
 	padding-bottom: 0;
 	@include media-breakpoint-up(lg) {
 		padding-bottom: rem(83);
-		flex-grow: 1;
+		// flex-grow: 1;
 	}
 	&__btn {
 		@extend .btn, .btn-primary;
@@ -126,6 +131,7 @@
 			}
 		}
 		.range-slider {
+			padding-top: 1rem;
 			& > .irs {
 				margin-bottom: rem(8);
 			}
