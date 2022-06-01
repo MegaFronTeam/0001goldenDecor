@@ -636,9 +636,7 @@ const Swiper = {
       return h(Tag, {
         ref: swiperElRef,
         class: uniqueClasses(containerClasses.value)
-      }, [slots['container-start'], h(WrapperTag, {
-        class: 'swiper-wrapper'
-      }, [slots['wrapper-start'], renderSlides(slides), slots['wrapper-end']]), needsNavigation(props) && [h('div', {
+      }, [slots['container-start'], needsNavigation(props) && [h('div', {
         ref: prevElRef,
         class: 'swiper-button-prev'
       }), h('div', {
@@ -650,7 +648,9 @@ const Swiper = {
       }), needsPagination(props) && h('div', {
         ref: paginationElRef,
         class: 'swiper-pagination'
-      }), slots['container-end']]);
+      }), h(WrapperTag, {
+        class: 'swiper-wrapper'
+      }, [slots['wrapper-start'], renderSlides(slides), slots['wrapper-end']]), slots['container-end']]);
     };
   }
 

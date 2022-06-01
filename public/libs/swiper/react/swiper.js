@@ -196,9 +196,7 @@ const Swiper = /*#__PURE__*/forwardRef(function (_temp, externalElRef) {
     className: uniqueClasses(`${containerClasses}${className ? ` ${className}` : ''}`)
   }, restProps), /*#__PURE__*/React.createElement(SwiperContext.Provider, {
     value: swiperRef.current
-  }, slots['container-start'], /*#__PURE__*/React.createElement(WrapperTag, {
-    className: "swiper-wrapper"
-  }, slots['wrapper-start'], renderSlides(), slots['wrapper-end']), needsNavigation(swiperParams) && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  }, slots['container-start'], needsNavigation(swiperParams) && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     ref: prevElRef,
     className: "swiper-button-prev"
   }), /*#__PURE__*/React.createElement("div", {
@@ -210,7 +208,9 @@ const Swiper = /*#__PURE__*/forwardRef(function (_temp, externalElRef) {
   }), needsPagination(swiperParams) && /*#__PURE__*/React.createElement("div", {
     ref: paginationElRef,
     className: "swiper-pagination"
-  }), slots['container-end']));
+  }), /*#__PURE__*/React.createElement(WrapperTag, {
+    className: "swiper-wrapper"
+  }, slots['wrapper-start'], renderSlides(), slots['wrapper-end']), slots['container-end']));
 });
 Swiper.displayName = 'Swiper';
 export { Swiper };

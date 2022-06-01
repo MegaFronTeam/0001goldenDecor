@@ -780,7 +780,7 @@ iframe {
 
 .searchBlock-wrap {
 	@include media-breakpoint-down(lg) {
-		overflow: hidden;
+		// overflow: hidden;
 	position: absolute;
 	z-index: 1200;
 	// @include media-breakpoint-up(xl) {
