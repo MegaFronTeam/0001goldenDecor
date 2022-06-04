@@ -216,7 +216,7 @@
 			}
 		}
 		.headerBlock__text-wrap {
-			max-width: rem(437);
+			// max-width: rem(437);
 			@include media-breakpoint-down(lg) {
 				height: 100%;
 				width: 100%;
