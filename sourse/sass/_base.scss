@@ -23,8 +23,8 @@ html {
 }
 
 body {
-	// height: 100vh;
-	// overflow-x: hidden;
+	height: 100vh;
+	overflow-x: hidden;
 	&.fixed,
 	&.fancybox-active {
 		.header {
