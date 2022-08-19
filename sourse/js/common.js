@@ -236,9 +236,26 @@ const JSCCommon = {
 	});
 	}
 };
+
+var Sticky = new hcSticky('.sticky-filter', {
+	stickTo: '.sGoods__col-filter', 
+	top: 130,
+	// bottomEnd: 70,
+	// innerTop: 12,
+	// offResolutions: [-1200],
+	// mobileFirst: true,
+	// 	responsive: {
+	// 		992: {
+	// 			disable: true
+	// 		}
+	// 	}
+});
+
 const $ = jQuery;
 
 function eventHandler() {
+
+	Sticky.update( );
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -412,20 +429,7 @@ function eventHandler() {
 	$('.header--js').hcSticky({
     // stickTo: $('#content')
   });
-	$('.sticky-filter').hcSticky({
-		stickTo: $('.sGoods__col-filter'), 
-		top: 130,
-		// bottomEnd: 70,
-    // innerTop: 12,
-    // offResolutions: [-1200],
-		// mobileFirst: true,
-		// 	responsive: {
-		// 		992: {
-		// 			disable: true
-		// 		}
-		// 	}
-  });
-
+	
 	const convertImages = (query, callback) => {
 		const images = document.querySelectorAll(query);
 

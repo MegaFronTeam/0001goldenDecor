@@ -895,6 +895,7 @@
 	width: 77%;
 	padding: rem(14.5) rem(34) rem(14.5) rem(16);
 	z-index: 10000;
+	
 	p, a {
 		font-size: rem(14);
 	}
@@ -908,10 +909,12 @@
 	span {
 		cursor: pointer;
 		position: absolute;
-		right: rem(34);
+		right: rem(24);
 		top: 50%;
 		transform: translateY(-50%);
 		display: block;
+		width: 30px;
+			height: 30px;
 		&::after, &::before {
 			content: '';
 			position: absolute;
