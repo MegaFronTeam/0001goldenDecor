@@ -126,7 +126,9 @@
 			position: fixed;
 			background-color: #fff;
 			z-index: 700;
-			bottom: 0;
+			// top: calc(var(--vh) * 100);
+			// transform: translateY(-100%);
+			bottom: env(safe-area-inset-bottom);
 			left: 0;
 			right: 0;
 			box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);

@@ -238,7 +238,7 @@
 			}
 		}
 		@include media-breakpoint-down(lg) {
-			bottom: 64px;
+			bottom:  calc(env(safe-area-inset-bottom) + 64px);
 			&.active2{
 				--active: ' ';
 			}
