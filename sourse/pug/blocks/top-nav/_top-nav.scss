@@ -123,12 +123,13 @@
 
 .top-btns-wrap{
 	@include media-breakpoint-down(lg) {
+		padding-bottom: calc(env(safe-area-inset-bottom) + 0);
 			position: fixed;
 			background-color: #fff;
 			z-index: 700;
 			// top: calc(var(--vh) * 100);
 			// transform: translateY(-100%);
-			bottom: env(safe-area-inset-bottom);
+			bottom: 0;
 			left: 0;
 			right: 0;
 			box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
