@@ -15,15 +15,15 @@
 body,
 html {
 	font-size: var(--bs-body-font-size);
+	height: 100vh;
 }
 html {
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
+	// -webkit-text-size-adjust: 100%;
+	// -webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 	// margin-right: calc(-1 * (100vw - 100%));
 }
 
 body {
-	height: 100vh;
 	overflow-x: hidden;
 	&.fixed,
 	&.fancybox-active {
