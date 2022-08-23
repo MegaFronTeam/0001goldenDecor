@@ -236,26 +236,28 @@ const JSCCommon = {
 	});
 	}
 };
+function stickyFilter() {
+	let Sticky = new hcSticky('.sticky-filter', {
+		stickTo: '.sGoods__col-filter', 
+		top: 130,
+		// bottomEnd: 70,
+		// innerTop: 12,
+		// offResolutions: [-1200],
+		// mobileFirst: true,
+		// 	responsive: {
+		// 		992: {
+		// 			disable: true
+		// 		}
+		// 	}
+	});
 
-var Sticky = new hcSticky('.sticky-filter', {
-	stickTo: '.sGoods__col-filter', 
-	top: 130,
-	// bottomEnd: 70,
-	// innerTop: 12,
-	// offResolutions: [-1200],
-	// mobileFirst: true,
-	// 	responsive: {
-	// 		992: {
-	// 			disable: true
-	// 		}
-	// 	}
-});
+}
 
 const $ = jQuery;
 
 function eventHandler() {
 
-	Sticky.update( );
+	stickyFilter()
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
