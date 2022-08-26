@@ -352,3 +352,21 @@ mixin labels(num, l2, l3)
 mixin quantity()
 	+b.quantity
 		p Осталось 6 шт
+
+mixin textileMenu
+	+b.textile-menu
+		+e.btn.BUTTON
+		+e.categoties
+			ul
+				mixin textileMenuItem(icon, text)
+					li
+						+e.link(href="#")
+							+img(`img/svg/${icon}.svg`)
+							+e.title= text
+				+textileMenuItem('curtain', 'Шторы')
+				+textileMenuItem('bedspreads', 'Покрывала')
+				+textileMenuItem('cloth', 'Ткани')
+				+textileMenuItem('blind', 'Жалюзи')
+				+textileMenuItem('cornices', 'Карнизы')
+		+soc
+

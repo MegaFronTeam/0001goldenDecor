@@ -1,0 +1,49 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+ 
+include ../blocks/footer/_footer.pug
+include ../blocks/sCategeries/_sCategeries.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sTextileBenefits/_sTextileBenefits.pug
+include ../blocks/sDesigServices/_sDesigServices.pug
+
+block variables
+	- let  mainPage= 'textile' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	//- +textileMenu
+	.main-content
+		.header
+			+top-nav-textile()
+		+headerBlockTextile
+		.section
+			+sCatalogCurtains("Шторы",'Покрывала', "Ткани", "Жалюзи","Карнизы")
+			+sCatalogBedspreads("Покрывала")
+			+sCatalogCloth("Ткани")
+			+sCatalogBlackout('Солнцезащита')
+			+sCatalogCornices('Карнизы')
+		+sTextileBenefits
+		+sDesigServices
+		+sAbout.--textile
+		
+		+footerTextile()
+      
+
+
+

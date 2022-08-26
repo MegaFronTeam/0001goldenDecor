@@ -241,6 +241,41 @@
 		}
 	}
 
+	&--textile {
+		.headerBlock__slide {
+			padding: rem(60) rem(80);
+			background-color: $body-color;
+		}
+		.picture-bg {
+			opacity: .9;
+		}
+		.headerBlock__caption {
+			max-width: 500px;
+		}
+		.headerBlock__btn {
+			width: auto;
+			font-weight: 600;
+			@include mt;
+			&:hover {
+				.icon-metering {
+					color: $white;
+				}
+			}
+		}
+		.icon-metering {
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+			color: $warning;
+			@include mt;
+		}
+		.swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
+			background-color: $warning;
+			border-color: $warning;
+			opacity: 1;
+	}
+	}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

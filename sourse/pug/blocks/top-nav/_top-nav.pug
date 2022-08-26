@@ -70,3 +70,23 @@ mixin top-nav()
 					+li(`5`,`Клей`,`Клей для бумажных обоев`,`Клей для всех видов обоев`,`Клей монтажный`,`Стыковочный клей`,`Клей для легких обоев`)
 					+li(`6`,`Напольные покрытия`,`Ламинат`,`Паркетная доска`,`Ковролин`,`Каменно-полимерная плитка`,`Керамическая плитка`)
 	// end top-nav
+
+mixin top-nav-textile()
+	+b.top-nav--textile
+		+e.container.container
+			.row
+				.col
+					+logo()
+				.col-auto
+					.topLine__wrap 
+						.topLine__tel(href="tel:+7(495)120-06-43").fw-600 +7 (495) 120-06-43
+							+icon('chevron-down')
+						.topLine__content
+							a(href="tel:+74951228945")
+								.topLine__numHeadline.SPAN Оптовый отдел
+								.topLine__num.SPAN +7 (495) 122-89-45
+							a(href="tel:+74951275647")
+								.topLine__numHeadline.SPAN Отдел по качеству
+								.topLine__num.SPAN +7 (495) 127-56-47
+				.col-auto
+					+btn('Заказать звонок').btn.btn-outline

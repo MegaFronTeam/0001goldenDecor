@@ -29,3 +29,23 @@ mixin headerBlock()
 				+arrow
 			.swiper-pagination
 	// end headerBlock
+
+mixin headerBlockTextile()
+	// start headerBlock
+	+b.headerBlock.--textile.section#headerBlock&attributes(attributes)
+		+e.container.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide.bg-wrap
+							+e.caption
+								+e.head
+									+pic('head-img-3.jpg','bg').picture-bg
+									.h1 Текстильный декор для дома
+								+e.body
+									p Стильный дизайн, высокое качество, лояльные цены!
+									+e.btn(href="#") 
+										+icon('metering')
+										| Оставить заявку на замер
+				.swiper-pagination
+	// end headerBlock

@@ -1,0 +1,50 @@
+// start .sTextileBenefits
+.sTextileBenefits {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(60)};
+	&__row {
+		--bs-gutter-y: #{rem(36)};
+		--bs-gutter-x: #{rem(33)};
+		counter-reset: benefits;
+	}
+	&__item {
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+			counter-increment: benefits;
+			content: counter(benefits);
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background-color: $warning;
+			color: $white;
+			font-weight: 600;
+			@include media-breakpoint-down(sm) {
+				margin: 0 auto 20px;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: rem(20);
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: 120%;
+	}
+	&__descr {
+		color: $secondary;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTextileBenefits

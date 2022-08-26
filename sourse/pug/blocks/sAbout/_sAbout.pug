@@ -1,4 +1,4 @@
-mixin sAbout(data)
+mixin sAbout(link)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
@@ -6,10 +6,11 @@ mixin sAbout(data)
 				.col-lg-6
 					+b.section-title
 						h2!= about.title
-					.d-none.d-lg-block
-						a.link-more(href="#")
-							= about.link
-							+icon("chevron-right")
+					if link
+						.d-none.d-lg-block
+							a.link-more(href="#")
+								= about.link
+								+icon("chevron-right")
 				.col-lg-6
 					each p in about.p
 						p!= p

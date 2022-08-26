@@ -447,3 +447,22 @@
 	z-index: 3;
 	position: relative;
 }
+
+.top-nav--textile {
+	.container {
+		padding-top: 11px;
+		padding-bottom: 11px;
+	}
+	.icon-chevron-down {
+		color: $warning;
+	}
+	.top-nav__btn {
+		padding: 15px 30px;
+		border: 2px solid $warning;
+		font-weight: 600;
+		@include mt;
+		&:hover {
+			background-color: $warning;
+		}
+	}
+}

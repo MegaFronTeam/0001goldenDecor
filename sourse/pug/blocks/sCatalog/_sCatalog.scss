@@ -89,7 +89,11 @@
 				}
 			}
 		}
-
+	&--textile {
+		.menu a:before {
+			background-color: $warning;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -240,5 +244,62 @@
 		font-size: rem(24);
 		position: relative;
 		// top: re;
+	}
+}
+
+.grid-catalog {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px 32px;
+	margin-bottom: rem(100);
+	.catalog-item--big {
+		grid-row: 2 span;
+		grid-column: 2 span;
+		.catalog-item__img-wrap  {
+			@include block(584,548);
+		}
+	}
+	.catalog-item__img-wrap img {
+		width: 100%;
+	}
+}
+
+.feedback-call {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: rem(32);
+	background-color: #F8F8F8;
+	background-image: url('../img/svg/metering.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 67% 43%;
+	&:hover {
+		// .feedback-call__title, .feedback-call__link {
+			color: $body-color;
+		// }
+		.icon {
+			color: $warning;
+		}
+	}
+	&__title {
+		font-weight: 500;
+		font-size: rem(28);
+		line-height: 114%;
+		letter-spacing: -0.5px;
+		@include mt;
+	}
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 500;
+		font-size: rem(20);
+		line-height:1;
+		letter-spacing: -0.5px;
+		@include mt;
+		.icon {
+			width: 25px;
+		}
 	}
 }

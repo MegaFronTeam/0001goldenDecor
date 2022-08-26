@@ -86,3 +86,144 @@ mixin sCatalog2(t, a, showMore)
 						+catalog-item(item.i,item.t,item.p,item.pr)
 			.d-none.d-md-block
 				+arrow
+
+mixin gridCatalogItem(img,title,number,price,fullprice)
+	+b.catalog-item&attributes(attributes)
+		+e.img-wrap(href="#").bg-wrap
+			+pic(`prod-${img}.jpg`)
+		+e.title: a(href="#")!= title
+		p= number
+		+e.footer
+			.row
+				+e.col-price.col
+					+e.price= price
+					+e.fullPrice= fullprice
+				.col-auto.swiper-no-swiping
+						+e.btn--add(type="button")
+
+mixin feedbackCall
+	+b.feedback-call(href="#modal-call").link-modal-custom-js
+		+e.title Оставьте заявку на замер
+		+e.link Бесплатно
+			+icon('chevron-right')
+
+
+mixin sCatalogCurtains(...titles)
+	// start sCatalog
+	+b.sCatalog.--textile&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					- for (var i = 0; i < titles.length; i++)
+						+e.title.h2.col-auto
+							if i==0
+								a.text-secondary.active(href="#")= titles[i]
+							else
+								a.text-secondary(href="#")= titles[i]
+				+e.menu-wrap
+					+mnu6
+			+b.grid-catalog
+				+gridCatalogItem(11,'Togas Молинеро золотые 260х275&nbsp;см','Артикул: 1002436999','13 499 ₽','16 999 ₽').--big
+				+gridCatalogItem(12,'Togas Алессио серые 260х300&nbsp;см','Артикул: 1002474744','19 999 ₽','')
+				+gridCatalogItem(13,'Togas Атилио экрю 260х300&nbsp;см','Артикул: 1002576433','16 999 ₽','19 999 ₽')
+				+gridCatalogItem(14,'Togas Алессио розовые 260х300&nbsp;см','Артикул: 1002474746','16 999 ₽','19 999 ₽')
+				+feedbackCall
+				+gridCatalogItem(15,'Togas Алессио бирюза 260х300&nbsp;см','Артикул: 1002474748','15 999 ₽','19 999 ₽')
+				+gridCatalogItem(16,'Togas Стоклин бежевые 260х275&nbsp;см','Артикул: 1002440898','22 999 ₽','')
+				+gridCatalogItem(12,'Togas Алессио серые 260х275&nbsp;см','Артикул: 1002474743','18 999 ₽','')
+				+gridCatalogItem(17,'Togas Киото серые 260х300&nbsp;см','Артикул: 1002423412','34 799 ₽','40 999 ₽')
+				+gridCatalogItem(18,'Togas Стоклин серые 260х300&nbsp;см','Артикул: 1002440901','24 999 ₽','')
+				+gridCatalogItem(14,'Togas Алессио розовые 260х275&nbsp;см','Артикул: 1002474745','15 799 ₽','18 999 ₽')
+
+mixin sCatalogBedspreads(...titles)
+	// start sCatalog
+	+b.sCatalog.--textile&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					- for (var i = 0; i < titles.length; i++)
+						+e.title.h2.col-auto
+							if i==0
+								a.text-secondary.active(href="#")= titles[i]
+							else
+								a.text-secondary(href="#")= titles[i]
+				+e.menu-wrap
+					+mnu7
+			+b.grid-catalog
+				+gridCatalogItem(19,'Sofi De Marko Гранд 240х220&nbsp;см','Артикул: 1002436999','3 999 ₽','4 999 ₽').--big
+				+gridCatalogItem(20,'Sofi De Marko Офира 230х250&nbsp;см','Артикул: 1002474744','8 499 ₽','')
+				+feedbackCall
+				+gridCatalogItem(21,'Sofi De Marko Афина 220х160&nbsp;см','Артикул: 1002474746','3 599 ₽','4 999 ₽')
+				+gridCatalogItem(22,'Sofi De Marko Мистерио 260х240&nbsp;см','Артикул: 1002576433','5 799 ₽','')
+				+gridCatalogItem(23,'Sofi De Marko Адажио 240х260&nbsp;см','Артикул: 1002474748','9 599 ₽','10 999 ₽')
+				+gridCatalogItem(24,'Sofi De Marko Джозеф 230х250&nbsp;см','Артикул: 1002440898','4 199 ₽','')
+
+mixin sCatalogCloth(...titles)
+	// start sCatalog
+	+b.sCatalog.--textile&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					- for (var i = 0; i < titles.length; i++)
+						+e.title.h2.col-auto
+							if i==0
+								a.text-secondary.active(href="#")= titles[i]
+							else
+								a.text-secondary(href="#")= titles[i]
+				+e.menu-wrap
+					+mnu8
+			+b.grid-catalog
+				+gridCatalogItem(25,'Портьерная ткань EVD-MSF-01','Артикул: 1002436999','13 499 ₽','16 999 ₽').--big
+				+gridCatalogItem(26,'Портьерная ткань EVD-TAN-01','Артикул: 1002474744','19 999 ₽','')
+				+gridCatalogItem(27,'Портьерная ткань CZL-ZZA','Артикул: 1002576433','16 999 ₽','19 999 ₽')
+				+feedbackCall
+				+gridCatalogItem(28,'Портьерная ткань EVD-LEG-PL-01','Артикул: 1002474746','16 999 ₽','19 999 ₽')
+				+gridCatalogItem(29,'Портьерная ткань EVD-JOS-05','Артикул: 1002474748','15 999 ₽','19 999 ₽')
+				+gridCatalogItem(30,'Портьерная ткань CZL-RHP','Артикул: 1002440898','22 999 ₽','')
+				+gridCatalogItem(31,'Портьерная ткань EVD-BAR-09','Артикул: 1002440898','22 999 ₽','')
+
+mixin sCatalogBlackout(...titles)
+	// start sCatalog
+	+b.sCatalog.--textile&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					- for (var i = 0; i < titles.length; i++)
+						+e.title.h2.col-auto
+							if i==0
+								a.text-secondary.active(href="#")= titles[i]
+							else
+								a.text-secondary(href="#")= titles[i]
+				+e.menu-wrap
+					+mnu9
+			+b.grid-catalog
+				+gridCatalogItem(32,'Decofest плиссе плайн 70х160','Артикул: 1002474744','1 470 ₽','2 099 ₽')
+				+gridCatalogItem(33,'Decofest плиссе плайн экрю 80х160','Артикул: 1002576433','1 920 ₽','')
+				+gridCatalogItem(34,'Decofest плиссе плайн 55х160','Артикул: 1002474746','1 340 ₽','')
+				+gridCatalogItem(35,'Decofest плиссе плайн 35х160','Артикул: 1002440898','1 040 ₽','1 290 ₽')
+				+gridCatalogItem(33,'Decofest плиссе плайн экрю 70х160','Артикул: 1002440898','1 680 ₽','')
+				+gridCatalogItem(32,'Decofest плиссе плайн 35х160','Артикул: 1002474748','900 ₽','1 290 ₽')
+				+feedbackCall
+				+gridCatalogItem(36,'Decofest плиссе плайн экрю 70х160','Артикул: 1002474748','3 999 ₽','')
+				+gridCatalogItem(37,'Decofest плиссе плайн 70х160','Артикул: 1002474748','1 999 ₽','')
+				+gridCatalogItem(38,'Decofest плиссе плайн 35х160','Артикул: 1002474748','3 999 ₽','')
+
+mixin sCatalogCornices(...titles)
+	// start sCatalog
+	+b.sCatalog.--textile&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					- for (var i = 0; i < titles.length; i++)
+						+e.title.h2.col-auto
+							if i==0
+								a.text-secondary.active(href="#")= titles[i]
+							else
+								a.text-secondary(href="#")= titles[i]
+			+b.grid-catalog
+				+gridCatalogItem(39,'Уют диаметр 1,6&nbsp;см Ост витая шампань 220&nbsp;см','Артикул: 1002474744','990 ₽','')
+				+gridCatalogItem(40,'Уют диаметр 1,6&nbsp;см Ост витая шоколад 220&nbsp;см','Артикул: 1002474744','990 ₽','')
+				+gridCatalogItem(41,'Уют диаметр 1,6&nbsp;см Ост сталь 220&nbsp;см','Артикул: 1002474746','890 ₽','')
+				+feedbackCall
+				+gridCatalogItem(40,'Уют диаметр 2&nbsp;см Ост витая шоколад 220&nbsp;см','Артикул: 1002440898','1 290 ₽','')
+				+gridCatalogItem(42,'Уют диаметр 1,6&nbsp;см Ост витая сталь 220&nbsp;см','Артикул: 1002440898','990 ₽','')

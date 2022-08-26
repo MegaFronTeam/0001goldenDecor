@@ -193,4 +193,15 @@ opacity: 0.4;
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+&--textile {
+	.footer__body {
+		align-items: center;
+	}
+	.footer__col-contact {
+		margin-right: auto;
+	}
+	.footer__time {
+		margin-bottom: 0;
+	}
+}
 }
