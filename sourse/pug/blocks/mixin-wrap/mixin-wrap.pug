@@ -355,18 +355,29 @@ mixin quantity()
 
 mixin textileMenu
 	+b.textile-menu
-		+e.btn.BUTTON
+		+e.btn.--js.BUTTON
 		+e.categoties
 			ul
 				mixin textileMenuItem(icon, text)
 					li
-						+e.link(href="#")
-							+img(`img/svg/${icon}.svg`)
+						+e.link.scroll-link(href=`#${icon}`)&attributes(attributes)
+							+e.img-wrap
+								+img(`img/svg/${icon}.svg`)
 							+e.title= text
 				+textileMenuItem('curtain', 'Шторы')
 				+textileMenuItem('bedspreads', 'Покрывала')
 				+textileMenuItem('cloth', 'Ткани')
 				+textileMenuItem('blind', 'Жалюзи')
-				+textileMenuItem('cornices', 'Карнизы')
-		+soc
+				+textileMenuItem('cornices', 'Карнизы').active
+		+e.social
+			ul
+				mixin textileSocItem(icon, text)
+					li
+						+e.link(href="#")
+							+e.img-wrap
+								+icon(`${icon}`)
+							+e.title= text
+				+textileSocItem('whatsapp', 'WhatApp')
+				+textileSocItem('telegram', 'Telegram')
+				+textileSocItem('viber', 'Viber')
 

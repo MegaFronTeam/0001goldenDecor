@@ -40,3 +40,7 @@
 3. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-3.html>
 4. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-4.html>
 5. <https://megafronteam.github.io/0001goldenDecor/public/17-сalculator-5.html>
+
+### Текстильный декор
+
+1. <https://megafronteam.github.io/0001goldenDecor/public/18-textile.html>

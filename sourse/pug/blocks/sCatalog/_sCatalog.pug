@@ -108,18 +108,22 @@ mixin feedbackCall
 			+icon('chevron-right')
 
 
-mixin sCatalogCurtains(...titles)
+mixin sCatalogCurtains
 	// start sCatalog
 	+b.sCatalog.--textile&attributes(attributes)
 		.container
 			+b.section-title
 				.row
-					- for (var i = 0; i < titles.length; i++)
-						+e.title.h2.col-auto
-							if i==0
-								a.text-secondary.active(href="#")= titles[i]
-							else
-								a.text-secondary(href="#")= titles[i]
+					+e.title.h2.col-auto
+						a.text-secondary.active(href='#curtain') Шторы
+					+e.title.h2.col-auto
+						a.text-secondary(href='#bedspreads') Покрывала
+					+e.title.h2.col-auto
+						a.text-secondary(href='#cloth') Ткани
+					+e.title.h2.col-auto
+						a.text-secondary(href='#blind') Жалюзи
+					+e.title.h2.col-auto
+						a.text-secondary(href='#cornices') Карнизы
 				+e.menu-wrap
 					+mnu6
 			+b.grid-catalog
@@ -135,18 +139,14 @@ mixin sCatalogCurtains(...titles)
 				+gridCatalogItem(18,'Togas Стоклин серые 260х300&nbsp;см','Артикул: 1002440901','24 999 ₽','')
 				+gridCatalogItem(14,'Togas Алессио розовые 260х275&nbsp;см','Артикул: 1002474745','15 799 ₽','18 999 ₽')
 
-mixin sCatalogBedspreads(...titles)
+mixin sCatalogBedspreads
 	// start sCatalog
 	+b.sCatalog.--textile&attributes(attributes)
 		.container
 			+b.section-title
 				.row
-					- for (var i = 0; i < titles.length; i++)
-						+e.title.h2.col-auto
-							if i==0
-								a.text-secondary.active(href="#")= titles[i]
-							else
-								a.text-secondary(href="#")= titles[i]
+					+e.title.h2.col-auto
+						a.text-secondary.active Покрывала
 				+e.menu-wrap
 					+mnu7
 			+b.grid-catalog
@@ -158,18 +158,14 @@ mixin sCatalogBedspreads(...titles)
 				+gridCatalogItem(23,'Sofi De Marko Адажио 240х260&nbsp;см','Артикул: 1002474748','9 599 ₽','10 999 ₽')
 				+gridCatalogItem(24,'Sofi De Marko Джозеф 230х250&nbsp;см','Артикул: 1002440898','4 199 ₽','')
 
-mixin sCatalogCloth(...titles)
+mixin sCatalogCloth
 	// start sCatalog
 	+b.sCatalog.--textile&attributes(attributes)
 		.container
 			+b.section-title
 				.row
-					- for (var i = 0; i < titles.length; i++)
-						+e.title.h2.col-auto
-							if i==0
-								a.text-secondary.active(href="#")= titles[i]
-							else
-								a.text-secondary(href="#")= titles[i]
+					+e.title.h2.col-auto
+						a.text-secondary.active Ткани
 				+e.menu-wrap
 					+mnu8
 			+b.grid-catalog
@@ -182,18 +178,14 @@ mixin sCatalogCloth(...titles)
 				+gridCatalogItem(30,'Портьерная ткань CZL-RHP','Артикул: 1002440898','22 999 ₽','')
 				+gridCatalogItem(31,'Портьерная ткань EVD-BAR-09','Артикул: 1002440898','22 999 ₽','')
 
-mixin sCatalogBlackout(...titles)
+mixin sCatalogBlackout
 	// start sCatalog
 	+b.sCatalog.--textile&attributes(attributes)
 		.container
 			+b.section-title
 				.row
-					- for (var i = 0; i < titles.length; i++)
-						+e.title.h2.col-auto
-							if i==0
-								a.text-secondary.active(href="#")= titles[i]
-							else
-								a.text-secondary(href="#")= titles[i]
+					+e.title.h2.col-auto
+						a.text-secondary.active Солнцезащита
 				+e.menu-wrap
 					+mnu9
 			+b.grid-catalog
@@ -208,18 +200,14 @@ mixin sCatalogBlackout(...titles)
 				+gridCatalogItem(37,'Decofest плиссе плайн 70х160','Артикул: 1002474748','1 999 ₽','')
 				+gridCatalogItem(38,'Decofest плиссе плайн 35х160','Артикул: 1002474748','3 999 ₽','')
 
-mixin sCatalogCornices(...titles)
+mixin sCatalogCornices
 	// start sCatalog
 	+b.sCatalog.--textile&attributes(attributes)
 		.container
 			+b.section-title
 				.row
-					- for (var i = 0; i < titles.length; i++)
-						+e.title.h2.col-auto
-							if i==0
-								a.text-secondary.active(href="#")= titles[i]
-							else
-								a.text-secondary(href="#")= titles[i]
+					+e.title.h2.col-auto
+						a.text-secondary.active Карнизы
 			+b.grid-catalog
 				+gridCatalogItem(39,'Уют диаметр 1,6&nbsp;см Ост витая шампань 220&nbsp;см','Артикул: 1002474744','990 ₽','')
 				+gridCatalogItem(40,'Уют диаметр 1,6&nbsp;см Ост витая шоколад 220&nbsp;см','Артикул: 1002474744','990 ₽','')

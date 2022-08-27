@@ -268,7 +268,7 @@ function eventHandler() {
 	JSCCommon.getRange();
 	// JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -748,34 +748,36 @@ function eventHandler() {
 		// }
 	})
 
-
-	catalog.addEventListener("click", function (event) {
-		if (!this.classList.contains("mobile-active")) return;
-		let link = event.target.closest(".menu-item-has-children>a")
-		if (!link) return;
-		event.preventDefault();
-		console.log(link);
-		let parent = link.parentElement;
-		let subMenu = parent.querySelector(".sub-menu");
-
-		let btnBack = document.createElement("li");
-		btnBack.classList.add('catalog-menu-back')
-		btnBack.innerHTML = link.innerText;
-		
-		subMenu.insertAdjacentElement('afterbegin', btnBack);
-		
-		btnBack.addEventListener("click", function () { 
-			subMenu.classList.remove('active');
-			document.querySelector(".overflowAll").classList.remove('overflowAll');
-			setTimeout(() => {
-				
-				this.remove();
-			}, 200);
+	if (catalog) {
+		catalog.addEventListener("click", function (event) {
+			if (!this.classList.contains("mobile-active")) return;
+			let link = event.target.closest(".menu-item-has-children>a")
+			if (!link) return;
+			event.preventDefault();
+			console.log(link);
+			let parent = link.parentElement;
+			let subMenu = parent.querySelector(".sub-menu");
+	
+			let btnBack = document.createElement("li");
+			btnBack.classList.add('catalog-menu-back')
+			btnBack.innerHTML = link.innerText;
+			
+			subMenu.insertAdjacentElement('afterbegin', btnBack);
+			
+			btnBack.addEventListener("click", function () { 
+				subMenu.classList.remove('active');
+				document.querySelector(".overflowAll").classList.remove('overflowAll');
+				setTimeout(() => {
+					
+					this.remove();
+				}, 200);
+			})
+				 // console.log(1);
+			catalog.classList.add('overflowAll');
+			subMenu.classList.add('active');
 		})
- 			// console.log(1);
-		catalog.classList.add('overflowAll');
-		subMenu.classList.add('active');
-	})
+	}
+
 	
 	$('.checkout__btn-more-info').on('click', function () {
 		$('.moreInfo').addClass('active');
@@ -836,6 +838,35 @@ function eventHandler() {
 			}
 		});
 	}
+
+	// Бургер в Лэндинге про текстиль
+
+	const textileBurgers = document.querySelectorAll('.textile-menu__btn--js');
+	
+	if (textileBurgers) {
+		const mainContent = document.querySelector('.main-content');
+		const textileMenu = document.querySelector('.textile-menu');
+		for (const textileBurger of textileBurgers) {
+			textileBurger.addEventListener('click', function(event) {
+				textileMenu.classList.toggle("active");
+				mainContent.classList.toggle("menu-active");
+				[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
+				textileBurgers.forEach(el => el.classList.toggle("active"));
+			});
+		}
+		document.body.addEventListener('click', function(event) {
+			let toggle = event.target.closest('.textile-menu__btn--js');
+			let menu = event.target.closest('.textile-menu.menu-active');
+			if (!menu && !toggle) {
+				textileMenu.classList.remove("active");
+				mainContent.classList.remove("menu-active");
+				[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+				textileBurgers.forEach(el => el.classList.remove("active"));
+			}
+		});
+	}
+
+	// / Бургер в Лэндинге про текстиль
 
 	FilePond.registerPlugin(
 		// encodes the file as base64 data

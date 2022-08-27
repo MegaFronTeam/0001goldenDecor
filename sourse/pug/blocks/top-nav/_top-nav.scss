@@ -464,5 +464,39 @@
 		&:hover {
 			background-color: $warning;
 		}
+		@include media-breakpoint-down(md) {
+			padding: 5px 10px;
+		}
+		// @include media-breakpoint-down(sm) {
+		// 	display: none;
+		// }
+	}
+	.topLine__tel {
+		&:hover {
+			.topLine__tel-dt {
+				color: $warning;
+			}
+		}
+	}
+	.topLine__tel-dt {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(md) {
+			font-weight: 400;
+		}
+	}
+
+	.icon-tel {
+		font-size: 24px;
+		stroke: none;
+	}
+	.topLine__num {
+		white-space: nowrap;
+	}
+	.topLine__content {
+		width: auto;
+	}
+	.textile-menu__btn {
+		margin-left: 0;
 	}
 }

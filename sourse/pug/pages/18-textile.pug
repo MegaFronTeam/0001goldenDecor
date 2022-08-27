@@ -16,6 +16,7 @@ include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sTextileBenefits/_sTextileBenefits.pug
 include ../blocks/sDesigServices/_sDesigServices.pug
+include ../blocks/sTextileProjects/_sTextileProjects.pug
 
 block variables
 	- let  mainPage= 'textile' 
@@ -27,21 +28,21 @@ block title
 block pagecontent
 	//- +mob-mnu()
 	
-	//- +textileMenu
+	+textileMenu
 	.main-content
 		.header
 			+top-nav-textile()
 		+headerBlockTextile
 		.section
-			+sCatalogCurtains("Шторы",'Покрывала', "Ткани", "Жалюзи","Карнизы")
-			+sCatalogBedspreads("Покрывала")
-			+sCatalogCloth("Ткани")
-			+sCatalogBlackout('Солнцезащита')
-			+sCatalogCornices('Карнизы')
+			+sCatalogCurtains(id='curtain')
+			+sCatalogBedspreads(id='bedspreads')
+			+sCatalogCloth(id='cloth')
+			+sCatalogBlackout(id='blind')
+			+sCatalogCornices(id='cornices')
 		+sTextileBenefits
+		+sTextileProjects
 		+sDesigServices
 		+sAbout.--textile
-		
 		+footerTextile()
       
 

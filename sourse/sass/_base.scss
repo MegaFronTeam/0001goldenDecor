@@ -24,9 +24,39 @@ html {
 }
 
 .textile {
+	.main-wrapper {		
+		position: relative;
+		height: auto;
+		@include media-breakpoint-up(md) {
+			padding-left: 80px;
+		}
+	}
+	.main-content {
+		width: 100%;
+		&.menu-active {
+			position: relative;
+			overflow: hidden;
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($body-color, .5);
+			}
+		}
+	}
+	.header {
+		z-index: 100;
+	}
 	.container {
+		padding-left: 40px;
+		padding-right: 40px;
 		@include media-breakpoint-up(xxl) {
-			max-width: 1220px;
+			max-width: 1360px;
+			padding-left: 80px;
+			padding-right: 80px;
 		}
 	}
 }
@@ -156,6 +186,13 @@ body {
 		font-weight: 600;
 		line-height: calc(48 / 40);
 	}
+}
+
+.section-subtitle {
+	max-width: 956px;
+	margin: 0 auto rem(60);
+	line-height: 150%;
+	text-align: center;
 }
 
 .mono {

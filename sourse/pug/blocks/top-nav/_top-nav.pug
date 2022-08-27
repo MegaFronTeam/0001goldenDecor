@@ -75,12 +75,18 @@ mixin top-nav-textile()
 	+b.top-nav--textile
 		+e.container.container
 			.row
+				.col-auto.d-md-none
+					.textile-menu__btn.textile-menu__btn--js
 				.col
 					+logo()
 				.col-auto
 					.topLine__wrap 
-						.topLine__tel(href="tel:+7(495)120-06-43").fw-600 +7 (495) 120-06-43
-							+icon('chevron-down')
+						.topLine__tel(href="tel:+7(495)120-06-43")
+							.topLine__tel-dt.d-none.d-md-flex
+								.fw-600 +7 (495) 120-06-43
+								+icon('chevron-down')
+							.topLine__tel-dt.d-md-none
+								+icon('tel')
 						.topLine__content
 							a(href="tel:+74951228945")
 								.topLine__numHeadline.SPAN Оптовый отдел
@@ -88,5 +94,5 @@ mixin top-nav-textile()
 							a(href="tel:+74951275647")
 								.topLine__numHeadline.SPAN Отдел по качеству
 								.topLine__num.SPAN +7 (495) 127-56-47
-				.col-auto
-					+btn('Заказать звонок').btn.btn-outline
+				.col-auto.d-none.d-sm-block
+					+btn('Заказать звонок')(href="#modal-call").btn.btn-outline.link-modal-custom-js

@@ -8,14 +8,14 @@
 		--bs-gutter-y: #{rem(32)};
 		margin-bottom: rem(60);
 	}
-	&__descr {
-		max-width: 956px;
-		margin: 0 auto rem(60);
-		line-height: 150%;
-		text-align: center;
-	}
-	&__item {
-		text-align: center;
+	// &__descr {
+	// 	max-width: 956px;
+	// 	margin: 0 auto rem(60);
+	// 	line-height: 150%;
+	// 	text-align: center;
+	// }
+	&__col {
+		min-width: 230px;
 	}
 	&__img-wrap {
 		display: flex;
@@ -38,6 +38,9 @@
 		padding: 60px;
 		text-align: center;
 		background-color: #F8F8F8;
+		@include media-breakpoint-down(md) {
+			padding: 20px;
+		}
 		p {
 			margin-bottom: 32px;
 			max-width: 1050px;

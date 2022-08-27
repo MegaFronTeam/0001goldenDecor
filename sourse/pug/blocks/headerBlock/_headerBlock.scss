@@ -245,12 +245,31 @@
 		.headerBlock__slide {
 			padding: rem(60) rem(80);
 			background-color: $body-color;
+			@include media-breakpoint-down(sm) {
+				padding: 0;
+			}
 		}
 		.picture-bg {
 			opacity: .9;
 		}
+		.headerBlock__head {
+			@include media-breakpoint-down(sm) {
+				min-height: 160px;
+			}
+		}
+		.headerBlock__body {
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 30px;
+			}
+		}
 		.headerBlock__caption {
 			max-width: 500px;
+			@include media-breakpoint-down(sm) {
+				max-width: none;
+			}
+		}
+		.headerBlock__slider {
+			max-width: none;
 		}
 		.headerBlock__btn {
 			width: auto;

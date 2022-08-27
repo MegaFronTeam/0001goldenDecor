@@ -996,55 +996,127 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	// padding: 28px;
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
 	height: 100vh;
+	z-index: 1201;
+	background-color: $white;
+	border-right: 1px solid #E6E6E6;
+	width: 80px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include mt;
+	@include media-breakpoint-down(md) {
+		opacity: 0;
+		visibility: hidden;
+	}
+	&.active {		
+		width: 320px;
+		opacity:1;
+		visibility: visible;
+	}
 	&__btn {
 		position: relative;
-		margin: rem(28) rem(28) rem(62);
-		width: 14px;
-		height: 6px;
+		display: block;
+		margin: 30px auto 34px 30px;
+		width: 20px;
+		height:20px;
 		background-color: transparent;
 		border: none;
+		@include mt;
 		&::before {
 			position: absolute;
 			display: inline-block;
 			content: '';
-			top: 0;
-			width: 100%;
+			top: 7px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 14px;
 			height: 2px;
 			background-color: $body-color;
+			transform-origin: center;
+			@include mt;
 		}
 		&::after {
 			position: absolute;
 			display: inline-block;
 			content: '';
-			bottom: 0;
-			width: 100%;
+			bottom: 7px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 14px;
 			height: 2px;
 			background-color: $body-color;
+			@include mt;
+		}
+		&.active {
+			// margin-left: 30px;
+			&::before {
+				top: calc(50% - 1px);
+				transform: rotate(45deg);
+				@include mt;
+			}
+			&::after {
+				transform: rotate(-45deg);
+				bottom: calc(50% - 1px);
+				@include mt;
+			}
 		}
 	}
-	&__categoties {
-		width: auto;
+	&__categoties, &__social {
+		width: 100%;
 		margin-bottom: auto;
 		ul {
 			display: flex;
 			flex-direction: column;
 			list-style-type: none;
+			width: 100%;
 		}
 		li {
+			width: auto;
 		}
+	}
+	&__social {
+		margin-bottom: 0;
 	}
 	&__link {
 		display: flex;
-		padding: rem(24) rem(28);
+		align-items: center;
+		padding: rem(12) rem(20);
+		width: auto;
 		&:hover {
 			background-color: #F8F8F8;
 		}
-		img {
-			margin-right: 28px;
+		&:active, &.active {
+			background-color: $body-color;
+			.textile-menu__img-wrap {
+				background-color: $white
+			}
+			.textile-menu__title {
+				color: $white
+			}
 		}
+	}
+	&__img-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 28px;
+		min-width: 40px;
+		min-height: 40px;
+		border-radius: 50%;
+		@include mt;
+		img, .icon {
+			width: 24px;
+			min-width: 24px;
+			height: 24px;
+		}
+	}
+	&__title {
+		min-width: 100%;
+		font-size: rem(20);
+		font-weight: 600;
+		@include mt;
 	}
 }
