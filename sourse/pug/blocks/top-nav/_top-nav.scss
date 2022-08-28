@@ -452,6 +452,10 @@
 	.container {
 		padding-top: 11px;
 		padding-bottom: 11px;
+		@include media-breakpoint-down(md) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 	}
 	.icon-chevron-down {
 		color: $warning;

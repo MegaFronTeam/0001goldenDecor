@@ -1000,7 +1000,7 @@
 	top: 0;
 	left: 0;
 	height: 100vh;
-	z-index: 1201;
+	z-index: 1202;
 	background-color: $white;
 	border-right: 1px solid #E6E6E6;
 	width: 80px;
@@ -1025,6 +1025,10 @@
 		background-color: transparent;
 		border: none;
 		@include mt;
+		@include media-breakpoint-down(md) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 		&::before {
 			position: absolute;
 			display: inline-block;
@@ -1119,4 +1123,7 @@
 		font-weight: 600;
 		@include mt;
 	}
+}
+.fixed-scroll {
+	overflow: hidden;
 }

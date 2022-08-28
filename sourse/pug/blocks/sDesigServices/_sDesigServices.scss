@@ -3,6 +3,12 @@
 		// --sPT: ;
 		// --sPB: ;
 		--sTPB: #{rem(32)};
+	&__request-container {
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 	&__row {
 		--bs-gutter-x: #{rem(32)};
 		--bs-gutter-y: #{rem(32)};
@@ -50,6 +56,7 @@
 		padding: rem(18) rem(20);
 		@include mt;
 		@extend .btn, .btn-primary;
+		
 		&:hover {
 			.icon-metering {
 				color: $white;

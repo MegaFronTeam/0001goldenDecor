@@ -275,6 +275,10 @@
 			width: auto;
 			font-weight: 600;
 			@include mt;
+			@include media-breakpoint-down(sm) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 			&:hover {
 				.icon-metering {
 					color: $white;
@@ -287,6 +291,11 @@
 			margin-right: 10px;
 			color: $warning;
 			@include mt;
+		}
+		.swiper-pagination {
+			@include media-breakpoint-down(sm) {
+				margin-top: 10px;
+			}
 		}
 		.swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
 			background-color: $warning;

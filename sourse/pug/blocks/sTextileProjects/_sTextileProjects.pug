@@ -5,18 +5,20 @@ mixin sTextileProjects(data)
 			+b.section-title.text-center
 				h2 Наши работы
 			.section-subtitle Тут мы&nbsp;делимся с&nbsp;вами нашими шторами и&nbsp;текстильными изделиями!
-			.row
-				mixin texttileProjectItem(img)
-					.col-12.col-sm-6.col-lg-4
-						+e.img-wrap(data-fancybox='sTextileProjects' data-src=`img/@2x/textile-project-${img}.jpg`)
-							+pic(`textile-project-${img}.jpg`)
-				+texttileProjectItem(1)
-				+texttileProjectItem(2)
-				+texttileProjectItem(3)
-				+texttileProjectItem(4)
-				+texttileProjectItem(5)
-				+texttileProjectItem(6)
-				+texttileProjectItem(7)
-				+texttileProjectItem(8)
-				+texttileProjectItem(9)
+			+e.swiper.swiper(data-mobile="false")
+				.row.swiper-wrapper
+					mixin texttileProjectItem(img)
+						.col-12.col-sm-6.col-lg-4.swiper-slide
+							+e.img-wrap(data-fancybox='sTextileProjects' data-src=`img/@2x/textile-project-${img}.jpg`)
+								+pic(`textile-project-${img}.jpg`)
+					+texttileProjectItem(1)
+					+texttileProjectItem(2)
+					+texttileProjectItem(3)
+					+texttileProjectItem(4)
+					+texttileProjectItem(5)
+					+texttileProjectItem(6)
+					+texttileProjectItem(7)
+					+texttileProjectItem(8)
+					+texttileProjectItem(9)
+				.swiper-pagination.d-sm-none
 	// end sTextileProjects

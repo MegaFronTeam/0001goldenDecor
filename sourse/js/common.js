@@ -1,4 +1,7 @@
 "use strict";
+
+// const { default: Swiper } = require("swiper");
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -850,7 +853,7 @@ function eventHandler() {
 			textileBurger.addEventListener('click', function(event) {
 				textileMenu.classList.toggle("active");
 				mainContent.classList.toggle("menu-active");
-				[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
+				[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed-scroll"));
 				textileBurgers.forEach(el => el.classList.toggle("active"));
 			});
 		}
@@ -860,13 +863,47 @@ function eventHandler() {
 			if (!menu && !toggle) {
 				textileMenu.classList.remove("active");
 				mainContent.classList.remove("menu-active");
-				[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+				[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed-scroll"));
 				textileBurgers.forEach(el => el.classList.remove("active"));
 			}
 		});
 	}
 
 	// / Бургер в Лэндинге про текстиль
+
+	// Проекты в слайдер
+
+	const projectsSlide = document.querySelector('.sTextileProjects__swiper');
+	let projectSwiper;
+	function projectsSwiping() {
+		if (window.innerWidth <= 576 && projectsSlide.dataset.mobile == 'false') {
+			projectSwiper = new Swiper(projectsSlide, {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+				},
+			});
+			projectsSlide.dataset.mobile = 'true';
+			// projectsSlide.update();
+		}
+		if (window.innerWidth > 576) {
+			projectsSlide.dataset.mobile = 'false';
+			if (projectsSlide.classList.contains('swiper-initialized')) {
+				projectSwiper.destroy();
+			}
+		}
+	}
+
+	if (projectsSlide) {
+		projectsSwiping();
+	}
+	window.addEventListener('resize', () => {
+		projectsSwiping();
+	});
+
+	// / Проекты в слайдер
 
 	// Скролл по левому меню
 	function tocPoss(element) {

@@ -125,13 +125,11 @@
 								</div>
 								<div class="col-auto">
 									<div class="topLine__wrap"> 
-										<div class="topLine__tel" href="tel:+7(495)120-06-43">
-											<div class="topLine__tel-dt d-none d-md-flex">
+										<div class="topLine__tel" href="tel:+7(495)120-06-43"><a class="topLine__tel-dt d-none d-md-flex">
 												<div class="fw-600">+7 (495) 120-06-43</div>
 												<svg class="icon icon-chevron-down ">
 													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-												</svg>
-											</div>
+												</svg></a>
 											<div class="topLine__tel-dt d-md-none">
 												<svg class="icon icon-tel ">
 													<use xlink:href="img/svg/sprite.svg#tel"></use>
@@ -219,12 +217,12 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination d-none d-sm-block"></div>
+							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
 				<!-- end headerBlock-->
-				<div class="section">
+				<div class="sCatalogTextile">
 					<!-- start sCatalog-->
 					<div class="sCatalog sCatalog--textile" id="curtain">
 						<div class="container">
@@ -1504,8 +1502,9 @@
 							<h2>Наши работы</h2>
 						</div>
 						<div class="section-subtitle">Тут мы&nbsp;делимся с&nbsp;вами нашими шторами и&nbsp;текстильными изделиями!</div>
-						<div class="row">
-									<div class="col-12 col-sm-6 col-lg-4">
+						<div class="sTextileProjects__swiper swiper" data-mobile="false">
+							<div class="row swiper-wrapper">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-1.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1514,7 +1513,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-2.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1523,7 +1522,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-3.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1532,7 +1531,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-4.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1541,7 +1540,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-5.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1550,7 +1549,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-6.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1559,7 +1558,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-7.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1568,7 +1567,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-8.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1577,7 +1576,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-12 col-sm-6 col-lg-4">
+									<div class="col-12 col-sm-6 col-lg-4 swiper-slide">
 										<div class="sTextileProjects__img-wrap" data-fancybox="sTextileProjects" data-src="img/@2x/textile-project-9.jpg">
 											<!-- picture-->
 											<picture> 
@@ -1586,6 +1585,8 @@
 											<!-- /picture-->
 										</div>
 									</div>
+							</div>
+							<div class="swiper-pagination d-sm-none"></div>
 						</div>
 					</div>
 				</section>
@@ -1631,6 +1632,8 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="sDesigServices__request-container container">
 						<div class="sDesigServices__request">
 							<p>Дизайнер предложит разнообразные варианты оформления, одготовленные с&nbsp;учетом Ваших пожеланий &mdash; Вам останется выбрать из&nbsp;них самый лучший!</p>
 							<a class="sDesigServices__btn btn link-modal-custom-js" href="#modal-call">
