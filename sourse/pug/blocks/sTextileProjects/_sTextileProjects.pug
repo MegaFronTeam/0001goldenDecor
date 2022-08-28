@@ -7,7 +7,7 @@ mixin sTextileProjects(data)
 			.section-subtitle Тут мы&nbsp;делимся с&nbsp;вами нашими шторами и&nbsp;текстильными изделиями!
 			.row
 				mixin texttileProjectItem(img)
-					.col-4
+					.col-12.col-sm-6.col-lg-4
 						+e.img-wrap(data-fancybox='sTextileProjects' data-src=`img/@2x/textile-project-${img}.jpg`)
 							+pic(`textile-project-${img}.jpg`)
 				+texttileProjectItem(1)

@@ -868,6 +868,71 @@ function eventHandler() {
 
 	// / Бургер в Лэндинге про текстиль
 
+	// Скролл по левому меню
+	function tocPoss(element) {
+		var rect = element.getBoundingClientRect();
+		return rect.top - 20 <= 0
+	}
+	$(window).scroll(function () {
+		$('.sCatalog--textile').each(function (index, element) {
+			if (tocPoss(element)) {
+				let toc_id = $(this).attr('id')
+				console.log(toc_id);
+				$('.textile-menu__link').each(function () {
+					let toc_link = $(this).attr('href').replace('#', '')
+					if (toc_link == toc_id) {
+						$(this).addClass('active')
+						$('.textile-menu__link').not(this).removeClass('active')
+					}
+				})
+			}
+		})
+	})
+
+	// leftMenu = document.querySelector('.textile-menu'),
+	// leftMenuHeight = leftMenu.outerHeight(),
+  //   // All list items
+  //   menuItems = leftMenu.find("a"),
+  //   // Anchors corresponding to menu items
+  //   scrollItems = menuItems.map(function(){
+  //     var item = $($(this).attr("href"));
+  //     if (item.length) { return item; }
+  //   });
+
+	// // Bind click handler to menu items
+	// // so we can get a fancy scroll animation
+	// menuItems.click(function(e){
+	// 	var href = $(this).attr("href"),
+	// 			offsetTop = href === "#" ? 0 : $(href).offset().top-leftMenuHeight+1;
+	// 	$('html, body').stop().animate({ 
+	// 			scrollTop: offsetTop
+	// 	}, 300);
+	// 	e.preventDefault();
+	// });
+	// // Bind to scroll
+	// $(window).scroll(function(){
+	// 	// Get container scroll position
+	// 	var fromTop = $(this).scrollTop()+leftMenuHeight;
+		
+	// 	// Get id of current scroll item
+	// 	var cur = scrollItems.map(function(){
+	// 		if ($(this).offset().top < fromTop)
+	// 			return this;
+	// 	});
+	// 	// Get the id of the current element
+	// 	cur = cur[cur.length-1];
+	// 	var id = cur && cur.length ? cur[0].id : "";
+		
+	// 	if (lastId !== id) {
+	// 			lastId = id;
+	// 			// Set/remove active class
+	// 			menuItems
+	// 				.parent().removeClass("active")
+	// 				.end().filter("[href='#"+id+"']").parent().addClass("active");
+	// 	}                   
+	// });
+	// / Скролл по левому меню
+
 	FilePond.registerPlugin(
 		// encodes the file as base64 data
 		FilePondPluginFileEncode,

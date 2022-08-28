@@ -8,7 +8,16 @@
 		--bs-gutter-x: #{rem(32)};
 		--bs-gutter-y: #{rem(32)};
 	}
-
+	&__img-wrap {
+		@include block(378,240);
+		cursor: pointer;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

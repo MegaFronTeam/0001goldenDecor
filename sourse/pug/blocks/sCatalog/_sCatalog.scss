@@ -90,6 +90,7 @@
 			}
 		}
 	&--textile {
+		padding-top: rem(50);
 		.menu a:before {
 			background-color: $warning;
 		}
@@ -257,7 +258,8 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 40px 32px;
-	margin-bottom: rem(100);
+	grid-auto-flow: dense;
+	margin-bottom: rem(50);
 	@include media-breakpoint-down(lg) {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -270,7 +272,7 @@
 	.catalog-item--big {
 		@include media-breakpoint-up(sm) {
 			grid-row: 2 span;
-			grid-column: 2 span;			
+			grid-column: 2 span;
 		}
 		.catalog-item__img-wrap  {
 			@include block(584,548);
@@ -320,5 +322,94 @@
 			width: 25px;
 			@include mt;
 		}
+	}
+}
+
+.feedback-call-vert {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: rem(32);
+	background-color: #F8F8F8;
+	grid-row: 1 span;
+	grid-column: 1 span;
+	@include media-breakpoint-up(sm) {
+		grid-row: 2 span;
+	}
+	@include media-breakpoint-up(md) {
+		grid-row: 2 span;
+		grid-column: 2 span;
+	}
+	@include media-breakpoint-up(xl) {
+		grid-row: 2 span;
+		grid-column: 1 span;
+	}
+	img {
+		width: 60px;
+		height: 45px;
+		margin-bottom: 27px;
+	}
+	.feedback-call__title {
+		margin-bottom: 20px;
+	}
+	&__descr {
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: auto;
+		}
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		padding:rem(20);
+	}
+}
+
+.full-catalog-link {
+	grid-row: 1 span;
+	grid-column: 1 span;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 100%;
+	padding: rem(32);
+	min-height: 250px;
+	background-color: #F8F8F8;
+	z-index: 1;
+
+	.feedback-call__title {
+		@include media-breakpoint-down(xl) {
+			font-size: rem(20);
+		}
+	}
+	&__link {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 500;
+		font-size: rem(20);
+		line-height:1;
+		letter-spacing: -0.5px;
+		@include mt;
+		z-index: 10;
+		.icon {
+			@include mt;
+				width: 25px;
+			}
+		&:hover {
+		color: $body-color;
+		.icon {
+				color: $warning;
+			}
+		}
+	}
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		width: 65%;
+		z-index: -1;
 	}
 }

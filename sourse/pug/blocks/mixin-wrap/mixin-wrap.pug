@@ -360,7 +360,7 @@ mixin textileMenu
 			ul
 				mixin textileMenuItem(icon, text)
 					li
-						+e.link.scroll-link(href=`#${icon}`)&attributes(attributes)
+						+e.link(href=`#${icon}`)&attributes(attributes)
 							+e.img-wrap
 								+img(`img/svg/${icon}.svg`)
 							+e.title= text
@@ -368,16 +368,16 @@ mixin textileMenu
 				+textileMenuItem('bedspreads', 'Покрывала')
 				+textileMenuItem('cloth', 'Ткани')
 				+textileMenuItem('blind', 'Жалюзи')
-				+textileMenuItem('cornices', 'Карнизы').active
+				+textileMenuItem('cornices', 'Карнизы')
 		+e.social
 			ul
-				mixin textileSocItem(icon, text)
+				mixin textileSocItem(icon, text, link)
 					li
-						+e.link(href="#")
+						+e.link(href=`${link}` target="_blank")
 							+e.img-wrap
 								+icon(`${icon}`)
 							+e.title= text
-				+textileSocItem('whatsapp', 'WhatApp')
-				+textileSocItem('telegram', 'Telegram')
+				+textileSocItem('whatsapp', 'WhatApp','https://wa.me/+74951200643')
+				+textileSocItem('telegram', 'Telegram','t.me/username')
 				+textileSocItem('viber', 'Viber')
 

@@ -119,7 +119,14 @@ mixin modal()
 			+input('Ваш комментарий или вопрос (необязательно)', 'textarea','') 
 			+policy2()
 			+e.BUTTON.btn.btn-primary(type="submit"  ).w-100   Отправить 
-
+	
+	+modal-custom-body()#modal-attantion
+		+e.alert-wrap
+			+img(`img/svg/alert.svg`)
+			+e.alert-text Обращаем ваше внимание
+			p Поставки некоторых товаров могут быть ограничены или будет долгая доставка!
+			p Советуем перед online оплатой связаться с&nbsp;отделом продаж по&nbsp;номеру телефона и&nbsp;уточнить есть&nbsp;ли товарв&nbsp;наличии!
+			+e.tel-link(href="+74951200643") +7 (495) 120-06-43
 
 	//- +modal-custom-body()#change-email
 	//- 	+e.title Изменить email
