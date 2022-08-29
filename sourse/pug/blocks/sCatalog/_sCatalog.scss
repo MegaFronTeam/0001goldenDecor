@@ -405,6 +405,16 @@
 			}
 		}
 	}
+	&__icon-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		border: 1px solid #E6E6E6;
+	}
 	img {
 		position: absolute;
 		top: 50%;

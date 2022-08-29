@@ -118,8 +118,10 @@ mixin fullCatalogLink(title, icon)
 	+b.full-catalog-link
 		+img(`img/svg/${icon}.svg`)
 		.feedback-call__title!= title
-		+e.link(href="#") Перейти
-			+icon('chevron-right')
+		+e.link(href="#")
+			| Перейти
+			+e.icon-wrap
+				+icon('chevron-right')
 
 mixin sCatalogCurtains
 	// start sCatalog
