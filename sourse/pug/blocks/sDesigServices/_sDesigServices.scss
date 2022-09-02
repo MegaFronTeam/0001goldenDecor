@@ -68,6 +68,7 @@
 		height: 24px;
 		margin-right: 10px;
 		color: $warning;
+		@include mt;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

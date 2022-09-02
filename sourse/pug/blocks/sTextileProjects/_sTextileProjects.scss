@@ -5,7 +5,11 @@
 		--sTPB: #{rem(32px)};
 	background-color: #F8F8F8;
 	.row {
-		--bs-gutter-x: #{rem(32)};
+		@include media-breakpoint-up(sm) {
+
+			--bs-gutter-x: #{rem(32)};
+		}
+		--bs-gutter-x: #{rem(0)};
 		--bs-gutter-y: #{rem(32)};
 	}
 	&__img-wrap {

@@ -15,7 +15,7 @@
 body,
 html {
 	font-size: var(--bs-body-font-size);
-	height: 100vh;
+	min-height: 100vh;
 	scroll-behavior: smooth;
 }
 html {
@@ -27,7 +27,7 @@ html {
 .textile {
 	.main-wrapper {		
 		position: relative;
-		height: auto;
+		// height: auto;
 		@include media-breakpoint-up(md) {
 			padding-left: 80px;
 		}
@@ -124,7 +124,9 @@ body {
 	&.fixed2,
 	&.fixed {
 		overflow: hidden;
-		position: absolute;
+		// position: absolute;
+		position: relative;
+		// position: fixed;
 		width: 100%;
 		left: 0;
 		top: 0;
@@ -454,7 +456,7 @@ ul {
 		border-radius: 50%;
 		background: #e5e5e7;
 		opacity: 0.9;
-		border: 1px solid rgba(151, 151, 151, 0.7);
+		// border: 1px solid rgba(151, 151, 151, 0.7);
 		outline: none !important;
 		@include mt;
 		margin-left: rem(4);

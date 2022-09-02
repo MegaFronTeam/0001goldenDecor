@@ -254,7 +254,11 @@
 		}
 		.headerBlock__head {
 			@include media-breakpoint-down(sm) {
-				min-height: 160px;
+				min-height: calc(100vh - 400px );
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 		.headerBlock__body {

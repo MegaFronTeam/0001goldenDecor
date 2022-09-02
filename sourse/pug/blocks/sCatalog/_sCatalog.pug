@@ -115,10 +115,10 @@ mixin feedbackCallVert
 		+btn('Оставить заявку')(href="#modal-call").link-modal-custom-js
 
 mixin fullCatalogLink(title, icon)
-	+b.full-catalog-link
+	+b.full-catalog-link(href="#")
 		+img(`img/svg/${icon}.svg`)
 		.feedback-call__title!= title
-		+e.link(href="#")
+		+e.link
 			| Перейти
 			+e.icon-wrap
 				+icon('chevron-right')
@@ -128,7 +128,7 @@ mixin sCatalogCurtains
 	+b.sCatalog.--textile&attributes(attributes)
 		.container
 			+b.section-title
-				.row
+				.row.mb-3
 					+e.title.h2.col-auto
 						a.text-secondary.active(href='#curtain') Шторы
 					+e.title.h2.col-auto

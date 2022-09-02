@@ -999,7 +999,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 100vh;
+	height: 100%;
 	z-index: 1202;
 	background-color: $white;
 	border-right: 1px solid #E6E6E6;
@@ -1008,6 +1008,14 @@
 	overflow-y: auto;
 	@include mt;
 	@include media-breakpoint-down(md) {
+		padding-bottom: 90px;
+		.textile-menu__btn{
+			margin-left: auto;
+			margin-right: 30px;
+			// height: 59px;
+			padding-top: 35px;
+			padding-bottom: 30px;
+		}
 		opacity: 0;
 		visibility: hidden;
 	}
@@ -1019,9 +1027,9 @@
 	&__btn {
 		position: relative;
 		display: block;
-		margin: 30px auto 34px 30px;
-		width: 20px;
-		height:20px;
+		margin: 34px auto 34px 30px;
+		width: rem(20);
+		height:rem(20);
 		background-color: transparent;
 		border: none;
 		@include mt;

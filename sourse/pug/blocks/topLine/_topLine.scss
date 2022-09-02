@@ -73,6 +73,7 @@
 			transform: scaleY(var(--sub-mnu-scale, 0));
 			transform-origin: top;
 			z-index: 10;
+			right: 0;
 			a {
 				padding: rem(12) rem(12) rem(12) rem(11);
 				display: flex;
