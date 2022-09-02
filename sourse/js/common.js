@@ -1105,25 +1105,3 @@ function tabStep(t="#calc") {
 }
 
  
-function addProd() {
-	let basketBtn = document.querySelector(".fixed-basket-btn")
-	function addpr() {
-		basketBtn.classList.add("add-prod") 
-		setTimeout(() => { 
-			basketBtn.classList.remove("add-prod")
-		}, 1000);
-
-	}
-	if(basketBtn.classList.contains("show")) {
-		addpr()
-	}
-	else{ 
-		basketBtn.classList.add("show")
-		setTimeout(() => {
-			addpr()
-			
-		}, 200);
-	}
-}
-
-$(document).on("click", ".catalog-item__btn--add",  function(){ addProd()})

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>textile</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover ">
@@ -2340,5 +2340,29 @@
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>
+		<script>
+			function addProd() {
+				let basketBtn = document.querySelector(".fixed-basket-btn")
+				function addpr() {
+					basketBtn.classList.add("add-prod") 
+					setTimeout(() => { 
+						basketBtn.classList.remove("add-prod")
+					}, 1000);
+			
+				}
+				if(basketBtn.classList.contains("show")) {
+					addpr()
+				}
+				else{ 
+					basketBtn.classList.add("show")
+					setTimeout(() => {
+						addpr()
+						
+					}, 200);
+				}
+			}
+			
+			$(document).on("click", ".catalog-item__btn--add",  function(){ addProd()})
+		</script>
 	</body>
 </html>
