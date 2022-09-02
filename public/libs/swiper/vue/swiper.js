@@ -1,14 +1,12 @@
 import { h, ref, onMounted, onUpdated, onBeforeUnmount, watch, nextTick, provide } from 'vue';
-import SwiperCore from 'swiper';
-import { getParams } from '../components-shared/get-params.js';
-import { mountSwiper } from '../components-shared/mount-swiper.js';
-import { needsScrollbar, needsNavigation, needsPagination, uniqueClasses, extend } from '../components-shared/utils.js';
+import { getParams } from './get-params.js';
+import { initSwiper, mountSwiper } from './init-swiper.js';
+import { needsScrollbar, needsNavigation, needsPagination, uniqueClasses, extend } from './utils.js';
 import { renderLoop, calcLoopedSlides } from './loop.js';
-import { getChangedParams } from '../components-shared/get-changed-params.js';
+import { getChangedParams } from './get-changed-params.js';
 import { getChildren } from './get-children.js';
-import { updateSwiper } from '../components-shared/update-swiper.js';
-import { renderVirtual } from './virtual.js';
-import { updateOnVirtualData } from '../components-shared/update-on-virtual-data.js';
+import { updateSwiper } from './update-swiper.js';
+import { renderVirtual, updateOnVirtualData } from './virtual.js';
 const Swiper = {
   name: 'Swiper',
   props: {
@@ -276,10 +274,6 @@ const Swiper = {
       type: Number,
       default: undefined
     },
-    loopedSlidesLimit: {
-      type: Boolean,
-      default: true
-    },
     loopFillGroupWithBlank: {
       type: Boolean,
       default: undefined
@@ -481,7 +475,7 @@ const Swiper = {
       default: undefined
     }
   },
-  emits: ['_beforeBreakpoint', '_containerClasses', '_slideClass', '_slideClasses', '_swiper', '_freeModeNoMomentumRelease', 'activeIndexChange', 'afterInit', 'autoplay', 'autoplayStart', 'autoplayStop', 'autoplayPause', 'autoplayResume', 'beforeDestroy', 'beforeInit', 'beforeLoopFix', 'beforeResize', 'beforeSlideChangeStart', 'beforeTransitionStart', 'breakpoint', 'changeDirection', 'click', 'disable', 'doubleTap', 'doubleClick', 'destroy', 'enable', 'fromEdge', 'hashChange', 'hashSet', 'imagesReady', 'init', 'keyPress', 'lazyImageLoad', 'lazyImageReady', 'lock', 'loopFix', 'momentumBounce', 'navigationHide', 'navigationShow', 'navigationPrev', 'navigationNext', 'observerUpdate', 'orientationchange', 'paginationHide', 'paginationRender', 'paginationShow', 'paginationUpdate', 'progress', 'reachBeginning', 'reachEnd', 'realIndexChange', 'resize', 'scroll', 'scrollbarDragEnd', 'scrollbarDragMove', 'scrollbarDragStart', 'setTransition', 'setTranslate', 'slideChange', 'slideChangeTransitionEnd', 'slideChangeTransitionStart', 'slideNextTransitionEnd', 'slideNextTransitionStart', 'slidePrevTransitionEnd', 'slidePrevTransitionStart', 'slideResetTransitionStart', 'slideResetTransitionEnd', 'sliderMove', 'sliderFirstMove', 'slidesLengthChange', 'slidesGridLengthChange', 'snapGridLengthChange', 'snapIndexChange', 'swiper', 'tap', 'toEdge', 'touchEnd', 'touchMove', 'touchMoveOpposite', 'touchStart', 'transitionEnd', 'transitionStart', 'unlock', 'update', 'virtualUpdate', 'zoomChange'],
+  emits: ['_beforeBreakpoint', '_containerClasses', '_slideClass', '_slideClasses', '_swiper', '_freeModeNoMomentumRelease', 'activeIndexChange', 'afterInit', 'autoplay', 'autoplayStart', 'autoplayStop', 'autoplayPause', 'autoplayResume', 'beforeDestroy', 'beforeInit', 'beforeLoopFix', 'beforeResize', 'beforeSlideChangeStart', 'beforeTransitionStart', 'breakpoint', 'changeDirection', 'click', 'disable', 'doubleTap', 'doubleClick', 'destroy', 'enable', 'fromEdge', 'hashChange', 'hashSet', 'imagesReady', 'init', 'keyPress', 'lazyImageLoad', 'lazyImageReady', 'lock', 'loopFix', 'momentumBounce', 'navigationHide', 'navigationShow', 'observerUpdate', 'orientationchange', 'paginationHide', 'paginationRender', 'paginationShow', 'paginationUpdate', 'progress', 'reachBeginning', 'reachEnd', 'realIndexChange', 'resize', 'scroll', 'scrollbarDragEnd', 'scrollbarDragMove', 'scrollbarDragStart', 'setTransition', 'setTranslate', 'slideChange', 'slideChangeTransitionEnd', 'slideChangeTransitionStart', 'slideNextTransitionEnd', 'slideNextTransitionStart', 'slidePrevTransitionEnd', 'slidePrevTransitionStart', 'slideResetTransitionStart', 'slideResetTransitionEnd', 'sliderMove', 'sliderFirstMove', 'slidesLengthChange', 'slidesGridLengthChange', 'snapGridLengthChange', 'snapIndexChange', 'swiper', 'tap', 'toEdge', 'touchEnd', 'touchMove', 'touchMoveOpposite', 'touchStart', 'transitionEnd', 'transitionStart', 'unlock', 'update', 'zoomChange'],
 
   setup(props, _ref) {
     let {
@@ -512,7 +506,7 @@ const Swiper = {
     const {
       params: swiperParams,
       passedParams
-    } = getParams(props, false);
+    } = getParams(props);
     getChildren(originalSlots, slidesRef, oldSlidesRef);
     oldPassedParamsRef.value = passedParams;
     oldSlidesRef.value = slidesRef.value;
@@ -539,7 +533,7 @@ const Swiper = {
 
     }); // init Swiper
 
-    swiperRef.value = new SwiperCore(swiperParams);
+    swiperRef.value = initSwiper(swiperParams);
 
     swiperRef.value.loopCreate = () => {};
 
@@ -573,8 +567,8 @@ const Swiper = {
 
       const {
         passedParams: newPassedParams
-      } = getParams(props, false);
-      const changedParams = getChangedParams(newPassedParams, oldPassedParamsRef.value, slidesRef.value, oldSlidesRef.value, c => c.props && c.props.key);
+      } = getParams(props);
+      const changedParams = getChangedParams(newPassedParams, oldPassedParamsRef.value, slidesRef.value, oldSlidesRef.value);
       oldPassedParamsRef.value = newPassedParams;
 
       if ((changedParams.length || breakpointChanged.value) && swiperRef.value && !swiperRef.value.destroyed) {
@@ -642,9 +636,7 @@ const Swiper = {
       return h(Tag, {
         ref: swiperElRef,
         class: uniqueClasses(containerClasses.value)
-      }, [slots['container-start'], h(WrapperTag, {
-        class: 'swiper-wrapper'
-      }, [slots['wrapper-start'], renderSlides(slides), slots['wrapper-end']]), needsNavigation(props) && [h('div', {
+      }, [slots['container-start'], needsNavigation(props) && [h('div', {
         ref: prevElRef,
         class: 'swiper-button-prev'
       }), h('div', {
@@ -656,7 +648,9 @@ const Swiper = {
       }), needsPagination(props) && h('div', {
         ref: paginationElRef,
         class: 'swiper-pagination'
-      }), slots['container-end']]);
+      }), h(WrapperTag, {
+        class: 'swiper-wrapper'
+      }, [slots['wrapper-start'], renderSlides(slides), slots['wrapper-end']]), slots['container-end']]);
     };
   }
 

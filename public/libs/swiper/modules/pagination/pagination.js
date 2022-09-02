@@ -37,8 +37,7 @@ export default function Pagination(_ref) {
       clickableClass: `${pfx}-clickable`,
       lockClass: `${pfx}-lock`,
       horizontalClass: `${pfx}-horizontal`,
-      verticalClass: `${pfx}-vertical`,
-      paginationDisabledClass: `${pfx}-disabled`
+      verticalClass: `${pfx}-vertical`
     }
   });
   swiper.pagination = {
@@ -341,14 +340,9 @@ export default function Pagination(_ref) {
   }
 
   on('init', () => {
-    if (swiper.params.pagination.enabled === false) {
-      // eslint-disable-next-line
-      disable();
-    } else {
-      init();
-      render();
-      update();
-    }
+    init();
+    render();
+    update();
   });
   on('activeIndexChange', () => {
     if (swiper.params.loop) {
@@ -395,7 +389,7 @@ export default function Pagination(_ref) {
       $el
     } = swiper.pagination;
 
-    if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el && $el.length > 0 && !$(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
+    if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el.length > 0 && !$(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
       if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
       const isHidden = $el.hasClass(swiper.params.pagination.hiddenClass);
 
@@ -408,32 +402,7 @@ export default function Pagination(_ref) {
       $el.toggleClass(swiper.params.pagination.hiddenClass);
     }
   });
-
-  const enable = () => {
-    swiper.$el.removeClass(swiper.params.pagination.paginationDisabledClass);
-
-    if (swiper.pagination.$el) {
-      swiper.pagination.$el.removeClass(swiper.params.pagination.paginationDisabledClass);
-    }
-
-    init();
-    render();
-    update();
-  };
-
-  const disable = () => {
-    swiper.$el.addClass(swiper.params.pagination.paginationDisabledClass);
-
-    if (swiper.pagination.$el) {
-      swiper.pagination.$el.addClass(swiper.params.pagination.paginationDisabledClass);
-    }
-
-    destroy();
-  };
-
   Object.assign(swiper.pagination, {
-    enable,
-    disable,
     render,
     update,
     init,

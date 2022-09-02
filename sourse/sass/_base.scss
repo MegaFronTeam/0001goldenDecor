@@ -1002,3 +1002,114 @@ iframe {
 		// top: 120px;
 
 	}
+
+
+	@keyframes zoomIn {
+		0% {
+			transform: scale(1.0);
+		}
+		50% {
+			transform: scale(1.08);
+		}
+		
+		100% {
+			transform: scale(1.0);
+		}
+
+	}
+
+	.fixed-basket-btn{
+		position: fixed;	
+		@include mt;
+		&.show,
+		&.add-prod{
+			
+			
+		}
+		&.add-prod{
+			.fixed-basket-btn__icon-wrap{ 
+				animation-delay: .2s;
+				animation-duration: 1s;
+				animation-name: zoomIn; 
+			}
+			.fixed-basket-btn__price{
+				--op: 1
+			}
+		}
+		&:not(.show){
+			transform: translateY(calc(100% + 90px));
+		}
+		@include media-breakpoint-up(xl) {
+			right: rem(80);
+		}
+		
+		@include media-breakpoint-up(lg) {
+		}
+		right: rem(20);
+
+		bottom: rem(80);
+		z-index: 900;
+		color: #fff !important;
+		&__icon-wrap{ 
+			@extend .btn, .btn-warning;
+			padding: 0;
+			width: rem(90);
+			height: rem(90);
+			border-radius: 50%;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0px 0px 20px rgba(5, 20, 31, 0.2) !important;
+			color: #fff !important;
+			@include mt;
+			&:hover{
+				transform: scale(1.08);
+			}
+		}
+		&:hover{
+			--op: 1
+		}
+		.icon{
+			font-size: rem(40);
+		}
+		&__count{
+			position: absolute;
+			right: 0;
+			color: #fff;
+			bottom: 0;
+			width: rem(30);
+			height: rem(30);
+			font-size: 1rem;
+			background-color: $body-color;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			pointer-events: none;
+		}
+		&__price{
+			position: absolute;
+			right: calc(100% + #{rem(12)});
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			font-size: 1rem;
+			padding: rem(8) rem(10);
+			background: rgba(0, 0, 0, 0.75);
+			backdrop-filter: blur(15px); 
+			border-radius: 6px;
+			width: max-content;
+			@include mt;
+			opacity: var(--op, 0);
+			&::before{
+				content: '';
+				position: absolute;
+				left: 100%;
+				top: 50%;
+				transform: translateY(-50%);
+				// background: rgba(0, 0, 0, 0.75);
+				@include triangle(.8rem, rgba(0, 0, 0, 0.75), right);
+			}
+		}
+	}
