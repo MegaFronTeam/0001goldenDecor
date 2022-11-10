@@ -91,6 +91,8 @@ mixin page-head(data)
 							+b.SPAN.top-btns
 								+e.SPAN.btn.active
 									+icon("favorite")
+					if data.text
+						+e.text!= data.text
 				if data.cart
 					+e.slider--js.swiper
 						.swiper-wrapper

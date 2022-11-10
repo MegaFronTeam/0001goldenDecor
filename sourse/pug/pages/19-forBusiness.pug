@@ -1,0 +1,37 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sForBusiness/_sForBusiness.pug
+include ../blocks/sForBusinessAdvantages/_sForBusinessAdvantages.pug
+ 
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'forBusiness-page' 
+	- let  bg= '19-forBusiness.jpg'
+
+block title
+	- let  title= 'Для бизнеса'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	.header.header--js
+		+topLine
+		+top-nav()
+	//- +headerBlock
+	+page-head({
+		title: 'Юридическим лицам и&nbsp;профессиональным клиентам',
+		text: 'Предлагаем особые условия покупки для профессиональных клиентов и&nbsp;юридических лиц'
+	})
+		+breadcrumb('Главная', 'Для бизнеса')
+	+sForBusiness
+	+sForBusinessAdvantages
+	+footer()
+

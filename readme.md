@@ -44,3 +44,7 @@
 ### Текстильный декор
 
 1. <https://megafronteam.github.io/0001goldenDecor/public/18-textile.html>
+
+### Для бизнеса
+
+1. <https://megafronteam.github.io/0001goldenDecor/public/19-forBusiness.html>

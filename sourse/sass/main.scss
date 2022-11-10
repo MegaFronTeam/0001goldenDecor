@@ -25,7 +25,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/functions";
 @import "vars"; 
 @import "./node_modules/bootstrap/scss/variables";
-// @import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/maps";
 @import "./node_modules/bootstrap/scss/mixins";
 @import "./node_modules/bootstrap/scss/utilities";
 
@@ -160,6 +160,8 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sTextileBenefits/_sTextileBenefits';
 @import '../pug/blocks/sDesigServices/_sDesigServices';
 @import '../pug/blocks/sTextileProjects/_sTextileProjects';
+@import '../pug/blocks/sForBusiness/_sForBusiness';
+@import '../pug/blocks/sForBusinessAdvantages/_sForBusinessAdvantages';
 
 @import "media"; // Всегда в конце
 

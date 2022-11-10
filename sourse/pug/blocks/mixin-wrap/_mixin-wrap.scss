@@ -212,6 +212,11 @@
 			z-index: 1;
 		}
 	}
+	&__text {
+		font-size: rem(18);
+		margin-bottom: 0;
+		line-height: 1.44em;
+	}
 	&--article {
 		box-shadow: none;
 		@include media-breakpoint-up(lg) {
