@@ -3,14 +3,21 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: ;
+	&__wrap {
+		max-width: rem(1212);
+		margin-left: auto;
+		margin-right: auto;
+		&:nth-child(even) {
+			.sForBusiness__row {
+				flex-direction: row-reverse;
+			}
+		}
+	}
 	&__row {
 		--bs-gutter-x: #{rem(42)};
 		--bs-gutter-y: #{rem(40)};
 		
 		position: relative;
-		max-width: rem(1212);
-		margin-left: auto;
-		margin-right: auto;
 		// align-items: center;
 		padding-top: rem(35);
 		&:before {
@@ -22,9 +29,6 @@
 			left: -50vw;
 			bottom: 0;
 			background-color: #E6E6E6;
-		}
-		&:nth-child(even) {
-			flex-direction: row-reverse;
 		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(75.200);
