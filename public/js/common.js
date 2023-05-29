@@ -845,10 +845,10 @@ function eventHandler() {
 	// Бургер в Лэндинге про текстиль
 
 	const textileBurgers = document.querySelectorAll('.textile-menu__btn--js');
+	const mainContent = document.querySelector('.main-content');
+	const textileMenu = document.querySelector('.textile-menu');
 	
-	if (textileBurgers) {
-		const mainContent = document.querySelector('.main-content');
-		const textileMenu = document.querySelector('.textile-menu');
+	if (textileBurgers && mainContent && textileMenu) {
 		for (const textileBurger of textileBurgers) {
 			textileBurger.addEventListener('click', function(event) {
 				textileMenu.classList.toggle("active");
@@ -900,7 +900,9 @@ function eventHandler() {
 		projectsSwiping();
 	}
 	window.addEventListener('resize', () => {
+		if (projectsSlide) {
 		projectsSwiping();
+		}
 	});
 
 	// / Проекты в слайдер

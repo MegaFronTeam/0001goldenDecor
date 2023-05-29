@@ -1037,6 +1037,7 @@
 		height:rem(20);
 		background-color: transparent;
 		border: none;
+		flex: 0 0 auto;
 		@include mt;
 		@include media-breakpoint-down(md) {
 			margin-top: 0;
