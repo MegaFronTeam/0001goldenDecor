@@ -3,7 +3,12 @@
 mixin mnuBody(json)
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link in json
-			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+			li.menu-item.menu-item-has-children(itemprop="item" )
+				a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+				ul.sub-menu
+					li: a(href="#")  Label one
+					li: a(href="#")  Label  2
+					li: a(href="#")  Label  34
 			
 mixin mnu()
 	+mnuBody(categories)
@@ -26,11 +31,16 @@ mixin mnu4()
 			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" )= link 
 			
 mixin mnumobile()
-	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	ul.menu.menu--mobile(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link in menumobile
 			li.menu-item.menu-item-has-children(itemprop="item" ): a(href="#" itemprop="url"  )= link.name
 		each link in nav
-			li.menu-item(itemprop="item" ): a(href="#" itemprop="url"  )= link.name
+			li.menu-item.menu-item-has-children(itemprop="item" )
+				a(class=(link.active  ? "active": null) href="#" itemprop="url")= link.name
+				ul.sub-menu
+					li: a(href="#")  Label one
+					li: a(href="#")  Label  2
+					li: a(href="#")  Label  34
 
 mixin mnu5()
 	+b.menu-slider--js.swiper

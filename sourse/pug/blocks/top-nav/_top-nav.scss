@@ -15,6 +15,9 @@
 	 --bs-gutter-x: 22px;
 	 }
  }
+ li{
+	list-style: none;
+ }
 
  .menu{
 	@include media-breakpoint-up(xl) {
@@ -51,6 +54,8 @@
 	 }
 	}
  }
+
+
  .logo-wrap{
 	//  padding-top: 10px;
 	//  padding-bottom: 10px;
@@ -272,6 +277,7 @@
 	}
 }
 
+ 
 .catalog-menu{
 	position: absolute;
 	left: 0;

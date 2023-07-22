@@ -111,6 +111,7 @@
  
 		&__inner {
 			// padding: rem(20) 0;
+			position: relative;
 			padding-bottom: 20px;
 			overflow-x: hidden;
 			overflow-y: auto;
@@ -162,5 +163,124 @@
 				}
 			}
 		}
+	.h3{
+			margin-bottom: rem(36);
+			@include media-breakpoint-down(lg) {
+				font-size: 20px;
+				margin-bottom: 28px;
+			}
+		}
+
+
+		.menu-item-has-children{
+			@include media-breakpoint-up(xxl) {
+				width: calc(100% / 4);
+			} 
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(74);
+				width: calc(100% / 3);
+			}
+			// padding-left: calc(var(--bs-gutter-x) / 2 + 30px) !important;
+			&> a{
+
+				@include media-breakpoint-up(lg) {
+				&:after{
+					display: none;
+				}
+				}
+				position: relative;
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(24);
+					margin-left: rem(-30);
+				} 
+				font-weight: bold;
+				@include media-breakpoint-up(lg){
+
+					font-size: rem(20);
+				}
+				font-size: 16px;
+				display: flex;
+				align-items: center;
+				img{
+					margin-right: rem(8);
+				}
+				// img{
+				// 	position: absolute;
+
+				// }
+			}
+		}
+		.menu--mobile{
+			position: static;
+		}
+		.container>ul{
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			@include roww(30px);
+		}
+	}
+	.sub-menu{
+		display: block;
+		@include media-breakpoint-up(lg) {
+		li {
+			margin-bottom: rem(12);
+		}
+		}
+	}
+
+	.sub-menu{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: calc(100vh - 130px);
+			padding: rem(20) 0;
+			overflow-y: auto;
+			overflow-x: hidden;
+			background-color: #fff;
+			z-index: 200;
+			@include mt;
+			&:not(.active){
+				transform: translateX(100vw);
+			}
+			.catalog-menu-back,
+			a{
+				@include media-breakpoint-up(md){
+					max-width: 720px;
+				}
+				
+				@include media-breakpoint-up(sm){
+					max-width: 480px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				margin-left: 24px;
+				margin-right: 24px;
+
+			}
+		}
+
+				.catalog-menu-back{
+
+			position: relative;
+			margin-bottom: 0;
+			padding-top: 16px;
+			padding-bottom: 20px;
+			display: block;
+			font-weight: 600;
+			cursor: pointer;
+			padding-left: 30px;
+			font-size: 20px;
+			cursor: pointer;
+			&:before {
+				content: var(--chevron);
+				transform: rotateY(180deg);
+				position: absolute;
+				left: 0;
+				top: em(14);
+			}
+		}
+
 	}
 }

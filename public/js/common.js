@@ -132,7 +132,7 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+		$(document).on('click', "  .scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", '/' + elementClick)
@@ -705,6 +705,7 @@ function eventHandler() {
 
 
 	let catalog = document.querySelector(".catalog-menu--js");
+	let mobmnu = document.querySelector(" .menu-mobile--js");
 	
 	document.addEventListener("click", function (event) {
 		let toggleCatalog = document.querySelectorAll(".catalog-toggle-js");
@@ -751,8 +752,10 @@ function eventHandler() {
 		// }
 	})
 
-	if (catalog) {
-		catalog.addEventListener("click", function (event) {
+	function togglemobmenu(menu) {
+
+		if (menu) {
+			menu.addEventListener("click", function (event) {
 			if (!this.classList.contains("mobile-active")) return;
 			let link = event.target.closest(".menu-item-has-children>a")
 			if (!link) return;
@@ -760,7 +763,7 @@ function eventHandler() {
 			console.log(link);
 			let parent = link.parentElement;
 			let subMenu = parent.querySelector(".sub-menu");
-	
+			
 			let btnBack = document.createElement("li");
 			btnBack.classList.add('catalog-menu-back')
 			btnBack.innerHTML = link.innerText;
@@ -775,11 +778,46 @@ function eventHandler() {
 					this.remove();
 				}, 200);
 			})
-				 // console.log(1);
+			// console.log(1);
 			catalog.classList.add('overflowAll');
 			subMenu.classList.add('active');
 		})
 	}
+}
+	function togglemobmenu2(menu) {
+
+		if (menu) {
+			menu.addEventListener("click", function (event) { 
+			let link = event.target.closest(".menu-item-has-children>a")
+			if (!link) return;
+			event.preventDefault();
+			console.log(link);
+			let parent = link.parentElement;
+			let subMenu = parent.querySelector(".sub-menu");
+			
+			let btnBack = document.createElement("li");
+			btnBack.classList.add('catalog-menu-back')
+			btnBack.innerHTML = link.innerText;
+			
+			subMenu.insertAdjacentElement('afterbegin', btnBack);
+			
+			btnBack.addEventListener("click", function () { 
+				subMenu.classList.remove('active');
+				document.querySelector(".overflowAll").classList.remove('overflowAll');
+				setTimeout(() => {
+					
+					this.remove();
+				}, 200);
+			})
+			// console.log(1);
+			catalog.classList.add('overflowAll');
+			subMenu.classList.add('active');
+		})
+	}
+}
+
+	togglemobmenu(catalog);
+	togglemobmenu2(mobmnu);
 
 	
 	$('.checkout__btn-more-info').on('click', function () {
